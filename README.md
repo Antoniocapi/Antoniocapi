@@ -1,0 +1,50 @@
+# FM27 · Salamanca CF UDS: herramienta de gestión
+
+Herramienta local en Python para gestionar la partida con el modelo de Voulgaris (CD Castellón). Los informes se generan en Markdown y Excel, en `informes/`, con la fecha de juego en el nombre.
+
+## Instalación (una vez)
+
+```
+pip install -r requirements.txt
+```
+
+## Flujo de trabajo
+
+1. Haces capturas de las vistas del FM y las guardas en `data/capturas/`.
+2. Las capturas se transcriben a CSV en `data/plantilla/` (o `data/ojeo/`) con este nombre:
+   `grupo_vista_AAAA-MM-DD.csv`, donde la fecha es la **del juego**.
+   - grupo de plantilla: `primer-equipo`, `filial` o `juvenil`.
+   - en ojeo, el grupo es el nombre del foco, por ejemplo `laterales-izquierdos_2029-01-05.csv`.
+   - Haz todas las vistas de un mismo equipo **el mismo día de juego**: así se juntan (información general + estadísticas + contratos…).
+3. Ejecutas el comando del informe que quieras. Cada comando importa antes los CSV nuevos a la base de datos `fm.db`, así que el historial se va guardando solo.
+
+## Comandos
+
+| Comando | Qué hace |
+|---|---|
+| `python fm.py revisar` | Lista los archivos importados y los datos que faltan para cada informe. |
+| `python fm.py contratos` | Contratos de 18 meses o menos con su fecha límite (1 de enero), cláusulas bajas en jugadores de 4★ o más, sueldos frente a los topes y masa salarial. |
+| `python fm.py plantilla` | RENOVAR / VENDER YA / CEDER / SALE LIBRE / MANTENER con el motivo en una frase, más la cobertura de cada posición de la táctica. |
+| `python fm.py fichajes` | Ranking 0-100 "modelo Castellón" por posición, con la lista de descartados y su motivo. |
+| `python fm.py cantera` | Jugadores de 19 años o menos con potencial de 4★ o más, su evolución y dónde deben jugar. |
+| `python fm.py partidos` | Bloques de 10 jornadas: xG, xPts, casa/fuera, rivales de arriba/abajo, mentalidad y alertas de faltas y tarjetas. |
+| `python fm.py disciplina` | Amarillas por jugador y quién está a 1 o 2 de la sanción. |
+| `python fm.py evolucion` | Cambios de estrellas y valor entre capturas. Para un jugador: `python fm.py evolucion "Pau Calvo"`. |
+| `python fm.py todo` | Genera todos los informes. |
+
+## Partidos
+
+Rellena `data/partidos/partidos.csv`, una fila por partido. Puedes abrirlo en Excel; el separador es `;`.
+
+- **Resultado**: tus goles primero (`2-1`).
+- **Jornada**: vacía en los partidos de copa.
+- **Posición rival**: su puesto en la tabla ese día; sirve para comparar contra los de arriba y los de abajo.
+- **Local/Visitante**: escribe `Local` o `Visitante`.
+
+## Configuración
+
+Todo se ajusta en `config.yaml`: topes de sueldo, reserva de enero, presupuesto salarial, edad máxima para renovar, criterio del potencial (mínimo/media/máximo), posiciones necesarias con su prioridad, pesos de la puntuación de fichajes, umbrales de alerta, ciclo de amarillas, etc.
+
+## Si falta un dato
+
+La herramienta **no inventa nada**. Si una columna no está en las capturas (cláusula, nota media, minutos, amarillas, valoración de entrenamiento…), el informe lo avisa y ese apartado se activa solo cuando aparezca la columna.

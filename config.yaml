@@ -1,0 +1,152 @@
+# =====================================================================
+#  Configuración de la herramienta FM27 · Salamanca CF UDS
+#  Edita los valores libremente. Todos los importes, en euros al año.
+# =====================================================================
+
+club: "Salamanca CF UDS"
+temporada: "2028-29"
+
+# ---------------------------------------------------------------------
+# Topes salariales (euros al año)
+# ---------------------------------------------------------------------
+topes_sueldo:
+  titular: 60000
+  rotacion: 40000
+  filial_proyecto: 25000
+
+# Reserva que quieres guardar para el mercado de invierno.
+reserva_enero: 100000
+
+# Presupuesto salarial anual del club. No sale en las capturas:
+# rellénalo tú (vista Club > Finanzas). Si lo dejas vacío (null), no calculo el margen.
+presupuesto_salarial_anual: null
+
+# Qué "Tiempo de juego" cuenta como titular o rotación en el primer equipo.
+# Lo que no esté aquí, en el primer equipo, cuenta como "rotación";
+# en filial y juvenil, siempre "filial_proyecto".
+estados_titular:
+  - Jugador estrella
+  - Jugador importante
+  - Titular habitual
+estados_proyecto:
+  - Futura promesa
+  - Joven
+
+# ---------------------------------------------------------------------
+# Contratos
+# ---------------------------------------------------------------------
+meses_alerta_contrato: 18        # avisar si quedan estos meses o menos
+edad_max_renovar_largo: 30       # a partir de aquí, renovar solo 1 año
+clausula_minima: 500000          # cláusula por debajo de esto = alerta roja (si potencial >= 4★)
+
+# ---------------------------------------------------------------------
+# Estrellas de potencial
+# El FM muestra a veces un rango (estrellas doradas + estrellas blancas).
+# En los CSV lo guardo como "3.5-4.5". Elige cómo usarlo:
+#   minimo  -> solo las doradas (prudente)
+#   media   -> punto medio del rango
+#   maximo  -> hasta las blancas (optimista)
+# ---------------------------------------------------------------------
+criterio_potencial: media
+
+# ---------------------------------------------------------------------
+# Recomendaciones de plantilla
+# ---------------------------------------------------------------------
+recomendaciones:
+  edad_joven: 23                 # "joven" para RENOVAR
+  potencial_renovar_joven: 3.5   # potencial mínimo para renovar a un joven
+  meses_para_renovar: 18         # solo se propone RENOVAR si quedan estos meses o menos
+  edad_max_cesion: 21
+  potencial_cesion: 3.5
+  # Sin datos de minutos, uso estos "Tiempo de juego" como "pocos minutos":
+  estados_pocos_minutos:
+    - Promesa casi en el primer equipo
+    - Futura promesa
+    - Joven
+    - Portero de competiciones de copa
+    - Recambio de emergencia
+  minutos_minimos_temporada: 900 # si algún día hay columna de minutos
+  edad_veterano: 30              # VENDER YA si está en declive o sin margen
+  edad_pico: 27                  # a partir de aquí, sin margen y con valor = vender en el pico
+  valor_minimo_venta: 50000      # valor estimado (punto medio) para considerar que "tiene valor"
+  techo_bajo: 2.5                # potencial igual o menor = SALE LIBRE
+  nota_minima: 6.6               # solo se usa si hay columna "Nota media"
+  partidos_minimos_nota: 5
+
+# Jugadores cedidos A NUESTRO club por otros equipos.
+# No se renuevan ni se venden. Escribe el nombre tal cual sale en el CSV.
+cedidos_a_nuestro_club: []
+#  - David Hamansenya
+#  - Xavi Miràngels
+
+# ---------------------------------------------------------------------
+# Cantera
+# ---------------------------------------------------------------------
+cantera:
+  edad_maxima: 19
+  potencial_minimo: 4
+  grupos: [filial, juvenil]
+  edad_maxima_juvenil: 18        # con 19 ya no juega en el Sub-19
+
+# ---------------------------------------------------------------------
+# Posiciones que necesito cubrir (para el ranking de fichajes)
+# Usa los códigos del FM: POR, DF (D), DF (C), DF (I), CR (D), CR (I),
+# MC, ME (C), ME (D), ME (I), MP (C), MP (D), MP (I), DL (C)
+# prioridad: alta | media | baja
+# ---------------------------------------------------------------------
+posiciones_necesarias: []
+#  - posicion: DF (I)
+#    prioridad: alta
+#  - posicion: DF (C)
+#    prioridad: media
+
+# Posiciones de tu táctica (para el informe de cobertura de la plantilla)
+posiciones_tactica:
+  - POR
+  - DF (D)
+  - DF (C)
+  - DF (I)
+  - MC
+  - ME (C)
+  - MP (D)
+  - MP (I)
+  - DL (C)
+
+# ---------------------------------------------------------------------
+# Fichajes: puntuación "modelo Castellón" (0-100)
+# Los pesos se reparten automáticamente; si falta un dato,
+# ese criterio no cuenta y se avisa en el informe.
+# ---------------------------------------------------------------------
+fichajes:
+  pesos:
+    edad: 15
+    potencial: 25
+    calidad: 15
+    recomendacion: 15
+    coste: 15
+    contrato: 5
+    encaje: 10
+  edad_ideal: [19, 23]
+  edad_aceptable: [19, 25]
+  edad_maxima: 27                # mayores = descartados
+  presupuesto_traspasos: 100000  # traspaso máximo que puedes pagar
+  descartar_sin_encaje: false    # true = descarta a quien no encaje en posiciones_necesarias
+
+# ---------------------------------------------------------------------
+# Partidos y disciplina
+# ---------------------------------------------------------------------
+partidos:
+  bloque_jornadas: 10
+  rivales_arriba_hasta: 6        # posición del rival 1-6 = "de arriba"
+  rivales_abajo_desde: 13        # posición del rival 13-18 = "de abajo"
+  faltas_por_partido_alerta: 14
+  amarillas_por_partido_alerta: 2.5
+
+disciplina:
+  ciclo_amarillas: 5             # 5 amarillas = 1 partido de sanción
+
+# ---------------------------------------------------------------------
+# Nombres alternativos de columnas, por si el FM cambia algún título.
+# Ejemplo:  nota: ["Media de puntuación"]
+# ---------------------------------------------------------------------
+alias_columnas: {}

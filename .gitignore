@@ -1,0 +1,4 @@
+fm.db
+__pycache__/
+*.pyc
+~$*
