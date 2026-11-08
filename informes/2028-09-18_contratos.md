@@ -15,7 +15,7 @@ Regla: renovar antes del 1 de enero de su último año (cuando ya puede firmar u
 | 🔴 | Jordi Martínez | Filial | 20 | 2 | 3-4 |  | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 20.000 | 41.000 | RENOVAR | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🔴 | Lucas Balan | Filial | 19 | 2 | 4-5 |  | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 26.000 | 55.500 | RENOVAR | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🔴 | Manu Vigo | Primer equipo | 23 | 2 | 2.5 | Trn | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 29.500 | 12.000 | SALE LIBRE | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. |
-| 🔴 | Marco Coronel | Filial | 23 | 2 | 2.5 | En seguimiento | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 22.000 | 0 | SALE LIBRE | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. |
+| 🔴 | Marco Coronel | Filial | 23 | 2 | 2.5 | Le siguen otros clubes | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 22.000 | 0 | SALE LIBRE | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
 | 🔴 | Mario Segura | Filial | 20 | 1.5 | 2-3 |  | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 19.250 | 0 | SALE LIBRE | Techo bajo (1.5★/2-3★) a los 20 años: no renovar, sale libre el 30/06/2029. |
 | 🔴 | Markel Ucín | Primer equipo | 24 | 2.5 | 3 |  | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 42.000 | 40.000 | SALE LIBRE | No cumple los criterios de renovación (24 años, 2.5★/3★) y acaba 30/06/2029: dejarle salir o venderle si llega oferta. |
 | 🔴 | Pau Calvo | Primer equipo | 21 | 3 | 3-4 |  | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 39.500 | 21.500 | CEDER | 21 años, 3★/3-4★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. Renuévalo antes de cederlo (acaba 30/06/2029). |
@@ -23,10 +23,23 @@ Regla: renovar antes del 1 de enero de su último año (cuando ya puede firmar u
 | 🔴 | Raúl Ruiz | Juvenil | 17 | 1 | 2-3 |  | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 6.250 | 24.750 | SALE LIBRE | Techo bajo (1★/2-3★) a los 17 años: no renovar, sale libre el 30/06/2029. |
 | 🔴 | Ronni | Filial | 22 | 2 | 2.5 |  | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 24.000 | 2.750 | SALE LIBRE | Techo bajo (2★/2.5★) a los 22 años: no renovar, sale libre el 30/06/2029. |
 | 🔴 | Sergio Rivera | Filial | 21 | 1.5 | 1.5-2.5 |  | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 22.000 | 0 | SALE LIBRE | Techo bajo (1.5★/1.5-2.5★) a los 21 años: no renovar, sale libre el 30/06/2029. |
-| 🔴 | Vaquero | Filial | 22 | 1.5 | 2 | En seguimiento | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 23.500 | 0 | SALE LIBRE | Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. |
+| 🔴 | Vaquero | Filial | 22 | 1.5 | 2 | Le siguen otros clubes | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 23.500 | 0 | SALE LIBRE | Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
 | 🔴 | Óscar León | Primer equipo | 23 | 3 | 3.5 |  | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 65.500 | 70.000 | RENOVAR | Joven (23) con potencial 3.5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 
 > ⚠️ Mayores de 30 años: si renuevas, solo 1 año → Javier Murúa
+
+## Jugadores a los que siguen otros clubes
+
+🔴 = potencial de 4★ o más, o menos de 12 meses de contrato: hay riesgo de perderle barato.
+
+|  | Jugador | Equipo | Edad | Calidad | Potencial | Fin contrato | Cláusula (€) | Valor máx. (€) | Riesgo | Recomendación | Motivo |
+|---|---|---|---|---|---|---|---|---|---|---|---|
+| 🔴 | Andres Giraldo | Filial | 17 | 2 | 3.5-4.5 | 30/06/2030 |  | 75.000 | cláusula desconocida, potencial 3.5-4.5★ | MANTENER | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
+| 🔴 | João Machado | Juvenil | 17 | 1.5 | 3.5-4.5 | 30/06/2030 |  | 70.000 | cláusula desconocida, potencial 3.5-4.5★ | MANTENER | 1.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
+| 🔴 | Marco Coronel | Filial | 23 | 2 | 2.5 | 30/06/2029 |  | 0 | le quedan 9.4 meses, cláusula desconocida | SALE LIBRE | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
+| 🔴 | Pol Escribano | Primer equipo | 20 | 3 | 3.5-4.5 | 30/06/2030 |  | 75.000 | cláusula desconocida, potencial 3.5-4.5★ | CEDER | 20 años, 3★/3.5-4.5★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. Le siguen otros clubes: blinda su contrato antes de cederlo. |
+| 🔴 | Vaquero | Filial | 22 | 1.5 | 2 | 30/06/2029 |  | 0 | le quedan 9.4 meses, cláusula desconocida | SALE LIBRE | Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
+| 🟠 | Manuel | Filial | 17 | 2 | 3-4 | 30/06/2031 |  | 210.000 | cláusula desconocida | MANTENER | 2★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
 
 ## Cláusulas de rescisión bajas (potencial 4★ o más)
 

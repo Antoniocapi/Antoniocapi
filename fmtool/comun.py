@@ -97,6 +97,10 @@ class Plantilla:
         trad = self.cfg.get("codigos_inf") or {}
         return ", ".join(trad.get(c, c) for c in sorted(self.codigos_inf(j)))
 
+    def le_siguen(self, j):
+        """True si otros clubes le siguen (código de interés en la columna Inf)."""
+        return self.cfg.get("codigo_interes", "Seg") in self.codigos_inf(j)
+
     def es_cedido_aqui(self, j):
         return j["jugador"] in (self.cfg.get("cedidos_a_nuestro_club") or [])
 

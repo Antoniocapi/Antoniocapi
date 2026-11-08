@@ -23,7 +23,7 @@ def generar(p, carpeta):
         limite = fecha_limite_renovacion(j["fin"])
         dias = (limite - p.fecha).days if limite else None
         accion, motivo = recomendar(p, j)
-        nivel = "rojo" if dias is not None and dias <= 120 else "naranja"
+        nivel = "rojo" if (dias is not None and dias <= 120) or p.le_siguen(j) else "naranja"
         filas.append({
             "Jugador": j["jugador"], "Equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "Edad": j["edad"],
             "Calidad": j["calidad"], "Potencial": texto_potencial(j), "Tiempo de juego": j["estado"],
@@ -40,6 +40,36 @@ def generar(p, carpeta):
     mayores = [f["Jugador"] for f in filas if (f["Edad"] or 0) > cfg.get("edad_max_renovar_largo", 30)]
     if mayores:
         inf.aviso("Mayores de " + str(cfg.get("edad_max_renovar_largo", 30)) + " años: si renuevas, solo 1 año → " + ", ".join(mayores))
+
+    # ------------------------------------------------ 1b. Jugadores que siguen otros clubes
+    inf.seccion("Jugadores a los que siguen otros clubes")
+    filas = []
+    for j in jugadores:
+        if not p.le_siguen(j):
+            continue
+        meses = meses_entre(p.fecha, j["fin"])
+        accion, motivo = recomendar(p, j)
+        pot = p.pot(j) or 0
+        riesgo = []
+        if meses is not None and meses <= cfg.get("meses_alerta_contrato", 18):
+            riesgo.append(f"le quedan {meses:g} meses")
+        if "clausula" not in p.columnas or j["clausula"] is None:
+            riesgo.append("cláusula desconocida")
+        elif j["clausula"] < cfg.get("clausula_minima", 500000):
+            riesgo.append("cláusula baja")
+        if pot >= 4:
+            riesgo.append(f"potencial {texto_potencial(j)}★")
+        filas.append({
+            "Jugador": j["jugador"], "Equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "Edad": j["edad"],
+            "Calidad": j["calidad"], "Potencial": texto_potencial(j), "Fin contrato": fmt_fecha(j["fin"]),
+            "Cláusula (€)": j["clausula"], "Valor máx. (€)": j["valor_max"], "Riesgo": ", ".join(riesgo),
+            "Recomendación": accion, "Motivo": motivo,
+            "_nivel": "rojo" if (pot >= 4 or (meses is not None and meses <= 12)) else "naranja",
+        })
+    filas.sort(key=lambda f: (f["_nivel"] != "rojo", f["Jugador"]))
+    inf.texto("🔴 = potencial de 4★ o más, o menos de 12 meses de contrato: hay riesgo de perderle barato.")
+    inf.tabla("Les siguen", ["Jugador", "Equipo", "Edad", "Calidad", "Potencial", "Fin contrato", "Cláusula (€)",
+                             "Valor máx. (€)", "Riesgo", "Recomendación", "Motivo"], filas, "Nadie marcado con seguimiento.")
 
     # ------------------------------------------------ 2. Cláusulas
     inf.seccion("Cláusulas de rescisión bajas (potencial 4★ o más)")

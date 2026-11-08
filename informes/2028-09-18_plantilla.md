@@ -39,17 +39,17 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. |
 | 🟠 | Mario Valdaliso | Primer equipo | 20 | MP (I) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 44.000 | 20 años, 2.5★/3-4★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. |
 | 🟠 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 39.500 | 21 años, 3★/3-4★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. Renuévalo antes de cederlo (acaba 30/06/2029). |
-| 🟠 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | En seguimiento | 30/06/2030 | 46.500 | 20 años, 3★/3.5-4.5★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. |
+| 🟠 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 20 años, 3★/3.5-4.5★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. Le siguen otros clubes: blinda su contrato antes de cederlo. |
 
 ## SALE LIBRE
 
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ⚪ | Marco Coronel | Filial | 23 | DF (C) | 2 | 2.5 | Recambio de emergencia | En seguimiento | 30/06/2029 | 22.000 | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. |
+| ⚪ | Marco Coronel | Filial | 23 | DF (C) | 2 | 2.5 | Recambio de emergencia | Le siguen otros clubes | 30/06/2029 | 22.000 | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
 | ⚪ | Mario Segura | Filial | 20 | MC | 1.5 | 2-3 | Promesa casi en el primer equipo |  | 30/06/2029 | 19.250 | Techo bajo (1.5★/2-3★) a los 20 años: no renovar, sale libre el 30/06/2029. |
 | ⚪ | Ronni | Filial | 22 | DL (C) | 2 | 2.5 | Promesa casi en el primer equipo |  | 30/06/2029 | 24.000 | Techo bajo (2★/2.5★) a los 22 años: no renovar, sale libre el 30/06/2029. |
 | ⚪ | Sergio Rivera | Filial | 21 | DF (I) | 1.5 | 1.5-2.5 | Promesa casi en el primer equipo |  | 30/06/2029 | 22.000 | Techo bajo (1.5★/1.5-2.5★) a los 21 años: no renovar, sale libre el 30/06/2029. |
-| ⚪ | Vaquero | Filial | 22 | ME (C) | 1.5 | 2 | Promesa casi en el primer equipo | En seguimiento | 30/06/2029 | 23.500 | Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. |
+| ⚪ | Vaquero | Filial | 22 | ME (C) | 1.5 | 2 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2029 | 23.500 | Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
 | ⚪ | Raúl Ruiz | Juvenil | 17 | ME (I) | 1 | 2-3 | Futura promesa |  | 30/06/2029 | 6.250 | Techo bajo (1★/2-3★) a los 17 años: no renovar, sale libre el 30/06/2029. |
 | ⚪ | Manu Vigo | Primer equipo | 23 | MC | 2 | 2.5 | Jugador secundario | Trn | 30/06/2029 | 29.500 | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. |
 | ⚪ | Markel Ucín | Primer equipo | 24 | DF (C) | 2.5 | 3 | Jugador importante |  | 30/06/2029 | 42.000 | No cumple los criterios de renovación (24 años, 2.5★/3★) y acaba 30/06/2029: dejarle salir o venderle si llega oferta. |
@@ -62,12 +62,12 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 |---|---|---|---|---|---|---|---|---|---|---|
 | Alberto Ruvira | Filial | 16 | DF (C) | 3 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 19.000 | 3★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Alessandro Lugo | Filial | 19 | POR | 2 | 2.5-3.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 20.000 | 2★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
-| Andres Giraldo | Filial | 17 | MP (C) | 2 | 3.5-4.5 | Futura promesa | En seguimiento | 30/06/2030 | 15.500 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Andres Giraldo | Filial | 17 | MP (C) | 2 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 15.500 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
 | Diego Llabrés | Filial | 17 | DF (C) | 1.5 | 4-5 | Futura promesa |  | 30/06/2030 | 7.000 | 1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Edu Gallego | Filial | 17 | DF (C) | 2.5 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 11.000 | 2.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Erick Benítes | Filial | 17 | DL (C) | 2 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 15.750 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Isaac Varela | Filial | 16 | MP (I) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 18.250 | 2.5★/4-5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
-| Manuel | Filial | 17 | DF (C) | 2 | 3-4 | Promesa casi en el primer equipo | En seguimiento | 30/06/2031 | 20.000 | 2★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
+| Manuel | Filial | 17 | DF (C) | 2 | 3-4 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2031 | 20.000 | 2★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
 | Andrei Roateș | Juvenil | 20 | DL (C) | 2 | 2.5-3.5 | Cedido en otro club |  | 30/06/2030 | 30.000 | Cedido en otro club; 2★/2.5-3.5★, contrato hasta 30/06/2030. |
 | Gabri Benito | Juvenil | 16 | MP (D) | 1 | 3-4 | Futura promesa |  | 30/06/2031 | 7.750 | 1★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Guillermo José | Juvenil | 16 | DF (I) | 1 | 2.5-3.5 | Futura promesa |  | 30/06/2031 | 7.750 | 1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
@@ -75,7 +75,7 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Jack Pingamage | Juvenil | 16 | MP (D) | 1.5 | 4-5 | Futura promesa | Les | 30/06/2030 | 7.500 | 1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Javier Rebollo | Juvenil | 17 | MP (D) | 1 | 2-3 | Joven | Juvenil | 30/06/2031 | 3.300 | 1★/2-3★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Jorge María | Juvenil | 20 | MC | 1.5 | 2.5-3.5 | Cedido en otro club |  | 30/06/2030 | 34.500 | Cedido en otro club; 1.5★/2.5-3.5★, contrato hasta 30/06/2030. |
-| João Machado | Juvenil | 17 | DF (I) | 1.5 | 3.5-4.5 | Futura promesa | En seguimiento | 30/06/2030 | 7.000 | 1.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| João Machado | Juvenil | 17 | DF (I) | 1.5 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 7.000 | 1.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
 | Juan Ruiz | Juvenil | 16 | ME (C) | 1 | 3.5-4.5 | Joven | Juvenil | 30/06/2031 | 3.300 | 1★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Luis Ramírez | Juvenil | 16 | ME (I) | 1 | 2.5-3.5 | Futura promesa |  | 30/06/2031 | 7.750 | 1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Pablo Arbós | Juvenil | 21 | DL (C) | 2 | 2.5-3.5 | Cedido en otro club |  | 30/06/2030 | 27.000 | Cedido en otro club; 2★/2.5-3.5★, contrato hasta 30/06/2030. |
@@ -96,7 +96,7 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|
-| David Hamansenya | Primer equipo | 21 | DF (I) | 3.5 | 4-5 | Titular habitual | En seguimiento | 30/06/2029 | 7.750 | Cedido por otro club: ni se renueva ni se vende. |
+| David Hamansenya | Primer equipo | 21 | DF (I) | 3.5 | 4-5 | Titular habitual | Le siguen otros clubes | 30/06/2029 | 7.750 | Cedido por otro club: ni se renueva ni se vende. |
 | Xavi Miràngels | Primer equipo | 19 | ME (C) | 3.5 | 4-5 | Jugador importante | Les | 30/06/2030 | 46.500 | Cedido por otro club: ni se renueva ni se vende. |
 
 ## SIN DATOS

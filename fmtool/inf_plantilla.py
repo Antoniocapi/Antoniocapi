@@ -9,8 +9,24 @@ ORDEN_ACCION = ["VENDER YA", "RENOVAR", "CEDER", "SALE LIBRE", "MANTENER", "CEDI
 NIVEL_ACCION = {"VENDER YA": "rojo", "RENOVAR": "verde", "CEDER": "naranja", "SALE LIBRE": "gris"}
 
 
+SUFIJO_INTERES = {
+    "RENOVAR": " Le siguen otros clubes: renovar YA y con cláusula alta.",
+    "VENDER YA": " Le siguen otros clubes: aprovecha el interés para venderle.",
+    "SALE LIBRE": " Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis.",
+    "CEDER": " Le siguen otros clubes: blinda su contrato antes de cederlo.",
+    "MANTENER": " Le siguen otros clubes: vigila su cláusula.",
+}
+
+
 def recomendar(p, j):
     """Devuelve (acción, motivo en una frase) para un jugador. p = Plantilla."""
+    accion, motivo = _recomendar(p, j)
+    if p.le_siguen(j) and not p.es_cedido_aqui(j):
+        motivo += SUFIJO_INTERES.get(accion, "")
+    return accion, motivo
+
+
+def _recomendar(p, j):
     r = p.cfg.get("recomendaciones", {})
     if p.es_cedido_aqui(j):
         return "CEDIDO AQUÍ", "Cedido por otro club: ni se renueva ni se vende."
