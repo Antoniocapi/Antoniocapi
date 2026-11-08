@@ -49,6 +49,17 @@ class Plantilla:
         }
         # Columnas disponibles en total
         self.columnas = set().union(*(j["columnas"] for j in self.jugadores)) if self.jugadores else set()
+        # Nota media y titularidades sacadas de data/partidos/alineaciones.csv (si no vienen en la plantilla)
+        self.fuente_nota = None
+        if "nota" not in self.columnas:
+            from .inf_partidos import rendimiento_jugadores
+            rend = {r["Jugador"]: r for r in rendimiento_jugadores(RAIZ / "data" / "partidos")}
+            for j in self.jugadores:
+                r = rend.get(j["jugador"])
+                if r and r["Nota media"] is not None:
+                    j["nota"], j["partidos"] = r["Nota media"], r["Titularidades"]
+            if rend:
+                self.fuente_nota = "alineaciones de los partidos (solo titulares)"
 
     def pot(self, j):
         return potencial(j, self.cfg.get("criterio_potencial", "media"))

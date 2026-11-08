@@ -1,5 +1,5 @@
-﻿Fecha;Jornada;Competición;Rival;Posición rival;Local/Visitante;Resultado;xG a favor;xG en contra;Ocasiones claras a favor;Ocasiones claras en contra;Posesión;PRPAD;Faltas;Amarillas;Mentalidad
-;1;2F5;Numantia;;Visitante;0-2;;;;;;;;;
-06/09/2028;2;2F5;C.D. Coria;;Visitante;2-1;;;;;;;;;
-10/09/2028;3;2F5;Unionistas;;Local;1-1;;;;;;;;;
-17/09/2028;4;2F5;Guijuelo;;Visitante;0-0;;;;;;;;;
+﻿Fecha;Jornada;Competición;Rival;Posición rival;Local/Visitante;Resultado;xG a favor;xG en contra;Ocasiones claras a favor;Ocasiones claras en contra;Posesión;PRPAD;Faltas;Amarillas;Mentalidad;Disparos a favor;Disparos en contra;Tiros a puerta a favor;Tiros a puerta en contra;Córners a favor;Córners en contra;% pases completados;% pases completados rival;% centros completados;% centros completados rival;Pases progresivos a favor;Pases progresivos en contra;PRPAD rival;Faltas rival;Amarillas rival;Rojas;Rojas rival;Distancia recorrida;Distancia recorrida rival;Nota media equipo;Nota media rival;Estadio
+03/09/2028;1;2F5;Numantia;;Visitante;0-2;0.33;2.37;0;2;32;16.87;13;3;;6;15;3;6;4;11;79;89;10;21;34;59;12.81;10;5;0;0;104;105;6.4;7.1;Nuevo Los Pajaritos
+06/09/2028;2;2F5;C.D. Coria;;Visitante;2-1;0.78;1.19;1;0;43;17.30;8;1;;9;13;5;8;5;9;80;83;13;14;48;40;16.25;10;0;0;0;117;117;6.9;6.6;Municipal Francisco Gil Valle
+10/09/2028;3;2F5;Unionistas;;Local;1-1;1.15;1.33;0;0;27;23.33;15;3;;10;13;5;3;4;9;81;90;5;17;39;57;9.80;7;3;0;0;118;120;6.7;6.9;El Helmántico
+17/09/2028;4;2F5;Guijuelo;;Visitante;0-0;1.03;0.66;1;0;32;39.60;6;1;;7;10;3;5;7;10;79;88;8;24;28;62;15.80;7;1;0;0;117;119;6.8;6.9;Municipal de Guijuelo

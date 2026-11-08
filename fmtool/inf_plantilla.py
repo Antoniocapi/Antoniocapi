@@ -126,7 +126,10 @@ def cobertura(p):
 
 def generar(p, carpeta):
     inf = Informe("plantilla", f"Recomendaciones de plantilla · {p.cfg.get('club', '')}", p.fecha)
-    faltan = falta(p.columnas, ["nota", "minutos", "partidos"])
+    faltan = falta(p.columnas | ({"nota", "partidos"} if p.fuente_nota else set()), ["nota", "minutos", "partidos"])
+    if p.fuente_nota:
+        inf.texto(f"Nota media y partidos: de las {p.fuente_nota}. Solo cuentan para VENDER/RENOVAR a partir de "
+                  f"{p.cfg.get('recomendaciones', {}).get('partidos_minimos_nota', 5)} titularidades.")
     if faltan:
         inf.aviso("Datos que no salen en las capturas: " + ", ".join(NOMBRE_DATO[d] for d in faltan)
                   + ". El rendimiento se mide por estrellas de calidad y los minutos, por el «Tiempo de juego».")

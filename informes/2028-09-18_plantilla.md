@@ -2,7 +2,9 @@
 
 *Fecha de juego: 18/09/2028*
 
-> ⚠️ Datos que no salen en las capturas: Nota media, Minutos jugados, Partidos jugados. El rendimiento se mide por estrellas de calidad y los minutos, por el «Tiempo de juego».
+Nota media y partidos: de las alineaciones de los partidos (solo titulares). Solo cuentan para VENDER/RENOVAR a partir de 5 titularidades.
+
+> ⚠️ Datos que no salen en las capturas: Minutos jugados. El rendimiento se mide por estrellas de calidad y los minutos, por el «Tiempo de juego».
 
 Potencial con rango (estrellas blancas): uso el criterio «media» de config.yaml.
 

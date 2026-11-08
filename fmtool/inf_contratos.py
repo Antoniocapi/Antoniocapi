@@ -123,7 +123,9 @@ def generar(p, carpeta):
                 alertas.append(f"cobra {ratio:g} veces lo normal para sus {j['calidad']:g}★")
         if (j["edad"] or 0) >= 28 and sueldo_p75 and j["sueldo"] >= sueldo_p75 and (p.pot(j) or 0) <= (j["calidad"] or 0):
             alertas.append(f"{j['edad']} años, de los sueldos más altos y sin margen de mejora")
-        if j["nota"] is not None and j["nota"] < cfg.get("recomendaciones", {}).get("nota_minima", 6.6) and tope and j["sueldo"] > tope * 0.75:
+        rec = cfg.get("recomendaciones", {})
+        if (j["nota"] is not None and (j["partidos"] or 0) >= rec.get("partidos_minimos_nota", 5)
+                and j["nota"] < rec.get("nota_minima", 6.6) and tope and j["sueldo"] > tope * 0.75):
             alertas.append(f"nota media {j['nota']:g} para un sueldo alto")
         filas.append({
             "Jugador": j["jugador"], "Equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "Edad": j["edad"],

@@ -25,6 +25,12 @@ COLUMNAS = {
     "faltas": ["Faltas"],
     "amarillas": ["Amarillas"],
     "mentalidad": ["Mentalidad"],
+    "dis_favor": ["Disparos a favor"],
+    "dis_contra": ["Disparos en contra"],
+    "tap_favor": ["Tiros a puerta a favor"],
+    "tap_contra": ["Tiros a puerta en contra"],
+    "cor_favor": ["Córners a favor"],
+    "cor_contra": ["Córners en contra"],
 }
 
 
@@ -49,7 +55,8 @@ def leer_partidos(ruta):
             "gf": int(m[1]), "gc": int(m[2]),
             "mentalidad": (v("mentalidad") or "").strip() or "(sin indicar)",
         }
-        for k in ("xg_favor", "xg_contra", "oc_favor", "oc_contra", "posesion", "prpad", "faltas", "amarillas"):
+        for k in ("xg_favor", "xg_contra", "oc_favor", "oc_contra", "posesion", "prpad", "faltas", "amarillas",
+                  "dis_favor", "dis_contra", "tap_favor", "tap_contra", "cor_favor", "cor_contra"):
             p[k] = numero(v(k))
         partidos.append(p)
     faltan = [COLUMNAS[k][0] for k, c in mapa.items() if c is None]
@@ -85,6 +92,40 @@ def buscar_posicion(tabla, rival):
         if k.startswith(clave) or clave.startswith(k):
             return v
     return None
+
+
+def rendimiento_jugadores(carpeta):
+    """Titularidades, nota media, goles y asistencias por jugador. Lista vacía si no hay alineaciones."""
+    ruta_al, ruta_go = Path(carpeta, "alineaciones.csv"), Path(carpeta, "goles.csv")
+    if not ruta_al.exists():
+        return []
+    _, filas = leer_csv(ruta_al)
+    datos = {}
+    for f in filas:
+        d = datos.setdefault(f["Jugador"], {"notas": [], "pos": set(), "goles": 0, "asist": 0})
+        n = numero(f.get("Nota"))
+        if n is not None:
+            d["notas"].append(n)
+        d["pos"].add(f.get("Posición", ""))
+    if ruta_go.exists():
+        _, goles = leer_csv(ruta_go)
+        for g in goles:
+            if _clave(g.get("Equipo", "")) != "salamanca":
+                continue
+            if g.get("Goleador"):
+                datos.setdefault(g["Goleador"], {"notas": [], "pos": set(), "goles": 0, "asist": 0})["goles"] += 1
+            if g.get("Asistente"):
+                datos.setdefault(g["Asistente"], {"notas": [], "pos": set(), "goles": 0, "asist": 0})["asist"] += 1
+    res = []
+    for nombre, d in datos.items():
+        notas = d["notas"]
+        media = round(sum(notas) / len(notas), 2) if notas else None
+        res.append({"Jugador": nombre, "Titularidades": len(notas), "Nota media": media,
+                    "Mejor nota": max(notas) if notas else None, "Peor nota": min(notas) if notas else None,
+                    "Goles": d["goles"], "Asistencias": d["asist"], "Posiciones": ", ".join(sorted(p for p in d["pos"] if p)),
+                    "_nivel": "verde" if media and media >= 7 else ("rojo" if media and media < 6.5 else "")})
+    res.sort(key=lambda r: (-(r["Nota media"] or 0), -r["Titularidades"]))
+    return res
 
 
 def _poisson(k, lam):
@@ -143,11 +184,15 @@ def resumen(partidos, nombre):
         "PRPAD medio": _media(p["prpad"] for p in partidos),
         "Faltas/partido": _media(p["faltas"] for p in partidos),
         "Amarillas/partido": _media(p["amarillas"] for p in partidos),
+        "Disparos (F-C)": texto_par(suma([p["dis_favor"] for p in partidos]), suma([p["dis_contra"] for p in partidos])),
+        "A puerta (F-C)": texto_par(suma([p["tap_favor"] for p in partidos]), suma([p["tap_contra"] for p in partidos])),
+        "Córners (F-C)": texto_par(suma([p["cor_favor"] for p in partidos]), suma([p["cor_contra"] for p in partidos])),
     }
 
 
 COLS = ["Grupo", "PJ", "G-E-P", "Puntos", "xPts", "GF", "GC", "xG favor", "xG contra", "Dif. xG", "Dif. xG/partido",
-        "Ocasiones claras (F-C)", "Posesión media", "PRPAD medio", "Faltas/partido", "Amarillas/partido"]
+        "Ocasiones claras (F-C)", "Disparos (F-C)", "A puerta (F-C)", "Córners (F-C)", "Posesión media", "PRPAD medio",
+        "Faltas/partido", "Amarillas/partido"]
 
 
 def generar(ruta_csv, cfg, carpeta, carpeta_liga=None):
@@ -259,6 +304,15 @@ def generar(ruta_csv, cfg, carpeta, carpeta_liga=None):
                              "_nivel": "naranja" if tramo == "de arriba" else ""})
         inf.seccion("Próximos partidos")
         inf.tabla("Próximos", ["Fecha", "Rival", "Campo", "Pos. rival", "Tramo", "Competición"], proximos[:8])
+
+    # Rendimiento individual (alineaciones.csv y goles.csv)
+    carpeta_partidos = Path(ruta_csv).parent
+    jugadores = rendimiento_jugadores(carpeta_partidos)
+    if jugadores:
+        inf.seccion("Jugadores (titularidades, nota, goles y asistencias)")
+        inf.texto("Solo cuento titulares: las capturas del partido no muestran a los suplentes que entran.")
+        inf.tabla("Jugadores", ["Jugador", "Titularidades", "Nota media", "Mejor nota", "Peor nota", "Goles", "Asistencias",
+                                "Posiciones"], jugadores)
 
     # Lista de partidos
     inf.seccion("Partidos")

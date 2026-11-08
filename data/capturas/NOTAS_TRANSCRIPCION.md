@@ -61,3 +61,12 @@ Capturas: `analitica_*_2028-09-18.webp` → `data/analitica/equipo_2028-09-18.cs
   - ≈ 13 % ganados (media ≈ 29 %).
   - En el gráfico hay un segundo jugador con foto, sin nombre: no lo transcribo.
 - **Acciones defensivas**: 84 por partido (media 66). Por zonas, de nuestra área a la del rival: 42 %, 29 %, 14 %, 7 %, 4 % y 4 %. El FM dice que la mayoría son cerca de nuestra área.
+
+## Partidos J1-J4 (pantalla Resultado de cada partido)
+
+Capturas: `partido_J0X-*.webp`.
+
+- **`data/partidos/partidos.csv`**: estadísticas del equipo desde nuestro punto de vista: resultado con nuestros goles primero, "a favor" = nuestro, "en contra"/"rival" = suyo. J1 era Numantia (domingo 3/9/2028, Nuevo Los Pajaritos).
+- **`data/partidos/alineaciones.csv`**: el once inicial con su nota. Los suplentes no salen (Edu González dio una asistencia en J3 y no está en el once). He puesto el nombre completo de la plantilla; "Osei Philip" = Philip Osei.
+- **`data/partidos/goles.csv`**: goles y asistencias, con los nombres del rival tal como salen.
+- **Mentalidad**: no sale en las capturas de los partidos; la dejo vacía.
