@@ -9,6 +9,7 @@ Uso:  python fm.py <comando>
   cantera      Jóvenes de 19 años o menos con potencial alto y dónde deben jugar
   partidos     Informe de partidos (data/partidos/partidos.csv)
   disciplina   Amarillas por jugador y quién está cerca del ciclo
+  equipo       Analítica del Centro de datos frente a la media de la liga
   evolucion    Evolución de la plantilla (o de un jugador: python fm.py evolucion "Pau Calvo")
   todo         Genera todos los informes
 """
@@ -18,7 +19,7 @@ import sys
 
 from fmtool import bd
 from fmtool.comun import RAIZ, Plantilla, abrir_bd, cargar_config
-from fmtool import (inf_cantera, inf_contratos, inf_disciplina, inf_evolucion, inf_fichajes,
+from fmtool import (inf_cantera, inf_contratos, inf_disciplina, inf_equipo, inf_evolucion, inf_fichajes,
                     inf_partidos, inf_plantilla)
 from fmtool.comun import NOMBRE_DATO
 
@@ -62,7 +63,7 @@ def main():
     parser = argparse.ArgumentParser(description="Gestión de la partida de FM27", formatter_class=argparse.RawDescriptionHelpFormatter,
                                      epilog=__doc__)
     parser.add_argument("comando", choices=["importar", "revisar", "contratos", "plantilla", "fichajes", "cantera",
-                                            "partidos", "disciplina", "evolucion", "todo"])
+                                            "partidos", "disciplina", "equipo", "evolucion", "todo"])
     parser.add_argument("jugador", nargs="?", help="(solo evolucion) nombre del jugador")
     args = parser.parse_args()
 
@@ -98,6 +99,8 @@ def main():
             print("Ranking de fichajes:"); avisar_guardado(rutas)
         else:
             print("Fichajes: no hay listas de ojeo en data/ojeo/ todavía.")
+    if c == "equipo" or todo:
+        cmd_equipo(cfg)
     if c == "partidos" or todo:
         if not CSV_PARTIDOS.exists():
             print(f"Partidos: falta {CSV_PARTIDOS.relative_to(RAIZ)}.")
@@ -109,6 +112,14 @@ def main():
                 print("Partidos:"); avisar_guardado(rutas)
             else:
                 print("Partidos: el CSV no tiene partidos todavía.")
+
+
+def cmd_equipo(cfg):
+    rutas = inf_equipo.generar(RAIZ / "data" / "analitica", cfg, INFORMES)
+    if rutas:
+        print("Analítica de equipo:"); avisar_guardado(rutas)
+    else:
+        print("Equipo: no hay capturas de analítica en data/analitica/ todavía.")
 
 
 if __name__ == "__main__":

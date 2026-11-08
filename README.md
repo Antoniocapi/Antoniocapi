@@ -28,6 +28,7 @@ pip install -r requirements.txt
 | `python fm.py fichajes` | Ranking 0-100 "modelo Castellón" por posición, con la lista de descartados y su motivo. |
 | `python fm.py cantera` | Jugadores de 19 años o menos con potencial de 4★ o más, su evolución y dónde deben jugar. |
 | `python fm.py partidos` | Bloques de 10 jornadas: xG, xPts, casa/fuera, rivales de arriba/abajo, mentalidad y alertas de faltas y tarjetas. |
+| `python fm.py equipo` | Analítica del Centro de datos frente a la media de la liga: juego (xG) frente a resultados y métricas mejores o peores que la media. |
 | `python fm.py disciplina` | Amarillas por jugador y quién está a 1 o 2 de la sanción. |
 | `python fm.py evolucion` | Cambios de estrellas y valor entre capturas. Para un jugador: `python fm.py evolucion "Pau Calvo"`. |
 | `python fm.py todo` | Genera todos los informes. |

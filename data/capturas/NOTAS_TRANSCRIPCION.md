@@ -38,3 +38,13 @@ Captura: `portal_vista-general_2028-09-18.webp`.
 - **Presupuestos** → `config.yaml`. Aquí "M" = millones: 1,82M € = 1.820.000 €.
   - Fichajes: disponible 14.000 €, gastado 39.150 €.
   - Sueldos: gasto 1.820.000 € al año, disponible 195.000 € al año.
+
+## 18/09/2028 · Tácticas > Centro de datos (análisis del segundo entrenador)
+
+Capturas: `analitica_*_2028-09-18.webp` → `data/analitica/equipo_2028-09-18.csv` y `data/analitica/jugador_2028-09-18.csv`.
+
+- Son valores por partido de la temporada (4 jornadas), comparados con la media de la 2ª Federación Gr. 5 (en el jugador, con la media de su rol).
+- La métrica `% Pase` sale en las 3 capturas con el mismo valor (80,2 / 88,4); `Gol/Par`, `xG- Sp/90`, `Dis/Par`, `% disparos`, `Enc/Par`, `xGC/Par` y `% ent` se repiten en varias y coinciden.
+- **Gráfico de pases (pases intentados por partido / % completados)**: no se leen los números del eje vertical (están cortados). Solo apunto lo que dice el FM: somos el equipo que menos pases da y de los menos precisos (esquina inferior izquierda).
+- Sin confirmar qué mide `Imb` ni el sentido exacto de `1/3 final pas con/par`: no los valoro como mejor/peor.
+- **Jornada 1** (dato del usuario): Numantia 2-0 Salamanca → en `partidos.csv` como `0-2`. Sin fecha ni campo: no los sé.

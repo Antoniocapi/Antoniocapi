@@ -44,7 +44,8 @@ def leer_partidos(ruta):
         p = {
             "fecha": fecha(v("fecha")), "jornada": numero(v("jornada")), "competicion": (v("competicion") or "").strip(),
             "rival": (v("rival") or "").strip(), "pos_rival": numero(v("pos_rival")),
-            "local": campo.startswith(("l", "c")),  # Local / Casa
+            # Local / Casa = True, Visitante / Fuera = False, vacío = no se sabe
+            "local": None if not campo else campo.startswith(("l", "c")),
             "gf": int(m[1]), "gc": int(m[2]),
             "mentalidad": (v("mentalidad") or "").strip() or "(sin indicar)",
         }
@@ -161,7 +162,7 @@ def generar(ruta_csv, cfg, carpeta, carpeta_liga=None):
             rellenadas += p["pos_rival"] is not None
     if not partidos:
         return None, errores
-    partidos.sort(key=lambda p: (p["fecha"] is None, p["fecha"]))
+    partidos.sort(key=lambda p: (p["jornada"] if p["jornada"] is not None else 999, p["fecha"] or fecha("1/1/2100")))
     ultima = max((p["fecha"] for p in partidos if p["fecha"]), default=None)
     inf = Informe("partidos", f"Seguimiento de partidos · {cfg.get('club', '')}", ultima)
     for e in errores:
@@ -217,7 +218,10 @@ def generar(ruta_csv, cfg, carpeta, carpeta_liga=None):
     # Casa / fuera
     inf.seccion("En casa y fuera")
     inf.tabla("Casa-fuera", COLS, [r for r in (resumen([p for p in partidos if p["local"]], "Local"),
-                                               resumen([p for p in partidos if not p["local"]], "Visitante")) if r])
+                                               resumen([p for p in partidos if p["local"] is False], "Visitante")) if r])
+    sin_campo = [p for p in partidos if p["local"] is None]
+    if sin_campo:
+        inf.aviso(f"{len(sin_campo)} partidos sin indicar Local/Visitante: no cuentan en esta tabla.")
 
     # Rivales de arriba / abajo
     inf.seccion("Según el rival")
@@ -260,7 +264,7 @@ def generar(ruta_csv, cfg, carpeta, carpeta_liga=None):
     inf.seccion("Partidos")
     inf.tabla("Partidos", ["Fecha", "J", "Rival", "Pos. rival", "Campo", "Resultado", "xG", "xPts", "Mentalidad"], [{
         "Fecha": p["fecha"].strftime("%d/%m/%Y") if p["fecha"] else "", "J": p["jornada"], "Rival": p["rival"],
-        "Pos. rival": p["pos_rival"], "Campo": "Local" if p["local"] else "Visitante", "Resultado": f"{p['gf']}-{p['gc']}",
+        "Pos. rival": p["pos_rival"], "Campo": {True: "Local", False: "Visitante"}.get(p["local"], "?"), "Resultado": f"{p['gf']}-{p['gc']}",
         "xG": f"{p['xg_favor']:g}-{p['xg_contra']:g}" if p["xg_favor"] is not None and p["xg_contra"] is not None else "",
         "xPts": round(puntos_esperados(p["xg_favor"], p["xg_contra"]), 2) if p["xg_favor"] is not None and p["xg_contra"] is not None else None,
         "Mentalidad": p["mentalidad"],
