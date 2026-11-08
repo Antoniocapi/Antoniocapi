@@ -48,3 +48,16 @@ Capturas: `analitica_*_2028-09-18.webp` → `data/analitica/equipo_2028-09-18.cs
 - **Gráfico de pases (pases intentados por partido / % completados)**: no se leen los números del eje vertical (están cortados). Solo apunto lo que dice el FM: somos el equipo que menos pases da y de los menos precisos (esquina inferior izquierda).
 - Sin confirmar qué mide `Imb` ni el sentido exacto de `1/3 final pas con/par`: no los valoro como mejor/peor.
 - **Jornada 1** (dato del usuario): Numantia 2-0 Salamanca → en `partidos.csv` como `0-2`. Sin fecha ni campo: no los sé.
+- **Jornada 1**: el usuario confirma que fue **fuera de casa**. La fecha sigue sin saberse.
+
+## 18/09/2028 · Centro de datos (balón parado, juego aéreo y acciones defensivas)
+
+- **Balón parado defensivo** (gráfico de dispersión): somos el escudo de arriba a la derecha. Valores **leídos a ojo** con las marcas de los ejes:
+  - centros del rival a balón parado ≈ 11,8 por partido (media ≈ 6,3);
+  - xA del rival a balón parado ≈ 0,16 por partido (media ≈ 0,06).
+  - El FM dice: "Encajamos más xA a balón parado que la media" y "Recibimos más centros a balón parado que la media".
+- **Óscar León, juego aéreo** (relativo a los delanteros de la división; leído a ojo):
+  - ≈ 9,8 cabezazos intentados por 90' (media ≈ 4,3);
+  - ≈ 13 % ganados (media ≈ 29 %).
+  - En el gráfico hay un segundo jugador con foto, sin nombre: no lo transcribo.
+- **Acciones defensivas**: 84 por partido (media 66). Por zonas, de nuestra área a la del rival: 42 %, 29 %, 14 %, 7 %, 4 % y 4 %. El FM dice que la mayoría son cerca de nuestra área.

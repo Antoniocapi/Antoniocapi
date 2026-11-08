@@ -23,6 +23,17 @@ METRICAS = {
     "Imb": ("Imb (sin confirmar qué mide)", 0),
     "PRPAD": ("Pases rivales por acción defensiva (más bajo = más presión)", 0),
     "Pos gan/par": ("Posesiones ganadas por partido", +1),
+    "Centros rivales ABP/par (aprox.)": ("Centros del rival a balón parado por partido", -1),
+    "xA rival ABP/par (aprox.)": ("xA del rival a balón parado por partido", -1),
+    "Acciones def./par": ("Acciones defensivas por partido", 0),
+    "Acc. def. zona 1 - propia área (%)": ("% de acciones defensivas junto a nuestra área", 0),
+    "Acc. def. zona 2 (%)": ("% de acciones defensivas, zona 2", 0),
+    "Acc. def. zona 3 (%)": ("% de acciones defensivas, zona 3", 0),
+    "Acc. def. zona 4 (%)": ("% de acciones defensivas, zona 4", 0),
+    "Acc. def. zona 5 (%)": ("% de acciones defensivas, zona 5", 0),
+    "Acc. def. zona 6 - área rival (%)": ("% de acciones defensivas junto al área rival", 0),
+    "Cabezazos intentados/90 (aprox.)": ("Balones aéreos disputados por 90'", 0),
+    "% cabezazos ganados (aprox.)": ("% de balones aéreos ganados", +1),
     # jugador
     "Desp/90": ("Despejes por 90'", +1),
     "Cab 90": ("Cabezazos ganados por 90'", +1),
@@ -98,6 +109,8 @@ def generar(carpeta_analitica, cfg, carpeta, partidos=None):
     inf.seccion("Métricas frente a la media de la liga")
     inf.texto("Valoración: «mejor/peor» si nos separamos más de un 5 % de la media; «estilo» = depende del plan de juego "
               "(un bloque medio de contraataque presiona menos, así que un PRPAD alto es esperable).")
+    inf.texto("«(aprox.)» = valor leído a ojo en un gráfico de dispersión del FM (margen de ±0,3 en centros, ±0,01 en xA, "
+              "±0,3 en cabezazos y ±2 puntos en %).")
     inf.tabla("Equipo", ["Bloque", "Métrica", "Qué es", "Nosotros", "Media", "Diferencia", "Valoración"],
               _tabla(filas_csv, "Salamanca", "Media 2F5"))
 
