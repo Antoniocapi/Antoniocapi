@@ -69,4 +69,4 @@ Capturas: `partido_J0X-*.webp`.
 - **`data/partidos/partidos.csv`**: estadísticas del equipo desde nuestro punto de vista: resultado con nuestros goles primero, "a favor" = nuestro, "en contra"/"rival" = suyo. J1 era Numantia (domingo 3/9/2028, Nuevo Los Pajaritos).
 - **`data/partidos/alineaciones.csv`**: el once inicial con su nota. Los suplentes no salen (Edu González dio una asistencia en J3 y no está en el once). He puesto el nombre completo de la plantilla; "Osei Philip" = Philip Osei.
 - **`data/partidos/goles.csv`**: goles y asistencias, con los nombres del rival tal como salen.
-- **Mentalidad**: no sale en las capturas de los partidos; la dejo vacía.
+- **Mentalidad**: no sale en las capturas. El usuario dice que normalmente juega con Equilibrada, así que la pongo en los 4 partidos. En el Centro de datos aparece "4-3-3 2MC Abierto Positiva" en algún partido: si fue alguno de estos, hay que corregirlo.
