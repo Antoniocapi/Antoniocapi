@@ -73,6 +73,10 @@ recomendaciones:
     - Portero de competiciones de copa
     - Recambio de emergencia
   minutos_minimos_temporada: 900 # si algún día hay columna de minutos
+  # Con alineaciones guardadas (data/partidos/alineaciones.csv), "pocos minutos" =
+  # titular en menos de esta proporción de partidos (a partir de partidos_minimos_minutos partidos)
+  proporcion_titular_minima: 0.34
+  partidos_minimos_minutos: 4
   edad_veterano: 30              # VENDER YA si está en declive o sin margen
   edad_pico: 27                  # a partir de aquí, sin margen y con valor = vender en el pico
   valor_minimo_venta: 50000      # valor estimado (punto medio) para considerar que "tiene valor"

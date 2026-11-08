@@ -11,10 +11,10 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 ## Resumen
 
 - **VENDER YA**: 1
-- **RENOVAR**: 4
-- **CEDER**: 5
+- **RENOVAR**: 5
+- **CEDER**: 2
 - **SALE LIBRE**: 10
-- **MANTENER**: 31
+- **MANTENER**: 33
 - **CEDIDO AQUÍ**: 2
 - **SIN DATOS**: 4
 
@@ -31,17 +31,15 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | 🟢 | Jordi Martínez | Filial | 20 | POR | 2 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 20.000 | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Lucas Balan | Filial | 19 | ME (C) | 2 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2029 | 26.000 | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Jon Eceizabarrena | Primer equipo | 23 | ME (C) | 3 | 4 | Jugador secundario |  | 30/06/2029 | 60.000 | Joven (23) con potencial 4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
+| 🟢 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 39.500 | Joven (21) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Óscar León | Primer equipo | 23 | DL (C) | 3 | 3.5 | Titular habitual |  | 30/06/2029 | 65.500 | Joven (23) con potencial 3.5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 
 ## CEDER
 
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 🟠 | Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 20 años, 2.5★/4-5★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. |
-| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. |
-| 🟠 | Mario Valdaliso | Primer equipo | 20 | MP (I) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 44.000 | 20 años, 2.5★/3-4★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. |
-| 🟠 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 39.500 | 21 años, 3★/3-4★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. Renuévalo antes de cederlo (acaba 30/06/2029). |
-| 🟠 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 20 años, 3★/3.5-4.5★ y pocos minutos (estado «Promesa casi en el primer equipo», sin datos de minutos): necesita jugar fuera. Le siguen otros clubes: blinda su contrato antes de cederlo. |
+| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (titular en 0 de 4 partidos): necesita jugar fuera. |
+| 🟠 | Mario Valdaliso | Primer equipo | 20 | MP (I) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 44.000 | 20 años, 2.5★/3-4★ y pocos minutos (titular en 1 de 4 partidos): necesita jugar fuera. |
 
 ## SALE LIBRE
 
@@ -90,8 +88,10 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Joaquín Tello | Primer equipo | 17 | MP (C) | 2 | 4-5 | Futura promesa | Con minutos en el B | 30/06/2030 | 7.000 | 2★/4-5★, ya suma minutos con el B: no hace falta cederlo. Contrato hasta 30/06/2030. |
 | Lucas Santos | Primer equipo | 22 | DF (C) | 2.5 | 3.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 33.500 | 2.5★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Luis Bilbao | Primer equipo | 25 | MP (D) | 3 | 3.5 | Jugador importante |  | 30/06/2030 | 120.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 2.5★/4-5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Mulas | Primer equipo | 22 | DF (C) | 3 | 3.5 | Jugador de plantilla |  | 30/06/2030 | 71.500 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Pavel Kadochnikov | Primer equipo | 22 | MC | 3 | 3 | Revulsivo desde el banquillo |  | 30/06/2030 | 80.000 | 3★/3★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 3★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
 | Álvaro Jiménez | Primer equipo | 25 | POR | 3 | 3.5 | Jugador importante |  | 30/06/2030 | 52.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 
 ## CEDIDO AQUÍ

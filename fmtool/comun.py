@@ -51,6 +51,15 @@ class Plantilla:
         self.columnas = set().union(*(j["columnas"] for j in self.jugadores)) if self.jugadores else set()
         # Nota media y titularidades sacadas de data/partidos/alineaciones.csv (si no vienen en la plantilla)
         self.fuente_nota = None
+        # Titularidades por jugador y nº de partidos con alineación guardada (sirve como "minutos")
+        self.titularidades, self.partidos_con_once = {}, 0
+        ruta_al = RAIZ / "data" / "partidos" / "alineaciones.csv"
+        if ruta_al.exists():
+            from .datos import leer_csv
+            _, filas_al = leer_csv(ruta_al)
+            self.partidos_con_once = len({f.get("Fecha") for f in filas_al})
+            for f in filas_al:
+                self.titularidades[f["Jugador"]] = self.titularidades.get(f["Jugador"], 0) + 1
         if "nota" not in self.columnas:
             from .inf_partidos import rendimiento_jugadores
             rend = {r["Jugador"]: r for r in rendimiento_jugadores(RAIZ / "data" / "partidos")}

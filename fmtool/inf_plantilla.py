@@ -70,6 +70,11 @@ def _recomendar(p, j):
     if j["minutos"] is not None:
         pocos_minutos = j["minutos"] < r.get("minutos_minimos_temporada", 900)
         fuente = f"{int(j['minutos'])} minutos"
+    elif p.partidos_con_once >= r.get("partidos_minimos_minutos", 4):
+        # Con alineaciones guardadas: pocos minutos = titular en menos de un tercio de los partidos
+        tit = p.titularidades.get(j["jugador"], 0)
+        pocos_minutos = tit / p.partidos_con_once < r.get("proporcion_titular_minima", 0.34)
+        fuente = f"titular en {tit} de {p.partidos_con_once} partidos"
     elif j["grupo"] == "primer-equipo" and j["estado"] in (r.get("estados_pocos_minutos") or []):
         pocos_minutos = True
         fuente = f"estado «{j['estado']}», sin datos de minutos"
