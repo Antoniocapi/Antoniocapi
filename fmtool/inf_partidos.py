@@ -2,6 +2,7 @@
 
 import math
 import re
+from pathlib import Path
 
 from .datos import fecha, leer_csv, mapa_columnas, numero, _clave
 from .salida import Informe
@@ -54,6 +55,37 @@ def leer_partidos(ruta):
     return partidos, errores, faltan
 
 
+def _equipo(nombre):
+    """Clave para comparar nombres de equipo ('R.C. Alcobe...' ~ 'R.C. Alcobendas')."""
+    return re.sub(r"[^a-z0-9 ]", "", _clave(nombre).replace("...", "")).strip()
+
+
+def _ultimo(carpeta, prefijo):
+    """El CSV más reciente de data/liga con ese prefijo (p. ej. clasificacion_AAAA-MM-DD.csv)."""
+    archivos = sorted(Path(carpeta).glob(f"{prefijo}_*.csv"))
+    return archivos[-1] if archivos else None
+
+
+def cargar_clasificacion(carpeta):
+    """Devuelve (fecha, {clave_equipo: posición}) de la última clasificación guardada."""
+    ruta = _ultimo(carpeta, "clasificacion")
+    if not ruta:
+        return None, {}
+    _, filas = leer_csv(ruta)
+    tabla = {_equipo(f.get("Equipo", "")): numero(f.get("Pos")) for f in filas}
+    return fecha(ruta.stem.split("_")[-1]), tabla
+
+
+def buscar_posicion(tabla, rival):
+    clave = _equipo(rival)
+    if clave in tabla:
+        return tabla[clave]
+    for k, v in tabla.items():  # nombre cortado o abreviado
+        if k.startswith(clave) or clave.startswith(k):
+            return v
+    return None
+
+
 def _poisson(k, lam):
     return math.exp(-lam) * lam ** k / math.factorial(k)
 
@@ -87,15 +119,25 @@ def resumen(partidos, nombre):
     xgf = [p["xg_favor"] for p in partidos]
     xgc = [p["xg_contra"] for p in partidos]
     xpts = [puntos_esperados(p["xg_favor"], p["xg_contra"]) for p in partidos]
-    suma = lambda l: round(sum(x for x in l if x is not None), 2)
+    def suma(lista):
+        v = [x for x in lista if x is not None]
+        return round(sum(v), 2) if v else None
+
+    def resta(a, b):
+        return None if a is None or b is None else round(a - b, 2)
+
+    def texto_par(a, b):
+        return "" if a is None and b is None else f"{a or 0:g}-{b or 0:g}"
+
     puntos = 3 * g + e
+    dif = resta(suma(xgf), suma(xgc))
     return {
         "Grupo": nombre, "PJ": len(partidos), "G-E-P": f"{g}-{e}-{len(partidos) - g - e}", "Puntos": puntos,
-        "xPts": suma(xpts) if any(x is not None for x in xpts) else None,
+        "xPts": suma(xpts),
         "GF": sum(p["gf"] for p in partidos), "GC": sum(p["gc"] for p in partidos),
-        "xG favor": suma(xgf), "xG contra": suma(xgc), "Dif. xG": round(suma(xgf) - suma(xgc), 2),
-        "Dif. xG/partido": round((suma(xgf) - suma(xgc)) / len(partidos), 2),
-        "Ocasiones claras (F-C)": f"{suma([p['oc_favor'] for p in partidos]):g}-{suma([p['oc_contra'] for p in partidos]):g}",
+        "xG favor": suma(xgf), "xG contra": suma(xgc), "Dif. xG": dif,
+        "Dif. xG/partido": None if dif is None else round(dif / len(partidos), 2),
+        "Ocasiones claras (F-C)": texto_par(suma([p["oc_favor"] for p in partidos]), suma([p["oc_contra"] for p in partidos])),
         "Posesión media": _media(p["posesion"] for p in partidos),
         "PRPAD medio": _media(p["prpad"] for p in partidos),
         "Faltas/partido": _media(p["faltas"] for p in partidos),
@@ -107,9 +149,16 @@ COLS = ["Grupo", "PJ", "G-E-P", "Puntos", "xPts", "GF", "GC", "xG favor", "xG co
         "Ocasiones claras (F-C)", "Posesión media", "PRPAD medio", "Faltas/partido", "Amarillas/partido"]
 
 
-def generar(ruta_csv, cfg, carpeta):
+def generar(ruta_csv, cfg, carpeta, carpeta_liga=None):
     c = cfg.get("partidos", {})
     partidos, errores, faltan = leer_partidos(ruta_csv)
+    # Si no has puesto la posición del rival, la tomo de la última clasificación guardada
+    fecha_tabla, tabla = cargar_clasificacion(carpeta_liga) if carpeta_liga else (None, {})
+    rellenadas = 0
+    for p in partidos:
+        if p["pos_rival"] is None and tabla:
+            p["pos_rival"] = buscar_posicion(tabla, p["rival"])
+            rellenadas += p["pos_rival"] is not None
     if not partidos:
         return None, errores
     partidos.sort(key=lambda p: (p["fecha"] is None, p["fecha"]))
@@ -119,6 +168,13 @@ def generar(ruta_csv, cfg, carpeta):
         inf.aviso(e)
     if faltan:
         inf.aviso("Columnas que faltan en partidos.csv: " + ", ".join(faltan))
+    if rellenadas:
+        inf.texto(f"Posición del rival: en {rellenadas} partidos la tomo de la clasificación del "
+                  f"{fecha_tabla.strftime('%d/%m/%Y')} (su puesto actual, no el del día del partido).")
+    sin_xg = [p for p in partidos if p["xg_favor"] is None or p["xg_contra"] is None]
+    if sin_xg:
+        inf.aviso(f"{len(sin_xg)} partidos sin xG en partidos.csv: el análisis por xG estará incompleto hasta que los rellenes "
+                  "(" + ", ".join(f"{p['fecha'].strftime('%d/%m') if p['fecha'] else '?'} {p['rival']}" for p in sin_xg) + ").")
 
     def alertas(fila):
         a = []
@@ -180,6 +236,25 @@ def generar(ruta_csv, cfg, carpeta):
     inf.seccion("Según la mentalidad usada")
     mentalidades = sorted({p["mentalidad"] for p in partidos})
     inf.tabla("Mentalidad", COLS, [resumen([p for p in partidos if p["mentalidad"] == m], m) for m in mentalidades])
+
+    # Próximos partidos (calendario guardado en data/liga)
+    ruta_cal = _ultimo(carpeta_liga, "calendario") if carpeta_liga else None
+    if ruta_cal:
+        _, cal = leer_csv(ruta_cal)
+        jugados = {p["fecha"] for p in partidos}
+        proximos = []
+        for f in cal:
+            d = fecha(f.get("Fecha"))
+            if d is None or d in jugados or (f.get("Resultado") or "").strip() not in ("", "-"):
+                continue
+            pos = buscar_posicion(tabla, f.get("Club", ""))
+            tramo = ("" if pos is None else "de arriba" if pos <= arriba else "de abajo" if pos >= abajo else "mitad")
+            proximos.append({"Fecha": d.strftime("%d/%m/%Y"), "Rival": f.get("Club"),
+                             "Campo": "Local" if (f.get("Estadio") or "").strip().upper() == "C" else "Visitante",
+                             "Pos. rival": pos, "Tramo": tramo, "Competición": f.get("Competición"),
+                             "_nivel": "naranja" if tramo == "de arriba" else ""})
+        inf.seccion("Próximos partidos")
+        inf.tabla("Próximos", ["Fecha", "Rival", "Campo", "Pos. rival", "Tramo", "Competición"], proximos[:8])
 
     # Lista de partidos
     inf.seccion("Partidos")

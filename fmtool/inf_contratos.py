@@ -139,22 +139,27 @@ def generar(p, carpeta):
     # Masa salarial
     inf.seccion("Masa salarial")
     masas = {}
-    for j in jugadores:
+    for j in p.unicos():  # aquí sí cuentan los cedidos: también cobran
         masas[j["grupo"]] = masas.get(j["grupo"], 0) + (j["sueldo"] or 0)
     filas_masa = [{"Equipo": NOMBRE_GRUPO.get(g, g), "Masa salarial (€)": v} for g, v in masas.items()]
     total = sum(masas.values())
     filas_masa.append({"Equipo": "TOTAL", "Masa salarial (€)": total})
     inf.tabla("Masa salarial", ["Equipo", "Masa salarial (€)"], filas_masa)
-    sin_sueldo = [j["jugador"] for j in jugadores if j["sueldo"] is None]
+    sin_sueldo = [j["jugador"] for j in p.unicos() if j["sueldo"] is None]
     if sin_sueldo:
         inf.aviso("Sin sueldo en la captura (no sumados): " + ", ".join(sin_sueldo))
-    presupuesto = cfg.get("presupuesto_salarial_anual")
+    ps = cfg.get("presupuesto_sueldos") or {}
     reserva = cfg.get("reserva_enero", 0)
-    if presupuesto:
-        margen = presupuesto - total - reserva
-        inf.texto(f"Presupuesto {fmt_euros(presupuesto)} − masa {fmt_euros(total)} − reserva de enero {fmt_euros(reserva)} "
-                  f"= **margen {fmt_euros(margen)}**" + (" ⚠️ NEGATIVO" if margen < 0 else ""))
+    if ps.get("disponible") is not None:
+        margen = ps["disponible"] - reserva
+        inf.texto(f"Según el FM ({ps.get('fecha', '')}): gasto en sueldos {fmt_euros(ps.get('gasto_actual'))} al año, "
+                  f"disponible {fmt_euros(ps['disponible'])}. Restando la reserva de enero ({fmt_euros(reserva)}): "
+                  f"**margen para sueldos nuevos {fmt_euros(margen)} al año**" + (" ⚠️ NEGATIVO" if margen < 0 else "") + ".")
+        if ps.get("gasto_actual"):
+            dif = ps["gasto_actual"] - total
+            inf.texto(f"La suma de las capturas ({fmt_euros(total)}) difiere en {fmt_euros(dif)} del gasto que da el FM: "
+                      "son sueldos que no veo (jugadores sin sueldo en la captura, cedidos fuera con sueldo compartido, etc.).")
     else:
-        inf.aviso(f"No sé el presupuesto salarial del club (no sale en las capturas). Ponlo en config.yaml "
-                  f"(presupuesto_salarial_anual) y calcularé si respetas la reserva de enero de {fmt_euros(reserva)}.")
+        inf.aviso(f"No sé el presupuesto salarial (pásame una captura del Portal o rellénalo en config.yaml): "
+                  f"no puedo comprobar la reserva de enero de {fmt_euros(reserva)}.")
     return inf.guardar(carpeta)

@@ -17,9 +17,16 @@ topes_sueldo:
 # Reserva que quieres guardar para el mercado de invierno.
 reserva_enero: 100000
 
-# Presupuesto salarial anual del club. No sale en las capturas:
-# rellénalo tú (vista Club > Finanzas). Si lo dejas vacío (null), no calculo el margen.
-presupuesto_salarial_anual: null
+# Presupuestos tal como los muestra el Portal del FM (en euros).
+# Actualízalos cuando me pases una captura nueva del Portal.
+presupuesto_sueldos:
+  fecha: 2028-09-18
+  gasto_actual: 1820000        # "Gasto en sueldos 1,82M € p/a"
+  disponible: 195000           # "Presupuesto disponible 195m € p/a"
+presupuesto_fichajes:
+  fecha: 2028-09-18
+  disponible: 14000            # "Presupuesto disponible 14m €"
+  gastado: 39150               # "Gastado esta temporada 39,15m €"
 
 # Qué "Tiempo de juego" cuenta como titular o rotación en el primer equipo.
 # Lo que no esté aquí, en el primer equipo, cuenta como "rotación";
@@ -138,7 +145,7 @@ fichajes:
   edad_ideal: [19, 23]
   edad_aceptable: [19, 25]
   edad_maxima: 27                # mayores = descartados
-  presupuesto_traspasos: 100000  # traspaso máximo que puedes pagar
+  presupuesto_traspasos: null    # traspaso máximo; si es null, uso presupuesto_fichajes.disponible
   descartar_sin_encaje: false    # true = descarta a quien no encaje en posiciones_necesarias
 
 # ---------------------------------------------------------------------

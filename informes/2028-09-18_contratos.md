@@ -113,11 +113,13 @@ Topes: titular 60.000 €, rotación 40.000 €, filial/proyecto 25.000 €.
 
 | Equipo | Masa salarial (€) |
 |---|---|
-| Primer equipo | 1.266.500 |
+| Primer equipo | 1.320.750 |
 | Filial | 283.250 |
 | Juvenil | 169.150 |
-| TOTAL | 1.718.900 |
+| TOTAL | 1.773.150 |
 
 > ⚠️ Sin sueldo en la captura (no sumados): Carlos Flores, Eric, Matías Aguirre, Willian Obama
 
-> ⚠️ No sé el presupuesto salarial del club (no sale en las capturas). Ponlo en config.yaml (presupuesto_salarial_anual) y calcularé si respetas la reserva de enero de 100.000 €.
+Según el FM (2028-09-18): gasto en sueldos 1.820.000 € al año, disponible 195.000 €. Restando la reserva de enero (100.000 €): **margen para sueldos nuevos 95.000 € al año**.
+
+La suma de las capturas (1.773.150 €) difiere en 46.850 € del gasto que da el FM: son sueldos que no veo (jugadores sin sueldo en la captura, cedidos fuera con sueldo compartido, etc.).

@@ -102,7 +102,7 @@ def main():
         if not CSV_PARTIDOS.exists():
             print(f"Partidos: falta {CSV_PARTIDOS.relative_to(RAIZ)}.")
         else:
-            rutas, errores = inf_partidos.generar(CSV_PARTIDOS, cfg, INFORMES)
+            rutas, errores = inf_partidos.generar(CSV_PARTIDOS, cfg, INFORMES, RAIZ / "data" / "liga")
             for e in errores:
                 print("AVISO:", e)
             if rutas:

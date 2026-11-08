@@ -77,7 +77,7 @@ def puntuar(j, cfg, ctx):
     elif cesion:
         coste, tipo = 0.85, "Cesión"
     elif j["valor_min"] is not None:
-        presupuesto = f.get("presupuesto_traspasos", 100000)
+        presupuesto = ctx["presupuesto_traspasos"]
         coste, tipo = _limitar(1 - j["valor_min"] / presupuesto), "Traspaso"
         if j["valor_min"] > presupuesto:
             descartes.append(f"traspaso mínimo {fmt_euros(j['valor_min'])} > presupuesto {fmt_euros(presupuesto)}")
@@ -86,6 +86,8 @@ def puntuar(j, cfg, ctx):
     if j["sueldo"] is not None:
         if j["sueldo"] > topes.get("titular", 60000):
             descartes.append(f"sueldo {fmt_euros(j['sueldo'])} > tope de titular")
+        if ctx["margen_sueldos"] is not None and j["sueldo"] > ctx["margen_sueldos"]:
+            descartes.append(f"sueldo {fmt_euros(j['sueldo'])} > margen salarial tras la reserva de enero ({fmt_euros(ctx['margen_sueldos'])})")
         factor = 1.0 if j["sueldo"] <= topes.get("rotacion", 40000) else 0.7
         coste = factor if coste is None else coste * factor
     c["coste"] = coste
@@ -138,7 +140,12 @@ def generar(conn, cfg, plantilla, carpeta):
             j["focos"] = {j["grupo"]}
             jugadores[j["jugador"]] = j
     propios = {j["jugador"] for j in plantilla.jugadores}
-    ctx = {"nivel": plantilla.mediana_calidad.get("primer-equipo") or 3}
+    ps, pf = cfg.get("presupuesto_sueldos") or {}, cfg.get("presupuesto_fichajes") or {}
+    ctx = {
+        "nivel": plantilla.mediana_calidad.get("primer-equipo") or 3,
+        "presupuesto_traspasos": cfg.get("fichajes", {}).get("presupuesto_traspasos") or pf.get("disponible") or 0,
+        "margen_sueldos": (ps["disponible"] - cfg.get("reserva_enero", 0)) if ps.get("disponible") is not None else None,
+    }
 
     columnas = set().union(*(j["columnas"] for j in jugadores.values()))
     faltan = [d for d in ("recomendacion", "situacion", "club", "sueldo", "fin_contrato") if d not in columnas]
@@ -149,7 +156,9 @@ def generar(conn, cfg, plantilla, carpeta):
         inf.aviso("No has definido «posiciones_necesarias» en config.yaml: el criterio de encaje no cuenta.")
     pesos = cfg.get("fichajes", {}).get("pesos", {})
     inf.texto("Pesos: " + ", ".join(f"{k} {v}" for k, v in pesos.items())
-              + f". Nivel de referencia (calidad mediana del primer equipo): {ctx['nivel']:g}★.")
+              + f". Nivel de referencia (calidad mediana del primer equipo): {ctx['nivel']:g}★. "
+              + f"Traspaso máximo: {fmt_euros(ctx['presupuesto_traspasos'])}. "
+              + ("" if ctx["margen_sueldos"] is None else f"Margen salarial tras la reserva de enero: {fmt_euros(ctx['margen_sueldos'])} al año."))
 
     validos, descartados = [], []
     for j in jugadores.values():
