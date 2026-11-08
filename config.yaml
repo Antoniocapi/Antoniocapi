@@ -75,9 +75,9 @@ recomendaciones:
 
 # Jugadores cedidos A NUESTRO club por otros equipos.
 # No se renuevan ni se venden. Escribe el nombre tal cual sale en el CSV.
-cedidos_a_nuestro_club: []
-#  - David Hamansenya
-#  - Xavi Miràngels
+cedidos_a_nuestro_club:
+  - David Hamansenya
+  - Xavi Miràngels
 
 # ---------------------------------------------------------------------
 # Cantera

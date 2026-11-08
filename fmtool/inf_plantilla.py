@@ -89,13 +89,16 @@ def cobertura(p):
         objetivo = posiciones(pos_txt)
         naturales = [j for j in primer if posiciones(j["mejor_pos"]) & objetivo]
         otros = [j for j in primer if j not in naturales and posiciones(j["posicion"]) & objetivo]
-        cals = sorted((j["calidad"] or 0 for j in naturales), reverse=True)
-        nivel = "rojo" if len(naturales) < 2 or (cals and cals[0] < (p.mediana_calidad["primer-equipo"] or 0)) else ""
+        # Los cedidos a nuestro club no cuentan como cobertura de futuro
+        propios = [j for j in naturales if not p.es_cedido_aqui(j)]
+        cals = sorted((j["calidad"] or 0 for j in propios), reverse=True)
+        nivel = "rojo" if len(propios) < 2 or (not cals or cals[0] < (p.mediana_calidad["primer-equipo"] or 0)) else ""
         filas.append({
             "Posición": pos_txt,
-            "Nº naturales": len(naturales),
-            "Jugadores (mejor posición)": ", ".join(f"{j['jugador']} {j['calidad']:g}★/{texto_potencial(j)}★"
-                                                    for j in sorted(naturales, key=lambda x: -(x["calidad"] or 0))),
+            "Nº naturales (propios)": len(propios),
+            "Jugadores (mejor posición)": ", ".join(
+                f"{j['jugador']} {j['calidad']:g}★/{texto_potencial(j)}★" + (" (CEDIDO)" if p.es_cedido_aqui(j) else "")
+                for j in sorted(naturales, key=lambda x: -(x["calidad"] or 0))),
             "También pueden jugar": ", ".join(j["jugador"] for j in otros),
             "_nivel": nivel,
         })
@@ -135,7 +138,7 @@ def generar(p, carpeta):
             inf.tabla(accion.title(), columnas[1:], grupo)
 
     inf.seccion("Cobertura de posiciones (primer equipo)")
-    inf.texto("En rojo: menos de 2 jugadores naturales, o el mejor está por debajo de la calidad mediana del primer equipo "
+    inf.texto("En rojo: menos de 2 jugadores naturales propios (los cedidos no cuentan), o el mejor propio está por debajo de la calidad mediana del primer equipo "
               f"({p.mediana_calidad['primer-equipo']:g}★). Sirve para decidir qué reforzar en enero.")
-    inf.tabla("Cobertura", ["Posición", "Nº naturales", "Jugadores (mejor posición)", "También pueden jugar"], cobertura(p))
+    inf.tabla("Cobertura", ["Posición", "Nº naturales (propios)", "Jugadores (mejor posición)", "También pueden jugar"], cobertura(p))
     return inf.guardar(carpeta)

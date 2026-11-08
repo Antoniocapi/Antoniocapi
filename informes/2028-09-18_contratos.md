@@ -6,11 +6,10 @@
 
 Regla: renovar antes del 1 de enero de su último año (cuando ya puede firmar un precontrato) o venderlo antes.
 
-🔴 = quedan 120 días o menos para el límite. Total: 16 jugadores.
+🔴 = quedan 120 días o menos para el límite. Total: 15 jugadores.
 
 |  | Jugador | Equipo | Edad | Calidad | Potencial | Fin contrato | Meses | Límite renovar/vender | Días hasta límite | Sueldo (€) | Valor estimado (€) | Recomendación | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 🔴 | David Hamansenya | Primer equipo | 21 | 3.5 | 4-5 | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 7.750 | 450.000 | RENOVAR | Joven (21) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🔴 | Javier Murúa | Primer equipo | 31 | 3 | 3 | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 100.000 | 48.000 | VENDER YA | 31 años y sin margen de mejora (3★/3★): vender mientras vale ~48.000 €. |
 | 🔴 | Jon Eceizabarrena | Primer equipo | 23 | 3 | 4 | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 60.000 | 75.000 | RENOVAR | Joven (23) con potencial 4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🔴 | Jordi Martínez | Filial | 20 | 2 | 3-4 | 30/06/2029 | 9.4 | 01/01/2029 | 105 | 20.000 | 41.000 | RENOVAR | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
@@ -45,30 +44,29 @@ Topes: titular 60.000 €, rotación 40.000 €, filial/proyecto 25.000 €.
 
 |  | Jugador | Equipo | Edad | Calidad | Potencial | Rol salarial | Sueldo (€) | Tope (€) | Índice €/estrella | Alerta |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 🔴 | Aimar Vicandi | Primer equipo | 23 | 3.5 | 4 | titular | 175.000 | 60.000 | 2.98 | supera el tope de titular en 115.000 €; cobra 2.98 veces lo normal para sus 3.5★ |
-| 🔴 | Luis Bilbao | Primer equipo | 25 | 3 | 3.5 | titular | 120.000 | 60.000 | 2.38 | supera el tope de titular en 60.000 €; cobra 2.38 veces lo normal para sus 3★ |
-| 🔴 | Javier Murúa | Primer equipo | 31 | 3 | 3 | titular | 100.000 | 60.000 | 1.98 | supera el tope de titular en 40.000 €; cobra 1.98 veces lo normal para sus 3★; 31 años, de los sueldos más altos y sin margen de mejora |
-| 🔴 | Pavel Kadochnikov | Primer equipo | 22 | 3 | 3 | rotación | 80.000 | 40.000 | 1.59 | supera el tope de rotación en 40.000 €; cobra 1.59 veces lo normal para sus 3★ |
-| 🟠 | Mulas | Primer equipo | 22 | 3 | 3.5 | rotación | 71.500 | 40.000 | 1.42 | supera el tope de rotación en 31.500 € |
-| 🟠 | Adur Alsúa | Primer equipo | 23 | 3 | 4 | titular | 70.000 | 60.000 | 1.39 | supera el tope de titular en 10.000 € |
-| 🟠 | Óscar León | Primer equipo | 23 | 3 | 3.5 | titular | 65.500 | 60.000 | 1.3 | supera el tope de titular en 5.500 € |
-| 🟠 | Jon Eceizabarrena | Primer equipo | 23 | 3 | 4 | rotación | 60.000 | 40.000 | 1.19 | supera el tope de rotación en 20.000 € |
-|  | Philip Osei | Primer equipo | 28 | 2.5 | 2.5 | titular | 58.000 | 60.000 | 1.38 |  |
-|  | Álvaro Jiménez | Primer equipo | 25 | 3 | 3.5 | titular | 52.000 | 60.000 | 1.03 |  |
-| 🟠 | Pol Escribano | Primer equipo | 20 | 3 | 3.5-4.5 | rotación | 46.500 | 40.000 | 0.92 | supera el tope de rotación en 6.500 € |
-|  | Xavi Miràngels | Primer equipo | 19 | 3.5 | 4-5 | titular | 46.500 | 60.000 | 0.79 |  |
-| 🟠 | Mario Valdaliso | Primer equipo | 20 | 2.5 | 3-4 | rotación | 44.000 | 40.000 | 1.05 | supera el tope de rotación en 4.000 € |
-| 🟠 | Luis Paulo | Primer equipo | 20 | 2.5 | 4-5 | rotación | 42.000 | 40.000 | 1 | supera el tope de rotación en 2.000 € |
-|  | Markel Ucín | Primer equipo | 24 | 2.5 | 3 | titular | 42.000 | 60.000 | 1 |  |
-|  | Pau Calvo | Primer equipo | 21 | 3 | 3-4 | rotación | 39.500 | 40.000 | 0.78 |  |
-|  | Marc Castro | Primer equipo | 20 | 2.5 | 3-4 | rotación | 36.000 | 40.000 | 0.86 |  |
-|  | Edu González | Primer equipo | 19 | 2.5 | 2.5-3.5 | rotación | 35.000 | 40.000 | 0.83 |  |
+| 🔴 | Aimar Vicandi | Primer equipo | 23 | 3.5 | 4 | titular | 175.000 | 60.000 | 2.93 | supera el tope de titular en 115.000 €; cobra 2.93 veces lo normal para sus 3.5★ |
+| 🔴 | Luis Bilbao | Primer equipo | 25 | 3 | 3.5 | titular | 120.000 | 60.000 | 2.34 | supera el tope de titular en 60.000 €; cobra 2.34 veces lo normal para sus 3★ |
+| 🔴 | Javier Murúa | Primer equipo | 31 | 3 | 3 | titular | 100.000 | 60.000 | 1.95 | supera el tope de titular en 40.000 €; cobra 1.95 veces lo normal para sus 3★; 31 años, de los sueldos más altos y sin margen de mejora |
+| 🔴 | Pavel Kadochnikov | Primer equipo | 22 | 3 | 3 | rotación | 80.000 | 40.000 | 1.56 | supera el tope de rotación en 40.000 €; cobra 1.56 veces lo normal para sus 3★ |
+| 🟠 | Mulas | Primer equipo | 22 | 3 | 3.5 | rotación | 71.500 | 40.000 | 1.4 | supera el tope de rotación en 31.500 € |
+| 🟠 | Adur Alsúa | Primer equipo | 23 | 3 | 4 | titular | 70.000 | 60.000 | 1.37 | supera el tope de titular en 10.000 € |
+| 🟠 | Óscar León | Primer equipo | 23 | 3 | 3.5 | titular | 65.500 | 60.000 | 1.28 | supera el tope de titular en 5.500 € |
+| 🟠 | Jon Eceizabarrena | Primer equipo | 23 | 3 | 4 | rotación | 60.000 | 40.000 | 1.17 | supera el tope de rotación en 20.000 € |
+|  | Philip Osei | Primer equipo | 28 | 2.5 | 2.5 | titular | 58.000 | 60.000 | 1.36 |  |
+|  | Álvaro Jiménez | Primer equipo | 25 | 3 | 3.5 | titular | 52.000 | 60.000 | 1.02 |  |
+| 🟠 | Pol Escribano | Primer equipo | 20 | 3 | 3.5-4.5 | rotación | 46.500 | 40.000 | 0.91 | supera el tope de rotación en 6.500 € |
+| 🟠 | Mario Valdaliso | Primer equipo | 20 | 2.5 | 3-4 | rotación | 44.000 | 40.000 | 1.03 | supera el tope de rotación en 4.000 € |
+| 🟠 | Luis Paulo | Primer equipo | 20 | 2.5 | 4-5 | rotación | 42.000 | 40.000 | 0.98 | supera el tope de rotación en 2.000 € |
+|  | Markel Ucín | Primer equipo | 24 | 2.5 | 3 | titular | 42.000 | 60.000 | 0.98 |  |
+|  | Pau Calvo | Primer equipo | 21 | 3 | 3-4 | rotación | 39.500 | 40.000 | 0.77 |  |
+|  | Marc Castro | Primer equipo | 20 | 2.5 | 3-4 | rotación | 36.000 | 40.000 | 0.84 |  |
+|  | Edu González | Primer equipo | 19 | 2.5 | 2.5-3.5 | rotación | 35.000 | 40.000 | 0.82 |  |
 | 🟠 | Jorge María | Juvenil | 20 | 1.5 | 2.5-3.5 | filial/proyecto | 34.500 | 25.000 |  | supera el tope de filial/proyecto en 9.500 € |
-|  | Lucas Santos | Primer equipo | 22 | 2.5 | 3.5 | rotación | 33.500 | 40.000 | 0.8 |  |
-|  | Pablo Cojo | Primer equipo | 20 | 2 | 2-3 | rotación | 32.500 | 40.000 | 0.97 |  |
+|  | Lucas Santos | Primer equipo | 22 | 2.5 | 3.5 | rotación | 33.500 | 40.000 | 0.79 |  |
+|  | Pablo Cojo | Primer equipo | 20 | 2 | 2-3 | rotación | 32.500 | 40.000 | 0.95 |  |
 | 🟠 | Andrei Roateș | Juvenil | 20 | 2 | 2.5-3.5 | filial/proyecto | 30.000 | 25.000 |  | supera el tope de filial/proyecto en 5.000 € |
-|  | Manu Vigo | Primer equipo | 23 | 2 | 2.5 | rotación | 29.500 | 40.000 | 0.88 |  |
-|  | Ismael Velasco | Primer equipo | 23 | 2 | 3 | rotación | 27.000 | 40.000 | 0.8 |  |
+|  | Manu Vigo | Primer equipo | 23 | 2 | 2.5 | rotación | 29.500 | 40.000 | 0.86 |  |
+|  | Ismael Velasco | Primer equipo | 23 | 2 | 3 | rotación | 27.000 | 40.000 | 0.79 |  |
 | 🟠 | Pablo Arbós | Juvenil | 21 | 2 | 2.5-3.5 | filial/proyecto | 27.000 | 25.000 |  | supera el tope de filial/proyecto en 2.000 € |
 | 🟠 | Lucas Balan | Filial | 19 | 2 | 4-5 | filial/proyecto | 26.000 | 25.000 |  | supera el tope de filial/proyecto en 1.000 € |
 |  | Ronni | Filial | 22 | 2 | 2.5 | filial/proyecto | 24.000 | 25.000 |  |  |
@@ -85,7 +83,6 @@ Topes: titular 60.000 €, rotación 40.000 €, filial/proyecto 25.000 €.
 |  | Erick Benítes | Filial | 17 | 2 | 3.5-4.5 | filial/proyecto | 15.750 | 25.000 |  |  |
 |  | Andres Giraldo | Filial | 17 | 2 | 3.5-4.5 | filial/proyecto | 15.500 | 25.000 |  |  |
 |  | Edu Gallego | Filial | 17 | 2.5 | 3.5-4.5 | filial/proyecto | 11.000 | 25.000 |  |  |
-|  | David Hamansenya | Primer equipo | 21 | 3.5 | 4-5 | titular | 7.750 | 60.000 | 0.13 |  |
 |  | Gabri Benito | Juvenil | 16 | 1 | 3-4 | filial/proyecto | 7.750 | 25.000 |  |  |
 |  | Guillermo José | Juvenil | 16 | 1 | 2.5-3.5 | filial/proyecto | 7.750 | 25.000 |  |  |
 |  | Luis Ramírez | Juvenil | 16 | 1 | 2.5-3.5 | filial/proyecto | 7.750 | 25.000 |  |  |
@@ -103,10 +100,10 @@ Topes: titular 60.000 €, rotación 40.000 €, filial/proyecto 25.000 €.
 
 | Equipo | Masa salarial (€) |
 |---|---|
-| Primer equipo | 1.320.750 |
+| Primer equipo | 1.266.500 |
 | Filial | 283.250 |
 | Juvenil | 169.150 |
-| TOTAL | 1.773.150 |
+| TOTAL | 1.718.900 |
 
 > ⚠️ Sin sueldo en la captura (no sumados): Carlos Flores, Eric, Matías Aguirre, Willian Obama
 

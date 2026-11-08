@@ -9,10 +9,11 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 ## Resumen
 
 - **VENDER YA**: 1
-- **RENOVAR**: 5
+- **RENOVAR**: 4
 - **CEDER**: 5
 - **SALE LIBRE**: 10
-- **MANTENER**: 32
+- **MANTENER**: 31
+- **CEDIDO AQUÍ**: 2
 - **SIN DATOS**: 4
 
 ## VENDER YA
@@ -27,7 +28,6 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 |---|---|---|---|---|---|---|---|---|---|---|
 | 🟢 | Jordi Martínez | Filial | 20 | POR | 2 | 3-4 | Promesa casi en el primer equipo | 30/06/2029 | 20.000 | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Lucas Balan | Filial | 19 | ME (C) | 2 | 4-5 | Promesa casi en el primer equipo | 30/06/2029 | 26.000 | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
-| 🟢 | David Hamansenya | Primer equipo | 21 | DF (I) | 3.5 | 4-5 | Titular habitual | 30/06/2029 | 7.750 | Joven (21) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Jon Eceizabarrena | Primer equipo | 23 | ME (C) | 3 | 4 | Jugador secundario | 30/06/2029 | 60.000 | Joven (23) con potencial 4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Óscar León | Primer equipo | 23 | DL (C) | 3 | 3.5 | Titular habitual | 30/06/2029 | 65.500 | Joven (23) con potencial 3.5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 
@@ -90,8 +90,14 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Luis Bilbao | Primer equipo | 25 | MP (D) | 3 | 3.5 | Jugador importante | 30/06/2030 | 120.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Mulas | Primer equipo | 22 | DF (C) | 3 | 3.5 | Jugador de plantilla | 30/06/2030 | 71.500 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Pavel Kadochnikov | Primer equipo | 22 | MC | 3 | 3 | Revulsivo desde el banquillo | 30/06/2030 | 80.000 | 3★/3★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
-| Xavi Miràngels | Primer equipo | 19 | ME (C) | 3.5 | 4-5 | Jugador importante | 30/06/2030 | 46.500 | 3.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Álvaro Jiménez | Primer equipo | 25 | POR | 3 | 3.5 | Jugador importante | 30/06/2030 | 52.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+
+## CEDIDO AQUÍ
+
+| Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Fin contrato | Sueldo (€) | Motivo |
+|---|---|---|---|---|---|---|---|---|---|
+| David Hamansenya | Primer equipo | 21 | DF (I) | 3.5 | 4-5 | Titular habitual | 30/06/2029 | 7.750 | Cedido por otro club: ni se renueva ni se vende. |
+| Xavi Miràngels | Primer equipo | 19 | ME (C) | 3.5 | 4-5 | Jugador importante | 30/06/2030 | 46.500 | Cedido por otro club: ni se renueva ni se vende. |
 
 ## SIN DATOS
 
@@ -104,16 +110,16 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 ## Cobertura de posiciones (primer equipo)
 
-En rojo: menos de 2 jugadores naturales, o el mejor está por debajo de la calidad mediana del primer equipo (3★). Sirve para decidir qué reforzar en enero.
+En rojo: menos de 2 jugadores naturales propios (los cedidos no cuentan), o el mejor propio está por debajo de la calidad mediana del primer equipo (3★). Sirve para decidir qué reforzar en enero.
 
-|  | Posición | Nº naturales | Jugadores (mejor posición) | También pueden jugar |
+|  | Posición | Nº naturales (propios) | Jugadores (mejor posición) | También pueden jugar |
 |---|---|---|---|---|
 |  | POR | 2 | Álvaro Jiménez 3★/3.5★, Ismael Velasco 2★/3★ |  |
 | 🔴 | DF (D) | 1 | Pablo Cojo 2★/2-3★ | Markel Ucín |
 |  | DF (C) | 6 | Javier Murúa 3★/3★, Mulas 3★/3.5★, Lucas Santos 2.5★/3.5★, Luis Paulo 2.5★/4-5★, Marc Castro 2.5★/3-4★, Markel Ucín 2.5★/3★ | Pavel Kadochnikov |
-|  | DF (I) | 2 | David Hamansenya 3.5★/4-5★, Philip Osei 2.5★/2.5★ |  |
+| 🔴 | DF (I) | 1 | David Hamansenya 3.5★/4-5★ (CEDIDO), Philip Osei 2.5★/2.5★ |  |
 |  | MC | 3 | Adur Alsúa 3★/4★, Pavel Kadochnikov 3★/3★, Manu Vigo 2★/2.5★ | Jon Eceizabarrena, Pau Calvo |
-|  | ME (C) | 3 | Xavi Miràngels 3.5★/4-5★, Jon Eceizabarrena 3★/4★, Pau Calvo 3★/3-4★ | Adur Alsúa, Edu González |
+|  | ME (C) | 2 | Xavi Miràngels 3.5★/4-5★ (CEDIDO), Jon Eceizabarrena 3★/4★, Pau Calvo 3★/3-4★ | Adur Alsúa, Edu González |
 |  | MP (D) | 2 | Aimar Vicandi 3.5★/4★, Luis Bilbao 3★/3.5★ | Pol Escribano |
 |  | MP (I) | 2 | Pol Escribano 3★/3.5-4.5★, Mario Valdaliso 2.5★/3-4★ | Aimar Vicandi, Joaquín Tello, Luis Bilbao |
 | 🔴 | DL (C) | 1 | Óscar León 3★/3.5★ | Pol Escribano |
