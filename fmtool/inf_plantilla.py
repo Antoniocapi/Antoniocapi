@@ -49,6 +49,7 @@ def recomendar(p, j):
 
     # ---------------- CEDER (joven con potencial y pocos minutos)
     otros_grupos = p.grupos_de.get(j["jugador"], set()) - {j["grupo"]}
+    juega_en_b = "B" in p.codigos_inf(j)  # Inf "B" = tiene minutos en el filial
     pocos_minutos, fuente = False, ""
     if j["minutos"] is not None:
         pocos_minutos = j["minutos"] < r.get("minutos_minimos_temporada", 900)
@@ -56,7 +57,7 @@ def recomendar(p, j):
     elif j["grupo"] == "primer-equipo" and j["estado"] in (r.get("estados_pocos_minutos") or []):
         pocos_minutos = True
         fuente = f"estado «{j['estado']}», sin datos de minutos"
-    if (not cedido_fuera and j["grupo"] == "primer-equipo" and not otros_grupos and pocos_minutos
+    if (not cedido_fuera and j["grupo"] == "primer-equipo" and not otros_grupos and not juega_en_b and pocos_minutos
             and edad <= r.get("edad_max_cesion", 21) and pot >= r.get("potencial_cesion", 3.5)):
         extra = f" Renuévalo antes de cederlo (acaba {fin})." if meses is not None and meses <= r.get("meses_para_renovar", 18) else ""
         return "CEDER", f"{edad} años, {estrellas} y pocos minutos ({fuente}): necesita jugar fuera.{extra}"
@@ -76,6 +77,8 @@ def recomendar(p, j):
             return "SALE LIBRE", f"No cumple los criterios de renovación ({edad} años, {estrellas}) y acaba {fin}: dejarle salir o venderle si llega oferta."
 
     # ---------------- MANTENER
+    if juega_en_b:
+        return "MANTENER", f"{estrellas}, ya suma minutos con el B: no hace falta cederlo. Contrato hasta {fin}."
     if cedido_fuera:
         return "MANTENER", f"Cedido en otro club; {estrellas}, contrato hasta {fin}."
     return "MANTENER", f"{estrellas}, contrato hasta {fin}: sin acción necesaria ahora."
@@ -120,7 +123,7 @@ def generar(p, carpeta):
         filas.append({
             "Acción": accion, "Jugador": j["jugador"], "Equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]),
             "Edad": j["edad"], "Pos.": j["mejor_pos"] or j["posicion"], "Calidad": j["calidad"],
-            "Potencial": texto_potencial(j), "Tiempo de juego": j["estado"], "Fin contrato": fmt_fecha(j["fin"]),
+            "Potencial": texto_potencial(j), "Tiempo de juego": j["estado"], "Inf": p.inf_texto(j), "Fin contrato": fmt_fecha(j["fin"]),
             "Sueldo (€)": j["sueldo"], "Valor máx. (€)": j["valor_max"], "Motivo": motivo,
             "_nivel": NIVEL_ACCION.get(accion, ""),
         })
@@ -129,7 +132,7 @@ def generar(p, carpeta):
     inf.seccion("Resumen")
     inf.lista(f"**{a}**: {sum(f['Acción'] == a for f in filas)}" for a in ORDEN_ACCION
               if any(f["Acción"] == a for f in filas))
-    columnas = ["Acción", "Jugador", "Equipo", "Edad", "Pos.", "Calidad", "Potencial", "Tiempo de juego",
+    columnas = ["Acción", "Jugador", "Equipo", "Edad", "Pos.", "Calidad", "Potencial", "Tiempo de juego", "Inf",
                 "Fin contrato", "Sueldo (€)", "Motivo"]
     for accion in ORDEN_ACCION:
         grupo = [f for f in filas if f["Acción"] == accion]

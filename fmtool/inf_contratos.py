@@ -27,13 +27,14 @@ def generar(p, carpeta):
         filas.append({
             "Jugador": j["jugador"], "Equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "Edad": j["edad"],
             "Calidad": j["calidad"], "Potencial": texto_potencial(j), "Tiempo de juego": j["estado"],
+            "Inf": p.inf_texto(j),
             "Fin contrato": fmt_fecha(j["fin"]), "Meses": meses, "Límite renovar/vender": fmt_fecha(limite),
             "Días hasta límite": dias, "Sueldo (€)": j["sueldo"], "Valor estimado (€)": valor_estimado(j),
             "Recomendación": accion, "Motivo": motivo, "_nivel": nivel,
         })
     filas.sort(key=lambda f: (f["Días hasta límite"] if f["Días hasta límite"] is not None else 9999, f["Jugador"]))
     inf.texto(f"🔴 = quedan 120 días o menos para el límite. Total: {len(filas)} jugadores.")
-    inf.tabla("Vencimientos", ["Jugador", "Equipo", "Edad", "Calidad", "Potencial", "Fin contrato", "Meses",
+    inf.tabla("Vencimientos", ["Jugador", "Equipo", "Edad", "Calidad", "Potencial", "Inf", "Fin contrato", "Meses",
                                "Límite renovar/vender", "Días hasta límite", "Sueldo (€)", "Valor estimado (€)",
                                "Recomendación", "Motivo"], filas)
     mayores = [f["Jugador"] for f in filas if (f["Edad"] or 0) > cfg.get("edad_max_renovar_largo", 30)]

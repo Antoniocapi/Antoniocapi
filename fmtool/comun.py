@@ -88,6 +88,15 @@ class Plantilla:
             "valor": dif(j["valor_max"], primero["valor_max"]),
         }
 
+    def codigos_inf(self, j):
+        """Códigos de la columna Inf (p. ej. {'Seg'})."""
+        return set(j.get("inf", "").replace(",", " ").split())
+
+    def inf_texto(self, j):
+        """Columna Inf traducida con config.yaml (los códigos sin traducir se dejan tal cual)."""
+        trad = self.cfg.get("codigos_inf") or {}
+        return ", ".join(trad.get(c, c) for c in sorted(self.codigos_inf(j)))
+
     def es_cedido_aqui(self, j):
         return j["jugador"] in (self.cfg.get("cedidos_a_nuestro_club") or [])
 

@@ -19,4 +19,5 @@ Avisos (celdas cortadas en la captura; transcrito solo lo que se ve):
 Otros:
 - Filial: 4 jugadores en gris sin datos (Willian Obama, Carlos Flores, Matías Aguirre, Eric). Solo tienen posición, edad y país.
 - Joaquín Tello aparece en el primer equipo (marca "B") y en el filial.
-- El nombre de David Hamansenya y Xavi Miràngels sale en **azul**; el de Jorge María, Andrei Roateș y Pablo Arbós sale en **rosa** ("Cedido en otro club").
+- Columna Inf: Seg = en seguimiento, B = con minutos en el B, Juv = juvenil (confirmado). "Les" y "Trn" se dejan tal cual.
+- El nombre de David Hamansenya y Xavi Miràngels sale en **azul** (= cedidos a nuestro club, confirmado); el de Jorge María, Andrei Roateș y Pablo Arbós sale en **rosa** ("Cedido en otro club").

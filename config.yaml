@@ -73,6 +73,12 @@ recomendaciones:
   nota_minima: 6.6               # solo se usa si hay columna "Nota media"
   partidos_minimos_nota: 5
 
+# Significado de los códigos de la columna "Inf" del FM
+codigos_inf:
+  Seg: En seguimiento
+  B: Con minutos en el B
+  Juv: Juvenil
+
 # Jugadores cedidos A NUESTRO club por otros equipos.
 # No se renuevan ni se venden. Escribe el nombre tal cual sale en el CSV.
 cedidos_a_nuestro_club:

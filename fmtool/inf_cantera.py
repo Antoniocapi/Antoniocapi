@@ -47,7 +47,7 @@ def generar(p, carpeta):
             motivo += " También inscrito en: " + ", ".join(NOMBRE_GRUPO.get(o, o) for o in otros) + "."
         filas.append({
             "Jugador": j["jugador"], "Equipo actual": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "Edad": j["edad"],
-            "Pos.": j["mejor_pos"] or j["posicion"], "Calidad": j["calidad"], "Potencial": texto_potencial(j),
+            "Pos.": j["mejor_pos"] or j["posicion"], "Calidad": j["calidad"], "Potencial": texto_potencial(j), "Inf": p.inf_texto(j),
             "Evolución calidad": ("primera captura" if not evo or evo["calidad"] is None
                                   else f"{evo['calidad']:+g} desde {fmt_fecha(evo['desde'])}"),
             "Evolución potencial": ("" if not evo or evo["potencial"] is None else f"{evo['potencial']:+g}"),
@@ -57,7 +57,7 @@ def generar(p, carpeta):
         })
     filas.sort(key=lambda f: (-f["_pot"], f["Edad"]))
     inf.seccion(f"Joyas de la cantera ({len(filas)})")
-    inf.tabla("Cantera", ["Jugador", "Equipo actual", "Edad", "Pos.", "Calidad", "Potencial", "Evolución calidad",
+    inf.tabla("Cantera", ["Jugador", "Equipo actual", "Edad", "Pos.", "Calidad", "Potencial", "Inf", "Evolución calidad",
                           "Evolución potencial", "Entrenamiento", "Fin contrato", "Propuesta", "Motivo"], filas)
     m = {g: (f"{v:g}★" if v is not None else "sin datos") for g, v in p.mediana_calidad.items()}
     inf.texto(f"Referencia de nivel (calidad mediana): primer equipo {m['primer-equipo']} · "
