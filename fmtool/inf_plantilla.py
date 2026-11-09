@@ -20,6 +20,9 @@ SUFIJO_INTERES = {
 
 def recomendar(p, j):
     """Devuelve (acción, motivo en una frase) para un jugador. p = Plantilla."""
+    renov = (p.cfg.get("renovados") or {}).get(j["jugador"])
+    if renov:
+        return "MANTENER", f"Renovado: {renov}. Pásame la vista de contratos para ver su nuevo sueldo y cláusula."
     accion, motivo = _recomendar(p, j)
     if p.le_siguen(j) and not p.es_cedido_aqui(j):
         clausula_baja = j["clausula"] is not None and j["clausula"] < p.cfg.get("clausula_minima", 500000)

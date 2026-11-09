@@ -11,7 +11,7 @@ Regla: renovar antes del 1 de enero de su último año (cuando ya puede firmar u
 |  | Jugador | Equipo | Edad | Calidad | Potencial | Inf | Fin contrato | Meses | Límite renovar/vender | Días hasta límite | Sueldo (€) | Valor estimado (€) | Recomendación | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 🔴 | Javier Murúa | Primer equipo | 31 | 3 | 3 | Des | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 100.000 | 48.000 | VENDER YA | 31 años y sin margen de mejora (3★/3★): vender mientras vale ~48.000 €. |
-| 🔴 | Jon Eceizabarrena | Primer equipo | 23 | 3 | 4 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 60.000 | 75.000 | RENOVAR | Joven (23) con potencial 4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
+| 🔴 | Jon Eceizabarrena | Primer equipo | 23 | 3 | 4 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 60.000 | 75.000 | MANTENER | Renovado: 2 años (23/12/2028). Pásame la vista de contratos para ver su nuevo sueldo y cláusula. |
 | 🔴 | Jordi Martínez | Salamanca B | 20 | 2 | 3-4 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 20.000 | 0 | RENOVAR | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🔴 | Lucas Balan | Salamanca B | 19 | 2.5 | 4-5 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 26.000 | 22.000 | RENOVAR | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🔴 | Manu Vigo | Primer equipo | 23 | 2 | 2.5 | Trn | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 29.500 | 12.000 | SALE LIBRE | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. |
@@ -24,7 +24,7 @@ Regla: renovar antes del 1 de enero de su último año (cuando ya puede firmar u
 | 🔴 | Ronni | Salamanca B | 22 | 2 | 2.5 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 24.000 | 0 | SALE LIBRE | Techo bajo (2★/2.5★) a los 22 años: no renovar, sale libre el 30/06/2029. |
 | 🔴 | Sergio Rivera | Salamanca B | 21 | 1.5 | 1.5-2.5 | Lesionado | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 22.000 | 0 | SALE LIBRE | Techo bajo (1.5★/1.5-2.5★) a los 21 años: no renovar, sale libre el 30/06/2029. |
 | 🔴 | Vaquero | Salamanca B | 22 | 1.5 | 2.5 | Le siguen otros clubes | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 23.500 | 0 | SALE LIBRE | Techo bajo (1.5★/2.5★) a los 22 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
-| 🔴 | Óscar León | Primer equipo | 23 | 3 | 3.5 | Lesionado | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 65.500 | 70.000 | RENOVAR | Joven (23) con potencial 3.5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
+| 🔴 | Óscar León | Primer equipo | 23 | 3 | 3.5 | Lesionado | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 65.500 | 70.000 | MANTENER | Renovado: 3 años (23/12/2028). Pásame la vista de contratos para ver su nuevo sueldo y cláusula. |
 
 > ⚠️ Mayores de 30 años: si renuevas, solo 1 año → Javier Murúa
 
@@ -153,6 +153,6 @@ Fuera del cálculo: David Hamansenya, Xavi Miràngels (cedidos a nuestro club) y
 
 > ⚠️ Sin sueldo en la captura (no sumados): Carlos Flores, Eric, Matías Aguirre, Willian Obama
 
-Según el FM (2028-09-18): gasto en sueldos 1.820.000 € al año, disponible 195.000 €. Restando la reserva de enero (100.000 €): **margen para sueldos nuevos 95.000 € al año**.
+Según el FM (2028-12-23): gasto en sueldos 1.900.000 € al año, disponible 116.000 €. Restando la reserva de enero (100.000 €): **margen para sueldos nuevos 16.000 € al año**.
 
-La suma de las capturas (1.773.150 €) difiere en 46.850 € del gasto que da el FM: son sueldos que no veo (jugadores sin sueldo en la captura, cedidos fuera con sueldo compartido, etc.).
+La suma de las capturas (1.773.150 €) difiere en 126.850 € del gasto que da el FM: son sueldos que no veo (jugadores sin sueldo en la captura, cedidos fuera con sueldo compartido, etc.).

@@ -20,11 +20,11 @@ reserva_enero: 100000
 # Presupuestos tal como los muestra el Portal del FM (en euros).
 # Actualízalos cuando me pases una captura nueva del Portal.
 presupuesto_sueldos:
-  fecha: 2028-09-18
-  gasto_actual: 1820000        # "Gasto en sueldos 1,82M € p/a"
-  disponible: 195000           # "Presupuesto disponible 195m € p/a"
+  fecha: 2028-12-23
+  gasto_actual: 1900000       # "Gasto en sueldos 1,9M € p/a"
+  disponible: 116000           # "Presupuesto disponible 116m € p/a"
 presupuesto_fichajes:
-  fecha: 2028-09-18
+  fecha: 2028-12-23
   disponible: 14000            # "Presupuesto disponible 14m €"
   gastado: 39150               # "Gastado esta temporada 39,15m €"
 
@@ -98,6 +98,11 @@ codigo_interes: Seg
 # Jugadores que NO se proponen para ceder aunque tengan pocos minutos (decisión del entrenador)
 no_ceder:
   - Mario Valdaliso   # gol y 7,0 desde el banquillo en la J7
+
+# Renovaciones ya firmadas que aún no salen en las capturas de contratos
+renovados:
+  Óscar León: "3 años (23/12/2028)"
+  Jon Eceizabarrena: "2 años (23/12/2028)"
 
 # Jugadores cedidos A NUESTRO club por otros equipos.
 # No se renuevan ni se venden. Escribe el nombre tal cual sale en el CSV.

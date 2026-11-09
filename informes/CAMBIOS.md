@@ -1,5 +1,11 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Portal del 23/12/2028
+- **Clasificación**: 6º con 29 puntos, a 1 del playoff. 19 de 24 puntos en las jornadas 10-17 y 3 victorias seguidas.
+- **Renovados**: León (3 años) y Eceizabarrena (2 años). Ya no salen como «renovar»; falta la captura de sus nuevos contratos.
+- **Presupuesto**: 116.000 € al año para sueldos (antes 95.000 €) y 14.000 € para traspasos. El ranking de fichajes se ha recalculado.
+- **Panel**: clasificación y calendario nuevos (próximo: C.D. Coria, 07/01) y cuenta atrás al 23/12.
+
 ## 09/11 · Panel rediseñado: más visual, menos tablas
 - **Inicio**: cuenta atrás hasta el 1 de enero, 4 cifras clave y un **tablero de decisiones** (Renovar ya · Proteger cláusula · Vender o sacar · Fichar) con fichas de jugador.
 - **Plantilla**: fichas por línea (porteros, defensas, medios y ataque), con una barra de calidad a potencial, la nota y un color por acción. Botón para cambiar de equipo.

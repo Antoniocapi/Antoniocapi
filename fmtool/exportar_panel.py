@@ -74,6 +74,7 @@ def exportar(p, cfg, carpeta=RAIZ / "panel"):
             "valor_max": j["valor_max"], "valor_estimado": valor_estimado(j), "accion": accion, "motivo": motivo,
             "le_siguen": "Sí" if p.le_siguen(j) else "No", "cedido": "Sí" if p.es_cedido_aqui(j) else "No",
             "lesionado": "Sí" if "Les" in p.codigos_inf(j) else "No",
+            "renovado": (p.cfg.get("renovados") or {}).get(j["jugador"], ""),
             "meses_contrato": meses_entre(p.fecha, j["fin"]),
             "limite_renovar": fecha_limite_renovacion(j["fin"]).isoformat() if j["fin"] else "",
             "sueldo_justo": sj["sueldo_justo"] if sj else None,

@@ -123,7 +123,7 @@
 <div class="sa">
   <header class="sa-head">
     <h1 class="sa-title">Salamanca UDS · Dirección deportiva</h1>
-    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · plantilla a 17/12/2028 · partidos analizados hasta la jornada 9</span>
+    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · clasificación a 23/12/2028 · plantilla a 17/12 · xG analizado hasta la jornada 9</span>
   </header>
 
   <nav class="sa-tabs" role="tablist" aria-label="Secciones del panel">
@@ -306,7 +306,7 @@
       <div class="sa-chart sa-tall" id="grafico-liga" data-draw="metricas" data-source="metricas"></div>
     </div>
     <div class="sa-card">
-      <h3>Clasificación (18/09)</h3>
+      <h3>Clasificación (23/12)</h3>
       <div class="sa-tablebox"><table class="sa-table" id="tabla-clasificacion" data-source="clasificacion" data-row-key="equipo"><thead><tr>
         <th data-field="pos" class="num">Pos.</th><th data-field="equipo">Equipo</th><th data-field="jugados" class="num">PJ</th><th data-field="ganados" class="num">G</th><th data-field="empatados" class="num">E</th><th data-field="perdidos" class="num">P</th><th data-field="dif_goles" class="num">Dif.</th><th data-field="puntos" class="num">Pts</th>
       </tr></thead><tbody data-draw="clasificacion"></tbody></table></div>
@@ -801,7 +801,7 @@
   }));
 
   // =================== CAPA VISUAL ===================
-  const FECHA_JUEGO = '2028-12-17'; // fecha del juego de las últimas capturas
+  const FECHA_JUEGO = '2028-12-23'; // fecha del juego de las últimas capturas
   const LIMITE_RENOV = '2029-01-01';
   const COL = {RENOVAR: 'var(--color-ok)', 'VENDER YA': 'var(--color-bad)', CEDER: 'var(--color-warn)', 'SALE LIBRE': 'var(--cds-chart-muted)', MANTENER: 'var(--color-border-line)', 'CEDIDO AQUÍ': 'var(--color-border-line)'};
   const corto = (n) => { const p = String(n).split(' '); return p.length > 1 && p[0].length > 2 ? p.slice(-1)[0] : String(n); };
@@ -883,12 +883,12 @@
   dash.draw('semaforo', (e) => {
     if (!sa.ready(e, ['jugadores'])) return;
     const J = dash.data('jugadores').data.filter((j, i, t) => t.findIndex((o) => o.jugador === j.jugador) === i && j.cedido !== 'Sí');
-    const fin29 = (j) => (j.fin_contrato || '').startsWith('2029');
+    const fin29 = (j) => (j.fin_contrato || '').startsWith('2029') && !j.renovado;
     const lanes = [
       {t: 'Renovar antes del 1/1', c: 'var(--color-bad)', xs: J.filter((j) => fin29(j) && j.accion === 'RENOVAR')},
       {t: 'Vender en enero', c: 'var(--color-warn)', xs: J.filter((j) => j.accion === 'VENDER YA')},
       {t: 'Se van libres en junio', c: 'var(--cds-chart-muted)', xs: J.filter((j) => fin29(j) && j.accion === 'SALE LIBRE')},
-      {t: 'Atados (2030 o más)', c: 'var(--color-ok)', xs: J.filter((j) => !fin29(j) && j.fin_contrato && j.equipo === 'Primer equipo')},
+      {t: 'Atados (2030 o más)', c: 'var(--color-ok)', xs: J.filter((j) => (!fin29(j) && j.fin_contrato && j.equipo === 'Primer equipo'))},
     ];
     e.replaceChildren(...lanes.map((l) => {
       const col = el('div', 'sa-col'); col.style.setProperty('--c', l.c);

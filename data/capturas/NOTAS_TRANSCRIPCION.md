@@ -175,3 +175,10 @@ Captura: `partido_J09-fuenlabrada_2028-10-21.webp`, pantalla "Resultado": muestr
 - **Valor 0 €, sueldo N/D y final «No disponible»** (Clua, Kluivert, Orobengoa, Domínguez, Baldé): interpretado como **sin contrato**. Por confirmar en su ficha.
 - Estrellas leídas a ojo: algunas medias estrellas de potencial pueden variar ±0,5.
 - Sin recomendación del ojeador ni club en la vista.
+
+## 23/12/2028 · Portal
+
+- Clasificación completa → `data/liga/clasificacion_2028-12-23.csv`: **6º con 29 puntos**.
+- Calendario: últimos 3 resultados (puntos verdes = victorias) y próximos 9 partidos → `data/liga/calendario_2028-12-23.csv`. El resultado va con el local primero.
+- Presupuestos → `config.yaml`: sueldos, 116.000 € al año disponibles (gasto 1,9 M €); fichajes, 14.000 € (gastado 39.150 €).
+- Mensajes: **León renueva 3 años** y **Eceizabarrena 2 años** → `renovados` en `config.yaml` (sueldo y cláusula nuevos, pendientes de captura). «No hay ofertas por Castro».

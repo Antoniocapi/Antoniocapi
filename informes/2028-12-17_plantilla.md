@@ -7,10 +7,10 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 ## Resumen
 
 - **VENDER YA**: 1
-- **RENOVAR**: 6
+- **RENOVAR**: 4
 - **CEDER**: 1
 - **SALE LIBRE**: 8
-- **MANTENER**: 35
+- **MANTENER**: 37
 - **CEDIDO AQUÍ**: 2
 - **SIN DATOS**: 4
 
@@ -24,9 +24,7 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 🟢 | Jon Eceizabarrena | Primer equipo | 23 | ME (C) | 3 | 4 | Jugador secundario |  | 30/06/2029 | 60.000 | Joven (23) con potencial 4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo | Apy | 30/06/2029 | 39.500 | Joven (21) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
-| 🟢 | Óscar León | Primer equipo | 23 | DL (C) | 3 | 3.5 | Titular habitual | Lesionado | 30/06/2029 | 65.500 | Joven (23) con potencial 3.5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Jordi Martínez | Salamanca B | 20 | POR | 2 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 20.000 | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Lucas Balan | Salamanca B | 19 | ME (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2029 | 26.000 | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Mario Segura | Salamanca B | 21 | MC | 1.5 | 2-3 | Promesa casi en el primer equipo | Lesionado | 30/06/2029 | 19.250 | Rinde muy por encima de sus estrellas (nota 7.01 en 1368'): renovar antes del 01/01/2029. |
@@ -72,6 +70,7 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Alberto Ruvira | Primer equipo | 16 | DF (C) | 3 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 19.000 | 3★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Edu González | Primer equipo | 19 | MP (C) | 2.5 | 2.5-3.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 35.000 | 2.5★/2.5-3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Ismael Velasco | Primer equipo | 23 | POR | 2 | 3 | Portero de competiciones de copa | Lesionado | 30/06/2030 | 27.000 | 2★/3★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Jon Eceizabarrena | Primer equipo | 23 | ME (C) | 3 | 4 | Jugador secundario |  | 30/06/2029 | 60.000 | Renovado: 2 años (23/12/2028). Pásame la vista de contratos para ver su nuevo sueldo y cláusula. |
 | Lucas Santos | Primer equipo | 22 | DF (C) | 2.5 | 3.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 33.500 | 2.5★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Luis Bilbao | Primer equipo | 25 | MP (D) | 3 | 3.5 | Jugador importante | RJ | 30/06/2030 | 120.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 2.5★/4-5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
@@ -81,6 +80,7 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Pavel Kadochnikov | Primer equipo | 22 | MC | 3 | 3 | Revulsivo desde el banquillo |  | 30/06/2030 | 80.000 | 3★/3★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Apy | 30/06/2030 | 46.500 | 3★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Álvaro Jiménez | Primer equipo | 25 | POR | 3 | 3.5 | Jugador importante |  | 30/06/2030 | 52.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Óscar León | Primer equipo | 23 | DL (C) | 3 | 3.5 | Titular habitual | Lesionado | 30/06/2029 | 65.500 | Renovado: 3 años (23/12/2028). Pásame la vista de contratos para ver su nuevo sueldo y cláusula. |
 | Alessandro Lugo | Salamanca B | 19 | POR | 2 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2031 | 20.000 | 2★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Andres Giraldo | Salamanca B | 17 | MP (C) | 2 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 15.500 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 110.000 €: renueva para subirla o quitarla. |
 | Diego Llabrés | Salamanca B | 17 | DF (C) | 2 | 4-5 | Futura promesa |  | 30/06/2030 | 7.000 | 2★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
