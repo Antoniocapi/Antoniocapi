@@ -24,11 +24,11 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 🟢 | Jordi Martínez | Filial | 20 | POR | 2 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 20.000 | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
-| 🟢 | Lucas Balan | Filial | 19 | ME (C) | 2 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2029 | 26.000 | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Jon Eceizabarrena | Primer equipo | 23 | ME (C) | 3 | 4 | Jugador secundario |  | 30/06/2029 | 60.000 | Joven (23) con potencial 4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 39.500 | Joven (21) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Óscar León | Primer equipo | 23 | DL (C) | 3 | 3.5 | Titular habitual |  | 30/06/2029 | 65.500 | Joven (23) con potencial 3.5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
+| 🟢 | Jordi Martínez | Salamanca B | 20 | POR | 2 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 20.000 | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
+| 🟢 | Lucas Balan | Salamanca B | 19 | ME (C) | 2 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2029 | 26.000 | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 
 ## CEDER
 
@@ -41,29 +41,21 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| ⚪ | Marco Coronel | Filial | 23 | DF (C) | 2 | 2.5 | Recambio de emergencia | Le siguen otros clubes | 30/06/2029 | 22.000 | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
-| ⚪ | Mario Segura | Filial | 20 | MC | 1.5 | 2-3 | Promesa casi en el primer equipo |  | 30/06/2029 | 19.250 | Techo bajo (1.5★/2-3★) a los 20 años: no renovar, sale libre el 30/06/2029. |
-| ⚪ | Ronni | Filial | 22 | DL (C) | 2 | 2.5 | Promesa casi en el primer equipo |  | 30/06/2029 | 24.000 | Techo bajo (2★/2.5★) a los 22 años: no renovar, sale libre el 30/06/2029. |
-| ⚪ | Sergio Rivera | Filial | 21 | DF (I) | 1.5 | 1.5-2.5 | Promesa casi en el primer equipo |  | 30/06/2029 | 22.000 | Techo bajo (1.5★/1.5-2.5★) a los 21 años: no renovar, sale libre el 30/06/2029. |
-| ⚪ | Vaquero | Filial | 22 | ME (C) | 1.5 | 2 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2029 | 23.500 | Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
 | ⚪ | Raúl Ruiz | Juvenil | 17 | ME (I) | 1 | 2-3 | Futura promesa |  | 30/06/2029 | 6.250 | Techo bajo (1★/2-3★) a los 17 años: no renovar, sale libre el 30/06/2029. |
 | ⚪ | Manu Vigo | Primer equipo | 23 | MC | 2 | 2.5 | Jugador secundario | Trn | 30/06/2029 | 29.500 | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. |
 | ⚪ | Markel Ucín | Primer equipo | 24 | DF (C) | 2.5 | 3 | Jugador importante |  | 30/06/2029 | 42.000 | No cumple los criterios de renovación (24 años, 2.5★/3★) y acaba 30/06/2029: dejarle salir o venderle si llega oferta. |
 | ⚪ | Pablo Cojo | Primer equipo | 20 | DF (D) | 2 | 2-3 | Promesa casi en el primer equipo |  | 30/06/2030 | 32.500 | Techo bajo (2★/2-3★) a los 20 años: buscarle salida, contrato hasta 30/06/2030. |
 | ⚪ | Philip Osei | Primer equipo | 28 | DF (I) | 2.5 | 2.5 | Titular habitual |  | 30/06/2029 | 58.000 | Techo bajo (2.5★/2.5★) a los 28 años: no renovar, sale libre el 30/06/2029. |
+| ⚪ | Marco Coronel | Salamanca B | 23 | DF (C) | 2 | 2.5 | Recambio de emergencia | Le siguen otros clubes | 30/06/2029 | 22.000 | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
+| ⚪ | Mario Segura | Salamanca B | 20 | MC | 1.5 | 2-3 | Promesa casi en el primer equipo |  | 30/06/2029 | 19.250 | Techo bajo (1.5★/2-3★) a los 20 años: no renovar, sale libre el 30/06/2029. |
+| ⚪ | Ronni | Salamanca B | 22 | DL (C) | 2 | 2.5 | Promesa casi en el primer equipo |  | 30/06/2029 | 24.000 | Techo bajo (2★/2.5★) a los 22 años: no renovar, sale libre el 30/06/2029. |
+| ⚪ | Sergio Rivera | Salamanca B | 21 | DF (I) | 1.5 | 1.5-2.5 | Promesa casi en el primer equipo |  | 30/06/2029 | 22.000 | Techo bajo (1.5★/1.5-2.5★) a los 21 años: no renovar, sale libre el 30/06/2029. |
+| ⚪ | Vaquero | Salamanca B | 22 | ME (C) | 1.5 | 2 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2029 | 23.500 | Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
 
 ## MANTENER
 
 | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Alberto Ruvira | Filial | 16 | DF (C) | 3 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 19.000 | 3★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
-| Alessandro Lugo | Filial | 19 | POR | 2 | 2.5-3.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 20.000 | 2★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
-| Andres Giraldo | Filial | 17 | MP (C) | 2 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 15.500 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 110.000 €: renueva para subirla o quitarla. |
-| Diego Llabrés | Filial | 17 | DF (C) | 1.5 | 4-5 | Futura promesa |  | 30/06/2030 | 7.000 | 1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
-| Edu Gallego | Filial | 17 | DF (C) | 2.5 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 11.000 | 2.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
-| Erick Benítes | Filial | 17 | DL (C) | 2 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 15.750 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
-| Isaac Varela | Filial | 16 | MP (I) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 18.250 | 2.5★/4-5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
-| Manuel | Filial | 17 | DF (C) | 2 | 3-4 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2031 | 20.000 | 2★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
 | Andrei Roateș | Juvenil | 20 | DL (C) | 2 | 2.5-3.5 | Cedido en otro club |  | 30/06/2030 | 30.000 | Cedido en otro club; 2★/2.5-3.5★, contrato hasta 30/06/2030. |
 | Gabri Benito | Juvenil | 16 | MP (D) | 1 | 3-4 | Futura promesa |  | 30/06/2031 | 7.750 | 1★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Guillermo José | Juvenil | 16 | DF (I) | 1 | 2.5-3.5 | Futura promesa |  | 30/06/2031 | 7.750 | 1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
@@ -89,6 +81,14 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Pavel Kadochnikov | Primer equipo | 22 | MC | 3 | 3 | Revulsivo desde el banquillo |  | 30/06/2030 | 80.000 | 3★/3★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 3★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 250.000 €: renueva para subirla o quitarla. |
 | Álvaro Jiménez | Primer equipo | 25 | POR | 3 | 3.5 | Jugador importante |  | 30/06/2030 | 52.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Alberto Ruvira | Salamanca B | 16 | DF (C) | 3 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 19.000 | 3★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
+| Alessandro Lugo | Salamanca B | 19 | POR | 2 | 2.5-3.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 20.000 | 2★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
+| Andres Giraldo | Salamanca B | 17 | MP (C) | 2 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 15.500 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 110.000 €: renueva para subirla o quitarla. |
+| Diego Llabrés | Salamanca B | 17 | DF (C) | 1.5 | 4-5 | Futura promesa |  | 30/06/2030 | 7.000 | 1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Edu Gallego | Salamanca B | 17 | DF (C) | 2.5 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 11.000 | 2.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Erick Benítes | Salamanca B | 17 | DL (C) | 2 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 15.750 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Isaac Varela | Salamanca B | 16 | MP (I) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 18.250 | 2.5★/4-5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
+| Manuel | Salamanca B | 17 | DF (C) | 2 | 3-4 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2031 | 20.000 | 2★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
 
 ## CEDIDO AQUÍ
 
@@ -101,10 +101,10 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|
-| Carlos Flores | Filial | 17 | ME (D) |  |  |  |  |  |  | La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada. |
-| Eric | Filial | 19 | MP (C), DL (C) |  |  |  |  |  |  | La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada. |
-| Matías Aguirre | Filial | 18 | ME (D) |  |  |  |  |  |  | La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada. |
-| Willian Obama | Filial | 18 | DF/MP (D) |  |  |  |  |  |  | La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada. |
+| Carlos Flores | Salamanca B | 17 | ME (D) |  |  |  |  |  |  | La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada. |
+| Eric | Salamanca B | 19 | MP (C), DL (C) |  |  |  |  |  |  | La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada. |
+| Matías Aguirre | Salamanca B | 18 | ME (D) |  |  |  |  |  |  | La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada. |
+| Willian Obama | Salamanca B | 18 | DF/MP (D) |  |  |  |  |  |  | La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada. |
 
 ## Cobertura de posiciones (primer equipo)
 

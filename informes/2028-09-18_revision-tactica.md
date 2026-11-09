@@ -30,8 +30,8 @@
 
 | Instrucción | Ahora | Propuesta | Motivo (datos) |
 |---|---|---|---|
-| Línea defensiva | Estándar | **Más alta (un punto)** | El 71 % de las acciones defensivas son en nuestro tercio: jugamos en bloque bajo, no medio. |
-| Línea de presión | Bloque medio | Bloque medio (mantener) | El problema es la línea defensiva, no la de presión. |
+| Línea defensiva | Estándar | Estándar (mantener) · *rectificado* | Primero propuse subirla. Contra el Guijuelo, con el bloque más bajo (PRPAD 39,6), concedimos solo 0,66 de xG: en juego abierto el bloque bajo funciona. |
+| Línea de presión | Bloque medio | Bloque medio (mantener) | El problema son las faltas y el balón parado, no la altura del bloque. |
 | Realizando una entrada | Estándar | **Mantenerse en pie** | 10,5 faltas por partido (media 8,3), y de ahí los 39 córners y el balón parado en contra. |
 | Activar presión | Más insistente | **Estándar** | Presionar con insistencia desde atrás genera faltas sin robos arriba (PRPAD 24,3). |
 | Transición defensiva | Reagruparse | Reagruparse (mantener) | Coherente con el contraataque. |

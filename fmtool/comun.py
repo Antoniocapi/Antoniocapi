@@ -9,7 +9,7 @@ from .datos import mediana, potencial
 
 RAIZ = Path(__file__).resolve().parent.parent
 ORDEN_GRUPOS = {"primer-equipo": 0, "filial": 1, "juvenil": 2}
-NOMBRE_GRUPO = {"primer-equipo": "Primer equipo", "filial": "Filial", "juvenil": "Juvenil"}
+NOMBRE_GRUPO = {"primer-equipo": "Primer equipo", "filial": "Salamanca B", "juvenil": "Juvenil"}
 
 
 def cargar_config(ruta=None):

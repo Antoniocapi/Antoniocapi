@@ -57,6 +57,14 @@
   .sa-go:hover { background: var(--color-panel); }
   .sa-pitch { position: relative; min-height: 420px; }
   .sa-table td.strong { font-weight: 600; }
+
+  .sa-analisis { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+  .sa-bloque { gap: var(--cds-gap-md); }
+  .sa-item { display: flex; flex-direction: column; gap: var(--cds-gap-xs); max-width: 80ch; }
+  .sa-item p { margin: 0; line-height: 1.5; }
+  .sa-item-t { font-weight: var(--cds-font-weight-medium); }
+  .sa-item-x { color: var(--color-fg); }
+  .sa-item-a { color: var(--color-ok); font-size: var(--cds-font-size-caption); }
 </style>
 
 <div class="sa">
@@ -67,6 +75,7 @@
 
   <nav class="sa-tabs" role="tablist" aria-label="Secciones del panel">
     <button class="sa-tab" role="tab" data-tab="inicio" aria-selected="true">Inicio<small>Qué hacer ahora</small></button>
+    <button class="sa-tab" role="tab" data-tab="analisis" aria-selected="false">Análisis<small>Lectura a fondo</small></button>
     <button class="sa-tab" role="tab" data-tab="partidos" aria-selected="false">Partidos<small>xG y resultados</small></button>
     <button class="sa-tab" role="tab" data-tab="tactica" aria-selected="false">Táctica<small>Once y cambios</small></button>
     <button class="sa-tab" role="tab" data-tab="plantilla" aria-selected="false">Plantilla<small>Notas y sueldos</small></button>
@@ -120,6 +129,26 @@
             <th>Detalle</th>
           </tr></thead>
           <tbody data-draw="tareas"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ANÁLISIS ===================== -->
+  <section class="sa-page" id="analisis" role="tabpanel" hidden>
+    <p class="sa-intro">La lectura completa de las jornadas jugadas: qué funciona, qué no, por qué y qué hacer. Al final, las capturas que necesito para profundizar.</p>
+    <div class="sa-analisis" id="analisis-texto" data-draw="analisis" data-source="analisis"></div>
+    <div class="sa-card" id="necesito">
+      <h3>Para profundizar: capturas que necesito</h3>
+      <p class="sa-note">Con cada una puedo analizar más a fondo lo que dice «Para qué».</p>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-necesito" data-source="necesito" data-row-key="orden">
+          <thead><tr>
+            <th data-field="captura">Captura</th>
+            <th data-field="donde">Dónde está en el FM</th>
+            <th data-field="para_que">Para qué</th>
+          </tr></thead>
+          <tbody data-draw="necesito"></tbody>
         </table>
       </div>
     </div>
@@ -225,21 +254,14 @@
 
   <!-- ===================== PLANTILLA ===================== -->
   <section class="sa-page" id="plantilla" role="tabpanel" hidden>
-    <p class="sa-intro">Quién rinde y cuánto cuesta. La acción de cada jugador sale del modelo Castellón: renovar, vender, ceder, dejar salir o mantener.</p>
-    <div class="sa-card">
-      <h3>Sueldo frente a nota media (primer equipo)</h3>
-      <p class="sa-note">Arriba a la izquierda: cobran mucho y rinden poco. La línea discontinua es el tope de titular. Pasa el ratón por un punto para ver el jugador.</p>
-      <div class="sa-chart sa-tall" id="grafico-sueldos" data-draw="scatter" data-source="jugadores"></div>
-    </div>
-    <div class="sa-card">
-      <h3>Toda la plantilla</h3>
-      <p class="sa-note">Pulsa una columna para ordenar; pasa el ratón por una fila para ver el motivo de la acción. ✚ = lesionado.</p>
-      <div class="sa-tools"><input class="sa-search" id="buscar-jugador" type="search" placeholder="Buscar jugador, equipo, posición o acción" aria-label="Buscar en la plantilla"></div>
+    <p class="sa-intro">Todos los jugadores, separados por equipo. «Sueldo justo» es lo que le correspondería a cada uno por lo que aporta (calidad, nota, minutos y margen de mejora), con la misma masa salarial de su equipo. Pulsa una columna para ordenar y pasa el ratón por una fila para ver el motivo. ✚ = lesionado.</p>
+    <div class="sa-tools"><input class="sa-search" id="buscar-jugador" type="search" placeholder="Buscar en los tres equipos: jugador, posición o acción" aria-label="Buscar en la plantilla"></div>
+    <div class="sa-card" id="tabla-primer-card">
+      <h3>Primer equipo</h3>
       <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-plantilla" data-source="jugadores" data-row-key="jugador">
+        <table class="sa-table sa-plantilla" id="tabla-primer" data-source="jugadores" data-row-key="id">
           <thead><tr>
             <th data-field="jugador" data-sort="jugador">Jugador</th>
-            <th data-field="equipo" data-sort="equipo">Equipo</th>
             <th data-field="edad" data-sort="edad" class="num">Edad</th>
             <th data-field="posicion" data-sort="posicion">Pos.</th>
             <th data-field="calidad" data-sort="calidad" class="num">Calidad</th>
@@ -249,13 +271,62 @@
             <th data-field="goles" data-sort="goles" class="num">Goles</th>
             <th data-field="amarillas" data-sort="amarillas" class="num">Amarillas</th>
             <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th>
+            <th data-field="sueldo_justo" data-sort="sueldo_justo" class="num">Sueldo justo</th>
+            <th data-field="valoracion_sueldo" data-sort="valoracion_sueldo">Sueldo</th>
             <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th>
             <th data-field="fin_contrato" data-sort="fin_contrato">Fin</th>
             <th data-field="accion" data-sort="accion">Acción</th>
           </tr></thead>
-          <tbody data-draw="plantilla"></tbody>
+          <tbody data-draw="plantilla-primer"></tbody>
         </table>
       </div>
+    </div>
+    <div class="sa-card" id="tabla-filial-card">
+      <h3>Salamanca B</h3>
+      <div class="sa-tablebox">
+        <table class="sa-table sa-plantilla" id="tabla-filial" data-source="jugadores" data-row-key="id">
+          <thead><tr>
+            <th data-field="jugador" data-sort="jugador">Jugador</th>
+            <th data-field="edad" data-sort="edad" class="num">Edad</th>
+            <th data-field="posicion" data-sort="posicion">Pos.</th>
+            <th data-field="calidad" data-sort="calidad" class="num">Calidad</th>
+            <th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
+            <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th>
+            <th data-field="sueldo_justo" data-sort="sueldo_justo" class="num">Sueldo justo</th>
+            <th data-field="valoracion_sueldo" data-sort="valoracion_sueldo">Sueldo</th>
+            <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th>
+            <th data-field="fin_contrato" data-sort="fin_contrato">Fin</th>
+            <th data-field="accion" data-sort="accion">Acción</th>
+          </tr></thead>
+          <tbody data-draw="plantilla-filial"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sa-card" id="tabla-juvenil-card">
+      <h3>Juvenil</h3>
+      <div class="sa-tablebox">
+        <table class="sa-table sa-plantilla" id="tabla-juvenil" data-source="jugadores" data-row-key="id">
+          <thead><tr>
+            <th data-field="jugador" data-sort="jugador">Jugador</th>
+            <th data-field="edad" data-sort="edad" class="num">Edad</th>
+            <th data-field="posicion" data-sort="posicion">Pos.</th>
+            <th data-field="calidad" data-sort="calidad" class="num">Calidad</th>
+            <th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
+            <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th>
+            <th data-field="sueldo_justo" data-sort="sueldo_justo" class="num">Sueldo justo</th>
+            <th data-field="valoracion_sueldo" data-sort="valoracion_sueldo">Sueldo</th>
+            <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th>
+            <th data-field="fin_contrato" data-sort="fin_contrato">Fin</th>
+            <th data-field="accion" data-sort="accion">Acción</th>
+          </tr></thead>
+          <tbody data-draw="plantilla-juvenil"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sa-card">
+      <h3>Sueldo real frente a sueldo justo (primer equipo)</h3>
+      <p class="sa-note">Punto = lo que cobra; raya = lo que le correspondería por rendimiento. Rojo: cobra de más; verde: cobra de menos. Ordenados del que más aporta al que menos.</p>
+      <div class="sa-chart sa-tall" id="grafico-sueldos" data-draw="sueldos" data-source="jugadores"></div>
     </div>
   </section>
 
@@ -266,7 +337,7 @@
       <h3>Cláusulas bajas y jugadores que siguen otros clubes</h3>
       <p class="sa-note">Cláusula por debajo de su valor de mercado o con interés de otros clubes. Solución: renovar subiendo o quitando la cláusula.</p>
       <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-riesgos" data-source="alertas" data-row-key="jugador">
+        <table class="sa-table" id="tabla-riesgos" data-source="alertas" data-row-key="id">
           <thead><tr>
             <th data-field="jugador">Jugador</th>
             <th data-field="equipo">Equipo</th>
@@ -285,7 +356,7 @@
       <h3>Contratos que acaban en 18 meses o menos</h3>
       <p class="sa-note">Renovar o vender antes de la fecha límite (1 de enero), cuando ya pueden firmar un precontrato con otro club.</p>
       <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-vencimientos" data-source="vencimientos" data-row-key="jugador">
+        <table class="sa-table" id="tabla-vencimientos" data-source="vencimientos" data-row-key="id">
           <thead><tr>
             <th data-field="jugador">Jugador</th>
             <th data-field="equipo">Equipo</th>
@@ -300,19 +371,20 @@
       </div>
     </div>
     <div class="sa-card">
-      <h3>Sueldos por encima de tus topes</h3>
-      <p class="sa-note">Topes de config.yaml: titular, rotación y filial/proyecto.</p>
+      <h3>Sueldos que no cuadran con el rendimiento</h3>
+      <p class="sa-note">Más de un 30 % por encima de su sueldo justo (cobra de más) o más de un 25 % por debajo (cobra de menos: al renovar pedirá más, y lo merece).</p>
       <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-sobretope" data-source="sobretope" data-row-key="jugador">
+        <table class="sa-table" id="tabla-desajuste" data-source="desajuste" data-row-key="id">
           <thead><tr>
             <th data-field="jugador">Jugador</th>
             <th data-field="equipo">Equipo</th>
-            <th data-field="nota" class="num">Nota</th>
             <th data-field="sueldo" class="num">Sueldo</th>
-            <th data-field="tope" class="num">Tope</th>
-            <th data-field="exceso_tope" class="num">Exceso</th>
+            <th data-field="sueldo_justo" class="num">Sueldo justo</th>
+            <th data-field="diferencia" class="num">Diferencia</th>
+            <th data-field="valoracion">Valoración</th>
+            <th data-field="motivo">Por qué</th>
           </tr></thead>
-          <tbody data-draw="sobretope"></tbody>
+          <tbody data-draw="desajuste"></tbody>
         </table>
       </div>
     </div>
@@ -478,9 +550,10 @@
     title: 'Riesgos de contrato',
     description: 'Jugadores con la cláusula por debajo de su valor máximo, o a los que siguen otros clubes.',
     fn: (jugadores) => jugadores
+      .filter((j, i, todos) => todos.findIndex((o) => o.jugador === j.jugador) === i)
       .filter((j) => j.cedido !== 'Sí' && ((j.clausula !== '' && Number(j.clausula) < Number(j.valor_max || 0)) || j.le_siguen === 'Sí'))
       .map((j) => ({
-        jugador: j.jugador, equipo: j.equipo, edad: Number(j.edad), potencial: j.potencial,
+        id: j.id, jugador: j.jugador, equipo: j.equipo, edad: Number(j.edad), potencial: j.potencial,
         clausula: j.clausula === '' ? null : Number(j.clausula), valor_max: j.valor_max === '' ? null : Number(j.valor_max),
         le_siguen: j.le_siguen,
         riesgo: (j.clausula !== '' && Number(j.clausula) < Number(j.valor_max || 0) ? 'Cláusula < valor' : 'Interés de otros clubes')
@@ -505,10 +578,6 @@
   cifra('difxg', () => (fila('resumen') ? sa.signed(fila('resumen').dif_xg_pp) : null));
   cifra('xgf', () => (fila('resumen') ? sa.dec(fila('resumen').xg_favor) : null));
   cifra('xgc', () => (fila('resumen') ? sa.dec(fila('resumen').xg_contra) : null));
-  cifra('gf', () => fila('resumen')?.goles_favor);
-  cifra('gc', () => fila('resumen')?.goles_contra);
-  cifra('disf', () => fila('resumen')?.disparos_favor);
-  cifra('disc', () => fila('resumen')?.disparos_contra);
   cifra('pos', () => salamanca()?.pos);
   cifra('ptsliga', () => salamanca()?.puntos);
   dash.draw('variante', (el) => {
@@ -617,89 +686,28 @@
     sa.tip(el);
   });
 
-  // ---------- gráfico: sueldo frente a nota
-  const TOPE_TITULAR = 60000; // tope de titular de config.yaml
-  dash.draw('scatter', (el) => {
-    if (!sa.ready(el, ['jugadores'])) return;
-    const rows = dash.data('jugadores').data.filter((r) => r.equipo === 'Primer equipo' && r.nota !== '' && r.sueldo !== '')
-      .map((r) => ({n: r.jugador, nota: Number(r.nota), s: Number(r.sueldo), accion: r.accion, cedido: r.cedido}));
-    const W = el.clientWidth || 320, H = 360, m = {t: 14, r: 16, b: 34, l: 64};
-    const x = d3.scaleLinear(d3.extent(rows, (r) => r.nota), [m.l, W - m.r]).nice();
-    const y = d3.scaleLinear([0, d3.max(rows, (r) => r.s) * 1.05], [H - m.b, m.t]).nice();
-    const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Sueldo anual frente a nota media');
-    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat((v) => d3.format(',.0f')(v) + ' €').tickSize(-(W - m.l - m.r))).call(sa.axisClean).call((g) => g.select('.domain').remove());
-    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(6).tickFormat(d3.format('.1f'))).call(sa.axisClean);
-    svg.append('text').attr('x', W - m.r).attr('y', H - 4).attr('text-anchor', 'end').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text('Nota media');
-    svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(TOPE_TITULAR)).attr('y2', y(TOPE_TITULAR)).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 4');
-    const med = d3.median(rows, (r) => r.nota);
-    const col = (r) => (r.s > TOPE_TITULAR && r.nota < med ? 'var(--cds-chart-status-critical)' : r.nota >= med ? dash.colors[0] : 'var(--cds-chart-muted)');
-    const tip = sa.tip(el);
-    svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', (r) => x(r.nota)).attr('cy', (r) => y(r.s)).attr('r', 5).attr('fill', col)
-      .on('pointermove', (ev, r) => { const [px, py] = d3.pointer(ev, el); tip.show([r.n + (r.cedido === 'Sí' ? ' (cedido)' : ''), `Nota ${sa.dec(r.nota)} · ${sa.eur(r.s)} al año`, r.accion], px, py); })
-      .on('pointerleave', () => tip.hide());
-    // etiquetas solo de los que destacan, para que no se pisen
-    const destacados = rows.filter((r) => r.s > TOPE_TITULAR || r.nota >= 6.9);
-    const usados = [];
-    destacados.sort((a, b) => b.s - a.s).forEach((r) => {
-      let ly = y(r.s) - 8;
-      while (usados.some((u) => Math.abs(u.y - ly) < 12 && Math.abs(u.x - x(r.nota)) < 90)) ly += 12;
-      usados.push({x: x(r.nota), y: ly});
-      const right = x(r.nota) > W - 90;
-      svg.append('text').attr('x', x(r.nota) + (right ? -6 : 6)).attr('y', ly).attr('text-anchor', right ? 'end' : 'start')
-        .attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text(r.n.split(' ').slice(-1)[0]);
-    });
-    el.replaceChildren(svg.node());
-    sa.tip(el);
-  });
-
   // ---------- tablas
   const estado = {campo: 'nota', dir: -1};
-  const NUMERICAS = new Set(['edad', 'calidad', 'potencial_num', 'nota', 'minutos', 'goles', 'amarillas', 'sueldo', 'clausula']);
-  document.querySelectorAll('#tabla-plantilla th[data-sort]').forEach((th) => {
+  const NUMERICAS = new Set(['edad', 'calidad', 'potencial_num', 'nota', 'minutos', 'goles', 'amarillas', 'sueldo', 'sueldo_justo', 'clausula']);
+  document.querySelectorAll('.sa-plantilla th[data-sort]').forEach((th) => {
     th.addEventListener('click', () => {
       const c = th.getAttribute('data-sort');
       estado.dir = estado.campo === c ? -estado.dir : (NUMERICAS.has(c) ? -1 : 1);
       estado.campo = c;
-      document.querySelectorAll('#tabla-plantilla th[data-sort]').forEach((h) => h.setAttribute('aria-sort', h === th ? (estado.dir > 0 ? 'ascending' : 'descending') : 'none'));
-      dash.draw('plantilla');
+      document.querySelectorAll('.sa-plantilla th[data-sort]').forEach((h) => h.setAttribute('aria-sort', h.getAttribute('data-sort') === c ? (estado.dir > 0 ? 'ascending' : 'descending') : 'none'));
+      ['plantilla-primer', 'plantilla-filial', 'plantilla-juvenil'].forEach((n) => dash.draw(n));
     });
   });
-  document.querySelectorAll('#buscar-jugador').forEach((i) => i.addEventListener('input', () => dash.draw('plantilla')));
+  document.querySelectorAll('#buscar-jugador').forEach((i) => i.addEventListener('input', () => ['plantilla-primer', 'plantilla-filial', 'plantilla-juvenil'].forEach((n) => dash.draw(n))));
   const pill = (txt, cls) => { const s = document.createElement('span'); s.className = 'sa-pill ' + (cls || ''); s.textContent = txt; return s; };
   const td = (content, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; if (content instanceof Node) c.appendChild(content); else c.textContent = content ?? ''; return c; };
   const CLASE_ACCION = {'RENOVAR': 'ok', 'VENDER YA': 'bad', 'CEDER': 'warn', 'SALE LIBRE': '', 'MANTENER': ''};
-
-  dash.draw('plantilla', (tb) => {
-    if (!sa.ready(tb, ['jugadores'], true)) return;
-    const q = (document.querySelector('#buscar-jugador')?.value || '').toLowerCase();
-    const rows = dash.data('jugadores').data.filter((r) => !q || [r.jugador, r.equipo, r.posicion, r.accion].join(' ').toLowerCase().includes(q));
-    const c = estado.campo;
-    rows.sort((a, b) => {
-      const va = NUMERICAS.has(c) ? (a[c] === '' ? -Infinity : Number(a[c])) : a[c];
-      const vb = NUMERICAS.has(c) ? (b[c] === '' ? -Infinity : Number(b[c])) : b[c];
-      return (va > vb ? 1 : va < vb ? -1 : 0) * estado.dir;
-    });
-    tb.replaceChildren(...rows.map((r) => {
-      const tr = document.createElement('tr');
-      tr.title = r.motivo;
-      tr.append(
-        td(r.jugador + (r.cedido === 'Sí' ? ' (cedido)' : '') + (r.lesionado === 'Sí' ? ' ✚' : '')),
-        td(r.equipo), td(r.edad, 'num'), td(r.posicion), td(r.calidad === '' ? '' : sa.dec(Number(r.calidad), 1), 'num'),
-        td(r.potencial, 'num'), td(r.nota === '' ? '' : sa.dec(Number(r.nota)), 'num'), td(r.minutos, 'num'), td(r.goles, 'num'), td(r.amarillas, 'num'),
-        td(r.sueldo === '' ? '' : sa.eur(Number(r.sueldo)), 'num'), td(r.clausula === '' ? '' : sa.eur(Number(r.clausula)), 'num'),
-        td(r.fin_contrato ? d3.utcFormat('%d/%m/%Y')(new Date(r.fin_contrato)) : ''),
-        td(pill(r.accion, CLASE_ACCION[r.accion])),
-      );
-      tr.setAttribute('data-key', r.jugador);
-      return tr;
-    }));
-  });
 
   dash.draw('riesgos', (tb) => {
     if (!sa.ready(tb, ['alertas'], true)) return;
     tb.replaceChildren(...dash.data('alertas').data.map((r) => {
       const tr = document.createElement('tr');
-      tr.setAttribute('data-key', r.jugador);
+      tr.setAttribute('data-key', r.id);
       tr.append(td(r.jugador), td(r.equipo), td(r.edad, 'num'), td(r.potencial, 'num'), td(sa.eur(r.clausula), 'num'), td(sa.eur(r.valor_max), 'num'),
         td(r.le_siguen === 'Sí' ? pill('Sí', 'bad') : 'No'), td(r.riesgo));
       return tr;
@@ -720,7 +728,7 @@
   });
 
   // ---------- pestañas
-  const PESTANAS = ['inicio', 'partidos', 'tactica', 'plantilla', 'contratos', 'cantera', 'liga'];
+  const PESTANAS = ['inicio', 'analisis', 'partidos', 'tactica', 'plantilla', 'contratos', 'cantera', 'liga'];
   sa.mostrar = (id, link = true) => {
     if (!PESTANAS.includes(id)) id = 'inicio';
     document.querySelectorAll('.sa-page').forEach((s) => { s.hidden = s.id !== id; });
@@ -736,7 +744,7 @@
 
   const fechaES = (iso) => (iso ? d3.utcFormat('%d/%m/%Y')(new Date(iso)) : '');
   const CLASE_URGENCIA = {Urgente: 'bad', Alta: 'warn'};
-  const NOMBRE_PESTANA = {inicio: 'Inicio', partidos: 'Partidos', tactica: 'Táctica', plantilla: 'Plantilla', contratos: 'Contratos', cantera: 'Cantera', liga: 'Liga'};
+  const NOMBRE_PESTANA = {inicio: 'Inicio', analisis: 'Análisis', partidos: 'Partidos', tactica: 'Táctica', plantilla: 'Plantilla', contratos: 'Contratos', cantera: 'Cantera', liga: 'Liga'};
 
   // ---------- cálculos de contratos
   dash.calc('vencimientos', {
@@ -744,22 +752,12 @@
     title: 'Contratos que acaban pronto',
     description: 'Jugadores propios con 18 meses o menos de contrato, ordenados por fecha límite.',
     fn: (jugadores) => jugadores
+      .filter((j, i, todos) => todos.findIndex((o) => o.jugador === j.jugador) === i)
       .filter((j) => j.cedido !== 'Sí' && j.meses_contrato !== '' && Number(j.meses_contrato) <= 18)
-      .map((j) => ({jugador: j.jugador, equipo: j.equipo, edad: Number(j.edad), fin_contrato: j.fin_contrato,
+      .map((j) => ({id: j.id, jugador: j.jugador, equipo: j.equipo, edad: Number(j.edad), fin_contrato: j.fin_contrato,
         limite_renovar: j.limite_renovar, accion: j.accion, motivo: j.motivo}))
       .sort((a, b) => a.limite_renovar.localeCompare(b.limite_renovar) || a.accion.localeCompare(b.accion)),
   });
-  dash.calc('sobretope', {
-    inputs: ['jugadores'],
-    title: 'Sueldos por encima del tope',
-    description: 'Jugadores cuyo sueldo supera el tope de su rol, de mayor a menor exceso.',
-    fn: (jugadores) => jugadores
-      .filter((j) => Number(j.exceso_tope || 0) > 0)
-      .map((j) => ({jugador: j.jugador, equipo: j.equipo, nota: j.nota === '' ? null : Number(j.nota), sueldo: Number(j.sueldo),
-        tope: Number(j.tope), exceso_tope: Number(j.exceso_tope)}))
-      .sort((a, b) => b.exceso_tope - a.exceso_tope),
-  });
-
   // ---------- próximo partido
   const prox = () => (dash.data('calendario').status === 'ok' ? dash.data('calendario').data[0] : null);
   cifra('prox-rival', () => prox()?.rival);
@@ -796,13 +794,9 @@
     td(r.fase), td(r.instruccion, 'strong'), td(r.ahora), td(r.propuesta),
     td(pill(r.cambiar === 'Sí' ? 'Cambiar' : 'Mantener', r.cambiar === 'Sí' ? 'bad' : 'ok')), td(r.motivo, 'wrap'))));
 
-  dash.draw('vencimientos', (tb) => filas(tb, 'vencimientos', (r) => tr(r.jugador,
+  dash.draw('vencimientos', (tb) => filas(tb, 'vencimientos', (r) => tr(r.id,
     td(r.jugador, 'strong'), td(r.equipo), td(r.edad, 'num'), td(fechaES(r.fin_contrato)), td(fechaES(r.limite_renovar)),
     td(pill(r.accion, CLASE_ACCION[r.accion])), td(r.motivo, 'wrap'))));
-
-  dash.draw('sobretope', (tb) => filas(tb, 'sobretope', (r) => tr(r.jugador,
-    td(r.jugador, 'strong'), td(r.equipo), td(r.nota == null ? '' : sa.dec(r.nota), 'num'), td(sa.eur(r.sueldo), 'num'),
-    td(sa.eur(r.tope), 'num'), td('+' + sa.eur(r.exceso_tope), 'num'))));
 
   dash.draw('cantera', (tb) => filas(tb, 'cantera', (r) => tr(r.jugador,
     td(r.jugador + (r.le_siguen === 'Sí' ? ' · le siguen' : ''), 'strong'), td(r.equipo), td(r.edad, 'num'), td(r.posicion),
@@ -835,4 +829,107 @@
     });
     el.replaceChildren(svg.node());
   });
+
+  // ---------- plantilla por equipos
+  const CLASE_SUELDO = {'Cobra de más': 'bad', 'Cobra de menos': 'ok'};
+  const tablaEquipo = (equipo, conNota) => (tb) => {
+    if (!sa.ready(tb, ['jugadores'], true)) return;
+    const q = (document.querySelector('#buscar-jugador')?.value || '').toLowerCase();
+    const rows = dash.data('jugadores').data.filter((r) => r.equipo === equipo
+      && (!q || [r.jugador, r.posicion, r.accion, r.valoracion_sueldo].join(' ').toLowerCase().includes(q)));
+    const c = estado.campo;
+    rows.sort((a, b) => {
+      const va = NUMERICAS.has(c) ? (a[c] === '' || a[c] == null ? -Infinity : Number(a[c])) : (a[c] || '');
+      const vb = NUMERICAS.has(c) ? (b[c] === '' || b[c] == null ? -Infinity : Number(b[c])) : (b[c] || '');
+      return (va > vb ? 1 : va < vb ? -1 : 0) * estado.dir;
+    });
+    tb.replaceChildren(...rows.map((r) => {
+      const fila = document.createElement('tr');
+      fila.setAttribute('data-key', r.id);
+      fila.title = [r.motivo, r.motivo_sueldo, r.otros_equipos ? 'También inscrito en: ' + r.otros_equipos : ''].filter(Boolean).join('\n');
+      const celdas = [
+        td(r.jugador + (r.cedido === 'Sí' ? ' (cedido)' : '') + (r.lesionado === 'Sí' ? ' ✚' : ''), 'strong'),
+        td(r.edad, 'num'), td(r.posicion), td(r.calidad === '' ? '' : sa.dec(Number(r.calidad), 1), 'num'), td(r.potencial, 'num'),
+      ];
+      if (conNota) celdas.push(td(r.nota === '' ? '' : sa.dec(Number(r.nota)), 'num'), td(r.minutos, 'num'), td(r.goles, 'num'), td(r.amarillas, 'num'));
+      celdas.push(
+        td(r.sueldo === '' ? '' : sa.eur(Number(r.sueldo)), 'num'), td(r.sueldo_justo === '' ? '' : sa.eur(Number(r.sueldo_justo)), 'num'),
+        td(r.valoracion_sueldo ? pill(r.valoracion_sueldo, CLASE_SUELDO[r.valoracion_sueldo]) : ''),
+        td(r.clausula === '' ? '' : sa.eur(Number(r.clausula)), 'num'), td(fechaES(r.fin_contrato)),
+        td(pill(r.accion, CLASE_ACCION[r.accion])));
+      fila.append(...celdas);
+      return fila;
+    }));
+  };
+  dash.draw('plantilla-primer', tablaEquipo('Primer equipo', true));
+  dash.draw('plantilla-filial', tablaEquipo('Salamanca B', false));
+  dash.draw('plantilla-juvenil', tablaEquipo('Juvenil', false));
+
+  // ---------- gráfico: sueldo real frente a sueldo justo (primer equipo)
+  dash.draw('sueldos', (el) => {
+    if (!sa.ready(el, ['jugadores'])) return;
+    const rows = dash.data('jugadores').data.filter((r) => r.equipo === 'Primer equipo' && r.sueldo_justo !== '' && r.sueldo !== '')
+      .map((r) => ({n: r.jugador, s: Number(r.sueldo), j: Number(r.sueldo_justo), v: r.valoracion_sueldo, puesto: parseInt(r.puesto_rendimiento, 10), dif: Number(r.diferencia_sueldo_pct)}))
+      .sort((a, b) => a.puesto - b.puesto);
+    const W = el.clientWidth || 320, rowH = 20, m = {t: 8, r: 16, b: 26, l: 8};
+    const svg = d3.create('svg').attr('width', '100%');
+    el.replaceChildren(svg.node());
+    const probe = svg.append('g').style('font-size', 'var(--cds-font-size-caption)');
+    let lw = 0;
+    rows.forEach((r) => { const t = probe.append('text').text(r.n); lw = Math.max(lw, t.node().getComputedTextLength()); });
+    probe.remove();
+    const H = m.t + rows.length * rowH + m.b;
+    svg.attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Sueldo real frente a sueldo justo por jugador');
+    const x = d3.scaleLinear([0, d3.max(rows, (r) => Math.max(r.s, r.j)) * 1.05], [m.l + lw + 10, W - m.r]).nice();
+    const y = d3.scaleBand(rows.map((r) => r.n), [m.t, H - m.b]).padding(0.3);
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor(W / 140))).tickFormat((v) => d3.format(',.0f')(v / 1000) + ' mil €').tickSize(-(H - m.t - m.b))).call(sa.axisClean).call((g) => g.select('.domain').remove());
+    const col = (v) => (v === 'Cobra de más' ? 'var(--cds-chart-status-critical)' : v === 'Cobra de menos' ? 'var(--color-ok)' : dash.colors[0]);
+    const tip = sa.tip(el);
+    rows.forEach((r) => {
+      const cy = y(r.n) + y.bandwidth() / 2;
+      svg.append('text').attr('x', m.l).attr('y', cy + 4).attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text(r.n);
+      svg.append('line').attr('x1', x(Math.min(r.s, r.j))).attr('x2', x(Math.max(r.s, r.j))).attr('y1', cy).attr('y2', cy).attr('stroke', col(r.v)).attr('stroke-width', 2).attr('stroke-linecap', 'round');
+      svg.append('line').attr('x1', x(r.j)).attr('x2', x(r.j)).attr('y1', cy - 6).attr('y2', cy + 6).attr('stroke', 'var(--color-fg-muted)').attr('stroke-width', 2);
+      svg.append('circle').attr('cx', x(r.s)).attr('cy', cy).attr('r', 5).attr('fill', col(r.v))
+        .on('pointermove', (ev) => { const [px, py] = d3.pointer(ev, el); tip.show([`${r.n} · ${r.puesto}º en rendimiento`, `Cobra ${sa.eur(r.s)}`, `Sueldo justo ${sa.eur(r.j)} (${r.dif > 0 ? '+' : ''}${r.dif} %)`], px, py); })
+        .on('pointerleave', () => tip.hide());
+    });
+    sa.tip(el);
+  });
+
+  // ---------- contratos: sueldos que no cuadran con el rendimiento
+  dash.calc('desajuste', {
+    inputs: ['jugadores'],
+    title: 'Sueldos que no cuadran',
+    description: 'Jugadores que cobran más de un 30 % por encima o más de un 25 % por debajo de su sueldo justo.',
+    fn: (jugadores) => jugadores
+      .filter((j) => j.valoracion_sueldo === 'Cobra de más' || j.valoracion_sueldo === 'Cobra de menos')
+      .map((j) => ({id: j.id, jugador: j.jugador, equipo: j.equipo, sueldo: Number(j.sueldo), sueldo_justo: Number(j.sueldo_justo),
+        diferencia: Number(j.diferencia_sueldo_pct), valoracion: j.valoracion_sueldo, motivo: j.motivo_sueldo}))
+      .sort((a, b) => b.diferencia - a.diferencia),
+  });
+  dash.draw('desajuste', (tb) => filas(tb, 'desajuste', (r) => tr(r.id,
+    td(r.jugador, 'strong'), td(r.equipo), td(sa.eur(r.sueldo), 'num'), td(sa.eur(r.sueldo_justo), 'num'),
+    td((r.diferencia > 0 ? '+' : '') + r.diferencia + ' %', 'num'), td(pill(r.valoracion, CLASE_SUELDO[r.valoracion])), td(r.motivo, 'wrap'))));
+
+  // ---------- análisis escrito
+  dash.draw('analisis', (el) => {
+    if (!sa.ready(el, ['analisis'])) return;
+    const rows = [...dash.data('analisis').data].sort((a, b) => Number(a.orden) - Number(b.orden));
+    const bloques = d3.groups(rows, (r) => r.bloque);
+    el.replaceChildren(...bloques.map(([bloque, items]) => {
+      const sec = document.createElement('div'); sec.className = 'sa-card sa-bloque';
+      const h = document.createElement('h3'); h.textContent = bloque; sec.append(h);
+      items.forEach((r) => {
+        const it = document.createElement('div'); it.className = 'sa-item';
+        const t = document.createElement('p'); t.className = 'sa-item-t'; t.textContent = r.titulo;
+        const x = document.createElement('p'); x.className = 'sa-item-x'; x.textContent = r.texto;
+        it.append(t, x);
+        if (r.accion) { const a = document.createElement('p'); a.className = 'sa-item-a'; a.textContent = '→ ' + r.accion; it.append(a); }
+        sec.append(it);
+      });
+      return sec;
+    }));
+  });
+  dash.draw('necesito', (tb) => filas(tb, 'necesito', (r) => tr(r.orden, td(r.captura, 'strong'), td(r.donde, 'wrap'), td(r.para_que, 'wrap'))));
 </script>

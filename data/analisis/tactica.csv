@@ -6,9 +6,9 @@
 5;Con balón;Distribución del portero;Rápida;Rápida, a laterales o pivote;Sí;Que la salida no sea en largo.
 6;Con balón;Recepción de pase;Pasar al espacio;Pasar al espacio;No;Es lo que funciona: los goles de León llegan atacando el espacio.
 7;Con balón;Transición ofensiva;Contraataque;Contraataque;No;Recuperamos 88,9 balones por partido: hay que aprovecharlos.
-8;Sin balón;Línea defensiva;Estándar;Más alta (un punto);Sí;El 71 % de las acciones defensivas son en nuestro tercio: jugamos en bloque bajo.
+8;Sin balón;Línea defensiva;Estándar;Estándar (rectificado);No;Contra el Guijuelo, con el bloque más bajo (PRPAD 39,6), concedimos solo 0,66 de xG. En juego abierto el bloque bajo funciona.
 9;Sin balón;Realizando una entrada;Estándar;Mantenerse en pie;Sí;10,5 faltas por partido frente a 8,3 de media.
-10;Sin balón;Activar presión;Más insistente;Estándar;Sí;La presión insistente desde atrás genera faltas sin robar arriba.
+10;Sin balón;Activar presión;Más insistente;Estándar;Sí;Contra el Numantia presionamos más que nunca (PRPAD 16,9) y fue nuestro peor partido. Las faltas suben cuando el rival tiene el balón.
 11;Sin balón;Línea de presión;Bloque medio;Bloque medio;No;El problema es la línea defensiva, no la de presión.
 12;Sin balón;Transición defensiva;Reagruparse;Reagruparse;No;Coherente con el contraataque.
 13;Córners en contra;Contraatacante C2;Frontal del área;Marcar segundo palo;Sí;Nadie cubre el segundo palo. Concedemos 39 córners en 4 partidos.

@@ -1,5 +1,15 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Plantilla por equipos, sueldo justo e informe de analista
+- **Plantilla dividida**: en el panel, tres tablas (Primer equipo, Salamanca B y Juvenil) con todos los jugadores. Tello sale en los dos equipos en los que está inscrito. El filial se llama ahora "Salamanca B" en todos los informes.
+- **Sueldo justo (sin topes fijos)**: modelo estadístico nuevo. Con la misma masa salarial de cada equipo, calcula lo que le correspondería a cada jugador por lo que aporta (calidad, nota ajustada por minutos, participación y margen de mejora). Si mejora, su sueldo justo sube.
+  - Cobran de más: Vicandi (+159 %), Bilbao (+167 %), Kadochnikov (+78 %) y Ucín (+75 %).
+  - Cobran de menos: León (−49 %), Escribano (−46 %), Jiménez (−43 %) y Calvo (−41 %). Al renovarlos, subirles el sueldo.
+  - Está en el informe de contratos, en la pestaña Plantilla (gráfico de sueldo real frente a sueldo justo) y en Contratos (tabla de sueldos que no cuadran).
+- **Informe de analista** (pestaña nueva "Análisis" e `informes/2028-09-18_analisis.md`): 25 puntos en 8 bloques sobre las jornadas 1-4, con la lista de capturas que necesito para profundizar.
+- **Rectificación**: retiro lo de subir la línea defensiva. Contra el Guijuelo, con el bloque más bajo, concedimos solo 0,66 de xG. El problema son las faltas y el balón parado.
+- **Comprobación del panel**: correcta.
+
 ## 09/11 · Estadísticas, defensa aérea y Luis Paulo al once
 - **Transcrito**: estadísticas del primer equipo (minutos, amarillas, media, goles, asistencias) y la lista de "Defensas aéreos" de los córners en contra.
 - **Hallazgo**: los 4 mejores por arriba (Luis Paulo, Lucas Santos, Kadochnikov y Ucín) no son titulares, y los centrales titulares son débiles por arriba (Mulas, salto 9; Murúa, fuerza 5).

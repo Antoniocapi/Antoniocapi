@@ -2,7 +2,7 @@ orden,prioridad,area,pestana,tarea,detalle
 1,Urgente,Táctica,tactica,Quita a Miràngels del once,"Está lesionado (cruz roja) y sigue de titular. Entra Jon Eceizabarrena (media 6,70)."
 2,Urgente,Táctica,tactica,Óscar León de titular en punta,"Es tu jugador con mejor media (7,00) y 3 goles, y está en el banquillo. Escribano pasa a la banda izquierda."
 3,Urgente,Táctica,tactica,Menos balón largo,Pases directos a Estándar y Estrategia previa a Equilibrada: León gana solo el 13 % de los balones aéreos.
-4,Urgente,Táctica,tactica,Menos faltas y defensa más arriba,"Entradas: Mantenerse en pie. Presión: Estándar. Línea defensiva un punto más alta. Hacemos 10,5 faltas por partido (media 8,3)."
+4,Urgente,Táctica,tactica,Menos faltas,"Entradas: Mantenerse en pie y presión Estándar. Hacemos 10,5 faltas por partido (media 8,3), sobre todo contra equipos de posesión. La línea defensiva se queda como está: el bloque bajo funcionó contra el Guijuelo."
 5,Urgente,Balón parado,tactica,Cubre el segundo palo en los córners en contra,"Pasa el contraatacante C2 a Marcar segundo palo. Concedemos 39 córners en 4 partidos y unos 0,16 de xA a balón parado por partido (media 0,06)."
 6,Urgente,Táctica,tactica,Luis Paulo de central titular en lugar de Mulas,"Es el mejor de la plantilla por arriba (salto 15, fuerza 14) y está en el banquillo. Mulas tiene salto 9. Convoca también a Lucas Santos (salto 15)."
 7,Alta,Contratos,contratos,Renueva a João Machado y Alberto Ruvira,Sus cláusulas (29.000 € y 82.000 €) están por debajo de su valor y a Machado le siguen otros clubes.
@@ -12,4 +12,4 @@ orden,prioridad,area,pestana,tarea,detalle
 11,Media,Cantera,cantera,Sube a Alberto Ruvira al primer equipo,"16 años y ya tiene 3★, el nivel de los titulares. De cuarto central."
 12,Media,Mercado de enero,plantilla,Prepara los fichajes de enero,"Lateral izquierdo (Hamansenya es cedido), delantero centro y lateral derecho. Margen: 95.000 € al año en sueldos y 14.000 € en traspasos."
 13,Baja,Ventas,contratos,Escucha ofertas por Murúa,"31 años, cobra 100.000 € y acaba en junio. Rinde (7,00), así que solo si la oferta es buena."
-14,Baja,Datos,inicio,Pásame estas capturas,Entrenamiento > Valoraciones (filial y juvenil) y Balón parado > Faltas en defensa.
+14,Baja,Datos,analisis,Pásame más capturas para analizar a fondo,"La lista completa, con para qué sirve cada una, está al final de la pestaña Análisis."

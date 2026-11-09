@@ -6,6 +6,7 @@ from pathlib import Path
 from .comun import NOMBRE_GRUPO, RAIZ
 from .datos import fecha, fecha_limite_renovacion, leer_csv, meses_entre, numero, texto_potencial, valor_estimado
 from .inf_cantera import proponer_nivel
+from . import sueldos
 from .inf_equipo import METRICAS, _valoracion
 from .inf_partidos import (buscar_posicion, cargar_clasificacion, leer_partidos, puntos_esperados,
                            rendimiento_jugadores)
@@ -54,14 +55,17 @@ def exportar(p, cfg, carpeta=RAIZ / "panel"):
         })
     _escribir(carpeta / "partidos.csv", list(filas[0]) if filas else ["jornada"], filas)
 
-    # Jugadores (un registro por jugador)
+    # Jugadores: todos los de cada equipo (un canterano inscrito en dos equipos sale en los dos)
     rend = {r["Jugador"]: r for r in rendimiento_jugadores(RAIZ / "data" / "partidos")}
+    salarios = sueldos.calcular(p)
     filas = []
-    for j in p.unicos():
+    for j in p.jugadores:
         accion, motivo = recomendar(p, j)
         r = rend.get(j["jugador"], {})
+        sj = salarios.get((j["grupo"], j["jugador"]))
+        equipo = NOMBRE_GRUPO.get(j["grupo"], j["grupo"])
         filas.append({
-            "jugador": j["jugador"], "equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "edad": j["edad"],
+            "id": f"{equipo} · {j['jugador']}", "jugador": j["jugador"], "equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "edad": j["edad"],
             "posicion": j["mejor_pos"] or j["posicion"], "calidad": j["calidad"], "potencial": texto_potencial(j),
             "potencial_num": p.pot(j), "nota": j["nota"], "titularidades": j["titular"] if j.get("titular") is not None else r.get("Titularidades", 0),
             "minutos": j["minutos"], "amarillas": j["amarillas"],
@@ -72,7 +76,12 @@ def exportar(p, cfg, carpeta=RAIZ / "panel"):
             "lesionado": "Sí" if "Les" in p.codigos_inf(j) else "No",
             "meses_contrato": meses_entre(p.fecha, j["fin"]),
             "limite_renovar": fecha_limite_renovacion(j["fin"]).isoformat() if j["fin"] else "",
-            "exceso_tope": (j["sueldo"] - p.tope(j)) if j["sueldo"] and p.tope(j) and j["sueldo"] > p.tope(j) else 0,
+            "sueldo_justo": sj["sueldo_justo"] if sj else None,
+            "diferencia_sueldo_pct": sj["diferencia_pct"] if sj else None,
+            "valoracion_sueldo": sj["valoracion"] if sj else ("Cedido" if p.es_cedido_aqui(j) else ""),
+            "motivo_sueldo": sueldos.motivo(j, sj) if sj else "",
+            "puesto_rendimiento": f"{sj['puesto']}º de {sj['de']}" if sj else "",
+            "otros_equipos": ", ".join(NOMBRE_GRUPO.get(g, g) for g in sorted(p.grupos_de.get(j["jugador"], set()) - {j["grupo"]})),
         })
     _escribir(carpeta / "jugadores.csv", list(filas[0]), filas)
 
@@ -134,7 +143,7 @@ def exportar(p, cfg, carpeta=RAIZ / "panel"):
     _escribir(carpeta / "calendario.csv", ["fecha", "rival", "campo", "pos_rival", "tramo"], filas)
 
     # Análisis escrito (tareas, once propuesto, cambios de táctica): se copian de data/analisis
-    for nombre in ("tareas", "once", "tactica"):
+    for nombre in ("tareas", "once", "tactica", "analisis", "necesito"):
         ruta = RAIZ / "data" / "analisis" / f"{nombre}.csv"
         if ruta.exists():
             cols, filas = leer_csv(ruta)

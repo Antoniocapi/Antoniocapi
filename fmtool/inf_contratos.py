@@ -4,6 +4,7 @@ from .comun import NOMBRE_GRUPO, NOMBRE_DATO, ROL_TEXTO, falta
 from .datos import (fecha_limite_renovacion, fmt_euros, fmt_fecha, mediana, meses_entre,
                     texto_potencial, valor_estimado)
 from .inf_plantilla import recomendar
+from . import sueldos
 from .salida import Informe
 
 
@@ -107,46 +108,37 @@ def generar(p, carpeta):
     if "futura_venta" not in p.columnas:
         inf.aviso("El «Porcentaje de futura venta» no sale en las capturas: no puedo revisarlo.")
 
-    # ------------------------------------------------ 3. Estructura salarial
-    inf.seccion("Estructura salarial")
-    faltan = falta(p.columnas, ["nota"])
-    if faltan:
-        inf.aviso("Sin «Nota media» en las capturas: el rendimiento se mide por estrellas de calidad, no por nota.")
-    topes = cfg.get("topes_sueldo") or {}
-    inf.texto("Topes: " + ", ".join(f"{ROL_TEXTO.get(k, k)} {fmt_euros(v)}" for k, v in topes.items()) + ".")
-
-    primer = [j for j in jugadores if j["grupo"] == "primer-equipo" and j["sueldo"]]
-    eur_estrella = mediana(j["sueldo"] / j["calidad"] for j in primer if j["calidad"])
-    sueldo_p75 = sorted(j["sueldo"] for j in primer)[int(len(primer) * 0.75)] if primer else None
-    filas = []
-    for j in jugadores:
-        if not j["sueldo"]:
-            continue
-        tope = p.tope(j)
-        alertas = []
-        if tope and j["sueldo"] > tope:
-            alertas.append(f"supera el tope de {ROL_TEXTO[p.rol_salarial(j)]} en {fmt_euros(j['sueldo'] - tope)}")
-        ratio = None
-        if j["grupo"] == "primer-equipo" and j["calidad"] and eur_estrella:
-            ratio = round(j["sueldo"] / j["calidad"] / eur_estrella, 2)
-            if ratio >= 1.5:
-                alertas.append(f"cobra {ratio:g} veces lo normal para sus {j['calidad']:g}★")
-        if (j["edad"] or 0) >= 28 and sueldo_p75 and j["sueldo"] >= sueldo_p75 and (p.pot(j) or 0) <= (j["calidad"] or 0):
-            alertas.append(f"{j['edad']} años, de los sueldos más altos y sin margen de mejora")
-        rec = cfg.get("recomendaciones", {})
-        if (j["nota"] is not None and (j["partidos"] or 0) >= rec.get("partidos_minimos_nota", 5)
-                and j["nota"] < rec.get("nota_minima", 6.6) and tope and j["sueldo"] > tope * 0.75):
-            alertas.append(f"nota media {j['nota']:g} para un sueldo alto")
-        filas.append({
-            "Jugador": j["jugador"], "Equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "Edad": j["edad"],
-            "Calidad": j["calidad"], "Potencial": texto_potencial(j), "Rol salarial": ROL_TEXTO[p.rol_salarial(j)],
-            "Sueldo (€)": j["sueldo"], "Tope (€)": tope, "Índice €/estrella": ratio,
-            "Alerta": "; ".join(alertas), "_nivel": "rojo" if len(alertas) >= 2 else ("naranja" if alertas else ""),
-        })
-    filas.sort(key=lambda f: -(f["Sueldo (€)"] or 0))
-    inf.texto("Índice €/estrella: 1 = lo que cobra de media el primer equipo por cada estrella de calidad; 1,5 o más = caro.")
-    inf.tabla("Salarios", ["Jugador", "Equipo", "Edad", "Calidad", "Potencial", "Rol salarial", "Sueldo (€)",
-                           "Tope (€)", "Índice €/estrella", "Alerta"], filas)
+    # ------------------------------------------------ 3. Sueldo frente a rendimiento
+    inf.seccion("Sueldo frente a rendimiento")
+    inf.texto("Sin topes fijos. Para cada equipo, con su misma masa salarial, el **sueldo justo** es lo que le "
+              "correspondería a cada jugador según lo que aporta: calidad, nota media (ajustada por los minutos: con "
+              "pocos minutos la nota se acerca a la del equipo), participación y, en menores de 24, margen de mejora. "
+              "En el Salamanca B y el juvenil, calidad y potencial. Si un jugador mejora, su sueldo justo sube.")
+    inf.texto("«Cobra de más» = más de un 30 % por encima de su sueldo justo; «cobra de menos» = más de un 25 % por "
+              "debajo (al renovar pedirá más, y lo merece). Con 4 jornadas, las notas aún pesan poco.")
+    salarios = sueldos.calcular(p)
+    for grupo in ("primer-equipo", "filial", "juvenil"):
+        filas = []
+        for j in p.jugadores:
+            r = salarios.get((grupo, j["jugador"])) if j["grupo"] == grupo else None
+            if not r:
+                continue
+            filas.append({
+                "Puesto": r["puesto"], "Jugador": j["jugador"], "Edad": j["edad"], "Calidad": j["calidad"],
+                "Potencial": texto_potencial(j), "Nota": j["nota"], "Minutos": j["minutos"],
+                "Sueldo (€)": j["sueldo"], "Sueldo justo (€)": r["sueldo_justo"], "Diferencia": f"{r['diferencia_pct']:+d} %",
+                "Valoración": r["valoracion"], "Motivo": sueldos.motivo(j, r),
+                "_nivel": "rojo" if r["valoracion"] == "Cobra de más" else ("verde" if r["valoracion"] == "Cobra de menos" else ""),
+            })
+        filas.sort(key=lambda f: f["Puesto"])
+        inf.seccion(f"Sueldo justo · {NOMBRE_GRUPO[grupo]}")
+        cols = ["Puesto", "Jugador", "Edad", "Calidad", "Potencial"] + (["Nota", "Minutos"] if grupo == "primer-equipo" else []) + \
+               ["Sueldo (€)", "Sueldo justo (€)", "Diferencia", "Valoración", "Motivo"]
+        inf.tabla(f"Sueldos {NOMBRE_GRUPO[grupo]}", cols, filas)
+    cedidos = [j["jugador"] for j in p.unicos() if p.es_cedido_aqui(j)]
+    if cedidos:
+        inf.texto("Fuera del cálculo: " + ", ".join(cedidos) + " (cedidos a nuestro club) y los canteranos que figuran también "
+                  "en el primer equipo (cobran sueldo de cantera).")
 
     # Masa salarial
     inf.seccion("Masa salarial")
