@@ -2,6 +2,20 @@
 
 Herramienta local en Python para gestionar la partida con el modelo de Voulgaris (CD Castellón). Los informes se generan en Markdown y Excel, en `informes/`, con la fecha de juego en el nombre.
 
+## Por dónde empezar
+
+1. **Panel de analista** (privado, en claude.ai): es el sitio principal. Tiene pestañas:
+   - **Inicio**: qué hacer ahora, ordenado por urgencia.
+   - **Partidos**: xG y resultados, próximos rivales.
+   - **Táctica**: once propuesto y cambios en las instrucciones.
+   - **Plantilla**: notas, sueldos y la acción de cada jugador.
+   - **Contratos**: cláusulas, renovaciones y sueldos por encima del tope.
+   - **Cantera**: jóvenes con futuro y dónde deben jugar.
+   - **Liga**: clasificación y métricas frente a la media.
+2. **Informes** (`informes/`): lo mismo en Markdown y Excel, por fecha de juego.
+3. **Datos** (`data/`): lo transcrito de tus capturas. Las notas de cada captura están en `data/capturas/NOTAS_TRANSCRIPCION.md`.
+4. **Análisis editable** (`data/analisis/`): tareas, once propuesto y cambios de táctica. Si cambias algo, el panel lo recoge en la siguiente actualización.
+
 ## Instalación (una vez)
 
 ```

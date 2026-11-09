@@ -44,45 +44,90 @@
   details.sa-notes dl { font-size: var(--cds-font-size-caption); display: grid; grid-template-columns: max-content 1fr; gap: var(--cds-gap-xs) var(--cds-gap-md); }
   details.sa-notes dt { font-weight: var(--cds-font-weight-medium); }
   details.sa-notes dd { margin: 0; color: var(--color-fg-muted); }
+  /* Pestañas: una barra fija arriba; cada pestaña es una sección */
+  .sa-tabs { display: flex; gap: var(--cds-gap-xs); overflow-x: auto; border-bottom: 1px solid var(--color-border-line); padding-bottom: var(--cds-pad-xs); scrollbar-width: thin; }
+  .sa-tab { font: inherit; font-size: var(--cds-font-size-body); background: transparent; color: var(--color-fg-muted); border: 1px solid transparent; border-radius: var(--cds-radius); padding: var(--cds-pad-xs) var(--cds-pad-md); cursor: pointer; white-space: nowrap; display: flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+  .sa-tab small { font-size: var(--cds-font-size-caption); opacity: .8; }
+  .sa-tab:hover { color: var(--color-fg); border-color: var(--color-border-line); }
+  .sa-tab[aria-selected="true"] { color: var(--color-fg); background: var(--color-panel); border-color: var(--color-border-line); font-weight: var(--cds-font-weight-medium); }
+  .sa-tab:focus-visible, .sa-go:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+  .sa-page { display: flex; flex-direction: column; gap: var(--cds-gap-xl); }
+  .sa-intro { margin: 0; color: var(--color-fg-muted); max-width: 70ch; }
+  .sa-go { font: inherit; font-size: var(--cds-font-size-caption); border: 1px solid var(--color-border-line); background: var(--color-bg); color: var(--color-fg); border-radius: var(--cds-radius); padding: 2px var(--cds-pad-sm); cursor: pointer; white-space: nowrap; }
+  .sa-go:hover { background: var(--color-panel); }
+  .sa-pitch { position: relative; min-height: 420px; }
+  .sa-table td.strong { font-weight: 600; }
 </style>
 
 <div class="sa">
-  <header class="sa-head" id="resumen">
+  <header class="sa-head">
     <h1 class="sa-title">Salamanca UDS · Analítica</h1>
+    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · datos del FM a 18/09/2028</span>
+  </header>
+
+  <nav class="sa-tabs" role="tablist" aria-label="Secciones del panel">
+    <button class="sa-tab" role="tab" data-tab="inicio" aria-selected="true">Inicio<small>Qué hacer ahora</small></button>
+    <button class="sa-tab" role="tab" data-tab="partidos" aria-selected="false">Partidos<small>xG y resultados</small></button>
+    <button class="sa-tab" role="tab" data-tab="tactica" aria-selected="false">Táctica<small>Once y cambios</small></button>
+    <button class="sa-tab" role="tab" data-tab="plantilla" aria-selected="false">Plantilla<small>Notas y sueldos</small></button>
+    <button class="sa-tab" role="tab" data-tab="contratos" aria-selected="false">Contratos<small>Cláusulas y renovaciones</small></button>
+    <button class="sa-tab" role="tab" data-tab="cantera" aria-selected="false">Cantera<small>Jóvenes con futuro</small></button>
+    <button class="sa-tab" role="tab" data-tab="liga" aria-selected="false">Liga<small>Clasificación y métricas</small></button>
+  </nav>
+
+  <!-- ===================== INICIO ===================== -->
+  <section class="sa-page" id="inicio" role="tabpanel">
     <p class="sa-take">Tras <b data-draw="pj" data-source="resumen" data-field="pj" data-row="0">—</b> jornadas llevamos <b data-draw="pts" data-source="resumen" data-field="puntos" data-row="0">—</b> puntos con un juego que vale <b data-draw="xpts" data-source="resumen" data-field="xpts" data-row="0">—</b> puntos esperados.
       <span data-variant="suerte">Los resultados van por delante del juego: si el xG no mejora, lo normal es que los resultados empeoren.</span>
       <span data-variant="merito" hidden>El juego merece más puntos de los que llevamos: si se mantiene el xG, llegarán.</span>
       <span data-variant="justo" hidden>Los resultados reflejan lo que hemos jugado.</span>
       <span data-draw="variante" data-source="resumen"></span>
     </p>
-    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · datos del FM a 18/09/2028</span>
-  </header>
 
-  <div class="sa-tiles">
-    <div class="sa-tile">
-      <span class="sa-tile-label">Posición en la liga</span>
-      <span class="sa-big"><span data-draw="pos" data-source="clasificacion" data-field="pos" data-where="equipo=Salamanca">—</span>º</span>
-      <span class="sa-sub"><span data-draw="ptsliga" data-source="clasificacion" data-field="puntos" data-where="equipo=Salamanca">—</span> puntos</span>
+    <div class="sa-tiles">
+      <div class="sa-tile">
+        <span class="sa-tile-label">Posición en la liga</span>
+        <span class="sa-big"><span data-draw="pos" data-source="clasificacion" data-field="pos" data-where="equipo=Salamanca">—</span>º</span>
+        <span class="sa-sub"><span data-draw="ptsliga" data-source="clasificacion" data-field="puntos" data-where="equipo=Salamanca">—</span> puntos</span>
+      </div>
+      <div class="sa-tile">
+        <span class="sa-tile-label">Puntos reales / esperados (xPts)</span>
+        <span class="sa-big"><span data-draw="pts2" data-source="resumen" data-field="puntos" data-row="0">—</span> / <span data-draw="xpts2" data-source="resumen" data-field="xpts" data-row="0">—</span></span>
+        <span class="sa-sub">Diferencia <span data-draw="suerte" data-source="resumen" data-field="suerte" data-row="0">—</span> puntos</span>
+      </div>
+      <div class="sa-tile">
+        <span class="sa-tile-label">Diferencia de xG por partido</span>
+        <span class="sa-big" data-draw="difxg" data-source="resumen" data-field="dif_xg_pp" data-row="0">—</span>
+        <span class="sa-sub">xG <span data-draw="xgf" data-source="resumen" data-field="xg_favor" data-row="0">—</span> a favor · <span data-draw="xgc" data-source="resumen" data-field="xg_contra" data-row="0">—</span> en contra</span>
+      </div>
+      <div class="sa-tile">
+        <span class="sa-tile-label">Próximo partido</span>
+        <span class="sa-big" data-draw="prox-rival" data-source="calendario" data-field="rival" data-row="0">—</span>
+        <span class="sa-sub"><span data-draw="prox-fecha" data-source="calendario" data-field="fecha" data-row="0">—</span> · <span data-draw="prox-campo" data-source="calendario" data-field="campo" data-row="0">—</span> · <span data-draw="prox-pos" data-source="calendario" data-field="pos_rival" data-row="0">—</span>º en la liga</span>
+      </div>
     </div>
-    <div class="sa-tile">
-      <span class="sa-tile-label">Puntos reales / esperados (xPts)</span>
-      <span class="sa-big"><span data-draw="pts2" data-source="resumen" data-field="puntos" data-row="0">—</span> / <span data-draw="xpts2" data-source="resumen" data-field="xpts" data-row="0">—</span></span>
-      <span class="sa-sub">Diferencia <span data-draw="suerte" data-source="resumen" data-field="suerte" data-row="0">—</span> puntos</span>
-    </div>
-    <div class="sa-tile">
-      <span class="sa-tile-label">Diferencia de xG por partido</span>
-      <span class="sa-big" data-draw="difxg" data-source="resumen" data-field="dif_xg_pp" data-row="0">—</span>
-      <span class="sa-sub">xG <span data-draw="xgf" data-source="resumen" data-field="xg_favor" data-row="0">—</span> a favor · <span data-draw="xgc" data-source="resumen" data-field="xg_contra" data-row="0">—</span> en contra</span>
-    </div>
-    <div class="sa-tile">
-      <span class="sa-tile-label">Goles a favor - en contra</span>
-      <span class="sa-big"><span data-draw="gf" data-source="resumen" data-field="goles_favor" data-row="0">—</span> - <span data-draw="gc" data-source="resumen" data-field="goles_contra" data-row="0">—</span></span>
-      <span class="sa-sub">Disparos <span data-draw="disf" data-source="resumen" data-field="disparos_favor" data-row="0">—</span> - <span data-draw="disc" data-source="resumen" data-field="disparos_contra" data-row="0">—</span></span>
-    </div>
-  </div>
 
-  <section class="sa-section" id="juego">
-    <h2 class="sa-h2">Juego frente a resultados</h2>
+    <div class="sa-card" id="que-hacer">
+      <h3>Qué hacer ahora</h3>
+      <p class="sa-note">Ordenado por urgencia. Pulsa «Ver» para ir a la pestaña con el detalle.</p>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-tareas" data-source="tareas" data-row-key="orden">
+          <thead><tr>
+            <th data-field="prioridad">Urgencia</th>
+            <th data-field="area">Área</th>
+            <th data-field="tarea">Qué hacer</th>
+            <th data-field="detalle">Por qué</th>
+            <th>Detalle</th>
+          </tr></thead>
+          <tbody data-draw="tareas"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PARTIDOS ===================== -->
+  <section class="sa-page" id="partidos" role="tabpanel" hidden>
+    <p class="sa-intro">Cómo jugamos de verdad (xG) frente a lo que dicen los resultados, partido a partido, y quién viene ahora.</p>
     <div class="sa-grid">
       <div class="sa-card">
         <h3>xG por partido</h3>
@@ -92,31 +137,103 @@
       </div>
       <div class="sa-card">
         <h3>Puntos acumulados frente a xPts</h3>
-        <p class="sa-note">Si la línea de puntos va por encima de la de xPts, estamos sacando más de lo que merece el juego.</p>
+        <p class="sa-note">Si la línea de puntos va por encima de la de xPts, sacamos más de lo que merece el juego.</p>
         <div class="sa-chart" id="grafico-puntos" data-draw="acum" data-source="acumulado"></div>
+      </div>
+    </div>
+    <div class="sa-card">
+      <h3>Partidos jugados</h3>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-partidos" data-source="partidos" data-row-key="jornada">
+          <thead><tr>
+            <th data-field="jornada" class="num">J</th>
+            <th data-field="rival">Rival</th>
+            <th data-field="campo">Campo</th>
+            <th data-field="resultado">Resultado</th>
+            <th data-field="xg_favor" class="num">xG a favor</th>
+            <th data-field="xg_contra" class="num">xG en contra</th>
+            <th data-field="xpts" class="num">xPts</th>
+            <th data-field="posesion" class="num">Posesión</th>
+            <th data-field="faltas" class="num">Faltas</th>
+            <th data-field="corners_contra" class="num">Córners en contra</th>
+          </tr></thead>
+          <tbody data-draw="tabla-partidos"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sa-card">
+      <h3>Próximos partidos</h3>
+      <p class="sa-note">Posición actual del rival. Los de arriba (1º-6º), en naranja.</p>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-calendario" data-source="calendario" data-row-key="fecha">
+          <thead><tr>
+            <th data-field="fecha">Fecha</th>
+            <th data-field="rival">Rival</th>
+            <th data-field="campo">Campo</th>
+            <th data-field="pos_rival" class="num">Posición</th>
+            <th data-field="tramo">Tramo</th>
+          </tr></thead>
+          <tbody data-draw="calendario"></tbody>
+        </table>
       </div>
     </div>
   </section>
 
-  <section class="sa-section" id="liga">
-    <h2 class="sa-h2">Frente a la media de la liga</h2>
+  <!-- ===================== TÁCTICA ===================== -->
+  <section class="sa-page" id="tactica" role="tabpanel" hidden>
+    <p class="sa-intro">El once que proponen los datos para el próximo partido y qué instrucciones cambiar en el 4-3-3 de contraataque.</p>
+    <div class="sa-grid">
+      <div class="sa-card">
+        <h3>Once propuesto</h3>
+        <p class="sa-note">Nombre y nota media de la temporada. Atacamos hacia arriba.</p>
+        <div class="sa-pitch" id="campo-once" data-draw="campo" data-source="once"></div>
+      </div>
+      <div class="sa-card">
+        <h3>Por qué cada uno</h3>
+        <div class="sa-tablebox">
+          <table class="sa-table" id="tabla-once" data-source="once" data-row-key="orden">
+            <thead><tr>
+              <th data-field="rol">Puesto</th>
+              <th data-field="titular">Titular</th>
+              <th data-field="media" class="num">Media</th>
+              <th data-field="alternativa">Recambio</th>
+              <th data-field="motivo">Motivo</th>
+            </tr></thead>
+            <tbody data-draw="once"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
     <div class="sa-card">
-      <h3>Diferencia con la media de la 2ª Federación Gr. 5</h3>
-      <p class="sa-note">En % sobre la media del Centro de datos. Verde = mejor que la media, rojo = peor, gris = depende del estilo de juego.</p>
-      <div class="sa-chart sa-tall" id="grafico-liga" data-draw="metricas" data-source="metricas"></div>
+      <h3>Cambios en las instrucciones</h3>
+      <p class="sa-note">«Cambiar» en rojo = toca cambiarlo. Agrupado por fase del juego.</p>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-tactica" data-source="tactica" data-row-key="orden">
+          <thead><tr>
+            <th data-field="fase">Fase</th>
+            <th data-field="instruccion">Instrucción</th>
+            <th data-field="ahora">Ahora</th>
+            <th data-field="propuesta">Propuesta</th>
+            <th data-field="cambiar">Cambiar</th>
+            <th data-field="motivo">Motivo</th>
+          </tr></thead>
+          <tbody data-draw="tactica"></tbody>
+        </table>
+      </div>
     </div>
   </section>
 
-  <section class="sa-section" id="jugadores">
-    <h2 class="sa-h2">Jugadores</h2>
+  <!-- ===================== PLANTILLA ===================== -->
+  <section class="sa-page" id="plantilla" role="tabpanel" hidden>
+    <p class="sa-intro">Quién rinde y cuánto cuesta. La acción de cada jugador sale del modelo Castellón: renovar, vender, ceder, dejar salir o mantener.</p>
     <div class="sa-card">
       <h3>Sueldo frente a nota media (primer equipo)</h3>
-      <p class="sa-note">Arriba a la izquierda: cobran mucho y rinden poco. La línea discontinua es el tope de titular.</p>
+      <p class="sa-note">Arriba a la izquierda: cobran mucho y rinden poco. La línea discontinua es el tope de titular. Pasa el ratón por un punto para ver el jugador.</p>
       <div class="sa-chart sa-tall" id="grafico-sueldos" data-draw="scatter" data-source="jugadores"></div>
     </div>
     <div class="sa-card">
       <h3>Toda la plantilla</h3>
-      <p class="sa-note">Pulsa una columna para ordenar. La acción es la recomendación del modelo Castellón.</p>
+      <p class="sa-note">Pulsa una columna para ordenar; pasa el ratón por una fila para ver el motivo de la acción. ✚ = lesionado.</p>
       <div class="sa-tools"><input class="sa-search" id="buscar-jugador" type="search" placeholder="Buscar jugador, equipo, posición o acción" aria-label="Buscar en la plantilla"></div>
       <div class="sa-tablebox">
         <table class="sa-table" id="tabla-plantilla" data-source="jugadores" data-row-key="jugador">
@@ -141,11 +258,12 @@
     </div>
   </section>
 
-  <section class="sa-section" id="riesgos">
-    <h2 class="sa-h2">Riesgos de contrato</h2>
+  <!-- ===================== CONTRATOS ===================== -->
+  <section class="sa-page" id="contratos" role="tabpanel" hidden>
+    <p class="sa-intro">Lo que hay que cerrar antes de que nos cueste dinero: cláusulas baratas, contratos que acaban y sueldos por encima de tus topes.</p>
     <div class="sa-card">
       <h3>Cláusulas bajas y jugadores que siguen otros clubes</h3>
-      <p class="sa-note">Cláusula por debajo de su valor de mercado o con interés de otros clubes. Renovar subiendo o quitando la cláusula.</p>
+      <p class="sa-note">Cláusula por debajo de su valor de mercado o con interés de otros clubes. Solución: renovar subiendo o quitando la cláusula.</p>
       <div class="sa-tablebox">
         <table class="sa-table" id="tabla-riesgos" data-source="alertas" data-row-key="jugador">
           <thead><tr>
@@ -162,11 +280,78 @@
         </table>
       </div>
     </div>
+    <div class="sa-card">
+      <h3>Contratos que acaban en 18 meses o menos</h3>
+      <p class="sa-note">Renovar o vender antes de la fecha límite (1 de enero), cuando ya pueden firmar un precontrato con otro club.</p>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-vencimientos" data-source="vencimientos" data-row-key="jugador">
+          <thead><tr>
+            <th data-field="jugador">Jugador</th>
+            <th data-field="equipo">Equipo</th>
+            <th data-field="edad" class="num">Edad</th>
+            <th data-field="fin_contrato">Fin</th>
+            <th data-field="limite_renovar">Límite</th>
+            <th data-field="accion">Acción</th>
+            <th data-field="motivo">Motivo</th>
+          </tr></thead>
+          <tbody data-draw="vencimientos"></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sa-card">
+      <h3>Sueldos por encima de tus topes</h3>
+      <p class="sa-note">Topes de config.yaml: titular, rotación y filial/proyecto.</p>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-sobretope" data-source="sobretope" data-row-key="jugador">
+          <thead><tr>
+            <th data-field="jugador">Jugador</th>
+            <th data-field="equipo">Equipo</th>
+            <th data-field="nota" class="num">Nota</th>
+            <th data-field="sueldo" class="num">Sueldo</th>
+            <th data-field="tope" class="num">Tope</th>
+            <th data-field="exceso_tope" class="num">Exceso</th>
+          </tr></thead>
+          <tbody data-draw="sobretope"></tbody>
+        </table>
+      </div>
+    </div>
   </section>
 
-  <section class="sa-section" id="clasificacion">
-    <h2 class="sa-h2">Clasificación</h2>
+  <!-- ===================== CANTERA ===================== -->
+  <section class="sa-page" id="cantera" role="tabpanel" hidden>
+    <p class="sa-intro">Jugadores de 19 años o menos del filial y el juvenil con potencial de 4★ o más, y dónde deberían jugar.</p>
     <div class="sa-card">
+      <h3>Joyas de la cantera</h3>
+      <p class="sa-note">La propuesta compara su calidad con la del primer equipo y la del filial.</p>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-cantera" data-source="cantera" data-row-key="jugador">
+          <thead><tr>
+            <th data-field="jugador">Jugador</th>
+            <th data-field="equipo">Equipo</th>
+            <th data-field="edad" class="num">Edad</th>
+            <th data-field="posicion">Pos.</th>
+            <th data-field="calidad" class="num">Calidad</th>
+            <th data-field="potencial" class="num">Potencial</th>
+            <th data-field="clausula" class="num">Cláusula</th>
+            <th data-field="propuesta">Dónde jugar</th>
+            <th data-field="motivo">Motivo</th>
+          </tr></thead>
+          <tbody data-draw="cantera"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LIGA ===================== -->
+  <section class="sa-page" id="liga" role="tabpanel" hidden>
+    <p class="sa-intro">Dónde estamos en la tabla y en qué somos mejores o peores que la media de la liga.</p>
+    <div class="sa-card">
+      <h3>Diferencia con la media de la 2ª Federación Gr. 5</h3>
+      <p class="sa-note">En % sobre la media del Centro de datos. Verde = mejor que la media, rojo = peor, gris = depende del estilo de juego.</p>
+      <div class="sa-chart sa-tall" id="grafico-liga" data-draw="metricas" data-source="metricas"></div>
+    </div>
+    <div class="sa-card">
+      <h3>Clasificación</h3>
       <div class="sa-tablebox">
         <table class="sa-table" id="tabla-clasificacion" data-source="clasificacion" data-row-key="equipo">
           <thead><tr>
@@ -531,5 +716,122 @@
         td((d > 0 ? '+' : '') + d, 'num'), td(r.puntos, 'num'));
       return tr;
     }));
+  });
+
+  // ---------- pestañas
+  const PESTANAS = ['inicio', 'partidos', 'tactica', 'plantilla', 'contratos', 'cantera', 'liga'];
+  sa.mostrar = (id, link = true) => {
+    if (!PESTANAS.includes(id)) id = 'inicio';
+    document.querySelectorAll('.sa-page').forEach((s) => { s.hidden = s.id !== id; });
+    document.querySelectorAll('.sa-tab').forEach((b) => b.setAttribute('aria-selected', String(b.getAttribute('data-tab') === id)));
+    if (link) dash.setLink(id);
+  };
+  document.querySelectorAll('.sa-tab').forEach((b) => b.addEventListener('click', () => sa.mostrar(b.getAttribute('data-tab'))));
+  document.querySelectorAll('#tabla-tareas').forEach((t) => t.addEventListener('click', (ev) => {
+    const go = ev.target.closest('[data-goto]');
+    if (go) { sa.mostrar(go.getAttribute('data-goto')); document.querySelector('.sa-tabs')?.scrollIntoView({block: 'start'}); }
+  }));
+  sa.mostrar(location.hash.slice(1) || 'inicio', false);
+
+  const fechaES = (iso) => (iso ? d3.utcFormat('%d/%m/%Y')(new Date(iso)) : '');
+  const CLASE_URGENCIA = {Urgente: 'bad', Alta: 'warn'};
+  const NOMBRE_PESTANA = {inicio: 'Inicio', partidos: 'Partidos', tactica: 'Táctica', plantilla: 'Plantilla', contratos: 'Contratos', cantera: 'Cantera', liga: 'Liga'};
+
+  // ---------- cálculos de contratos
+  dash.calc('vencimientos', {
+    inputs: ['jugadores'],
+    title: 'Contratos que acaban pronto',
+    description: 'Jugadores propios con 18 meses o menos de contrato, ordenados por fecha límite.',
+    fn: (jugadores) => jugadores
+      .filter((j) => j.cedido !== 'Sí' && j.meses_contrato !== '' && Number(j.meses_contrato) <= 18)
+      .map((j) => ({jugador: j.jugador, equipo: j.equipo, edad: Number(j.edad), fin_contrato: j.fin_contrato,
+        limite_renovar: j.limite_renovar, accion: j.accion, motivo: j.motivo}))
+      .sort((a, b) => a.limite_renovar.localeCompare(b.limite_renovar) || a.accion.localeCompare(b.accion)),
+  });
+  dash.calc('sobretope', {
+    inputs: ['jugadores'],
+    title: 'Sueldos por encima del tope',
+    description: 'Jugadores cuyo sueldo supera el tope de su rol, de mayor a menor exceso.',
+    fn: (jugadores) => jugadores
+      .filter((j) => Number(j.exceso_tope || 0) > 0)
+      .map((j) => ({jugador: j.jugador, equipo: j.equipo, nota: j.nota === '' ? null : Number(j.nota), sueldo: Number(j.sueldo),
+        tope: Number(j.tope), exceso_tope: Number(j.exceso_tope)}))
+      .sort((a, b) => b.exceso_tope - a.exceso_tope),
+  });
+
+  // ---------- próximo partido
+  const prox = () => (dash.data('calendario').status === 'ok' ? dash.data('calendario').data[0] : null);
+  cifra('prox-rival', () => prox()?.rival);
+  cifra('prox-fecha', () => (prox() ? fechaES(prox().fecha) : null));
+  cifra('prox-campo', () => prox()?.campo);
+  cifra('prox-pos', () => prox()?.pos_rival);
+
+  // ---------- tablas nuevas
+  const filas = (tb, id, fn) => {
+    if (!sa.ready(tb, [id], true)) return;
+    tb.replaceChildren(...dash.data(id).data.map(fn));
+  };
+  const tr = (key, ...cells) => { const r = document.createElement('tr'); r.setAttribute('data-key', key); r.append(...cells); return r; };
+
+  dash.draw('tareas', (tb) => filas(tb, 'tareas', (r) => {
+    const b = document.createElement('button'); b.className = 'sa-go'; b.setAttribute('data-goto', r.pestana);
+    b.textContent = `Ver en ${NOMBRE_PESTANA[r.pestana] || 'Inicio'} →`;
+    return tr(r.orden, td(pill(r.prioridad, CLASE_URGENCIA[r.prioridad])), td(r.area), td(r.tarea, 'strong'), td(r.detalle, 'wrap'), td(b));
+  }));
+
+  dash.draw('tabla-partidos', (tb) => filas(tb, 'partidos', (r) => tr(r.jornada,
+    td(r.jornada, 'num'), td(r.rival), td(r.campo), td(r.resultado),
+    td(sa.dec(num(r.xg_favor)), 'num'), td(sa.dec(num(r.xg_contra)), 'num'), td(sa.dec(num(r.xpts)), 'num'),
+    td(r.posesion === '' ? '' : r.posesion + ' %', 'num'), td(r.faltas, 'num'), td(r.corners_contra, 'num'))));
+
+  dash.draw('calendario', (tb) => filas(tb, 'calendario', (r) => tr(r.fecha,
+    td(fechaES(r.fecha)), td(r.rival), td(r.campo), td(r.pos_rival, 'num'),
+    td(pill(r.tramo, r.tramo === 'Arriba' ? 'warn' : r.tramo === 'Abajo' ? 'ok' : '')))));
+
+  dash.draw('once', (tb) => filas(tb, 'once', (r) => tr(r.orden,
+    td(r.rol), td(r.titular, 'strong'), td(sa.dec(num(r.media)), 'num'), td(r.alternativa), td(r.motivo, 'wrap'))));
+
+  dash.draw('tactica', (tb) => filas(tb, 'tactica', (r) => tr(r.orden,
+    td(r.fase), td(r.instruccion, 'strong'), td(r.ahora), td(r.propuesta),
+    td(pill(r.cambiar === 'Sí' ? 'Cambiar' : 'Mantener', r.cambiar === 'Sí' ? 'bad' : 'ok')), td(r.motivo, 'wrap'))));
+
+  dash.draw('vencimientos', (tb) => filas(tb, 'vencimientos', (r) => tr(r.jugador,
+    td(r.jugador, 'strong'), td(r.equipo), td(r.edad, 'num'), td(fechaES(r.fin_contrato)), td(fechaES(r.limite_renovar)),
+    td(pill(r.accion, CLASE_ACCION[r.accion])), td(r.motivo, 'wrap'))));
+
+  dash.draw('sobretope', (tb) => filas(tb, 'sobretope', (r) => tr(r.jugador,
+    td(r.jugador, 'strong'), td(r.equipo), td(r.nota == null ? '' : sa.dec(r.nota), 'num'), td(sa.eur(r.sueldo), 'num'),
+    td(sa.eur(r.tope), 'num'), td('+' + sa.eur(r.exceso_tope), 'num'))));
+
+  dash.draw('cantera', (tb) => filas(tb, 'cantera', (r) => tr(r.jugador,
+    td(r.jugador + (r.le_siguen === 'Sí' ? ' · le siguen' : ''), 'strong'), td(r.equipo), td(r.edad, 'num'), td(r.posicion),
+    td(sa.dec(num(r.calidad), 1), 'num'), td(r.potencial, 'num'), td(r.clausula === '' ? 'Sin cláusula' : sa.eur(num(r.clausula)), 'num'),
+    td(pill(r.propuesta, r.propuesta === 'Primer equipo' ? 'ok' : '')), td(r.motivo, 'wrap'))));
+
+  // ---------- campo con el once propuesto (4-3-3, atacando hacia arriba)
+  const POSICIONES = {1: [50, 91], 2: [85, 70], 3: [62, 76], 4: [38, 76], 5: [15, 70], 6: [50, 59], 7: [32, 44], 8: [68, 44],
+    9: [16, 21], 10: [84, 21], 11: [50, 11]};
+  dash.draw('campo', (el) => {
+    if (!sa.ready(el, ['once'])) return;
+    const rows = dash.data('once').data;
+    const W = el.clientWidth || 320, H = Math.max(380, Math.min(560, W * 1.25));
+    const px = (v) => (v / 100) * W, py = (v) => (v / 100) * H;
+    const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Once propuesto sobre el campo');
+    const linea = (g) => g.attr('fill', 'none').attr('stroke', 'var(--cds-chart-grid)').attr('stroke-width', 1.5);
+    svg.append('rect').attr('x', 2).attr('y', 2).attr('width', W - 4).attr('height', H - 4).attr('rx', 6).call(linea);
+    svg.append('line').attr('x1', 2).attr('x2', W - 2).attr('y1', H / 2).attr('y2', H / 2).call(linea);
+    svg.append('circle').attr('cx', W / 2).attr('cy', H / 2).attr('r', Math.min(W, H) * 0.1).call(linea);
+    [[2, 0.16], [H - 2 - H * 0.16, 0.16]].forEach(([y0, h]) => svg.append('rect').attr('x', W * 0.22).attr('y', y0).attr('width', W * 0.56).attr('height', H * h).call(linea));
+    const g = svg.append('g');
+    rows.forEach((r) => {
+      const p = POSICIONES[Number(r.orden)]; if (!p) return;
+      const n = g.append('g').attr('transform', `translate(${px(p[0])},${py(p[1])})`);
+      n.append('circle').attr('r', 15).attr('fill', dash.colors[0]);
+      n.append('text').attr('text-anchor', 'middle').attr('y', 4).attr('fill', 'var(--color-bg)').style('font-size', 'var(--cds-font-size-caption)').style('font-weight', 600).text(r.puesto);
+      const apellido = r.titular.split(' ').slice(-1)[0];
+      n.append('text').attr('text-anchor', 'middle').attr('y', 30).attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').style('font-weight', 600).text(apellido);
+      n.append('text').attr('text-anchor', 'middle').attr('y', 44).attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text(sa.dec(num(r.media)));
+    });
+    el.replaceChildren(svg.node());
   });
 </script>

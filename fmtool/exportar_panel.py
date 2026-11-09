@@ -4,7 +4,8 @@ import csv
 from pathlib import Path
 
 from .comun import NOMBRE_GRUPO, RAIZ
-from .datos import _clave, fecha, leer_csv, numero, texto_potencial, valor_estimado
+from .datos import fecha, fecha_limite_renovacion, leer_csv, meses_entre, numero, texto_potencial, valor_estimado
+from .inf_cantera import proponer_nivel
 from .inf_equipo import METRICAS, _valoracion
 from .inf_partidos import (buscar_posicion, cargar_clasificacion, leer_partidos, puntos_esperados,
                            rendimiento_jugadores)
@@ -68,6 +69,9 @@ def exportar(p, cfg, carpeta=RAIZ / "panel"):
             "valor_max": j["valor_max"], "valor_estimado": valor_estimado(j), "accion": accion, "motivo": motivo,
             "le_siguen": "Sí" if p.le_siguen(j) else "No", "cedido": "Sí" if p.es_cedido_aqui(j) else "No",
             "lesionado": "Sí" if "Les" in p.codigos_inf(j) else "No",
+            "meses_contrato": meses_entre(p.fecha, j["fin"]),
+            "limite_renovar": fecha_limite_renovacion(j["fin"]).isoformat() if j["fin"] else "",
+            "exceso_tope": (j["sueldo"] - p.tope(j)) if j["sueldo"] and p.tope(j) and j["sueldo"] > p.tope(j) else 0,
         })
     _escribir(carpeta / "jugadores.csv", list(filas[0]), filas)
 
@@ -96,4 +100,42 @@ def exportar(p, cfg, carpeta=RAIZ / "panel"):
             filas.append({"pos": int(c["Pos"]), "equipo": c["Equipo"], "jugados": jug, "ganados": g, "empatados": jug - g - pe,
                           "perdidos": pe, "dif_goles": int(c["Dif."]), "puntos": int(c["Pts"])})
     _escribir(carpeta / "clasificacion.csv", ["pos", "equipo", "jugados", "ganados", "empatados", "perdidos", "dif_goles", "puntos"], filas)
+    # Cantera: 19 años o menos, potencial alto, en filial o juvenil
+    c = cfg.get("cantera", {})
+    filas, vistos = [], set()
+    for j in p.jugadores:
+        pot = p.pot(j)
+        if (j["grupo"] not in c.get("grupos", ["filial", "juvenil"]) or j["jugador"] in vistos or j["edad"] is None
+                or j["edad"] > c.get("edad_maxima", 19) or pot is None or pot < c.get("potencial_minimo", 4)):
+            continue
+        vistos.add(j["jugador"])
+        nivel, motivo = proponer_nivel(p, j)
+        filas.append({"jugador": j["jugador"], "equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "edad": j["edad"],
+                      "posicion": j["mejor_pos"] or j["posicion"], "calidad": j["calidad"], "potencial": texto_potencial(j),
+                      "potencial_num": pot, "clausula": j["clausula"], "valor_max": j["valor_max"],
+                      "le_siguen": "Sí" if p.le_siguen(j) else "No", "propuesta": nivel, "motivo": motivo})
+    filas.sort(key=lambda f: (-f["potencial_num"], f["edad"]))
+    _escribir(carpeta / "cantera.csv", list(filas[0]) if filas else ["jugador"], filas)
+
+    # Calendario: próximos partidos con la posición del rival
+    ruta = sorted(liga.glob("calendario_*.csv"))
+    filas = []
+    if ruta:
+        _, cal = leer_csv(ruta[-1])
+        arriba, abajo = cfg.get("partidos", {}).get("rivales_arriba_hasta", 6), cfg.get("partidos", {}).get("rivales_abajo_desde", 13)
+        for f in cal:
+            if (f.get("Resultado") or "").strip() not in ("", "-"):
+                continue
+            pos = buscar_posicion(tabla, f.get("Club", ""))
+            filas.append({"fecha": fecha(f["Fecha"]).isoformat(), "rival": f["Club"],
+                          "campo": "Local" if f.get("Estadio", "").strip().upper() == "C" else "Visitante", "pos_rival": pos,
+                          "tramo": "" if pos is None else "Arriba" if pos <= arriba else "Abajo" if pos >= abajo else "Mitad"})
+    _escribir(carpeta / "calendario.csv", ["fecha", "rival", "campo", "pos_rival", "tramo"], filas)
+
+    # Análisis escrito (tareas, once propuesto, cambios de táctica): se copian de data/analisis
+    for nombre in ("tareas", "once", "tactica"):
+        ruta = RAIZ / "data" / "analisis" / f"{nombre}.csv"
+        if ruta.exists():
+            cols, filas = leer_csv(ruta)
+            _escribir(carpeta / f"{nombre}.csv", cols, filas)
     return sorted(carpeta.glob("*.csv"))

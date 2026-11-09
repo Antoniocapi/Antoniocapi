@@ -84,3 +84,11 @@ corners_ataque:
     amenazas_en_area: {B1: Atacar primer palo}
     creadores: {C1: Recibir en corto, C2: Situarse fuera del área (parte cercana), C3: Situarse fuera del área (centro), C4: Situarse fuera del área (parte lejana)}
     defensas_recuperacion: {D1: Quedarse atrás}
+
+# Balón parado · Saques de esquina · DEFENSA (captura tactica_corner-defensa-rutina1_2028-09-18.webp)
+corners_defensa:
+  rutina_1:
+    defensas_aereos: {A1: Marcaje a jugador, A2: Marcaje a jugador, A3: Marcaje a jugador, A4: "Marcar en zona en el área pequeña (cerca del centro)", A5: Marcar primer palo}
+    perseguidores: {B1: Marcaje a jugador, B2: Marcaje a jugador, B3: Marcaje a jugador}
+    contratacantes: {C1: Frontal del área, C2: Frontal del área}
+    nota: "Nadie en el segundo palo. 6 al hombre y 2 en zona. Las listas de prioridad (quién es A1, A2...) no salen en la captura."
