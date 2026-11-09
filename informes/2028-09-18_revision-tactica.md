@@ -2,7 +2,7 @@
 
 *Fecha de juego: 18/09/2028 · próximo partido: R.C. Alcobendas (en casa), 20/09 · mentalidad Equilibrada*
 
-## 1. Alineación: tres cambios urgentes
+## 1. Alineación: cuatro cambios urgentes
 
 | Puesto | En la táctica | Propuesta | Por qué |
 |---|---|---|---|
@@ -12,7 +12,7 @@
 | EPD (izq.) | Aimar Vicandi | **Pol Escribano** | Su mejor posición es MP (I), con 6,80 de media. Vicandi lleva 6,42, la peor del once. |
 | EXT (der.) | Luis Bilbao | **Aimar Vicandi** o Bilbao | Vicandi pasa a su mejor posición, MP (D). Bilbao (6,47) queda como primer cambio de banda. |
 
-**Banquillo:** Velasco, Luis Paulo, Osei (6,95, el suplente con mejor nota), Kadochnikov, Bilbao, Valdaliso y Edu González (o Miràngels cuando vuelva).
+**Banquillo:** Velasco, Mulas, Lucas Santos, Osei (6,95, el suplente con mejor nota), Kadochnikov, Bilbao, Valdaliso y Edu González (o Miràngels cuando vuelva).
 
 ## 2. Instrucciones con balón
 
