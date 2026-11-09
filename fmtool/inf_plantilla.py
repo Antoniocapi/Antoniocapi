@@ -72,7 +72,12 @@ def _recomendar(p, j):
     otros_grupos = p.grupos_de.get(j["jugador"], set()) - {j["grupo"]}
     juega_en_b = "B" in p.codigos_inf(j)  # Inf "B" = tiene minutos en el filial
     pocos_minutos, fuente = False, ""
-    if j["minutos"] is not None:
+    if j["minutos"] is not None and p.partidos_con_once:
+        # Proporción de los minutos posibles (90 por partido jugado por el equipo)
+        posibles = 90 * p.partidos_con_once
+        pocos_minutos = j["minutos"] / posibles < r.get("proporcion_titular_minima", 0.34)
+        fuente = f"{int(j['minutos'])} de {posibles} minutos"
+    elif j["minutos"] is not None:
         pocos_minutos = j["minutos"] < r.get("minutos_minimos_temporada", 900)
         fuente = f"{int(j['minutos'])} minutos"
     elif p.partidos_con_once >= r.get("partidos_minimos_minutos", 4):

@@ -245,8 +245,9 @@
             <th data-field="calidad" data-sort="calidad" class="num">Calidad</th>
             <th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
             <th data-field="nota" data-sort="nota" class="num">Nota</th>
-            <th data-field="titularidades" data-sort="titularidades" class="num">Tit.</th>
+            <th data-field="minutos" data-sort="minutos" class="num">Minutos</th>
             <th data-field="goles" data-sort="goles" class="num">Goles</th>
+            <th data-field="amarillas" data-sort="amarillas" class="num">Amarillas</th>
             <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th>
             <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th>
             <th data-field="fin_contrato" data-sort="fin_contrato">Fin</th>
@@ -653,7 +654,7 @@
 
   // ---------- tablas
   const estado = {campo: 'nota', dir: -1};
-  const NUMERICAS = new Set(['edad', 'calidad', 'potencial_num', 'nota', 'titularidades', 'goles', 'sueldo', 'clausula']);
+  const NUMERICAS = new Set(['edad', 'calidad', 'potencial_num', 'nota', 'minutos', 'goles', 'amarillas', 'sueldo', 'clausula']);
   document.querySelectorAll('#tabla-plantilla th[data-sort]').forEach((th) => {
     th.addEventListener('click', () => {
       const c = th.getAttribute('data-sort');
@@ -684,7 +685,7 @@
       tr.append(
         td(r.jugador + (r.cedido === 'Sí' ? ' (cedido)' : '') + (r.lesionado === 'Sí' ? ' ✚' : '')),
         td(r.equipo), td(r.edad, 'num'), td(r.posicion), td(r.calidad === '' ? '' : sa.dec(Number(r.calidad), 1), 'num'),
-        td(r.potencial, 'num'), td(r.nota === '' ? '' : sa.dec(Number(r.nota)), 'num'), td(r.titularidades, 'num'), td(r.goles, 'num'),
+        td(r.potencial, 'num'), td(r.nota === '' ? '' : sa.dec(Number(r.nota)), 'num'), td(r.minutos, 'num'), td(r.goles, 'num'), td(r.amarillas, 'num'),
         td(r.sueldo === '' ? '' : sa.eur(Number(r.sueldo)), 'num'), td(r.clausula === '' ? '' : sa.eur(Number(r.clausula)), 'num'),
         td(r.fin_contrato ? d3.utcFormat('%d/%m/%Y')(new Date(r.fin_contrato)) : ''),
         td(pill(r.accion, CLASE_ACCION[r.accion])),

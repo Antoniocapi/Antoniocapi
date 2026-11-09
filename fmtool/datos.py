@@ -26,11 +26,11 @@ ALIAS = {
     "club": ["Club", "Equipo"],
     "clausula": ["Cláusula de rescisión", "Cláusula de rescisión mínima", "Cláusula"],
     "futura_venta": ["Porcentaje de futura venta", "% futura venta", "Futura venta"],
-    "nota": ["Nota media", "Nota", "Media de puntuación", "Media"],
-    "partidos": ["Partidos", "Apariciones", "PJ"],
+    "nota": ["Nota media", "Nota", "Media de puntuación", "Media", "Med."],
+    "partidos": ["Partidos", "Apariciones", "PJ", "Part"],
     "minutos": ["Minutos", "Min.", "Minutos jugados"],
-    "amarillas": ["Amarillas", "Tarjetas amarillas", "TA"],
-    "rojas": ["Rojas", "Tarjetas rojas", "TR"],
+    "amarillas": ["Amarillas", "Tarjetas amarillas", "TA", "Ama"],
+    "rojas": ["Rojas", "Tarjetas rojas", "TR", "Roj"],
     "xg": ["xG", "Goles esperados"],
     "entrenamiento": ["Valoración de entrenamiento", "Entrenamiento", "Media de entrenamiento"],
     "recomendacion": ["Recomendación", "Recomendación del ojeador", "Rec."],
@@ -189,7 +189,11 @@ def normalizar(fila, mapa):
         v = col(dato)
         j[dato] = "" if es_vacio(v) else v.strip()
     j["clausula"] = dinero(col("clausula"))
-    for dato in ("aumento_sueldo", "futura_venta", "nota", "partidos", "minutos", "amarillas", "rojas", "xg", "entrenamiento"):
+    # Partidos en formato del FM "3 (1)": 3 de titular + 1 desde el banquillo
+    m = re.fullmatch(r"\s*(\d+)\s*(?:\((\d+)\))?\s*", col("partidos") or "")
+    j["titular"] = int(m[1]) if m else None
+    j["partidos"] = int(m[1]) + int(m[2] or 0) if m else None
+    for dato in ("aumento_sueldo", "futura_venta", "nota", "minutos", "amarillas", "rojas", "xg", "entrenamiento"):
         j[dato] = numero(col(dato))
     # Qué datos existen de verdad en este CSV
     j["columnas"] = set(mapa)

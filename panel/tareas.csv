@@ -4,11 +4,12 @@ orden,prioridad,area,pestana,tarea,detalle
 3,Urgente,Táctica,tactica,Menos balón largo,Pases directos a Estándar y Estrategia previa a Equilibrada: León gana solo el 13 % de los balones aéreos.
 4,Urgente,Táctica,tactica,Menos faltas y defensa más arriba,"Entradas: Mantenerse en pie. Presión: Estándar. Línea defensiva un punto más alta. Hacemos 10,5 faltas por partido (media 8,3)."
 5,Urgente,Balón parado,tactica,Cubre el segundo palo en los córners en contra,"Pasa el contraatacante C2 a Marcar segundo palo. Concedemos 39 córners en 4 partidos y unos 0,16 de xA a balón parado por partido (media 0,06)."
-6,Alta,Contratos,contratos,Renueva a João Machado y Alberto Ruvira,Sus cláusulas (29.000 € y 82.000 €) están por debajo de su valor y a Machado le siguen otros clubes.
-7,Alta,Contratos,contratos,Renovaciones antes del 1 de enero de 2029,"Eceizabarrena, Pau Calvo, Óscar León, Lucas Balan y Jordi Martínez."
-8,Media,Contratos,contratos,Sube las cláusulas de los canteranos,"Tello (68.000 €), Varela (73.000 €), Llabrés (61.000 €), Gallego (53.000 €) y Benítes (110.000 €) están por debajo de su valor."
-9,Media,Plantilla,plantilla,Cede a Marc Castro y a Mario Valdaliso,20 años y casi sin minutos en el primer equipo.
-10,Media,Cantera,cantera,Sube a Alberto Ruvira al primer equipo,"16 años y ya tiene 3★, el nivel de los titulares. De cuarto central."
-11,Media,Mercado de enero,plantilla,Prepara los fichajes de enero,"Lateral izquierdo (Hamansenya es cedido), delantero centro y lateral derecho. Margen: 95.000 € al año en sueldos y 14.000 € en traspasos."
-12,Baja,Ventas,contratos,Escucha ofertas por Murúa,"31 años, cobra 100.000 € y acaba en junio. Rinde (7,00), así que solo si la oferta es buena."
-13,Baja,Datos,inicio,Pásame estas capturas,"Plantilla > Estadísticas (amarillas y minutos), Entrenamiento > Valoraciones, Balón parado > Faltas en defensa y la lista de Defensas aéreos."
+6,Urgente,Táctica,tactica,Luis Paulo de central titular en lugar de Mulas,"Es el mejor de la plantilla por arriba (salto 15, fuerza 14) y está en el banquillo. Mulas tiene salto 9. Convoca también a Lucas Santos (salto 15)."
+7,Alta,Contratos,contratos,Renueva a João Machado y Alberto Ruvira,Sus cláusulas (29.000 € y 82.000 €) están por debajo de su valor y a Machado le siguen otros clubes.
+8,Alta,Contratos,contratos,Renovaciones antes del 1 de enero de 2029,"Eceizabarrena, Pau Calvo, Óscar León, Lucas Balan y Jordi Martínez."
+9,Media,Contratos,contratos,Sube las cláusulas de los canteranos,"Tello (68.000 €), Varela (73.000 €), Llabrés (61.000 €), Gallego (53.000 €) y Benítes (110.000 €) están por debajo de su valor."
+10,Media,Plantilla,plantilla,Cede a Marc Castro y a Mario Valdaliso,20 años y casi sin minutos en el primer equipo.
+11,Media,Cantera,cantera,Sube a Alberto Ruvira al primer equipo,"16 años y ya tiene 3★, el nivel de los titulares. De cuarto central."
+12,Media,Mercado de enero,plantilla,Prepara los fichajes de enero,"Lateral izquierdo (Hamansenya es cedido), delantero centro y lateral derecho. Margen: 95.000 € al año en sueldos y 14.000 € en traspasos."
+13,Baja,Ventas,contratos,Escucha ofertas por Murúa,"31 años, cobra 100.000 € y acaba en junio. Rinde (7,00), así que solo si la oferta es buena."
+14,Baja,Datos,inicio,Pásame estas capturas,Entrenamiento > Valoraciones (filial y juvenil) y Balón parado > Faltas en defensa.

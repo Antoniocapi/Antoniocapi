@@ -2,8 +2,6 @@
 
 *Fecha de juego: 18/09/2028*
 
-> ⚠️ Datos que no salen en las capturas: Minutos jugados, Partidos jugados. El rendimiento se mide por estrellas de calidad y los minutos, por el «Tiempo de juego».
-
 Potencial con rango (estrellas blancas): uso el criterio «media» de config.yaml.
 
 ## Resumen
@@ -36,8 +34,8 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (titular en 0 de 4 partidos): necesita jugar fuera. |
-| 🟠 | Mario Valdaliso | Primer equipo | 20 | MP (I) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 44.000 | 20 años, 2.5★/3-4★ y pocos minutos (titular en 1 de 4 partidos): necesita jugar fuera. |
+| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (0 de 360 minutos): necesita jugar fuera. |
+| 🟠 | Mario Valdaliso | Primer equipo | 20 | MP (I) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 44.000 | 20 años, 2.5★/3-4★ y pocos minutos (122 de 360 minutos): necesita jugar fuera. |
 
 ## SALE LIBRE
 

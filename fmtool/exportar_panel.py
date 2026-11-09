@@ -63,7 +63,8 @@ def exportar(p, cfg, carpeta=RAIZ / "panel"):
         filas.append({
             "jugador": j["jugador"], "equipo": NOMBRE_GRUPO.get(j["grupo"], j["grupo"]), "edad": j["edad"],
             "posicion": j["mejor_pos"] or j["posicion"], "calidad": j["calidad"], "potencial": texto_potencial(j),
-            "potencial_num": p.pot(j), "nota": j["nota"], "titularidades": r.get("Titularidades", 0),
+            "potencial_num": p.pot(j), "nota": j["nota"], "titularidades": j["titular"] if j.get("titular") is not None else r.get("Titularidades", 0),
+            "minutos": j["minutos"], "amarillas": j["amarillas"],
             "goles": r.get("Goles", 0), "asistencias": r.get("Asistencias", 0), "sueldo": j["sueldo"],
             "tope": p.tope(j), "fin_contrato": j["fin"].isoformat() if j["fin"] else "", "clausula": j["clausula"],
             "valor_max": j["valor_max"], "valor_estimado": valor_estimado(j), "accion": accion, "motivo": motivo,

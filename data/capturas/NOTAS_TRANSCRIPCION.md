@@ -87,3 +87,18 @@ Capturas: `*_contrato_2028-09-18.webp` → `data/plantilla/*_contrato_2028-09-18
 - **"Les" = lesionado**: confirmado por la cruz roja de Miràngels en la columna "Con".
 - **Cabecera cortada** "Familiaridad co...": transcribo las estrellas sin saber exactamente qué mide.
 - **Instrucciones cortadas**: "Buscar balón p..." y "Distribuir con r...".
+
+## 18/09/2028 · Primer equipo, vista "Información de selección" (estadísticas)
+
+Captura: `primer-equipo_estadisticas_2028-09-18.webp` → `data/plantilla/primer-equipo_estadisticas_2028-09-18.csv`.
+
+- **Columnas que son iconos, no texto** (Con, RIT, Mor, Forma, Eficacia): no las transcribo.
+- **"Part"**: el FM pone "3 (1)" = 3 de titular y 1 desde el banquillo. La herramienta lo lee como 4 partidos, 3 de ellos de titular.
+- **Cabeceras cortadas**: "Felicidad con los minutos ..." y "Tiempo sin jug..." las guardo como `Felicidad con los minutos` y `Tiempo sin jugar`.
+
+## 18/09/2028 · Córners en defensa: lista de prioridad "Defensas aéreos"
+
+Captura: `tactica_corner-defensa-lista-defensas-aereos_2028-09-18.png` → `data/tactica/corners-defensa_defensas-aereos_2028-09-18.csv`.
+
+- Se ven los 12 primeros. La fila 12 (Manu Vigo) sale cortada por abajo, pero sus números se leen.
+- La prioridad de categorías es: 1 Lanzador de córner (bloqueado), 2 Defensas aéreos, 3 Rastreadores y 4 Contratacantes.
