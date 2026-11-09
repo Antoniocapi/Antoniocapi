@@ -1,5 +1,9 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Fichaje: Ekain Orobengoa (DL)
+- Libre, 24 años, 3★/4★, delantero centro y extremo izquierdo. 4º del ranking (80/100).
+- En `fichados` de config.yaml: sale como «Fichado» en el panel. Siguiente prioridad: lateral izquierdo.
+
 ## 09/11 · Renovaciones cerradas salvo Calvo
 - Renovados: León, Eceizabarrena, Balan y Jordi Martínez (en `renovados` de config.yaml).
 - **Calvo pide 120.000 €**: sueldo justo ≈73.000 €. Propuesta: contraoferta de 70.000-80.000 € con primas; si no acepta, venderlo en enero.

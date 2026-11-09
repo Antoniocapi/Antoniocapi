@@ -838,7 +838,7 @@
         .map((j) => chip(j.jugador, Math.round(Number(j.clausula) / 1000) + ' mil €', 'var(--color-warn)', `Cláusula ${sa.eur(Number(j.clausula))} · valor hasta ${sa.eur(Number(j.valor_max))}`))},
       {t: 'Vender o sacar', d: 'Liberan masa salarial.', c: 'var(--color-fg)', xs: J.filter((j) => j.accion === 'VENDER YA' || (j.valoracion_sueldo === 'Cobra de más' && j.equipo === 'Primer equipo' && Number(j.sueldo) >= 40000))
         .sort((a, b) => Number(b.sueldo) - Number(a.sueldo)).map((j) => chip(j.jugador, Math.round(Number(j.sueldo) / 1000) + ' mil €', 'var(--color-bad)', (j.motivo_sueldo || '') + ' ' + j.motivo))},
-      {t: 'Fichar', d: 'Mejores delanteros de la lista de ojeo.', c: 'var(--color-ok)', xs: F.filter((f) => f.estado === 'Candidato').slice(0, 5).map((f) => chip(f.jugador, Math.round(num(f.nota)) + ' pts', 'var(--color-ok)', `${f.edad} años · ${f.calidad}★ → ${f.potencial}★ · ${f.tipo}`))},
+      {t: 'Fichar', d: 'Delantero: ✔ fichado. Siguiente: lateral izquierdo.', c: 'var(--color-ok)', xs: F.filter((f) => f.estado === 'Fichado').concat(F.filter((f) => f.estado === 'Candidato').slice(0, 2)).map((f) => chip(f.jugador, Math.round(num(f.nota)) + ' pts', 'var(--color-ok)', `${f.edad} años · ${f.calidad}★ → ${f.potencial}★ · ${f.tipo}`))},
     ];
     e.replaceChildren(...cols.map((c) => {
       const col = el('div', 'sa-col'); col.style.setProperty('--c', c.c);
@@ -938,15 +938,16 @@
   };
   dash.draw('candidatos', (e) => {
     if (!sa.ready(e, ['fichajes'])) return;
-    const xs = dash.data('fichajes').data.filter((f) => f.estado === 'Candidato');
+    const xs = dash.data('fichajes').data.filter((f) => f.estado === 'Candidato' || f.estado === 'Fichado');
     e.replaceChildren(...xs.map((f, i) => {
-      const c = el('div', 'sa-cand' + (i === 0 ? ' top' : ''));
+      const fich = f.estado === 'Fichado';
+      const c = el('div', 'sa-cand' + (fich ? ' top' : ''));
       const b = el('div', 'sa-cand-b');
-      b.append(el('span', 'sa-cand-n', (i === 0 ? '★ ' : '') + f.jugador), el('span', 'sa-pc-m', `${f.edad} años · ${f.posicion}`));
+      b.append(el('span', 'sa-cand-n', (fich ? '✔ ' : '') + f.jugador), el('span', 'sa-pc-m', `${f.edad} años · ${f.posicion}`));
       const r = el('div', 'sa-pc-row'); r.append(mini(f.calidad, potMax(f.potencial)), el('span', null, `${f.calidad}★ → ${String(f.potencial).split('-').pop()}★`)); b.append(r);
-      const coste = f.tipo === 'Libre' ? 'Gratis' : f.precontrato === 'Sí' ? 'Precontrato · ' + (f.sueldo ? Math.round(num(f.sueldo) / 1000) + ' mil €/año' : '') : 'Traspaso';
+      const coste = fich ? 'FICHADO' : f.tipo === 'Libre' ? 'Gratis' : f.precontrato === 'Sí' ? 'Precontrato · ' + (f.sueldo ? Math.round(num(f.sueldo) / 1000) + ' mil €/año' : '') : 'Traspaso';
       b.append(pill(coste, f.tipo === 'Libre' || f.precontrato === 'Sí' ? 'ok' : ''));
-      c.append(anillo(num(f.nota), i === 0), b); return c;
+      c.append(fich ? (() => { const d = el('span', 'sa-av', '✔'); d.style.cssText = 'width:56px;height:56px;font-size:24px;--c:var(--color-ok)'; return d; })() : anillo(num(f.nota), false), b); return c;
     }));
   });
 

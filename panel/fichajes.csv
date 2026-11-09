@@ -1,8 +1,8 @@
 jugador,estado,nota,edad,posicion,calidad,potencial,tipo,valor_min,sueldo,fin,precontrato,motivo
+Ekain Orobengoa,Fichado,0,24,DL (C),3.0,4,Libre,0,,,,
 Genís Clua,Candidato,100.0,19,DL (C),3.5,4.5-5,Libre,0,,,,
 Shane Kluivert,Candidato,88.1,21,MP (I),3.0,4-4.5,Libre,0,,,,
 David Domínguez,Candidato,80.9,23,DL (C),2.5,4,Libre,0,,,,
-Ekain Orobengoa,Candidato,79.7,24,DL (C),3.0,4,Libre,0,,,,
 Jens Olsson,Candidato,79.1,22,DL (C),2.5,4,Traspaso,0,23000,30/06/2029,Sí,
 Mahamadou Baldé,Candidato,77.4,24,MP (D),3.0,4,Libre,0,,,,
 Miguel Conde,Candidato,73.8,22,DL (C),2.5,4,Traspaso,0,65000,30/06/2029,Sí,

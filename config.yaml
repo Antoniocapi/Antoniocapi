@@ -108,6 +108,10 @@ renovados:
   Lucas Balan: "renovado (diciembre de 2028)"
   Jordi Martínez: "renovado (diciembre de 2028)"
 
+# Fichajes ya cerrados (salen como «Fichado» en el ranking)
+fichados:
+  Ekain Orobengoa: "DL (C), libre, mercado de invierno 2028-29"
+
 # Jugadores cedidos A NUESTRO club por otros equipos.
 # No se renuevan ni se venden. Escribe el nombre tal cual sale en el CSV.
 cedidos_a_nuestro_club:

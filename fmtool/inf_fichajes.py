@@ -160,9 +160,12 @@ def generar(conn, cfg, plantilla, carpeta):
               + f"Traspaso máximo: {fmt_euros(ctx['presupuesto_traspasos'])}. "
               + ("" if ctx["margen_sueldos"] is None else f"Margen salarial tras la reserva de enero: {fmt_euros(ctx['margen_sueldos'])} al año."))
 
-    validos, descartados = [], []
+    validos, descartados, fichados = [], [], []
     for j in jugadores.values():
         if j["jugador"] in propios:
+            continue
+        if j["jugador"] in (cfg.get("fichados") or {}):
+            fichados.append(j["jugador"])
             continue
         nota, c, descartes, tipo, meses, grupo_pos = puntuar(j, cfg, ctx)
         fila = {
@@ -190,6 +193,9 @@ def generar(conn, cfg, plantilla, carpeta):
         filas = sorted((f for f in validos if f["_grupo"] == g), key=lambda f: -f["Nota"])
         inf.seccion(f"{g} ({len(filas)})")
         inf.tabla(g, cols, filas)
+    if fichados:
+        inf.seccion("Ya fichados")
+        inf.lista(f"**{n}**: {(cfg.get('fichados') or {})[n]}" for n in fichados)
     inf.seccion(f"Descartados ({len(descartados)})")
     inf.tabla("Descartados", ["Jugador", "Edad", "Pos.", "Calidad", "Potencial", "Nota", "Motivo del descarte"],
               sorted(descartados, key=lambda f: -f["Nota"]))
@@ -197,6 +203,11 @@ def generar(conn, cfg, plantilla, carpeta):
     import csv as _csv
     filas_panel = [dict(f, Estado="Candidato") for f in validos] + [dict(f, Estado="Descartado") for f in descartados]
     filas_panel.sort(key=lambda f: (f["Estado"] != "Candidato", -f["Nota"]))
+    for n in fichados:
+        j = jugadores[n]
+        filas_panel.insert(0, {"Jugador": n, "Estado": "Fichado", "Nota": 0, "Edad": j["edad"], "Pos.": j["mejor_pos"] or j["posicion"],
+                               "Calidad": j["calidad"], "Potencial": texto_potencial(j), "Tipo": "Libre", "Valor mín. (€)": 0,
+                               "Sueldo (€)": None, "Fin contrato": ""})
     with open(RAIZ / "panel" / "fichajes.csv", "w", encoding="utf-8", newline="") as fh:
         w = _csv.writer(fh)
         w.writerow(["jugador", "estado", "nota", "edad", "posicion", "calidad", "potencial", "tipo", "valor_min", "sueldo", "fin", "precontrato", "motivo"])
