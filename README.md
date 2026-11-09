@@ -46,6 +46,10 @@ Rellena `data/partidos/partidos.csv`, una fila por partido. Puedes abrirlo en Ex
 
 En `data/liga/` se guardan la clasificación (`clasificacion_AAAA-MM-DD.csv`) y el calendario (`calendario_AAAA-MM-DD.csv`) sacados de las capturas del Portal. Si en `partidos.csv` dejas vacía la «Posición rival», se toma de la última clasificación. El informe de partidos también muestra los próximos rivales y en qué parte de la tabla están.
 
+## Panel de analista
+
+`python fm.py panel` exporta a `panel/` los CSV del panel de analista privado de claude.ai (partidos, plantilla, métricas del Centro de datos y clasificación). La página del panel está en `panel/index.html`. Cuando hay datos nuevos, Claude sube los CSV al panel.
+
 ## Configuración
 
 Todo se ajusta en `config.yaml`: topes de sueldo, reserva de enero, presupuesto salarial, edad máxima para renovar, criterio del potencial (mínimo/media/máximo), posiciones necesarias con su prioridad, pesos de la puntuación de fichajes, umbrales de alerta, ciclo de amarillas, etc.

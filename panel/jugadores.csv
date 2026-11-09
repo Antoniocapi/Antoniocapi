@@ -1,0 +1,58 @@
+jugador,equipo,edad,posicion,calidad,potencial,potencial_num,nota,titularidades,goles,asistencias,sueldo,tope,fin_contrato,clausula,valor_max,valor_estimado,accion,motivo,le_siguen,cedido,lesionado
+Adur Alsúa,Primer equipo,23,MC,3,4,4,6.65,4,0,0,70000,60000,2030-06-30,245000,140000,81000,MANTENER,"3★/4★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Aimar Vicandi,Primer equipo,23,MP (D),3.5,4,4,6.42,4,0,0,175000,60000,2031-06-30,450000,325000,257500,MANTENER,"3.5★/4★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+David Hamansenya,Primer equipo,21,DF (I),3.5,4-5,4.5,6.6,3,0,0,7750,60000,2029-06-30,525000,450000,450000,CEDIDO AQUÍ,Cedido por otro club: ni se renueva ni se vende.,Sí,Sí,No
+Edu González,Primer equipo,19,MP (C),2.5,2.5-3.5,3,,0,0,1,35000,40000,2030-06-30,500000,150000,78500,MANTENER,"2.5★/2.5-3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Ismael Velasco,Primer equipo,23,POR,2,3,3,,0,0,0,27000,40000,2030-06-30,93000,40000,21750,MANTENER,"2★/3★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Javier Murúa,Primer equipo,31,DF (C),3,3,3,7,3,0,0,100000,60000,2029-06-30,325000,70000,48000,VENDER YA,31 años y sin margen de mejora (3★/3★): vender mientras vale ~48.000 €.,No,No,No
+Joaquín Tello,Primer equipo,17,MP (C),2,4-5,4.5,,0,0,0,7000,25000,2030-06-30,68000,150000,83000,MANTENER,"2★/4-5★, ya suma minutos con el B: no hace falta cederlo. Contrato hasta 30/06/2030.",No,No,No
+Jon Eceizabarrena,Primer equipo,23,ME (C),3,4,4,6.7,2,0,0,60000,40000,2029-06-30,475000,130000,75000,RENOVAR,Joven (23) con potencial 4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029.,No,No,No
+Lucas Santos,Primer equipo,22,DF (C),2.5,3.5,3.5,,0,0,0,33500,40000,2030-06-30,350000,140000,77000,MANTENER,"2.5★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Luis Bilbao,Primer equipo,25,MP (D),3,3.5,3.5,6.47,2,0,0,120000,60000,2030-06-30,250000,120000,95000,MANTENER,"3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Luis Paulo,Primer equipo,20,DF (C),2.5,4-5,4.5,6.6,2,0,0,42000,40000,2031-06-30,1000000,95000,54500,MANTENER,"2.5★/4-5★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Manu Vigo,Primer equipo,23,MC,2,2.5,2.5,,0,0,0,29500,40000,2029-06-30,35000,12000,12000,SALE LIBRE,"Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029.",No,No,No
+Marc Castro,Primer equipo,20,DF (C),2.5,3-4,3.5,,0,0,0,36000,40000,2030-06-30,300000,180000,137500,CEDER,"20 años, 2.5★/3-4★ y pocos minutos (titular en 0 de 4 partidos): necesita jugar fuera.",No,No,No
+Mario Valdaliso,Primer equipo,20,MP (I),2.5,3-4,3.5,6.55,1,0,0,44000,40000,2030-06-30,250000,95000,54500,CEDER,"20 años, 2.5★/3-4★ y pocos minutos (titular en 1 de 4 partidos): necesita jugar fuera.",No,No,No
+Markel Ucín,Primer equipo,24,DF (C),2.5,3,3,,1,0,0,42000,60000,2029-06-30,150000,70000,40000,SALE LIBRE,"No cumple los criterios de renovación (24 años, 2.5★/3★) y acaba 30/06/2029: dejarle salir o venderle si llega oferta.",No,No,No
+Mulas,Primer equipo,22,DF (C),3,3.5,3.5,6.77,3,0,0,71500,40000,2030-06-30,400000,120000,74000,MANTENER,"3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Pablo Cojo,Primer equipo,20,DF (D),2,2-3,2.5,6.73,3,0,0,32500,40000,2030-06-30,250000,110000,57500,SALE LIBRE,"Techo bajo (2★/2-3★) a los 20 años: buscarle salida, contrato hasta 30/06/2030.",No,No,No
+Pau Calvo,Primer equipo,21,ME (C),3,3-4,3.5,6.67,2,0,0,39500,40000,2029-06-30,250000,35000,21500,RENOVAR,Joven (21) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029.,No,No,No
+Pavel Kadochnikov,Primer equipo,22,MC,3,3,3,6.47,2,0,0,80000,40000,2030-06-30,120000,40000,28000,MANTENER,"3★/3★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Philip Osei,Primer equipo,28,DF (I),2.5,2.5,2.5,6.95,1,0,1,58000,60000,2029-06-30,110000,60000,37000,SALE LIBRE,"Techo bajo (2.5★/2.5★) a los 28 años: no renovar, sale libre el 30/06/2029.",No,No,No
+Pol Escribano,Primer equipo,20,MP (I),3,3.5-4.5,4,6.8,2,0,1,46500,40000,2030-06-30,250000,75000,43500,MANTENER,"3★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 250.000 €: renueva para subirla o quitarla.",Sí,No,No
+Xavi Miràngels,Primer equipo,19,ME (C),3.5,4-5,4.5,6.67,2,0,0,46500,60000,2030-06-30,750000,475000,260000,CEDIDO AQUÍ,Cedido por otro club: ni se renueva ni se vende.,No,Sí,Sí
+Álvaro Jiménez,Primer equipo,25,POR,3,3.5,3.5,6.83,4,0,0,52000,60000,2030-06-30,100000,65000,39500,MANTENER,"3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Óscar León,Primer equipo,23,DL (C),3,3.5,3.5,7,3,3,0,65500,60000,2029-06-30,350000,120000,70000,RENOVAR,Joven (23) con potencial 3.5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029.,No,No,No
+Alberto Ruvira,Filial,16,DF (C),3,3.5-4.5,4,,0,0,0,19000,25000,2031-06-30,82000,160000,120000,MANTENER,"3★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Alessandro Lugo,Filial,19,POR,2,2.5-3.5,3,,0,0,0,20000,25000,2031-06-30,85000,65000,36000,MANTENER,"2★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Andres Giraldo,Filial,17,MP (C),2,3.5-4.5,4,,0,0,0,15500,25000,2030-06-30,110000,75000,41000,MANTENER,"2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 110.000 €: renueva para subirla o quitarla.",Sí,No,No
+Carlos Flores,Filial,17,ME (D),,,,,0,0,0,,25000,,,0,0,SIN DATOS,La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada.,No,No,No
+Diego Llabrés,Filial,17,DF (C),1.5,4-5,4.5,,0,0,0,7000,25000,2030-06-30,61000,130000,71000,MANTENER,"1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Edu Gallego,Filial,17,DF (C),2.5,3.5-4.5,4,,0,0,0,11000,25000,2030-06-30,53000,55000,30000,MANTENER,"2.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Eric,Filial,19,"MP (C), DL (C)",,,,,0,0,0,,25000,,,0,0,SIN DATOS,La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada.,No,No,No
+Erick Benítes,Filial,17,DL (C),2,3.5-4.5,4,,0,0,0,15750,25000,2030-06-30,110000,230000,126000,MANTENER,"2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,No
+Isaac Varela,Filial,16,MP (I),2.5,4-5,4.5,,0,0,0,18250,25000,2031-06-30,73000,130000,71000,MANTENER,"2.5★/4-5★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Jordi Martínez,Filial,20,POR,2,3-4,3.5,,0,0,0,20000,25000,2029-06-30,43500,80000,41000,RENOVAR,Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029.,No,No,No
+Lucas Balan,Filial,19,ME (C),2,4-5,4.5,,0,0,0,26000,25000,2029-06-30,110000,95000,55500,RENOVAR,Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029.,No,No,No
+Manuel,Filial,17,DF (C),2,3-4,3.5,,0,0,0,20000,25000,2031-06-30,500000,210000,115000,MANTENER,"2★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula.",Sí,No,No
+Marco Coronel,Filial,23,DF (C),2,2.5,2.5,,0,0,0,22000,25000,2029-06-30,12000,0,0,SALE LIBRE,"Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis.",Sí,No,No
+Mario Segura,Filial,20,MC,1.5,2-3,2.5,,0,0,0,19250,25000,2029-06-30,7500,0,0,SALE LIBRE,"Techo bajo (1.5★/2-3★) a los 20 años: no renovar, sale libre el 30/06/2029.",No,No,No
+Matías Aguirre,Filial,18,ME (D),,,,,0,0,0,,25000,,,0,0,SIN DATOS,La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada.,No,No,No
+Ronni,Filial,22,DL (C),2,2.5,2.5,,0,0,0,24000,25000,2029-06-30,60000,5000,2750,SALE LIBRE,"Techo bajo (2★/2.5★) a los 22 años: no renovar, sale libre el 30/06/2029.",No,No,No
+Sergio Rivera,Filial,21,DF (I),1.5,1.5-2.5,2,,0,0,0,22000,25000,2029-06-30,60000,0,0,SALE LIBRE,"Techo bajo (1.5★/1.5-2.5★) a los 21 años: no renovar, sale libre el 30/06/2029.",No,No,No
+Vaquero,Filial,22,ME (C),1.5,2,2,,0,0,0,23500,25000,2029-06-30,60000,0,0,SALE LIBRE,"Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis.",Sí,No,No
+Willian Obama,Filial,18,DF/MP (D),,,,,0,0,0,,25000,,,0,0,SIN DATOS,La captura no muestra sus estrellas ni su contrato: no puedo recomendar nada.,No,No,No
+Andrei Roateș,Juvenil,20,DL (C),2,2.5-3.5,3,,0,0,0,30000,25000,2030-06-30,500000,45000,29500,MANTENER,"Cedido en otro club; 2★/2.5-3.5★, contrato hasta 30/06/2030.",No,No,No
+Gabri Benito,Juvenil,16,MP (D),1,3-4,3.5,,0,0,0,7750,25000,2031-06-30,43000,110000,55000,MANTENER,"1★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Guillermo José,Juvenil,16,DF (I),1,2.5-3.5,3,,0,0,0,7750,25000,2031-06-30,39500,40000,22000,MANTENER,"1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Ivan Murgia,Juvenil,16,MC,1,2.5-3.5,3,,0,0,0,6250,25000,2031-06-30,650,0,0,MANTENER,"1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Jack Pingamage,Juvenil,16,MP (D),1.5,4-5,4.5,,0,0,0,7500,25000,2030-06-30,250000,170000,93000,MANTENER,"1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora.",No,No,Sí
+Javier Rebollo,Juvenil,17,MP (D),1,2-3,2.5,,0,0,0,3300,25000,2031-06-30,,0,0,MANTENER,"1★/2-3★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Jorge María,Juvenil,20,MC,1.5,2.5-3.5,3,,0,0,0,34500,25000,2030-06-30,500000,65000,33250,MANTENER,"Cedido en otro club; 1.5★/2.5-3.5★, contrato hasta 30/06/2030.",No,No,No
+João Machado,Juvenil,17,DF (I),1.5,3.5-4.5,4,,0,0,0,7000,25000,2030-06-30,29000,70000,35000,MANTENER,"1.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 29.000 €: renueva para subirla o quitarla.",Sí,No,No
+Juan Ruiz,Juvenil,16,ME (C),1,3.5-4.5,4,,0,0,0,3300,25000,2031-06-30,,90000,65000,MANTENER,"1★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Luis Ramírez,Juvenil,16,ME (I),1,2.5-3.5,3,,0,0,0,7750,25000,2031-06-30,650,0,0,MANTENER,"1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,No
+Pablo Arbós,Juvenil,21,DL (C),2,2.5-3.5,3,,0,0,0,27000,25000,2030-06-30,400000,70000,36500,MANTENER,"Cedido en otro club; 2★/2.5-3.5★, contrato hasta 30/06/2030.",No,No,No
+Raúl Ruiz,Juvenil,17,ME (I),1,2-3,2.5,,0,0,0,6250,25000,2029-06-30,49500,45000,24750,SALE LIBRE,"Techo bajo (1★/2-3★) a los 17 años: no renovar, sale libre el 30/06/2029.",No,No,No
+Ricardo,Juvenil,17,DF (D),1,3-4,3.5,,0,0,0,17500,25000,2031-06-30,100000,50000,27500,MANTENER,"1★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora.",No,No,Sí
+Toni Moreno,Juvenil,16,ME (C),1,2-3,2.5,,0,0,0,3300,25000,2032-06-30,,0,0,MANTENER,"1★/2-3★, contrato hasta 30/06/2032: sin acción necesaria ahora.",No,No,No

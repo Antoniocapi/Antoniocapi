@@ -1,0 +1,535 @@
+<meta name="dash-one-writer">
+<style>
+  /* Panel de analista · Salamanca UDS — una columna de tarjetas, rejilla de 2 cuando cabe */
+  .sa { display: flex; flex-direction: column; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); }
+  .sa-head { display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+  .sa-title { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0; text-wrap: balance; }
+  .sa-take { margin: 0; color: var(--color-fg-muted); max-width: 70ch; line-height: 1.5; }
+  .sa .sa-take b, .sa .sa-num b { font-weight: 600; color: var(--color-fg); }
+  .sa-meta { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sa-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); gap: var(--cds-gap-md); }
+  .sa-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); min-width: 0; }
+  .sa-tile-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); letter-spacing: .02em; }
+  .sa-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .sa-sub { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+  .sa-section { display: flex; flex-direction: column; gap: var(--cds-gap-md); }
+  .sa-h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .sa-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: var(--cds-gap-md); }
+  .sa-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; }
+  .sa-card h3 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+  .sa-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; }
+  .sa-chart { position: relative; min-height: 240px; }
+  .sa-chart.sa-tall { min-height: 360px; }
+  .sa-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sa-legend span { display: inline-flex; align-items: center; gap: var(--cds-gap-xs); }
+  .sa-sw { width: .75rem; height: .75rem; border-radius: 2px; display: inline-block; }
+  .sa-tip { position: absolute; pointer-events: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); white-space: nowrap; z-index: 2; }
+  .sa-tip .t { color: var(--cds-text-secondary); }
+  .sa-tablebox { max-height: 30rem; overflow: auto; }
+  .sa-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+  .sa-table th { position: sticky; top: 0; background: var(--color-panel); text-align: left; font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); cursor: pointer; white-space: nowrap; user-select: none; }
+  .sa-table th.num, .sa-table td.num { text-align: right; }
+  .sa-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); vertical-align: top; }
+  .sa-table tr.me td { font-weight: 600; }
+  .sa-table td.wrap { min-width: 16rem; }
+  .sa-pill { display: inline-block; padding: 0 .4rem; border-radius: 999px; border: 1px solid var(--color-border-line); white-space: nowrap; }
+  .sa-pill.ok { color: var(--color-ok); } .sa-pill.bad { color: var(--color-bad); } .sa-pill.warn { color: var(--color-warn); }
+  .sa-tools { display: flex; gap: var(--cds-gap-sm); flex-wrap: wrap; align-items: center; }
+  .sa-search { font: inherit; font-size: var(--cds-font-size-caption); padding: var(--cds-pad-xs) var(--cds-pad-sm); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-bg); color: var(--color-fg); min-width: 0; flex: 1 1 12rem; }
+  .sa-failed { display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); min-height: inherit; }
+  .sa-failed::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+  [data-dash-source-state=empty] { color: transparent; }
+  [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+  details.sa-notes summary { cursor: pointer; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  details.sa-notes dl { font-size: var(--cds-font-size-caption); display: grid; grid-template-columns: max-content 1fr; gap: var(--cds-gap-xs) var(--cds-gap-md); }
+  details.sa-notes dt { font-weight: var(--cds-font-weight-medium); }
+  details.sa-notes dd { margin: 0; color: var(--color-fg-muted); }
+</style>
+
+<div class="sa">
+  <header class="sa-head" id="resumen">
+    <h1 class="sa-title">Salamanca UDS · Analítica</h1>
+    <p class="sa-take">Tras <b data-draw="pj" data-source="resumen" data-field="pj" data-row="0">—</b> jornadas llevamos <b data-draw="pts" data-source="resumen" data-field="puntos" data-row="0">—</b> puntos con un juego que vale <b data-draw="xpts" data-source="resumen" data-field="xpts" data-row="0">—</b> puntos esperados.
+      <span data-variant="suerte">Los resultados van por delante del juego: si el xG no mejora, lo normal es que los resultados empeoren.</span>
+      <span data-variant="merito" hidden>El juego merece más puntos de los que llevamos: si se mantiene el xG, llegarán.</span>
+      <span data-variant="justo" hidden>Los resultados reflejan lo que hemos jugado.</span>
+      <span data-draw="variante" data-source="resumen"></span>
+    </p>
+    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · datos del FM a 18/09/2028</span>
+  </header>
+
+  <div class="sa-tiles">
+    <div class="sa-tile">
+      <span class="sa-tile-label">Posición en la liga</span>
+      <span class="sa-big"><span data-draw="pos" data-source="clasificacion" data-field="pos" data-where="equipo=Salamanca">—</span>º</span>
+      <span class="sa-sub"><span data-draw="ptsliga" data-source="clasificacion" data-field="puntos" data-where="equipo=Salamanca">—</span> puntos</span>
+    </div>
+    <div class="sa-tile">
+      <span class="sa-tile-label">Puntos reales / esperados (xPts)</span>
+      <span class="sa-big"><span data-draw="pts2" data-source="resumen" data-field="puntos" data-row="0">—</span> / <span data-draw="xpts2" data-source="resumen" data-field="xpts" data-row="0">—</span></span>
+      <span class="sa-sub">Diferencia <span data-draw="suerte" data-source="resumen" data-field="suerte" data-row="0">—</span> puntos</span>
+    </div>
+    <div class="sa-tile">
+      <span class="sa-tile-label">Diferencia de xG por partido</span>
+      <span class="sa-big" data-draw="difxg" data-source="resumen" data-field="dif_xg_pp" data-row="0">—</span>
+      <span class="sa-sub">xG <span data-draw="xgf" data-source="resumen" data-field="xg_favor" data-row="0">—</span> a favor · <span data-draw="xgc" data-source="resumen" data-field="xg_contra" data-row="0">—</span> en contra</span>
+    </div>
+    <div class="sa-tile">
+      <span class="sa-tile-label">Goles a favor - en contra</span>
+      <span class="sa-big"><span data-draw="gf" data-source="resumen" data-field="goles_favor" data-row="0">—</span> - <span data-draw="gc" data-source="resumen" data-field="goles_contra" data-row="0">—</span></span>
+      <span class="sa-sub">Disparos <span data-draw="disf" data-source="resumen" data-field="disparos_favor" data-row="0">—</span> - <span data-draw="disc" data-source="resumen" data-field="disparos_contra" data-row="0">—</span></span>
+    </div>
+  </div>
+
+  <section class="sa-section" id="juego">
+    <h2 class="sa-h2">Juego frente a resultados</h2>
+    <div class="sa-grid">
+      <div class="sa-card">
+        <h3>xG por partido</h3>
+        <p class="sa-note">Goles esperados creados y concedidos en cada jornada.</p>
+        <div class="sa-legend"><span><i class="sa-sw" data-sw="0"></i>xG a favor</span><span><i class="sa-sw" data-sw="bad"></i>xG en contra</span></div>
+        <div class="sa-chart" id="grafico-xg" data-draw="xg" data-source="partidos"></div>
+      </div>
+      <div class="sa-card">
+        <h3>Puntos acumulados frente a xPts</h3>
+        <p class="sa-note">Si la línea de puntos va por encima de la de xPts, estamos sacando más de lo que merece el juego.</p>
+        <div class="sa-chart" id="grafico-puntos" data-draw="acum" data-source="acumulado"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sa-section" id="liga">
+    <h2 class="sa-h2">Frente a la media de la liga</h2>
+    <div class="sa-card">
+      <h3>Diferencia con la media de la 2ª Federación Gr. 5</h3>
+      <p class="sa-note">En % sobre la media del Centro de datos. Verde = mejor que la media, rojo = peor, gris = depende del estilo de juego.</p>
+      <div class="sa-chart sa-tall" id="grafico-liga" data-draw="metricas" data-source="metricas"></div>
+    </div>
+  </section>
+
+  <section class="sa-section" id="jugadores">
+    <h2 class="sa-h2">Jugadores</h2>
+    <div class="sa-card">
+      <h3>Sueldo frente a nota media (primer equipo)</h3>
+      <p class="sa-note">Arriba a la izquierda: cobran mucho y rinden poco. La línea discontinua es el tope de titular.</p>
+      <div class="sa-chart sa-tall" id="grafico-sueldos" data-draw="scatter" data-source="jugadores"></div>
+    </div>
+    <div class="sa-card">
+      <h3>Toda la plantilla</h3>
+      <p class="sa-note">Pulsa una columna para ordenar. La acción es la recomendación del modelo Castellón.</p>
+      <div class="sa-tools"><input class="sa-search" id="buscar-jugador" type="search" placeholder="Buscar jugador, equipo, posición o acción" aria-label="Buscar en la plantilla"></div>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-plantilla" data-source="jugadores" data-row-key="jugador">
+          <thead><tr>
+            <th data-field="jugador" data-sort="jugador">Jugador</th>
+            <th data-field="equipo" data-sort="equipo">Equipo</th>
+            <th data-field="edad" data-sort="edad" class="num">Edad</th>
+            <th data-field="posicion" data-sort="posicion">Pos.</th>
+            <th data-field="calidad" data-sort="calidad" class="num">Calidad</th>
+            <th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
+            <th data-field="nota" data-sort="nota" class="num">Nota</th>
+            <th data-field="titularidades" data-sort="titularidades" class="num">Tit.</th>
+            <th data-field="goles" data-sort="goles" class="num">Goles</th>
+            <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th>
+            <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th>
+            <th data-field="fin_contrato" data-sort="fin_contrato">Fin</th>
+            <th data-field="accion" data-sort="accion">Acción</th>
+          </tr></thead>
+          <tbody data-draw="plantilla"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sa-section" id="riesgos">
+    <h2 class="sa-h2">Riesgos de contrato</h2>
+    <div class="sa-card">
+      <h3>Cláusulas bajas y jugadores que siguen otros clubes</h3>
+      <p class="sa-note">Cláusula por debajo de su valor de mercado o con interés de otros clubes. Renovar subiendo o quitando la cláusula.</p>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-riesgos" data-source="alertas" data-row-key="jugador">
+          <thead><tr>
+            <th data-field="jugador">Jugador</th>
+            <th data-field="equipo">Equipo</th>
+            <th data-field="edad" class="num">Edad</th>
+            <th data-field="potencial" class="num">Potencial</th>
+            <th data-field="clausula" class="num">Cláusula</th>
+            <th data-field="valor_max" class="num">Valor máx.</th>
+            <th data-field="le_siguen">Le siguen</th>
+            <th data-field="riesgo">Riesgo</th>
+          </tr></thead>
+          <tbody data-draw="riesgos"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="sa-section" id="clasificacion">
+    <h2 class="sa-h2">Clasificación</h2>
+    <div class="sa-card">
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-clasificacion" data-source="clasificacion" data-row-key="equipo">
+          <thead><tr>
+            <th data-field="pos" class="num">Pos.</th>
+            <th data-field="equipo">Equipo</th>
+            <th data-field="jugados" class="num">PJ</th>
+            <th data-field="ganados" class="num">G</th>
+            <th data-field="empatados" class="num">E</th>
+            <th data-field="perdidos" class="num">P</th>
+            <th data-field="dif_goles" class="num">Dif.</th>
+            <th data-field="puntos" class="num">Pts</th>
+          </tr></thead>
+          <tbody data-draw="clasificacion"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <details class="sa-notes">
+    <summary>Cómo se calculan los números</summary>
+    <dl>
+      <dt>xPts</dt><dd>Puntos esperados de cada partido según su xG a favor y en contra (modelo de Poisson).</dd>
+      <dt>Nota media</dt><dd>Media de la temporada que da el FM en la lista de selección; en filial y juvenil, sin dato.</dd>
+      <dt>Métricas de liga</dt><dd>Centro de datos del FM. Las marcadas «(aprox.)» se han leído a ojo de un gráfico.</dd>
+      <dt>Acción</dt><dd>RENOVAR, VENDER YA, CEDER, SALE LIBRE o MANTENER, con las reglas de config.yaml de la herramienta.</dd>
+      <dt>Origen</dt><dd>Capturas de pantalla del FM transcritas a mano; sin xG por jugador ni minutos de los suplentes.</dd>
+    </dl>
+  </details>
+</div>
+
+<script>
+  // ---------- utilidades comunes
+  d3.formatDefaultLocale({decimal: ',', thousands: '.', grouping: [3], currency: ['', ' €']});
+  window.sa = window.sa || {};
+  const num = (v) => (v === '' || v == null ? null : Number(v));
+  sa.num = num;
+  sa.eur = (v) => (v == null ? '' : d3.format(',.0f')(v) + ' €');
+  sa.dec = (v, d = 2) => (v == null ? '' : d3.format(`.${d}f`)(v));
+  sa.signed = (v, d = 2) => (v == null ? '' : (v > 0 ? '+' : v < 0 ? '−' : '') + d3.format(`.${d}f`)(Math.abs(v)));
+  sa.css = (name) => getComputedStyle(document.documentElement).getPropertyValue(name).trim() || null;
+  // Estado de las fuentes: true si todas están listas; si no, deja el elemento en su estado
+  sa.ready = (el, ids, isTable) => {
+    const st = ids.map((id) => dash.data(id).status);
+    if (st.every((s) => s === 'ok')) { el.classList.remove('dash-skeleton'); return true; }
+    if (st.some((s) => s === 'error' || s === 'missing' || s === 'declined')) {
+      el.classList.remove('dash-skeleton');
+      if (isTable) { el.replaceChildren(); return false; }
+      const f = document.createElement('div'); f.className = 'sa-failed'; f.textContent = 'Failed to load';
+      el.replaceChildren(f); return false;
+    }
+    if (isTable) { el.replaceChildren(); return false; }
+    el.textContent = '—';
+    return false;
+  };
+  // Tooltip: busca (o crea) su caja cada vez, así sobrevive a que el gráfico se redibuje
+  sa.tip = (box) => {
+    const get = () => {
+      let t = box.querySelector(':scope > .sa-tip');
+      if (!t) { t = document.createElement('div'); t.className = 'sa-tip'; t.hidden = true; box.appendChild(t); }
+      return t;
+    };
+    get();
+    return {
+      show(lines, x, y) {
+        const t = get();
+        t.replaceChildren(...lines.map((l, i) => { const d = document.createElement('div'); if (i === 0) d.className = 't'; d.textContent = l; return d; }));
+        t.hidden = false;
+        const bw = box.clientWidth, tw = t.offsetWidth;
+        t.style.left = Math.max(0, Math.min(bw - tw, x + 12)) + 'px';
+        t.style.top = Math.max(0, y - t.offsetHeight - 8) + 'px';
+      },
+      hide() { get().hidden = true; },
+    };
+  };
+  sa.axisClean = (g) => g.attr('font-size', null).attr('font-family', null)
+    .call((s) => s.selectAll('text').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)'))
+    .call((s) => s.selectAll('.domain').attr('stroke', 'var(--cds-chart-axis)'))
+    .call((s) => s.selectAll('.tick line').attr('stroke', 'var(--cds-chart-grid)'));
+
+  // Colores de la leyenda
+  dash.onData(() => {
+    document.querySelectorAll('[data-sw]').forEach((s) => {
+      const k = s.getAttribute('data-sw');
+      s.style.background = k === 'bad' ? 'var(--cds-chart-status-critical)' : k === 'muted' ? 'var(--cds-chart-muted)' : dash.colors[+k];
+    });
+  });
+
+  // ---------- cálculos
+  dash.calc('resumen', {
+    inputs: ['partidos'],
+    title: 'Resumen de la temporada',
+    description: 'Suma de los partidos jugados: puntos, xPts, goles, xG y disparos; diferencia de xG por partido.',
+    fn: (partidos) => {
+      const n = (v) => (v === '' || v == null ? 0 : Number(v));
+      const s = (k) => partidos.reduce((a, p) => a + n(p[k]), 0);
+      const pj = partidos.length;
+      const puntos = s('puntos'), xpts = Math.round(s('xpts') * 100) / 100;
+      const xg_favor = Math.round(s('xg_favor') * 100) / 100, xg_contra = Math.round(s('xg_contra') * 100) / 100;
+      return [{
+        pj, puntos, xpts, suerte: Math.round((puntos - xpts) * 100) / 100,
+        goles_favor: s('goles_favor'), goles_contra: s('goles_contra'), xg_favor, xg_contra,
+        dif_xg_pp: pj ? Math.round((xg_favor - xg_contra) / pj * 100) / 100 : null,
+        disparos_favor: s('disparos_favor'), disparos_contra: s('disparos_contra'),
+      }];
+    },
+  });
+
+  dash.calc('acumulado', {
+    inputs: ['partidos'],
+    title: 'Puntos y xPts acumulados',
+    description: 'Suma jornada a jornada de los puntos reales y de los puntos esperados (xPts).',
+    fn: (partidos) => {
+      let p = 0, x = 0;
+      return [...partidos].sort((a, b) => Number(a.jornada) - Number(b.jornada)).map((r) => {
+        p += Number(r.puntos); x += Number(r.xpts || 0);
+        return {jornada: Number(r.jornada), rival: r.rival, puntos_acum: p, xpts_acum: Math.round(x * 100) / 100};
+      });
+    },
+  });
+
+  dash.calc('alertas', {
+    inputs: ['jugadores'],
+    title: 'Riesgos de contrato',
+    description: 'Jugadores con la cláusula por debajo de su valor máximo, o a los que siguen otros clubes.',
+    fn: (jugadores) => jugadores
+      .filter((j) => j.cedido !== 'Sí' && ((j.clausula !== '' && Number(j.clausula) < Number(j.valor_max || 0)) || j.le_siguen === 'Sí'))
+      .map((j) => ({
+        jugador: j.jugador, equipo: j.equipo, edad: Number(j.edad), potencial: j.potencial,
+        clausula: j.clausula === '' ? null : Number(j.clausula), valor_max: j.valor_max === '' ? null : Number(j.valor_max),
+        le_siguen: j.le_siguen,
+        riesgo: (j.clausula !== '' && Number(j.clausula) < Number(j.valor_max || 0) ? 'Cláusula < valor' : 'Interés de otros clubes')
+          + (j.clausula !== '' && Number(j.clausula) < Number(j.valor_max || 0) && j.le_siguen === 'Sí' ? ' · le siguen' : ''),
+      }))
+      .sort((a, b) => (a.clausula ?? 1e12) / (a.valor_max || 1) - (b.clausula ?? 1e12) / (b.valor_max || 1)),
+  });
+
+  // ---------- cifras de cabecera
+  const fila = (id) => (dash.data(id).status === 'ok' ? dash.data(id).data[0] : null);
+  const salamanca = () => {
+    const c = dash.data('clasificacion');
+    return c.status === 'ok' ? c.data.find((r) => r.equipo === 'Salamanca') : null;
+  };
+  const cifra = (name, get) => dash.draw(name, (el) => { const v = get(); el.textContent = v == null || v === '' ? '—' : v; });
+  cifra('pj', () => fila('resumen')?.pj);
+  cifra('pts', () => fila('resumen')?.puntos);
+  cifra('pts2', () => fila('resumen')?.puntos);
+  cifra('xpts', () => (fila('resumen') ? sa.dec(fila('resumen').xpts) : null));
+  cifra('xpts2', () => (fila('resumen') ? sa.dec(fila('resumen').xpts) : null));
+  cifra('suerte', () => (fila('resumen') ? sa.signed(fila('resumen').suerte) : null));
+  cifra('difxg', () => (fila('resumen') ? sa.signed(fila('resumen').dif_xg_pp) : null));
+  cifra('xgf', () => (fila('resumen') ? sa.dec(fila('resumen').xg_favor) : null));
+  cifra('xgc', () => (fila('resumen') ? sa.dec(fila('resumen').xg_contra) : null));
+  cifra('gf', () => fila('resumen')?.goles_favor);
+  cifra('gc', () => fila('resumen')?.goles_contra);
+  cifra('disf', () => fila('resumen')?.disparos_favor);
+  cifra('disc', () => fila('resumen')?.disparos_contra);
+  cifra('pos', () => salamanca()?.pos);
+  cifra('ptsliga', () => salamanca()?.puntos);
+  dash.draw('variante', (el) => {
+    const r = fila('resumen');
+    const elegida = !r ? 'suerte' : r.suerte > 0.5 ? 'suerte' : r.suerte < -0.5 ? 'merito' : 'justo';
+    document.querySelectorAll('[data-variant]').forEach((s) => { s.hidden = s.getAttribute('data-variant') !== elegida; });
+    el.textContent = '';
+  });
+
+  // ---------- gráfico: xG por partido
+  dash.draw('xg', (el) => {
+    if (!sa.ready(el, ['partidos'])) return;
+    const rows = dash.data('partidos').data.map((r) => ({j: Number(r.jornada), rival: r.rival, campo: r.campo, res: r.resultado,
+      f: num(r.xg_favor), c: num(r.xg_contra)})).sort((a, b) => a.j - b.j);
+    const W = el.clientWidth || 320, H = 240, m = {t: 12, r: 8, b: 40, l: 34};
+    const x = d3.scaleBand(rows.map((r) => r.j), [m.l, W - m.r]).padding(0.3);
+    const x2 = d3.scaleBand(['f', 'c'], [0, x.bandwidth()]).padding(0.12);
+    const y = d3.scaleLinear([0, Math.max(1, d3.max(rows, (r) => Math.max(r.f || 0, r.c || 0)))], [H - m.b, m.t]).nice();
+    const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'xG a favor y en contra por jornada');
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickSize(-(W - m.l - m.r)).tickFormat(d3.format('.1f'))).call(sa.axisClean).call((g) => g.select('.domain').remove());
+    const ax = svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickSize(0).tickFormat((j) => `J${j}`)).call(sa.axisClean);
+    ax.selectAll('.tick').append('text').attr('y', 26).attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)')
+      .text((j) => { const r = rows.find((q) => q.j === j); return r ? r.rival.replace(/^C\.D\. |^R\.C\. |^U\. /, '').slice(0, 10) : ''; });
+    const g = svg.append('g');
+    const tip = sa.tip(el);
+    rows.forEach((r) => {
+      [['f', r.f, dash.colors[0]], ['c', r.c, 'var(--cds-chart-status-critical)']].forEach(([k, v, col]) => {
+        if (v == null) return;
+        g.append('rect').attr('x', x(r.j) + x2(k)).attr('width', Math.min(32, x2.bandwidth())).attr('y', y(v)).attr('height', y(0) - y(v))
+          .attr('rx', 2).attr('fill', col)
+          .on('pointermove', (ev) => { const [px, py] = d3.pointer(ev, el); tip.show([`J${r.j} · ${r.rival} (${r.campo}) ${r.res}`, `xG a favor ${sa.dec(r.f)}`, `xG en contra ${sa.dec(r.c)}`], px, py); })
+          .on('pointerleave', () => tip.hide());
+      });
+    });
+    el.replaceChildren(svg.node());
+    sa.tip(el);
+  });
+
+  // ---------- gráfico: puntos acumulados frente a xPts
+  dash.draw('acum', (el) => {
+    if (!sa.ready(el, ['acumulado'])) return;
+    const rows = dash.data('acumulado').data;
+    const W = el.clientWidth || 320, H = 240, m = {t: 12, r: 70, b: 28, l: 30};
+    const x = d3.scalePoint(rows.map((r) => r.jornada), [m.l, W - m.r]).padding(0.3);
+    const y = d3.scaleLinear([0, Math.max(3, d3.max(rows, (r) => Math.max(r.puntos_acum, r.xpts_acum)))], [H - m.b, m.t]).nice();
+    const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Puntos y xPts acumulados por jornada');
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(4).tickSize(-(W - m.l - m.r))).call(sa.axisClean).call((g) => g.select('.domain').remove());
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).tickSize(0).tickFormat((j) => `J${j}`)).call(sa.axisClean);
+    const series = [
+      {k: 'puntos_acum', name: 'Puntos', col: dash.colors[0], dash: null},
+      {k: 'xpts_acum', name: 'xPts', col: 'var(--cds-chart-muted)', dash: '5 4'},
+    ];
+    const ends = [];
+    series.forEach((s) => {
+      svg.append('path').attr('fill', 'none').attr('stroke', s.col).attr('stroke-width', 2).attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round')
+        .attr('stroke-dasharray', s.dash).attr('d', d3.line((r) => x(r.jornada), (r) => y(r[s.k]))(rows));
+      svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', (r) => x(r.jornada)).attr('cy', (r) => y(r[s.k])).attr('r', 3).attr('fill', s.col);
+      const last = rows[rows.length - 1];
+      ends.push({s, y: y(last[s.k]), v: last[s.k]});
+    });
+    ends.sort((a, b) => a.y - b.y);
+    if (ends.length === 2 && ends[1].y - ends[0].y < 14) { ends[0].y -= 7; ends[1].y += 7; }
+    ends.forEach((e) => svg.append('text').attr('x', W - m.r + 6).attr('y', e.y + 4).attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)')
+      .text(`${e.s.name} ${e.s.k === 'xpts_acum' ? sa.dec(e.v) : e.v}`));
+    const tip = sa.tip(el);
+    svg.append('g').selectAll('rect').data(rows).join('rect').attr('x', (r) => x(r.jornada) - x.step() / 2).attr('width', x.step()).attr('y', m.t).attr('height', H - m.t - m.b).attr('fill', 'transparent')
+      .on('pointermove', (ev, r) => { const [px, py] = d3.pointer(ev, el); tip.show([`J${r.jornada} · ${r.rival}`, `Puntos ${r.puntos_acum}`, `xPts ${sa.dec(r.xpts_acum)}`], px, py); })
+      .on('pointerleave', () => tip.hide());
+    el.replaceChildren(svg.node());
+    sa.tip(el);
+  });
+
+  // ---------- gráfico: métricas frente a la liga (barras divergentes)
+  dash.draw('metricas', (el) => {
+    if (!sa.ready(el, ['metricas'])) return;
+    const rows = dash.data('metricas').data.map((r) => ({...r, d: num(r.diferencia_pct), us: num(r.nosotros), avg: num(r.media_liga)}));
+    const W = el.clientWidth || 320, rowH = 22, m = {t: 8, r: 46, b: 24, l: 8};
+    const svg = d3.create('svg').attr('width', '100%');
+    const probe = svg.append('g').style('font-size', 'var(--cds-font-size-caption)');
+    el.replaceChildren(svg.node());
+    let lw = 0;
+    rows.forEach((r) => { const t = probe.append('text').text(r.que_es || r.metrica); lw = Math.max(lw, t.node().getComputedTextLength()); });
+    probe.remove();
+    lw = Math.min(lw, W * 0.45);
+    const H = m.t + rows.length * rowH + m.b;
+    svg.attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Diferencia con la media de la liga');
+    const ext = Math.max(20, d3.max(rows, (r) => Math.abs(r.d || 0)));
+    const x = d3.scaleLinear([-ext, ext], [m.l + lw + 10, W - m.r]).nice();
+    const y = d3.scaleBand(rows.map((r) => r.metrica), [m.t, H - m.b]).padding(0.25);
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(5).tickFormat((v) => `${v > 0 ? '+' : ''}${v}%`).tickSize(-(H - m.t - m.b))).call(sa.axisClean).call((g) => g.select('.domain').remove());
+    svg.append('line').attr('x1', x(0)).attr('x2', x(0)).attr('y1', m.t).attr('y2', H - m.b).attr('stroke', 'var(--cds-chart-reference)');
+    const col = (v) => (v === 'mejor' ? 'var(--color-ok)' : v === 'peor' ? 'var(--cds-chart-status-critical)' : 'var(--cds-chart-muted)');
+    const tip = sa.tip(el);
+    rows.forEach((r) => {
+      const label = r.que_es || r.metrica;
+      svg.append('text').attr('x', m.l).attr('y', y(r.metrica) + y.bandwidth() / 2 + 4).attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)')
+        .text(label.length > 48 ? label.slice(0, 46) + '…' : label);
+      if (r.d == null) return;
+      svg.append('rect').attr('x', Math.min(x(0), x(r.d))).attr('width', Math.abs(x(r.d) - x(0))).attr('y', y(r.metrica)).attr('height', Math.min(16, y.bandwidth()))
+        .attr('rx', 2).attr('fill', col(r.valoracion))
+        .on('pointermove', (ev) => { const [px, py] = d3.pointer(ev, el); tip.show([`${r.metrica}`, `Nosotros ${d3.format(',')(r.us)} · media ${d3.format(',')(r.avg)}`, `${r.d > 0 ? '+' : ''}${d3.format(',')(r.d)}% · ${r.valoracion}`], px, py); })
+        .on('pointerleave', () => tip.hide());
+      svg.append('text').attr('x', r.d >= 0 ? x(r.d) + 4 : x(r.d) - 4).attr('text-anchor', r.d >= 0 ? 'start' : 'end').attr('y', y(r.metrica) + y.bandwidth() / 2 + 4)
+        .attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text(`${r.d > 0 ? '+' : ''}${d3.format(',.0f')(r.d)}%`);
+    });
+    sa.tip(el);
+  });
+
+  // ---------- gráfico: sueldo frente a nota
+  const TOPE_TITULAR = 60000; // tope de titular de config.yaml
+  dash.draw('scatter', (el) => {
+    if (!sa.ready(el, ['jugadores'])) return;
+    const rows = dash.data('jugadores').data.filter((r) => r.equipo === 'Primer equipo' && r.nota !== '' && r.sueldo !== '')
+      .map((r) => ({n: r.jugador, nota: Number(r.nota), s: Number(r.sueldo), accion: r.accion, cedido: r.cedido}));
+    const W = el.clientWidth || 320, H = 360, m = {t: 14, r: 16, b: 34, l: 64};
+    const x = d3.scaleLinear(d3.extent(rows, (r) => r.nota), [m.l, W - m.r]).nice();
+    const y = d3.scaleLinear([0, d3.max(rows, (r) => r.s) * 1.05], [H - m.b, m.t]).nice();
+    const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Sueldo anual frente a nota media');
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat((v) => d3.format(',.0f')(v) + ' €').tickSize(-(W - m.l - m.r))).call(sa.axisClean).call((g) => g.select('.domain').remove());
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(6).tickFormat(d3.format('.1f'))).call(sa.axisClean);
+    svg.append('text').attr('x', W - m.r).attr('y', H - 4).attr('text-anchor', 'end').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text('Nota media');
+    svg.append('line').attr('x1', m.l).attr('x2', W - m.r).attr('y1', y(TOPE_TITULAR)).attr('y2', y(TOPE_TITULAR)).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 4');
+    const med = d3.median(rows, (r) => r.nota);
+    const col = (r) => (r.s > TOPE_TITULAR && r.nota < med ? 'var(--cds-chart-status-critical)' : r.nota >= med ? dash.colors[0] : 'var(--cds-chart-muted)');
+    const tip = sa.tip(el);
+    svg.append('g').selectAll('circle').data(rows).join('circle').attr('cx', (r) => x(r.nota)).attr('cy', (r) => y(r.s)).attr('r', 5).attr('fill', col)
+      .on('pointermove', (ev, r) => { const [px, py] = d3.pointer(ev, el); tip.show([r.n + (r.cedido === 'Sí' ? ' (cedido)' : ''), `Nota ${sa.dec(r.nota)} · ${sa.eur(r.s)} al año`, r.accion], px, py); })
+      .on('pointerleave', () => tip.hide());
+    // etiquetas solo de los que destacan, para que no se pisen
+    const destacados = rows.filter((r) => r.s > TOPE_TITULAR || r.nota >= 6.9);
+    const usados = [];
+    destacados.sort((a, b) => b.s - a.s).forEach((r) => {
+      let ly = y(r.s) - 8;
+      while (usados.some((u) => Math.abs(u.y - ly) < 12 && Math.abs(u.x - x(r.nota)) < 90)) ly += 12;
+      usados.push({x: x(r.nota), y: ly});
+      const right = x(r.nota) > W - 90;
+      svg.append('text').attr('x', x(r.nota) + (right ? -6 : 6)).attr('y', ly).attr('text-anchor', right ? 'end' : 'start')
+        .attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text(r.n.split(' ').slice(-1)[0]);
+    });
+    el.replaceChildren(svg.node());
+    sa.tip(el);
+  });
+
+  // ---------- tablas
+  const estado = {campo: 'nota', dir: -1};
+  const NUMERICAS = new Set(['edad', 'calidad', 'potencial_num', 'nota', 'titularidades', 'goles', 'sueldo', 'clausula']);
+  document.querySelectorAll('#tabla-plantilla th[data-sort]').forEach((th) => {
+    th.addEventListener('click', () => {
+      const c = th.getAttribute('data-sort');
+      estado.dir = estado.campo === c ? -estado.dir : (NUMERICAS.has(c) ? -1 : 1);
+      estado.campo = c;
+      document.querySelectorAll('#tabla-plantilla th[data-sort]').forEach((h) => h.setAttribute('aria-sort', h === th ? (estado.dir > 0 ? 'ascending' : 'descending') : 'none'));
+      dash.draw('plantilla');
+    });
+  });
+  document.querySelectorAll('#buscar-jugador').forEach((i) => i.addEventListener('input', () => dash.draw('plantilla')));
+  const pill = (txt, cls) => { const s = document.createElement('span'); s.className = 'sa-pill ' + (cls || ''); s.textContent = txt; return s; };
+  const td = (content, cls) => { const c = document.createElement('td'); if (cls) c.className = cls; if (content instanceof Node) c.appendChild(content); else c.textContent = content ?? ''; return c; };
+  const CLASE_ACCION = {'RENOVAR': 'ok', 'VENDER YA': 'bad', 'CEDER': 'warn', 'SALE LIBRE': '', 'MANTENER': ''};
+
+  dash.draw('plantilla', (tb) => {
+    if (!sa.ready(tb, ['jugadores'], true)) return;
+    const q = (document.querySelector('#buscar-jugador')?.value || '').toLowerCase();
+    const rows = dash.data('jugadores').data.filter((r) => !q || [r.jugador, r.equipo, r.posicion, r.accion].join(' ').toLowerCase().includes(q));
+    const c = estado.campo;
+    rows.sort((a, b) => {
+      const va = NUMERICAS.has(c) ? (a[c] === '' ? -Infinity : Number(a[c])) : a[c];
+      const vb = NUMERICAS.has(c) ? (b[c] === '' ? -Infinity : Number(b[c])) : b[c];
+      return (va > vb ? 1 : va < vb ? -1 : 0) * estado.dir;
+    });
+    tb.replaceChildren(...rows.map((r) => {
+      const tr = document.createElement('tr');
+      tr.title = r.motivo;
+      tr.append(
+        td(r.jugador + (r.cedido === 'Sí' ? ' (cedido)' : '') + (r.lesionado === 'Sí' ? ' ✚' : '')),
+        td(r.equipo), td(r.edad, 'num'), td(r.posicion), td(r.calidad === '' ? '' : sa.dec(Number(r.calidad), 1), 'num'),
+        td(r.potencial, 'num'), td(r.nota === '' ? '' : sa.dec(Number(r.nota)), 'num'), td(r.titularidades, 'num'), td(r.goles, 'num'),
+        td(r.sueldo === '' ? '' : sa.eur(Number(r.sueldo)), 'num'), td(r.clausula === '' ? '' : sa.eur(Number(r.clausula)), 'num'),
+        td(r.fin_contrato ? d3.utcFormat('%d/%m/%Y')(new Date(r.fin_contrato)) : ''),
+        td(pill(r.accion, CLASE_ACCION[r.accion])),
+      );
+      tr.setAttribute('data-key', r.jugador);
+      return tr;
+    }));
+  });
+
+  dash.draw('riesgos', (tb) => {
+    if (!sa.ready(tb, ['alertas'], true)) return;
+    tb.replaceChildren(...dash.data('alertas').data.map((r) => {
+      const tr = document.createElement('tr');
+      tr.setAttribute('data-key', r.jugador);
+      tr.append(td(r.jugador), td(r.equipo), td(r.edad, 'num'), td(r.potencial, 'num'), td(sa.eur(r.clausula), 'num'), td(sa.eur(r.valor_max), 'num'),
+        td(r.le_siguen === 'Sí' ? pill('Sí', 'bad') : 'No'), td(r.riesgo));
+      return tr;
+    }));
+  });
+
+  dash.draw('clasificacion', (tb) => {
+    if (!sa.ready(tb, ['clasificacion'], true)) return;
+    tb.replaceChildren(...dash.data('clasificacion').data.map((r) => {
+      const tr = document.createElement('tr');
+      if (r.equipo === 'Salamanca') tr.className = 'me';
+      tr.setAttribute('data-key', r.equipo);
+      const d = Number(r.dif_goles);
+      tr.append(td(r.pos, 'num'), td(r.equipo), td(r.jugados, 'num'), td(r.ganados, 'num'), td(r.empatados, 'num'), td(r.perdidos, 'num'),
+        td((d > 0 ? '+' : '') + d, 'num'), td(r.puntos, 'num'));
+      return tr;
+    }));
+  });
+</script>

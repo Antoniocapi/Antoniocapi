@@ -10,6 +10,7 @@ Uso:  python fm.py <comando>
   partidos     Informe de partidos (data/partidos/partidos.csv)
   disciplina   Amarillas por jugador y quién está cerca del ciclo
   equipo       Analítica del Centro de datos frente a la media de la liga
+  panel        Exporta los datos del panel de analista a la carpeta panel/
   evolucion    Evolución de la plantilla (o de un jugador: python fm.py evolucion "Pau Calvo")
   todo         Genera todos los informes
 """
@@ -63,7 +64,7 @@ def main():
     parser = argparse.ArgumentParser(description="Gestión de la partida de FM27", formatter_class=argparse.RawDescriptionHelpFormatter,
                                      epilog=__doc__)
     parser.add_argument("comando", choices=["importar", "revisar", "contratos", "plantilla", "fichajes", "cantera",
-                                            "partidos", "disciplina", "equipo", "evolucion", "todo"])
+                                            "partidos", "disciplina", "equipo", "evolucion", "panel", "todo"])
     parser.add_argument("jugador", nargs="?", help="(solo evolucion) nombre del jugador")
     args = parser.parse_args()
 
@@ -99,6 +100,10 @@ def main():
             print("Ranking de fichajes:"); avisar_guardado(rutas)
         else:
             print("Fichajes: no hay listas de ojeo en data/ojeo/ todavía.")
+    if c == "panel" or todo:
+        from fmtool import exportar_panel
+        print("Datos del panel:")
+        avisar_guardado(exportar_panel.exportar(Plantilla(conn, cfg), cfg))
     if c == "equipo" or todo:
         cmd_equipo(cfg)
     if c == "partidos" or todo:
