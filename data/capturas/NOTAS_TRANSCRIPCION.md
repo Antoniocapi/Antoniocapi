@@ -118,7 +118,7 @@ Captura: `tactica_corner-defensa-lista-defensas-aereos_2028-09-18.png` → `data
 Captura: `partido_J05-alcobendas_2028-09-20.webp`.
 
 - Estadísticas → `partidos.csv`. **Mentalidad**: no sale en la captura; pongo Equilibrada (la habitual, según el usuario).
-- Once inicial con nota → `alineaciones.csv`. "Benítes" (DB, nº 28) = Erick Benítes, del Salamanca B. Las flechas verdes indican cambio (Benítes, Valdaliso, Edu González, Kadochnikov y Osei fueron sustituidos); no se ve quién entró.
+- Once inicial con nota → `alineaciones.csv`. "Benítes" (DB, nº 28) = Erick Benítes, del Salamanca B. Las flechas verdes son cambios (confirmado por el usuario): Benítes, Valdaliso, Edu González, Kadochnikov y Osei fueron sustituidos. No se ve quién entró.
 - **Clasificación**: solo se ven los puestos 9-15 → `data/liga/clasificacion-parcial_2028-09-20.csv`. La herramienta sigue usando la completa del 18/09 hasta tener otra captura entera.
 - Calendario: añadido el resultado del 20/09 → `data/liga/calendario_2028-09-20.csv`.
 - Otros resultados de la jornada (visibles): Fuenlabrada 2-0 Guadalajara, Mirandés B 2-0 Guijuelo, Navalcarnero 2-2 Ávila, Náxara 1-1 Unionistas y Numantia 2-1 Las Rozas.

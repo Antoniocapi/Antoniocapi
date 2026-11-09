@@ -1,5 +1,8 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Confirmación: flechas = cambios
+- Anotado en las notas de transcripción: en la J5 salieron Benítes, Valdaliso, Edu González, Kadochnikov y Osei. Falta saber quién entró.
+
 ## 09/11 · Jornada 5: Salamanca 0-0 R.C. Alcobendas
 - **Transcrito**: estadísticas, once con notas y resultado; calendario y parte de la clasificación (solo se ven los puestos 9-15, quedamos 12º con 6 puntos).
 - **Partido**: el más completo con balón. 53 % de posesión, 84 % de pase, 10 tiros frente a 8, xG 0,78 frente a 0,35, solo 7 faltas y 5 córners en contra. Faltó el gol: jugó Benítes (17 años) de 9, con León y Escribano fuera del once.
