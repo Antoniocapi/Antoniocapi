@@ -1,12 +1,12 @@
 orden,prioridad,area,pestana,tarea,detalle
-1,Urgente,Contratos,contratos,Calvo pide 120.000 €: contraoferta o venta,"Su sueldo justo es ≈73.000 € (cobra 39.500 €). Contraoferta: 70.000-80.000 € fijos + primas por partido y una cláusula alta. Si no acepta antes del 1/1, venderlo en enero: en junio se iría gratis."
-2,Urgente,Contratos,contratos,"Subir cláusulas: Jiménez, Ruvira, Machado y Varela","Jiménez 100.000 € con 6,98 de media; Ruvira 82.000 €; Machado 29.000 € (ya 4-5★); Varela 73.000 €."
-3,Urgente,Mercado de enero,plantilla,Lateral izquierdo por precontrato,Hamansenya es cedido hasta junio y Osei se va. Buscar jugadores que acaben contrato en junio de 2029.
-4,Alta,Ventas,contratos,Vender a Murúa en enero,"31 años, 100.000 € de sueldo, acaba en junio y ya no es titular."
-5,Alta,Ventas,plantilla,"Sacar a Kadochnikov, Ucín y Manu Vigo",151.500 € al año de masa salarial con poco rendimiento.
-6,Media,Cantera,cantera,Ceder a Marc Castro y a Lucas Balan,0 y 175 minutos: necesitan jugar.
-7,Media,Ventas,plantilla,Escuchar ofertas por Vicandi y Bilbao,Cobran 175.000 € y 120.000 € con sueldo justo de ≈100.000 € y ≈54.000 €.
-8,Baja,Datos,analisis,Pásame laterales izquierdos y contratos,Lista de ojeo de DF (I) y la vista de contratos del primer equipo (nuevos contratos de León y Eceizabarrena).
+1,Urgente,Contratos,contratos,Subir la cláusula de Jiménez (100.000 €),"Ruvira ya está protegido (1,5 M €). Jiménez sigue con 100.000 € y es de los que más rinden (6,98). Machado y Varela: confírmamelo con la vista de contratos del B y el juvenil."
+2,Urgente,Mercado de enero,plantilla,Lateral izquierdo por precontrato,Hamansenya es cedido hasta junio y Osei se va. Buscar jugadores que acaben contrato en junio de 2029.
+3,Alta,Ventas,contratos,Vender a Murúa en enero,Ya está transferible. Cobra 100.000 € y acaba en junio: cualquier oferta razonable antes del cierre del mercado.
+4,Alta,Ventas,plantilla,"Sacar a Kadochnikov, Ucín y Manu Vigo","Manu Vigo ya está transferible. Kadochnikov (80.000 €, 6,59) y Ucín (42.000 €) siguen: cesión o venta antes del cierre del mercado."
+5,Media,Cantera,cantera,Ceder a Lucas Balan,Marc Castro ya no está en la plantilla del primer equipo (¿cedido?). Lucas Santos está marcado para ceder.
+6,Media,Ventas,plantilla,Escuchar ofertas por Vicandi y Bilbao,Cobran 175.000 € y 120.000 € con sueldo justo de ≈100.000 € y ≈54.000 €.
+7,Baja,Datos,analisis,Pásame laterales izquierdos y contratos,Lista de ojeo de DF (I) y la vista de contratos del primer equipo (nuevos contratos de León y Eceizabarrena).
+8,Hecho,Contratos,contratos,Renovar a Calvo,"Renovado: 75.000 € hasta 2030, cláusula 145.000 €. Muy cerca de su sueldo justo (≈80.000 €)."
 9,Hecho,Mercado de enero,plantilla,Delantero centro: Ekain Orobengoa,"Fichado libre (24 años, 3★/4★, DL y extremo izquierdo). Pásame su contrato."
 10,Hecho,Contratos,contratos,Renovar a Óscar León antes del 1/1,Renovado por 3 años el 23/12/2028.
 11,Hecho,Cantera,cantera,Sube a Alberto Ruvira al primer equipo,"Debutó en la J7 de central con 16 años (6,8). Ahora, renovarle subiendo su cláusula (82.000 €)."

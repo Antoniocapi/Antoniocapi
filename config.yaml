@@ -64,7 +64,7 @@ criterio_potencial: media
 recomendaciones:
   edad_joven: 23                 # "joven" para RENOVAR
   potencial_renovar_joven: 3.5   # potencial mínimo para renovar a un joven
-  meses_para_renovar: 18         # solo se propone RENOVAR si quedan estos meses o menos
+  meses_para_renovar: 12         # solo se propone RENOVAR si quedan estos meses o menos (el informe de contratos avisa desde 18)
   edad_max_cesion: 21
   potencial_cesion: 3.5
   # Sin datos de minutos, uso estos "Tiempo de juego" como "pocos minutos":
@@ -103,8 +103,6 @@ no_ceder:
 
 # Renovaciones ya firmadas que aún no salen en las capturas de contratos
 renovados:
-  Óscar León: "3 años (23/12/2028)"
-  Jon Eceizabarrena: "2 años (23/12/2028)"
   Lucas Balan: "renovado (diciembre de 2028)"
   Jordi Martínez: "renovado (diciembre de 2028)"
 

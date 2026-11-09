@@ -145,7 +145,8 @@ def estado_actual(conn, tipo, alias_extra=None):
     fusion = _fusionar(filas)
     # Huecos (p. ej. un canterano que sube y cuyo contrato solo sale en la vista del B):
     # se rellenan con su dato más reciente en cualquier equipo
-    todos = _cargar(conn, _SQL + "WHERE i.tipo=? ORDER BY i.fecha_juego DESC, r.id", (tipo,), alias_extra)
+    # (también desde las listas de ojeo: así un fichaje trae sus estrellas del informe del ojeador)
+    todos = _cargar(conn, _SQL + "ORDER BY (i.tipo = ?) DESC, i.fecha_juego DESC, r.id", (tipo,), alias_extra)
     for j in fusion:
         for o in todos:
             if o["jugador"] != j["jugador"]:

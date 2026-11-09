@@ -1,0 +1,25 @@
+﻿Elegido;Inf;Jugador;Nº;Tiempo de juego;Tiempo de juego real;Sueldo;Final;Valor de traspaso;Cláusula de rescisión;Aumento de sueldo
+POR;;Álvaro Jiménez;1;Jugador importante;Jugador importante;52000;30/6/2030;16000-75000;100000;
+DF (D);Seg;Markel Ucín;2;Jugador de plantilla;Jugador secundario;42000;30/6/2029;0;150000;
+DF (C);Trn;Javier Murúa;5;Jugador importante;Jugador importante;100000;30/6/2029;0;325000;
+DF (C);;Alberto Ruvira;14;Titular habitual;Jugador de plantilla;63000;30/6/2031;95000-180000;1500000;5%
+DF (I);;David Hamansenya;11;Titular habitual;Jugador importante;7750;30/6/2029;450000;525000;
+MC;;Pau Calvo;7;Titular habitual;Titular habitual;75000;30/6/2030;12000-50000;145000;10%
+MC;;Adur Alsúa;6;Titular habitual;Jugador importante;70000;30/6/2030;22000-140000;245000;10%
+ME (C);Obj;Xavi Miràngels;8;Jugador importante;Jugador importante;46500;30/6/2030;45000-475000;750000;5%
+MP (D);Les;Aimar Vicandi;9;Jugador estrella;Jugador estrella;175000;30/6/2031;180000-300000;450000;
+MP (I);;Pol Escribano;21;Promesa casi en el primer equipo;Titular habitual;46500;30/6/2030;14000-75000;250000;
+DL (C);;Óscar León;19;Jugador importante;Jugador importante;110000;30/6/2031;26000-140000;500000;
+S1;;Ismael Velasco;13;Portero de competiciones de copa;Portero de competiciones de copa;27000;30/6/2030;4000-40000;93000;
+S2;Apy;Mulas;12;Jugador de plantilla;Jugador de plantilla;71500;30/6/2030;16000-60000;400000;5%
+S3;;Pavel Kadochnikov;15;Revulsivo desde el banquillo;Revulsivo desde el banquillo;80000;30/6/2030;14000-55000;120000;
+S4;;Luis Bilbao;18;Jugador importante;Jugador importante;120000;30/6/2030;70000-110000;250000;5%
+S5;;Philip Osei;20;Titular habitual;Revulsivo desde el banquillo;58000;30/6/2029;8000-35000;110000;
+S6;;Jon Eceizabarrena;16;Jugador de plantilla;Revulsivo desde el banquillo;75000;30/6/2030;35000-150000;400000;10%
+S7;;Mario Valdaliso;22;Promesa casi en el primer equipo;Joven;44000;30/6/2030;14000-95000;250000;10%
+;;Pablo Cojo;17;Promesa casi en el primer equipo;Jugador importante;32500;30/6/2030;5000-110000;250000;10%
+;Ced;Lucas Santos;25;Promesa casi en el primer equipo;Jugador excedente;33500;30/6/2030;6000-50000;350000;10%
+;;Luis Paulo;4;Promesa casi en el primer equipo;Joven;42000;30/6/2031;16000-95000;1000000;5%
+;Trn;Manu Vigo;24;Jugador secundario;Recambio de emergencia;29500;30/6/2029;0;35000;10%
+;;Edu González;23;Promesa casi en el primer equipo;Joven;35000;30/6/2030;7000-150000;500000;
+;;Ekain Orobengoa;45;Jugador secundario;Jugador secundario;36500;30/6/2030;95000-170000;240000;

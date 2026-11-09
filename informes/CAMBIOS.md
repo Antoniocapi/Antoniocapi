@@ -1,5 +1,11 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Contratos del primer equipo a 21/01/2029
+- **Transcrito**: vista de contratos. Calvo renovado (75.000 € hasta 2030, cláusula 145.000 €), Ruvira (63.000 € hasta 2031, cláusula 1,5 M €), León (110.000 € hasta 2031, cláusula 500.000 €), Eceizabarrena (75.000 € hasta 2030) y Orobengoa (36.500 € hasta 2030, cláusula 240.000 €).
+- **Transferibles**: Murúa y Manu Vigo. Lucas Santos marcado «Ced». Marc Castro ya no está en la plantilla.
+- **Herramienta**: un fichaje toma sus estrellas del informe de ojeo; la acción «renovar» se propone con 12 meses o menos (el informe de contratos sigue avisando desde 18).
+- **Panel**: la cuenta atrás es ahora hasta el cierre del mercado (31/01, por confirmar).
+
 ## 09/11 · Fichaje: Ekain Orobengoa (DL)
 - Libre, 24 años, 3★/4★, delantero centro y extremo izquierdo. 4º del ranking (80/100).
 - En `fichados` de config.yaml: sale como «Fichado» en el panel. Siguiente prioridad: lateral izquierdo.

@@ -123,7 +123,7 @@
 <div class="sa">
   <header class="sa-head">
     <h1 class="sa-title">Salamanca UDS · Dirección deportiva</h1>
-    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · clasificación a 23/12/2028 · plantilla a 17/12 · xG analizado hasta la jornada 9</span>
+    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · contratos a 21/01/2029 · clasificación a 23/12/2028 · estadísticas a 17/12 · xG analizado hasta la jornada 9</span>
   </header>
 
   <nav class="sa-tabs" role="tablist" aria-label="Secciones del panel">
@@ -140,7 +140,7 @@
   <!-- ===================== INICIO ===================== -->
   <section class="sa-page" id="inicio" role="tabpanel">
     <div class="sa-hero">
-      <div class="sa-count"><span class="sa-count-n" data-draw="dias-enero">—</span><span class="sa-count-t">días para el 1 de enero<br>(límite de renovaciones)</span></div>
+      <div class="sa-count"><span class="sa-count-n" data-draw="dias-enero">—</span><span class="sa-count-t">días para el cierre<br>del mercado de invierno</span></div>
       <p class="sa-take">Tras <b data-draw="pj" data-source="resumen" data-field="pj" data-row="0">—</b> jornadas analizadas, <b data-draw="pts" data-source="resumen" data-field="puntos" data-row="0">—</b> puntos con un juego que vale <b data-draw="xpts" data-source="resumen" data-field="xpts" data-row="0">—</b>.
         <span data-variant="suerte" hidden>Los resultados van por delante del juego.</span>
         <span data-variant="merito" hidden>El juego merece más puntos de los que tenemos: el entrenador está haciendo bien su trabajo.</span>
@@ -801,7 +801,8 @@
   }));
 
   // =================== CAPA VISUAL ===================
-  const FECHA_JUEGO = '2028-12-23'; // fecha del juego de las últimas capturas
+  const FECHA_JUEGO = '2029-01-21';
+  const CIERRE_MERCADO = '2029-01-31'; // cierre habitual del mercado de invierno en España (confirmar en el FM) // fecha del juego de las últimas capturas
   const LIMITE_RENOV = '2029-01-01';
   const COL = {RENOVAR: 'var(--color-ok)', 'VENDER YA': 'var(--color-bad)', CEDER: 'var(--color-warn)', 'SALE LIBRE': 'var(--cds-chart-muted)', MANTENER: 'var(--color-border-line)', 'CEDIDO AQUÍ': 'var(--color-border-line)'};
   const corto = (n) => { const p = String(n).split(' '); return p.length > 1 && p[0].length > 2 ? p.slice(-1)[0] : String(n); };
@@ -822,7 +823,7 @@
     if (titulo) c.title = titulo; return c;
   };
   const diasHasta = (iso) => Math.round((new Date(iso) - new Date(FECHA_JUEGO)) / 864e5);
-  dash.draw('dias-enero', (e) => { e.textContent = String(diasHasta(LIMITE_RENOV)); });
+  dash.draw('dias-enero', (e) => { e.textContent = String(Math.max(0, diasHasta(CIERRE_MERCADO))); });
   cifra('gf', () => fila('resumen')?.goles_favor);
 
   // ---------- Tablero de decisiones
