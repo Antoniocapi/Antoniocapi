@@ -86,7 +86,7 @@ def puntuar(j, cfg, ctx):
         tipo = "?"
     if j["sueldo"] is not None:
         if ctx["margen_sueldos"] is not None and j["sueldo"] > ctx["margen_sueldos"]:
-            descartes.append(f"sueldo {fmt_euros(j['sueldo'])} > margen salarial tras la reserva de enero ({fmt_euros(ctx['margen_sueldos'])})")
+            descartes.append(f"sueldo {fmt_euros(j['sueldo'])} > margen salarial ({fmt_euros(ctx['margen_sueldos'])})")
         factor = 1.0 if j["sueldo"] <= topes.get("rotacion", 40000) else 0.7
         coste = factor if coste is None else coste * factor
     c["coste"] = coste
@@ -143,7 +143,8 @@ def generar(conn, cfg, plantilla, carpeta):
     ctx = {
         "nivel": plantilla.mediana_calidad.get("primer-equipo") or 3,
         "presupuesto_traspasos": cfg.get("fichajes", {}).get("presupuesto_traspasos") or pf.get("disponible") or 0,
-        "margen_sueldos": (ps["disponible"] - cfg.get("reserva_enero", 0)) if ps.get("disponible") is not None else None,
+        "margen_sueldos": (ps["disponible"] - (0 if cfg.get("usar_reserva") else cfg.get("reserva_enero", 0)))
+                          if ps.get("disponible") is not None else None,
     }
 
     columnas = set().union(*(j["columnas"] for j in jugadores.values()))

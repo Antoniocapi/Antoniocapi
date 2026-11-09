@@ -16,6 +16,8 @@ topes_sueldo:
 
 # Reserva que quieres guardar para el mercado de invierno.
 reserva_enero: 100000
+# En el mercado de invierno la reserva ya se puede gastar: true = el margen para fichar es todo lo disponible
+usar_reserva: true
 
 # Presupuestos tal como los muestra el Portal del FM (en euros).
 # Actualízalos cuando me pases una captura nueva del Portal.
