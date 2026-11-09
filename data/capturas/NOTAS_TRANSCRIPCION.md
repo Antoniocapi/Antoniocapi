@@ -152,3 +152,10 @@ Captura: `partido_J08-zamora_2028-10-15.webp`, hecha en el 90'+5.
 - Goles en contra: 68' P. Mascaró (asist. J. Paez) y 79' J. Carbonell (asist. P. Mascaró).
 - Clasificación parcial (7º-13º): 10º con 9 puntos → `data/liga/clasificacion-parcial_2028-10-15.csv`.
 - Otros resultados: Guadalajara 2-2 Mirandés B, Numantia 2-1 Navalcarnero, RSD Alcalá 0-2 Valladolid B y Jaraíz 0-1 Las Rozas.
+
+## 21/10/2028 · J9 · Fuenlabrada 0-0 Salamanca (Estadio Fernando Torres)
+
+Captura: `partido_J09-fuenlabrada_2028-10-21.webp`, pantalla "Resultado": muestra el **once inicial** con su nota.
+- Estadísticas → `partidos.csv` (mentalidad Equilibrada, la habitual; no sale en la captura).
+- Once inicial → `alineaciones.csv`. Luis Paulo no fue titular.
+- No se ve la clasificación: la posición sigue sin actualizar.

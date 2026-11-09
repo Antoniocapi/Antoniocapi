@@ -1,5 +1,11 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Jornada 9: Fuenlabrada 0-0 Salamanca
+- **Transcrito**: estadísticas y once inicial con nota (pantalla Resultado).
+- **Partido**: punto con algo de suerte (0,79 de xG frente a 1,47, 0 ocasiones claras). Cuarta portería a cero de la temporada y solo 3 faltas. León volvió (6,2) sin ocasiones.
+- **Temporada**: 10 puntos en 9 jornadas con 11,3 puntos esperados. 5 goles con 9,64 de xG; 2 partidos seguidos sin marcar.
+- **Próximo**: la jornada 10 cierra el primer bloque; con la clasificación completa y las estadísticas de la plantilla hago la revisión de bloque.
+
 ## 09/11 · Jornada 8: Salamanca 0-2 Zamora
 - **Transcrito**: estadísticas, jugadores en el campo al final con su nota, goles y clasificación parcial (seguimos 10º con 9 puntos).
 - **Partido**: nos superaron (0,65 de xG frente a 2,10, 32 % de posesión, 10 córners en contra). Goles suyos en el 68' y el 79'.

@@ -33,10 +33,10 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 🟠 | Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 20 años, 2.5★/4-5★ y pocos minutos (167 de 720 minutos): necesita jugar fuera. |
-| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (0 de 720 minutos): necesita jugar fuera. |
-| 🟠 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 39.500 | 21 años, 3★/3-4★ y pocos minutos (234 de 720 minutos): necesita jugar fuera. Renuévalo antes de cederlo (acaba 30/06/2029). |
-| 🟠 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 20 años, 3★/3.5-4.5★ y pocos minutos (204 de 720 minutos): necesita jugar fuera. Le siguen otros clubes: blinda su contrato antes de cederlo. |
+| 🟠 | Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 20 años, 2.5★/4-5★ y pocos minutos (167 de 810 minutos): necesita jugar fuera. |
+| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (0 de 810 minutos): necesita jugar fuera. |
+| 🟠 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 39.500 | 21 años, 3★/3-4★ y pocos minutos (234 de 810 minutos): necesita jugar fuera. Renuévalo antes de cederlo (acaba 30/06/2029). |
+| 🟠 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 20 años, 3★/3.5-4.5★ y pocos minutos (204 de 810 minutos): necesita jugar fuera. Le siguen otros clubes: blinda su contrato antes de cederlo. |
 
 ## SALE LIBRE
 
