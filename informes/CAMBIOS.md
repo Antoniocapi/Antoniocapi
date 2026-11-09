@@ -1,5 +1,13 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Jornada 6: Salamanca 1-0 Mirandés B · y León internacional
+- **Transcrito**: estadísticas, once con notas, gol (29', Bilbao, asistencia de Hamansenya), calendario y parte de la clasificación (10º con 9 puntos).
+- **Partido**: el mejor de la temporada. 2,29 de xG frente a 0,33, 3 ocasiones claras frente a 0 y tercera portería a cero seguida. Cojo 7,6, Murúa 7,4 y Luis Paulo 7,3.
+- **Hito**: el xG total es positivo por primera vez (6,36 frente a 6,23). Sin la J1, 6,03 frente a 3,86.
+- **Problema nuevo**: la puntería, con 4 goles y 6,36 de xG. Y León es internacional (República Dominicana): faltará en cada parón.
+- **Cambios en el plan**: sin León, Escribano de 9 (mejor que Benítes). El **delantero centro pasa a prioridad alta en enero**, por delante del lateral izquierdo.
+- **Panel**: comprobación correcta.
+
 ## 09/11 · Confirmación: flechas = cambios
 - Anotado en las notas de transcripción: en la J5 salieron Benítes, Valdaliso, Edu González, Kadochnikov y Osei. Falta saber quién entró.
 

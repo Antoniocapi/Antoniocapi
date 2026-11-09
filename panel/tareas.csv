@@ -1,14 +1,14 @@
 orden,prioridad,area,pestana,tarea,detalle
-1,Urgente,Táctica,tactica,Óscar León de titular en punta,"En la J5 tampoco fue titular (jugó Benítes, 17 años, 6,5) y no marcamos con 0,78 de xG. León: 3 goles y 7,00 de media. ¿Está tocado o es rotación?"
-2,Urgente,Táctica,tactica,Menos balón largo,"Pases directos a Estándar, Estrategia previa a Equilibrada, saques de puerta cortos y portero en corto. Jiménez solo completa ≈44 % de sus pases y León gana el 13 % de los balones aéreos."
-3,Urgente,Táctica,tactica,Menos faltas,"Entradas: Mantenerse en pie y presión Estándar. Hacemos 10,5 faltas por partido (media 8,3), sobre todo contra equipos de posesión. La línea defensiva se queda como está: el bloque bajo funcionó contra el Guijuelo."
-4,Urgente,Balón parado,tactica,Cubre el segundo palo en los córners en contra,"Pasa el contraatacante C2 a Marcar segundo palo. Concedemos 39 córners en 4 partidos y unos 0,16 de xA a balón parado por partido (media 0,06)."
+1,Urgente,Táctica,tactica,Menos balón largo,"Pases directos a Estándar, Estrategia previa a Equilibrada, saques de puerta cortos y portero en corto. Jiménez solo completa ≈44 % de sus pases y León gana el 13 % de los balones aéreos."
+2,Urgente,Táctica,tactica,Menos faltas,"Entradas: Mantenerse en pie y presión Estándar. Hacemos 10,5 faltas por partido (media 8,3), sobre todo contra equipos de posesión. La línea defensiva se queda como está: el bloque bajo funcionó contra el Guijuelo."
+3,Urgente,Balón parado,tactica,Cubre el segundo palo en los córners en contra,"Pasa el contraatacante C2 a Marcar segundo palo. Concedemos 39 córners en 4 partidos y unos 0,16 de xA a balón parado por partido (media 0,06)."
+4,Alta,Táctica,tactica,Plan sin León: Escribano de 9,"León es internacional y faltará en cada parón. Sin él, mejor Escribano (gana ≈41 % de los balones aéreos) que Benítes. Cuando León esté, titular: 3 de nuestros 4 goles son suyos."
 5,Alta,Contratos,contratos,Renueva a João Machado y Alberto Ruvira,Sus cláusulas (29.000 € y 82.000 €) están por debajo de su valor y a Machado le siguen otros clubes.
 6,Alta,Contratos,contratos,Renovaciones antes del 1 de enero de 2029,"Eceizabarrena, Pau Calvo, Óscar León, Lucas Balan y Jordi Martínez."
-7,Media,Contratos,contratos,Sube las cláusulas de los canteranos,"Tello (68.000 €), Varela (73.000 €), Llabrés (61.000 €), Gallego (53.000 €) y Benítes (110.000 €) están por debajo de su valor."
-8,Media,Plantilla,plantilla,Cede a Marc Castro y a Mario Valdaliso,20 años y casi sin minutos en el primer equipo.
-9,Media,Cantera,cantera,Sube a Alberto Ruvira al primer equipo,"16 años y ya tiene 3★, el nivel de los titulares. De cuarto central."
-10,Media,Mercado de enero,plantilla,Prepara los fichajes de enero,"Lateral izquierdo (Hamansenya es cedido), delantero centro y lateral derecho. Margen: 95.000 € al año en sueldos y 14.000 € en traspasos."
+7,Alta,Mercado de enero,plantilla,Prepara los fichajes de enero,1) Delantero centro titular (León se va con su selección). 2) Lateral izquierdo (Hamansenya es cedido). 3) Lateral derecho. Margen: 95.000 € al año en sueldos y 14.000 € en traspasos.
+8,Media,Contratos,contratos,Sube las cláusulas de los canteranos,"Tello (68.000 €), Varela (73.000 €), Llabrés (61.000 €), Gallego (53.000 €) y Benítes (110.000 €) están por debajo de su valor."
+9,Media,Plantilla,plantilla,Cede a Marc Castro y a Mario Valdaliso,20 años y casi sin minutos en el primer equipo.
+10,Media,Cantera,cantera,Sube a Alberto Ruvira al primer equipo,"16 años y ya tiene 3★, el nivel de los titulares. De cuarto central."
 11,Baja,Ventas,contratos,Escucha ofertas por Murúa,"31 años, cobra 100.000 € y acaba en junio. Rinde (7,00), así que solo si la oferta es buena."
 12,Baja,Datos,analisis,Pásame más capturas para analizar a fondo,"La lista completa, con para qué sirve cada una, está al final de la pestaña Análisis."
 13,Hecho,Táctica,tactica,Quita a Miràngels del once,Hecho en la J5: Miràngels no jugó.

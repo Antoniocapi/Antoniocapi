@@ -122,3 +122,14 @@ Captura: `partido_J05-alcobendas_2028-09-20.webp`.
 - **Clasificación**: solo se ven los puestos 9-15 → `data/liga/clasificacion-parcial_2028-09-20.csv`. La herramienta sigue usando la completa del 18/09 hasta tener otra captura entera.
 - Calendario: añadido el resultado del 20/09 → `data/liga/calendario_2028-09-20.csv`.
 - Otros resultados de la jornada (visibles): Fuenlabrada 2-0 Guadalajara, Mirandés B 2-0 Guijuelo, Navalcarnero 2-2 Ávila, Náxara 1-1 Unionistas y Numantia 2-1 Las Rozas.
+
+## 24/09/2028 · J6 · Salamanca 1-0 Mirandés B (El Helmántico)
+
+Captura: `partido_J06-mirandes-b_2028-09-24.webp`.
+
+- Estadísticas → `partidos.csv` (mentalidad: Equilibrada, la habitual; no sale en la captura).
+- Once con notas → `alineaciones.csv`. Salieron (flechas): Valdaliso, Tello, Edu González, Kadochnikov y Osei.
+- **Gol: 29', L. Bilbao, asistencia de D. Hamansenya.** Ninguno de los dos está en el once que muestra la captura, así que debieron entrar desde el banquillo antes del 29' (¿lesiones?). **Sin confirmar.**
+- Clasificación parcial (puestos 7-13): somos 10º con 9 puntos → `data/liga/clasificacion-parcial_2028-09-24.csv`.
+- Otros resultados visibles: C.D. Coria 0-0 Guijuelo y Zamora 0-0 Valladolid B.
+- **León**: no jugó porque está convocado con su selección (República Dominicana), según el usuario.
