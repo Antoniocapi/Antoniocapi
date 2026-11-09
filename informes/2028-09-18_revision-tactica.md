@@ -7,6 +7,7 @@
 | Puesto | En la táctica | Propuesta | Por qué |
 |---|---|---|---|
 | MC | Xavi Miràngels | **Jon Eceizabarrena** | Miràngels está **lesionado** (cruz roja). Eceizabarrena tiene 6,70 de media. |
+| DFC | Mulas | **Luis Paulo** | Es el mejor de la plantilla por arriba (salto 15, fuerza 14, colocación 14); Mulas tiene salto 9. Convoca también a Lucas Santos (salto 15). |
 | ARI / DL | Pol Escribano | **Óscar León** | León tiene **7,00 de media y 3 goles**, y ahora mismo está en el banquillo (S7). Escribano rinde mejor en banda. |
 | EPD (izq.) | Aimar Vicandi | **Pol Escribano** | Su mejor posición es MP (I), con 6,80 de media. Vicandi lleva 6,42, la peor del once. |
 | EXT (der.) | Luis Bilbao | **Aimar Vicandi** o Bilbao | Vicandi pasa a su mejor posición, MP (D). Bilbao (6,47) queda como primer cambio de banda. |
