@@ -102,3 +102,13 @@ Captura: `tactica_corner-defensa-lista-defensas-aereos_2028-09-18.png` → `data
 
 - Se ven los 12 primeros. La fila 12 (Manu Vigo) sale cortada por abajo, pero sus números se leen.
 - La prioridad de categorías es: 1 Lanzador de córner (bloqueado), 2 Defensas aéreos, 3 Rastreadores y 4 Contratacantes.
+
+## 18/09/2028 · Centro de datos: análisis de goles, pase de Jiménez y Alsúa, físico de los defensas y juego aéreo de los delanteros
+
+- **Análisis de goles** → `data/analitica/goles_historico.csv`. **No es de esta temporada**: suma 74 goles a favor y 53 en contra, y en 4 jornadas llevamos 3 y 4. La captura no dice el periodo (pendiente de confirmar con el usuario). Encajados 76-90: la barra sale vacía; pongo 0 porque las zonas suman 53, igual que el resto de tramos. La fila "Cabezazo" de los tipos de gol sale cortada por abajo: no la transcribo.
+- **Gráficos de dispersión** (valores **aprox.**, leídos a ojo con las marcas de los ejes) → `data/analitica/jugador_2028-09-18.csv`:
+  - Jiménez: ≈44 % de pases completados (media ≈83 %) y ≈21 pases por 90' (media ≈24).
+  - Alsúa: ≈86 % de pases completados (media ≈90 %) y ≈47 pases por 90' (media ≈60).
+  - Cojo: ≈11,1 esprints por 90' (media ≈4,7) y ≈11,2 km por 90' (media ≈10,1).
+  - Escribano (la foto del gráfico de delanteros): ≈41 % de cabezazos ganados (media ≈29 %) y ≈4,8 intentos por 90'.
+- **Físico de los defensas**: hay otros 2 jugadores nuestros abajo a la izquierda (≈9 km y ≈2 esprints por 90'), sin nombre. Por la foto, probablemente Murúa y Mulas: **sin confirmar**.

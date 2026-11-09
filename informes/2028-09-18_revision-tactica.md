@@ -24,7 +24,8 @@
 | Transición ofensiva | Contraataque | Contraataque (mantener) | Ganamos 88,9 posesiones por partido; hay que aprovecharlas. |
 | Estilo de centros | Equilibrada | **Centros bajos** | Acertamos el 9,9 % de los centros (media 14,9 %) y no ganamos por arriba. |
 | Jugar buscando el balón parado | Buscar balón parado | **No / estándar** | Sin juego aéreo, buscar faltas y córners no nos sirve. |
-| Distribución del portero | Rápida | Rápida, **a los laterales o al pivote** | Que la salida no sea en largo. |
+| Distribución del portero | Rápida | **Lenta, en corto a centrales o laterales** | Jiménez completa ≈44 % de sus pases (media de porteros ≈83 %): los envíos largos se pierden. |
+| Saques de puerta | Mixto | **Cortos** | No ganamos los balones largos: León gana el 13 % por arriba. |
 
 ## 3. Instrucciones sin balón
 
@@ -36,6 +37,8 @@
 | Activar presión | Más insistente | **Estándar** | Presionar con insistencia desde atrás genera faltas sin robos arriba (PRPAD 24,3). |
 | Transición defensiva | Reagruparse | Reagruparse (mantener) | Coherente con el contraataque. |
 | Compromiso de centros | Evitar centros | Evitar centros (mantener) | Reduce los centros en juego. |
+
+**Córners a favor:** pon a Escribano (≈41 % de balones aéreos ganados) y a Luis Paulo (salto 15) arriba de la lista de Amenazas aéreas; León gana solo el 13 %.
 
 **Balón parado defensivo:** pásame una captura de **Tácticas → Balón parado**. Es nuestra peor métrica: unos 0,16 de xA en contra a balón parado por partido, frente a 0,06 de media.
 

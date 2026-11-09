@@ -34,6 +34,10 @@ METRICAS = {
     "Acc. def. zona 6 - área rival (%)": ("% de acciones defensivas junto al área rival", 0),
     "Cabezazos intentados/90 (aprox.)": ("Balones aéreos disputados por 90'", 0),
     "% cabezazos ganados (aprox.)": ("% de balones aéreos ganados", +1),
+    "% pases completados (aprox.)": ("% de pases completados", +1),
+    "Pases intentados/90 (aprox.)": ("Pases intentados por 90'", 0),
+    "Esprints de alta intensidad/90 (aprox.)": ("Esprints de alta intensidad por 90'", +1),
+    "Distancia cubierta/90 km (aprox.)": ("Kilómetros por 90'", +1),
     # jugador
     "Desp/90": ("Despejes por 90'", +1),
     "Cab 90": ("Cabezazos ganados por 90'", +1),

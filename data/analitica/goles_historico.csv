@@ -1,0 +1,22 @@
+﻿Tipo;Categoría;Anotados;Encajados
+Minuto;1-15;9;10
+Minuto;16-30;13;7
+Minuto;31-45;13;10
+Minuto;46-60;10;9
+Minuto;61-75;10;11
+Minuto;76-90;13;0
+Minuto;90+;6;6
+Zona;Área pequeña (izquierda);1;1
+Zona;Área pequeña (centro);9;11
+Zona;Área pequeña (derecha);1;0
+Zona;Área grande (izquierda);4;5
+Zona;Área grande (centro);43;30
+Zona;Área grande (derecha);5;2
+Zona;Fuera del área (izquierda);4;2
+Zona;Fuera del área (derecha);6;2
+Zona;Lejos / propio campo;1;0
+Tipo de disparo;Disparo colocado;45;31
+Tipo de disparo;Disparo potente;14;6
+Tipo de disparo;Disparo con efecto;3;3
+Tipo de disparo;Vaselina;2;0
+Tipo de disparo;Chilena;0;0

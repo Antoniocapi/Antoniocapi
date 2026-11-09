@@ -1,5 +1,15 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Centro de datos: goles, pase, físico y juego aéreo
+- **Transcrito**: análisis de goles, pase de Jiménez y de Alsúa, físico de los defensas y juego aéreo de los delanteros. Los valores de los gráficos son aproximados, leídos a ojo.
+- **Hallazgos** (bloque 8 de la pestaña Análisis):
+  - Jiménez completa ≈44 % de sus pases (media ≈83 %): jugamos en largo y lo perdemos. → Saques de puerta cortos y portero en corto.
+  - Alsúa toca poco el balón (≈47 pases por 90', media ≈60) y con menos acierto (≈86 %, media ≈90 %).
+  - Cojo es el defensa más intenso de la liga (≈11 esprints por 90', media ≈4,7).
+  - Escribano gana ≈41 % de los balones aéreos y León el 13 %. → Escribano a la lista de rematadores en los córners a favor.
+  - Análisis de goles histórico: no encajamos entre el 76' y el 90' y marcamos el 26 % de nuestros goles del 76' en adelante.
+- **Pendiente de confirmar**: el análisis de goles suma 74 a favor y 53 en contra, así que no es de esta temporada. ¿Qué periodo cubre?
+
 ## 09/11 · Plantilla por equipos, sueldo justo e informe de analista
 - **Plantilla dividida**: en el panel, tres tablas (Primer equipo, Salamanca B y Juvenil) con todos los jugadores. Tello sale en los dos equipos en los que está inscrito. El filial se llama ahora "Salamanca B" en todos los informes.
 - **Sueldo justo (sin topes fijos)**: modelo estadístico nuevo. Con la misma masa salarial de cada equipo, calcula lo que le correspondería a cada jugador por lo que aporta (calidad, nota ajustada por minutos, participación y margen de mejora). Si mejora, su sueldo justo sube.

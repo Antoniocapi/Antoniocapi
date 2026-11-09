@@ -3,7 +3,7 @@
 2;Con balón;Estrategia previa;Saltarse la presión;Equilibrada;Sí;Saltarse la presión es balón largo al 9, que pierde casi todos los duelos aéreos.
 3;Con balón;Estilo de centros;Equilibrada;Centros bajos;Sí;Acertamos el 9,9 % de los centros (media 14,9 %).
 4;Con balón;Jugar buscando el balón parado;Buscar balón parado;Estándar;Sí;Sin juego aéreo, el balón parado a favor no nos da goles.
-5;Con balón;Distribución del portero;Rápida;Rápida, a laterales o pivote;Sí;Que la salida no sea en largo.
+5;Con balón;Distribución del portero;Rápida;Lenta, en corto a centrales o laterales;Sí;Jiménez completa ≈44 % de sus pases (media de porteros ≈83 %): los envíos largos se pierden.
 6;Con balón;Recepción de pase;Pasar al espacio;Pasar al espacio;No;Es lo que funciona: los goles de León llegan atacando el espacio.
 7;Con balón;Transición ofensiva;Contraataque;Contraataque;No;Recuperamos 88,9 balones por partido: hay que aprovecharlos.
 8;Sin balón;Línea defensiva;Estándar;Estándar (rectificado);No;Contra el Guijuelo, con el bloque más bajo (PRPAD 39,6), concedimos solo 0,66 de xG. En juego abierto el bloque bajo funciona.
@@ -15,3 +15,5 @@
 14;Córners en contra;Defensas aéreos (lista);Bien ordenada, pero los 4 primeros no juegan;Luis Paulo titular y Lucas Santos convocado;Sí;Luis Paulo, Lucas Santos, Kadochnikov y Ucín son los mejores por arriba y ninguno es titular. Los centrales titulares: Mulas salto 9, Murúa fuerza 5.
 15;Córners a favor;Rutina principal;Rutina 1 (primer palo);Rutina 3 (en corto);Sí;20 córners a favor y ningún gol: sin rematadores, mejor jugarlos en corto.
 16;Córners a favor;Defensas de recuperación;1 (D1);2 (añadir D2);Sí;Con un solo jugador atrás nos pueden pillar a la contra.
+17;Con balón;Saques de puerta;Mixto;Cortos;Sí;Mismo motivo: no ganamos los balones largos (León gana el 13 % por arriba).
+18;Córners a favor;Amenazas aéreas (lista);Sin revisar;Escribano y Luis Paulo arriba de la lista;Sí;"Escribano gana ≈41 % de los balones aéreos y Luis Paulo tiene salto 15; León, el 13 %."
