@@ -1,5 +1,12 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Jornada 7: Valladolid B 2-1 Salamanca
+- **Transcrito**: estadísticas, jugadores en el campo al final con su nota, goles y parte de la clasificación (seguimos 10º con 9 puntos).
+- **Partido**: derrota injusta por xG (1,84 frente a 1,65). 17 tiros, 65 pases progresivos y 3 ocasiones claras frente a 0, pero gol suyo en el 5'. Desde el banquillo: gol de Valdaliso (87'), asistencia de Tello y debut de Ruvira (16 años, 6,8).
+- **Temporada**: 9 puntos con 9,96 puntos esperados (−0,96). El problema claro es la puntería: 5 goles con 8,20 de xG.
+- **Tareas**: nueva «Más finalización en los entrenamientos». «Subir a Ruvira», hecha. Valdaliso ya no se cede (añadido a `no_ceder` en config.yaml).
+- **Panel**: actualizado. La comprobación automática no ha llegado a ejecutarse (el panel no estaba abierto); se hará al abrirlo.
+
 ## 09/11 · Corrección: en la J5 y la J6 las flechas marcan a los que ENTRARON
 - Como Bilbao y Hamansenya marcaron en el 29' y luego los cambiaste por cansancio, las capturas del 90' muestran a quien estaba en el campo al final. Las flechas son los que entraron desde el banquillo. Lo había leído al revés.
 - **Corregido**: alineaciones (titular o suplente), análisis de la J5 y la J6 y notas de transcripción. Bilbao y Hamansenya, titulares en la J6 (sin nota en la captura).

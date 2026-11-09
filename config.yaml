@@ -94,6 +94,10 @@ codigos_inf:
 # Código que indica que otros clubes siguen al jugador (sube la prioridad de su contrato)
 codigo_interes: Seg
 
+# Jugadores que NO se proponen para ceder aunque tengan pocos minutos (decisión del entrenador)
+no_ceder:
+  - Mario Valdaliso   # gol y 7,0 desde el banquillo en la J7
+
 # Jugadores cedidos A NUESTRO club por otros equipos.
 # No se renuevan ni se venden. Escribe el nombre tal cual sale en el CSV.
 cedidos_a_nuestro_club:

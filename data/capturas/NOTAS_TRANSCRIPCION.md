@@ -133,3 +133,13 @@ Captura: `partido_J06-mirandes-b_2028-09-24.webp`.
 - Clasificación parcial (puestos 7-13): somos 10º con 9 puntos → `data/liga/clasificacion-parcial_2028-09-24.csv`.
 - Otros resultados visibles: C.D. Coria 0-0 Guijuelo y Zamora 0-0 Valladolid B.
 - **León**: no jugó porque está convocado con su selección (República Dominicana), según el usuario.
+
+## 01/10/2028 · J7 · Valladolid B 2-1 Salamanca (Campos Anexos Nuevo José Zorrilla)
+
+Captura: `partido_J07-valladolid-b_2028-10-01.webp`, hecha en el 90'+5.
+
+- Estadísticas → `partidos.csv`, desde nuestro punto de vista (resultado `1-2`). Mentalidad: Equilibrada, la habitual; no sale en la captura.
+- Jugadores en el campo al final → `alineaciones.csv`. Entraron desde el banquillo (flechas): Valdaliso, Tello, Edu González, Kadochnikov y Ruvira. Junto a cada dorsal salen unas marcas "\ /" cuyo significado no sé; no las transcribo.
+- Goles: 5' Ó. Álvarez; 68' H. Calvo (asistencia de Álvaro García); 87' Valdaliso (asistencia de Tello).
+- Clasificación parcial (7º-13º): seguimos 10º con 9 puntos → `data/liga/clasificacion-parcial_2028-10-01.csv`.
+- Otros resultados visibles: Ávila 2-2 C.D. Coria, Las Rozas 1-1 Zamora, Navalcarnero 1-2 Guadalajara, Guijuelo 1-0 R.C. Alcobendas y Jaraíz 0-1 U. Adarve.

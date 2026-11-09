@@ -34,9 +34,9 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 🟠 | Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 20 años, 2.5★/4-5★ y pocos minutos (167 de 540 minutos): necesita jugar fuera. |
-| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (0 de 540 minutos): necesita jugar fuera. |
-| 🟠 | Mario Valdaliso | Primer equipo | 20 | MP (I) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 44.000 | 20 años, 2.5★/3-4★ y pocos minutos (122 de 540 minutos): necesita jugar fuera. |
+| 🟠 | Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 20 años, 2.5★/4-5★ y pocos minutos (167 de 630 minutos): necesita jugar fuera. |
+| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (0 de 630 minutos): necesita jugar fuera. |
+| 🟠 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 20 años, 3★/3.5-4.5★ y pocos minutos (204 de 630 minutos): necesita jugar fuera. Le siguen otros clubes: blinda su contrato antes de cederlo. |
 
 ## SALE LIBRE
 
@@ -77,9 +77,9 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Joaquín Tello | Primer equipo | 17 | MP (C) | 2 | 4-5 | Futura promesa | Con minutos en el B | 30/06/2030 | 7.000 | 2★/4-5★, ya suma minutos con el B: no hace falta cederlo. Contrato hasta 30/06/2030. |
 | Lucas Santos | Primer equipo | 22 | DF (C) | 2.5 | 3.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 33.500 | 2.5★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Luis Bilbao | Primer equipo | 25 | MP (D) | 3 | 3.5 | Jugador importante |  | 30/06/2030 | 120.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Mario Valdaliso | Primer equipo | 20 | MP (I) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 44.000 | 2.5★/3-4★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Mulas | Primer equipo | 22 | DF (C) | 3 | 3.5 | Jugador de plantilla |  | 30/06/2030 | 71.500 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Pavel Kadochnikov | Primer equipo | 22 | MC | 3 | 3 | Revulsivo desde el banquillo |  | 30/06/2030 | 80.000 | 3★/3★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
-| Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 3★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 250.000 €: renueva para subirla o quitarla. |
 | Álvaro Jiménez | Primer equipo | 25 | POR | 3 | 3.5 | Jugador importante |  | 30/06/2030 | 52.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Alberto Ruvira | Salamanca B | 16 | DF (C) | 3 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 19.000 | 3★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Alessandro Lugo | Salamanca B | 19 | POR | 2 | 2.5-3.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 20.000 | 2★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |

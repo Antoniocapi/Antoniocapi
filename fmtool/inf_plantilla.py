@@ -88,7 +88,8 @@ def _recomendar(p, j):
     elif j["grupo"] == "primer-equipo" and j["estado"] in (r.get("estados_pocos_minutos") or []):
         pocos_minutos = True
         fuente = f"estado «{j['estado']}», sin datos de minutos"
-    if (not cedido_fuera and j["grupo"] == "primer-equipo" and not otros_grupos and not juega_en_b and pocos_minutos
+    no_ceder = j["jugador"] in (p.cfg.get("no_ceder") or [])  # decisión del entrenador en config.yaml
+    if (not cedido_fuera and not no_ceder and j["grupo"] == "primer-equipo" and not otros_grupos and not juega_en_b and pocos_minutos
             and edad <= r.get("edad_max_cesion", 21) and pot >= r.get("potencial_cesion", 3.5)):
         extra = f" Renuévalo antes de cederlo (acaba {fin})." if meses is not None and meses <= r.get("meses_para_renovar", 18) else ""
         return "CEDER", f"{edad} años, {estrellas} y pocos minutos ({fuente}): necesita jugar fuera.{extra}"
