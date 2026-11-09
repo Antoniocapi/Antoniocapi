@@ -56,3 +56,31 @@ instrucciones_sin_posesion:
   Distribución del portero en corto (presionar): "No"
   Trampa de presión: Equilibrado
   Compromiso de centros: Evitar centros
+
+# Balón parado · Saques de esquina · ATAQUE (capturas tactica_corner-ataque-rutina*_2028-09-18.webp)
+# Las letras son puestos; quién ocupa cada uno sale de las listas de prioridad, que no están en la captura.
+corners_ataque:
+  rutina_1:
+    envio: Colgar hacia dentro
+    lanzador: Aimar Vicandi
+    dirigir_hacia: Primer palo
+    amenazas_aereas: {A1: Atacar primer palo, A2: Atacar segundo palo, A3: Adelantarse, A4: Marcar al portero}
+    amenazas_en_area: {B1: Adelantarse}
+    creadores: {C1: Situarse fuera del área (parte cercana), C2: Situarse fuera del área (parte lejana), C3: Recibir en corto}
+    defensas_recuperacion: {D1: Quedarse atrás}
+  rutina_2:
+    envio: Colgar hacia dentro
+    lanzador: Aimar Vicandi
+    dirigir_hacia: Segundo palo
+    amenazas_aereas: {A1: Atacar segundo palo, A2: Atacar segundo palo, A3: Moverse por el primer palo, A4: Marcar al portero}
+    amenazas_en_area: {B1: "Atacar el balón desde el borde del área (texto del tooltip; la etiqueta queda tapada)", B2: Atacar el balón desde la frontal}
+    creadores: {C1: Situarse fuera del área (centro), C2: Situarse fuera del área (parte lejana)}
+    defensas_recuperacion: {D1: Quedarse atrás}
+  rutina_3:
+    envio: Colgar hacia dentro
+    lanzador: Aimar Vicandi
+    dirigir_hacia: En corto
+    amenazas_aereas: {A1: Moverse por el primer palo, A2: Atacar el balón desde la frontal, A3: Marcar al portero}
+    amenazas_en_area: {B1: Atacar primer palo}
+    creadores: {C1: Recibir en corto, C2: Situarse fuera del área (parte cercana), C3: Situarse fuera del área (centro), C4: Situarse fuera del área (parte lejana)}
+    defensas_recuperacion: {D1: Quedarse atrás}
