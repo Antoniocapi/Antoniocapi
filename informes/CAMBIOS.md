@@ -1,5 +1,13 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Panel rediseñado: más visual, menos tablas
+- **Inicio**: cuenta atrás hasta el 1 de enero, 4 cifras clave y un **tablero de decisiones** (Renovar ya · Proteger cláusula · Vender o sacar · Fichar) con fichas de jugador.
+- **Plantilla**: fichas por línea (porteros, defensas, medios y ataque), con una barra de calidad a potencial, la nota y un color por acción. Botón para cambiar de equipo.
+- **Contratos**: semáforo por columnas y gráfico de cláusula frente a valor de mercado.
+- **Mercado**: tarjetas de candidatos con un anillo de puntuación.
+- **Cantera**: mapa calidad/potencial y fichas agrupadas por dónde deben jugar.
+- **Fuera la pestaña Táctica** (ahora la lleva el segundo entrenador). Todas las tablas siguen disponibles, plegadas en «Ver tablas».
+
 ## 09/11 · 17/12/2028: plantillas al día y plan del mercado de invierno
 - **Transcrito**: estadísticas del primer equipo y del Salamanca B, y la vista general del B y del juvenil (estrellas nuevas).
 - **Herramienta**: ahora junta la vista más reciente de cada tipo (las estadísticas del 17/12 con los contratos del 18/09) y rellena los datos de quien sube de categoría (Ruvira).

@@ -65,422 +65,253 @@
   .sa-item-t { font-weight: var(--cds-font-weight-medium); }
   .sa-item-x { color: var(--color-fg); }
   .sa-item-a { color: var(--color-ok); font-size: var(--cds-font-size-caption); }
+  /* --- capa visual --- */
+  .sa-hero { display: flex; gap: var(--cds-gap-lg); align-items: center; flex-wrap: wrap; }
+  .sa-count { display: flex; align-items: center; gap: var(--cds-gap-sm); padding: var(--cds-pad-sm) var(--cds-pad-md); border-radius: var(--cds-radius); border: 1px solid var(--color-border-line); background: var(--color-panel); }
+  .sa-count-n { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-title); color: var(--color-bad); font-variant-numeric: tabular-nums; }
+  .sa-count-t { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.3; }
+  .sa-hero .sa-take { flex: 1 1 20rem; }
+  .sa-big small { font-size: 0.6em; color: var(--color-fg-muted); }
+  .sa-big-txt { font-size: var(--cds-font-size-heading); }
+  .sa-h3 { font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); margin: var(--cds-gap-md) 0 var(--cds-gap-xs); }
+  .sa-board { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: var(--cds-gap-md); }
+  .sa-col { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); display: flex; flex-direction: column; gap: var(--cds-gap-sm); min-width: 0; border-top: 4px solid var(--c, var(--color-border-line)); }
+  .sa-col h3 { margin: 0; font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); display: flex; justify-content: space-between; align-items: baseline; gap: var(--cds-gap-sm); }
+  .sa-col h3 span { font-family: var(--font-anthropic-serif); font-size: var(--cds-font-size-heading); color: var(--c); }
+  .sa-col p { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sa-chips { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); }
+  .sa-chip { display: inline-flex; align-items: center; gap: 6px; padding: 3px 8px 3px 4px; border-radius: 999px; border: 1px solid var(--color-border-line); background: var(--color-bg); font-size: var(--cds-font-size-caption); white-space: nowrap; cursor: default; }
+  .sa-chip b { font-weight: 600; }
+  .sa-chip em { font-style: normal; color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+  .sa-av { width: 20px; height: 20px; border-radius: 50%; display: inline-grid; place-items: center; font-size: 10px; font-weight: 700; color: var(--color-bg); background: var(--c, var(--color-fg-muted)); flex: none; }
+  .sa-legendbar { display: flex; flex-wrap: wrap; gap: var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); align-items: center; }
+  .sa-legendbar span { display: inline-flex; align-items: center; gap: 6px; }
+  .sa-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; background: var(--color-border-line); }
+  .sa-dot.ok { background: var(--color-ok); } .sa-dot.bad { background: var(--color-bad); } .sa-dot.warn { background: var(--color-warn); } .sa-dot.muted { background: var(--cds-chart-muted); }
+  .sa-seg { display: inline-flex; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); overflow: hidden; align-self: flex-start; flex-wrap: wrap; }
+  .sa-segb { font: inherit; font-size: var(--cds-font-size-caption); background: transparent; color: var(--color-fg-muted); border: 0; padding: var(--cds-pad-xs) var(--cds-pad-md); cursor: pointer; }
+  .sa-segb[aria-pressed="true"] { background: var(--color-panel); color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+  .sa-pitchgrid { display: flex; flex-direction: column; gap: var(--cds-gap-lg); }
+  .sa-line h3 { font-size: var(--cds-font-size-caption); text-transform: uppercase; letter-spacing: .06em; color: var(--color-fg-muted); margin: 0 0 var(--cds-gap-sm); font-weight: var(--cds-font-weight-medium); }
+  .sa-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 11.5rem), 1fr)); gap: var(--cds-gap-sm); }
+  .sa-pc { background: var(--color-panel); border: 1px solid var(--color-border-line); border-left: 4px solid var(--c, var(--color-border-line)); border-radius: var(--cds-radius); padding: var(--cds-pad-sm); display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+  .sa-pc-top { display: flex; justify-content: space-between; gap: var(--cds-gap-xs); align-items: baseline; }
+  .sa-pc-n { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .sa-pc-m { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); white-space: nowrap; }
+  .sa-pc-row { display: flex; justify-content: space-between; align-items: center; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sa-mini { position: relative; display: inline-flex; width: 70px; height: 8px; border-radius: 4px; background: var(--color-border-line); overflow: hidden; flex: none; }
+  .sa-mini i { display: block; height: 100%; }
+  .sa-mini i:first-child { background: var(--cds-chart-status-warning, #d9a400); background: #d9a400; }
+  .sa-mini i:nth-child(2) { background: color-mix(in srgb, #d9a400 35%, transparent); }
+  .sa-legend-bar { gap: 6px; }
+  .sa-nota { font-variant-numeric: tabular-nums; font-weight: 600; padding: 0 6px; border-radius: 999px; color: var(--color-bg); background: var(--cds-chart-muted); font-size: var(--cds-font-size-caption); }
+  .sa-nota.hi { background: var(--color-ok); } .sa-nota.lo { background: var(--color-bad); }
+  .sa-tag { font-size: 10px; text-transform: uppercase; letter-spacing: .05em; font-weight: 700; color: var(--c, var(--color-fg-muted)); }
+  .sa-lanes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); gap: var(--cds-gap-md); }
+  .sa-cands { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 15rem), 1fr)); gap: var(--cds-gap-md); }
+  .sa-cand { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-md); display: flex; gap: var(--cds-gap-md); align-items: center; min-width: 0; }
+  .sa-cand.top { border-color: var(--color-ok); box-shadow: 0 0 0 1px var(--color-ok) inset; }
+  .sa-cand-b { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .sa-cand-n { font-weight: 600; }
+  .sa-ring { flex: none; }
+  .sa-more { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-sm) var(--cds-pad-md); }
+  .sa-more summary { cursor: pointer; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+  .sa-more[open] summary { margin-bottom: var(--cds-gap-sm); }
+  .sa-more .sa-tablebox { margin-top: var(--cds-gap-sm); }
 </style>
 
 <div class="sa">
   <header class="sa-head">
-    <h1 class="sa-title">Salamanca UDS · Analítica</h1>
-    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · plantilla a 17/12/2028 · partidos analizados hasta la jornada 9 · posición de la liga del 18/09 a la espera de la tabla completa</span>
+    <h1 class="sa-title">Salamanca UDS · Dirección deportiva</h1>
+    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · plantilla a 17/12/2028 · partidos analizados hasta la jornada 9</span>
   </header>
 
   <nav class="sa-tabs" role="tablist" aria-label="Secciones del panel">
-    <button class="sa-tab" role="tab" data-tab="inicio" aria-selected="true">Inicio<small>Qué hacer ahora</small></button>
+    <button class="sa-tab" role="tab" data-tab="inicio" aria-selected="true">Inicio<small>Qué decidir</small></button>
+    <button class="sa-tab" role="tab" data-tab="plantilla" aria-selected="false">Plantilla<small>Los tres equipos</small></button>
+    <button class="sa-tab" role="tab" data-tab="contratos" aria-selected="false">Contratos<small>Semáforo</small></button>
+    <button class="sa-tab" role="tab" data-tab="mercado" aria-selected="false">Mercado<small>Fichajes</small></button>
+    <button class="sa-tab" role="tab" data-tab="cantera" aria-selected="false">Cantera<small>El futuro</small></button>
+    <button class="sa-tab" role="tab" data-tab="partidos" aria-selected="false">Rendimiento<small>xG del equipo</small></button>
     <button class="sa-tab" role="tab" data-tab="analisis" aria-selected="false">Análisis<small>Lectura a fondo</small></button>
-    <button class="sa-tab" role="tab" data-tab="partidos" aria-selected="false">Partidos<small>xG y resultados</small></button>
-    <button class="sa-tab" role="tab" data-tab="tactica" aria-selected="false">Táctica<small>Once y cambios</small></button>
-    <button class="sa-tab" role="tab" data-tab="plantilla" aria-selected="false">Plantilla<small>Notas y sueldos</small></button>
-    <button class="sa-tab" role="tab" data-tab="contratos" aria-selected="false">Contratos<small>Cláusulas y renovaciones</small></button>
-    <button class="sa-tab" role="tab" data-tab="mercado" aria-selected="false">Mercado<small>Fichajes de enero</small></button>
-    <button class="sa-tab" role="tab" data-tab="cantera" aria-selected="false">Cantera<small>Jóvenes con futuro</small></button>
-    <button class="sa-tab" role="tab" data-tab="liga" aria-selected="false">Liga<small>Clasificación y métricas</small></button>
+    <button class="sa-tab" role="tab" data-tab="liga" aria-selected="false">Liga<small>Tabla y métricas</small></button>
   </nav>
 
   <!-- ===================== INICIO ===================== -->
   <section class="sa-page" id="inicio" role="tabpanel">
-    <p class="sa-take">Tras <b data-draw="pj" data-source="resumen" data-field="pj" data-row="0">—</b> jornadas llevamos <b data-draw="pts" data-source="resumen" data-field="puntos" data-row="0">—</b> puntos con un juego que vale <b data-draw="xpts" data-source="resumen" data-field="xpts" data-row="0">—</b> puntos esperados.
-      <span data-variant="suerte">Los resultados van por delante del juego: si el xG no mejora, lo normal es que los resultados empeoren.</span>
-      <span data-variant="merito" hidden>El juego merece más puntos de los que llevamos: si se mantiene el xG, llegarán.</span>
-      <span data-variant="justo" hidden>Los resultados reflejan lo que hemos jugado.</span>
-      <span data-draw="variante" data-source="resumen"></span>
-    </p>
+    <div class="sa-hero">
+      <div class="sa-count"><span class="sa-count-n" data-draw="dias-enero">—</span><span class="sa-count-t">días para el 1 de enero<br>(límite de renovaciones)</span></div>
+      <p class="sa-take">Tras <b data-draw="pj" data-source="resumen" data-field="pj" data-row="0">—</b> jornadas analizadas, <b data-draw="pts" data-source="resumen" data-field="puntos" data-row="0">—</b> puntos con un juego que vale <b data-draw="xpts" data-source="resumen" data-field="xpts" data-row="0">—</b>.
+        <span data-variant="suerte" hidden>Los resultados van por delante del juego.</span>
+        <span data-variant="merito" hidden>El juego merece más puntos de los que tenemos: el entrenador está haciendo bien su trabajo.</span>
+        <span data-variant="justo" hidden>Los resultados reflejan el juego.</span>
+        <span data-draw="variante" data-source="resumen"></span>
+      </p>
+    </div>
 
     <div class="sa-tiles">
-      <div class="sa-tile">
-        <span class="sa-tile-label">Posición en la liga</span>
-        <span class="sa-big"><span data-draw="pos" data-source="clasificacion" data-field="pos" data-where="equipo=Salamanca">—</span>º</span>
-        <span class="sa-sub"><span data-draw="ptsliga" data-source="clasificacion" data-field="puntos" data-where="equipo=Salamanca">—</span> puntos</span>
-      </div>
-      <div class="sa-tile">
-        <span class="sa-tile-label">Puntos reales / esperados (xPts)</span>
-        <span class="sa-big"><span data-draw="pts2" data-source="resumen" data-field="puntos" data-row="0">—</span> / <span data-draw="xpts2" data-source="resumen" data-field="xpts" data-row="0">—</span></span>
-        <span class="sa-sub">Diferencia <span data-draw="suerte" data-source="resumen" data-field="suerte" data-row="0">—</span> puntos</span>
-      </div>
-      <div class="sa-tile">
-        <span class="sa-tile-label">Diferencia de xG por partido</span>
-        <span class="sa-big" data-draw="difxg" data-source="resumen" data-field="dif_xg_pp" data-row="0">—</span>
-        <span class="sa-sub">xG <span data-draw="xgf" data-source="resumen" data-field="xg_favor" data-row="0">—</span> a favor · <span data-draw="xgc" data-source="resumen" data-field="xg_contra" data-row="0">—</span> en contra</span>
-      </div>
-      <div class="sa-tile">
-        <span class="sa-tile-label">Próximo partido</span>
-        <span class="sa-big" data-draw="prox-rival" data-source="calendario" data-field="rival" data-row="0">—</span>
-        <span class="sa-sub"><span data-draw="prox-fecha" data-source="calendario" data-field="fecha" data-row="0">—</span> · <span data-draw="prox-campo" data-source="calendario" data-field="campo" data-row="0">—</span> · <span data-draw="prox-pos" data-source="calendario" data-field="pos_rival" data-row="0">—</span>º en la liga</span>
-      </div>
+      <div class="sa-tile"><span class="sa-tile-label">Puntos / esperados</span>
+        <span class="sa-big"><span data-draw="pts2" data-source="resumen" data-field="puntos" data-row="0">—</span><small> / <span data-draw="xpts2" data-source="resumen" data-field="xpts" data-row="0">—</span></small></span></div>
+      <div class="sa-tile"><span class="sa-tile-label">xG por partido (a favor − en contra)</span>
+        <span class="sa-big" data-draw="difxg" data-source="resumen" data-field="dif_xg_pp" data-row="0">—</span></div>
+      <div class="sa-tile"><span class="sa-tile-label">Goles / goles esperados</span>
+        <span class="sa-big"><span data-draw="gf" data-source="resumen" data-field="goles_favor" data-row="0">—</span><small> / <span data-draw="xgf" data-source="resumen" data-field="xg_favor" data-row="0">—</span></small></span></div>
+      <div class="sa-tile"><span class="sa-tile-label">Próximo rival</span>
+        <span class="sa-big sa-big-txt" data-draw="prox-rival" data-source="calendario" data-field="rival" data-row="0">—</span>
+        <span class="sa-sub"><span data-draw="prox-fecha" data-source="calendario" data-field="fecha" data-row="0">—</span> · <span data-draw="prox-campo" data-source="calendario" data-field="campo" data-row="0">—</span></span></div>
     </div>
 
-    <div class="sa-card" id="que-hacer">
-      <h3>Qué hacer ahora</h3>
-      <p class="sa-note">Ordenado por urgencia. Pulsa «Ver» para ir a la pestaña con el detalle.</p>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-tareas" data-source="tareas" data-row-key="orden">
-          <thead><tr>
-            <th data-field="prioridad">Urgencia</th>
-            <th data-field="area">Área</th>
-            <th data-field="tarea">Qué hacer</th>
-            <th data-field="detalle">Por qué</th>
-            <th>Detalle</th>
-          </tr></thead>
-          <tbody data-draw="tareas"></tbody>
-        </table>
-      </div>
+    <div>
+      <h2 class="sa-h2">Tablero de decisiones</h2>
+      <p class="sa-intro">Cada ficha es un jugador. Pásale el ratón (o tócala) para ver el porqué.</p>
     </div>
-  </section>
-
-  <!-- ===================== ANÁLISIS ===================== -->
-  <section class="sa-page" id="analisis" role="tabpanel" hidden>
-    <p class="sa-intro">La lectura completa de las jornadas jugadas: qué funciona, qué no, por qué y qué hacer. Al final, las capturas que necesito para profundizar.</p>
-    <div class="sa-analisis" id="analisis-texto" data-draw="analisis" data-source="analisis"></div>
-    <div class="sa-card" id="necesito">
-      <h3>Para profundizar: capturas que necesito</h3>
-      <p class="sa-note">Con cada una puedo analizar más a fondo lo que dice «Para qué».</p>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-necesito" data-source="necesito" data-row-key="orden">
-          <thead><tr>
-            <th data-field="captura">Captura</th>
-            <th data-field="donde">Dónde está en el FM</th>
-            <th data-field="para_que">Para qué</th>
-          </tr></thead>
-          <tbody data-draw="necesito"></tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== PARTIDOS ===================== -->
-  <section class="sa-page" id="partidos" role="tabpanel" hidden>
-    <p class="sa-intro">Cómo jugamos de verdad (xG) frente a lo que dicen los resultados, partido a partido, y quién viene ahora.</p>
-    <div class="sa-grid">
-      <div class="sa-card">
-        <h3>xG por partido</h3>
-        <p class="sa-note">Goles esperados creados y concedidos en cada jornada.</p>
-        <div class="sa-legend"><span><i class="sa-sw" data-sw="0"></i>xG a favor</span><span><i class="sa-sw" data-sw="bad"></i>xG en contra</span></div>
-        <div class="sa-chart" id="grafico-xg" data-draw="xg" data-source="partidos"></div>
-      </div>
-      <div class="sa-card">
-        <h3>Puntos acumulados frente a xPts</h3>
-        <p class="sa-note">Si la línea de puntos va por encima de la de xPts, sacamos más de lo que merece el juego.</p>
-        <div class="sa-chart" id="grafico-puntos" data-draw="acum" data-source="acumulado"></div>
-      </div>
-    </div>
-    <div class="sa-card">
-      <h3>Partidos jugados</h3>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-partidos" data-source="partidos" data-row-key="jornada">
-          <thead><tr>
-            <th data-field="jornada" class="num">J</th>
-            <th data-field="rival">Rival</th>
-            <th data-field="campo">Campo</th>
-            <th data-field="resultado">Resultado</th>
-            <th data-field="xg_favor" class="num">xG a favor</th>
-            <th data-field="xg_contra" class="num">xG en contra</th>
-            <th data-field="xpts" class="num">xPts</th>
-            <th data-field="posesion" class="num">Posesión</th>
-            <th data-field="faltas" class="num">Faltas</th>
-            <th data-field="corners_contra" class="num">Córners en contra</th>
-          </tr></thead>
-          <tbody data-draw="tabla-partidos"></tbody>
-        </table>
-      </div>
-    </div>
-    <div class="sa-card">
-      <h3>Próximos partidos</h3>
-      <p class="sa-note">Posición actual del rival. Los de arriba (1º-6º), en naranja.</p>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-calendario" data-source="calendario" data-row-key="fecha">
-          <thead><tr>
-            <th data-field="fecha">Fecha</th>
-            <th data-field="rival">Rival</th>
-            <th data-field="campo">Campo</th>
-            <th data-field="pos_rival" class="num">Posición</th>
-            <th data-field="tramo">Tramo</th>
-          </tr></thead>
-          <tbody data-draw="calendario"></tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== TÁCTICA ===================== -->
-  <section class="sa-page" id="tactica" role="tabpanel" hidden>
-    <p class="sa-intro">El once que proponen los datos para el próximo partido y qué instrucciones cambiar en el 4-3-3 de contraataque.</p>
-    <div class="sa-grid">
-      <div class="sa-card">
-        <h3>Once propuesto</h3>
-        <p class="sa-note">Nombre y nota media de la temporada. Atacamos hacia arriba.</p>
-        <div class="sa-pitch" id="campo-once" data-draw="campo" data-source="once"></div>
-      </div>
-      <div class="sa-card">
-        <h3>Por qué cada uno</h3>
-        <div class="sa-tablebox">
-          <table class="sa-table" id="tabla-once" data-source="once" data-row-key="orden">
-            <thead><tr>
-              <th data-field="rol">Puesto</th>
-              <th data-field="titular">Titular</th>
-              <th data-field="media" class="num">Media</th>
-              <th data-field="alternativa">Recambio</th>
-              <th data-field="motivo">Motivo</th>
-            </tr></thead>
-            <tbody data-draw="once"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-    <div class="sa-card">
-      <h3>Cambios en las instrucciones</h3>
-      <p class="sa-note">«Cambiar» en rojo = toca cambiarlo. Agrupado por fase del juego.</p>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-tactica" data-source="tactica" data-row-key="orden">
-          <thead><tr>
-            <th data-field="fase">Fase</th>
-            <th data-field="instruccion">Instrucción</th>
-            <th data-field="ahora">Ahora</th>
-            <th data-field="propuesta">Propuesta</th>
-            <th data-field="cambiar">Cambiar</th>
-            <th data-field="motivo">Motivo</th>
-          </tr></thead>
-          <tbody data-draw="tactica"></tbody>
-        </table>
-      </div>
-    </div>
+    <div class="sa-board" id="tablero" data-draw="tablero" data-source="jugadores fichajes"></div>
   </section>
 
   <!-- ===================== PLANTILLA ===================== -->
   <section class="sa-page" id="plantilla" role="tabpanel" hidden>
-    <p class="sa-intro">Todos los jugadores, separados por equipo. «Sueldo justo» es lo que le correspondería a cada uno por lo que aporta (calidad, nota, minutos y margen de mejora), con la misma masa salarial de su equipo. Pulsa una columna para ordenar y pasa el ratón por una fila para ver el motivo. ✚ = lesionado.</p>
-    <div class="sa-tools"><input class="sa-search" id="buscar-jugador" type="search" placeholder="Buscar en los tres equipos: jugador, posición o acción" aria-label="Buscar en la plantilla"></div>
-    <div class="sa-card" id="tabla-primer-card">
-      <h3>Primer equipo</h3>
-      <div class="sa-tablebox">
-        <table class="sa-table sa-plantilla" id="tabla-primer" data-source="jugadores" data-row-key="id">
-          <thead><tr>
-            <th data-field="jugador" data-sort="jugador">Jugador</th>
-            <th data-field="edad" data-sort="edad" class="num">Edad</th>
-            <th data-field="posicion" data-sort="posicion">Pos.</th>
-            <th data-field="calidad" data-sort="calidad" class="num">Calidad</th>
-            <th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
-            <th data-field="nota" data-sort="nota" class="num">Nota</th>
-            <th data-field="minutos" data-sort="minutos" class="num">Minutos</th>
-            <th data-field="goles" data-sort="goles" class="num">Goles</th>
-            <th data-field="amarillas" data-sort="amarillas" class="num">Amarillas</th>
-            <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th>
-            <th data-field="sueldo_justo" data-sort="sueldo_justo" class="num">Sueldo justo</th>
-            <th data-field="valoracion_sueldo" data-sort="valoracion_sueldo">Sueldo</th>
-            <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th>
-            <th data-field="fin_contrato" data-sort="fin_contrato">Fin</th>
-            <th data-field="accion" data-sort="accion">Acción</th>
-          </tr></thead>
-          <tbody data-draw="plantilla-primer"></tbody>
-        </table>
-      </div>
+    <div class="sa-legendbar">
+      <span><i class="sa-dot ok"></i>Renovar</span><span><i class="sa-dot bad"></i>Vender</span><span><i class="sa-dot warn"></i>Ceder</span>
+      <span><i class="sa-dot muted"></i>Sale libre</span><span><i class="sa-dot none"></i>Mantener</span>
+      <span class="sa-legend-bar"><i class="sa-mini"><i style="width:60%"></i><i style="width:20%"></i></i>calidad → potencial (de 5★)</span>
     </div>
-    <div class="sa-card" id="tabla-filial-card">
-      <h3>Salamanca B</h3>
-      <div class="sa-tablebox">
-        <table class="sa-table sa-plantilla" id="tabla-filial" data-source="jugadores" data-row-key="id">
-          <thead><tr>
-            <th data-field="jugador" data-sort="jugador">Jugador</th>
-            <th data-field="edad" data-sort="edad" class="num">Edad</th>
-            <th data-field="posicion" data-sort="posicion">Pos.</th>
-            <th data-field="calidad" data-sort="calidad" class="num">Calidad</th>
-            <th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
-            <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th>
-            <th data-field="sueldo_justo" data-sort="sueldo_justo" class="num">Sueldo justo</th>
-            <th data-field="valoracion_sueldo" data-sort="valoracion_sueldo">Sueldo</th>
-            <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th>
-            <th data-field="fin_contrato" data-sort="fin_contrato">Fin</th>
-            <th data-field="accion" data-sort="accion">Acción</th>
-          </tr></thead>
-          <tbody data-draw="plantilla-filial"></tbody>
-        </table>
-      </div>
+    <div class="sa-seg" role="group" aria-label="Equipo">
+      <button class="sa-segb" data-eq="Primer equipo" aria-pressed="true">Primer equipo</button>
+      <button class="sa-segb" data-eq="Salamanca B" aria-pressed="false">Salamanca B</button>
+      <button class="sa-segb" data-eq="Juvenil" aria-pressed="false">Juvenil</button>
     </div>
-    <div class="sa-card" id="tabla-juvenil-card">
-      <h3>Juvenil</h3>
-      <div class="sa-tablebox">
-        <table class="sa-table sa-plantilla" id="tabla-juvenil" data-source="jugadores" data-row-key="id">
-          <thead><tr>
-            <th data-field="jugador" data-sort="jugador">Jugador</th>
-            <th data-field="edad" data-sort="edad" class="num">Edad</th>
-            <th data-field="posicion" data-sort="posicion">Pos.</th>
-            <th data-field="calidad" data-sort="calidad" class="num">Calidad</th>
-            <th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
-            <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th>
-            <th data-field="sueldo_justo" data-sort="sueldo_justo" class="num">Sueldo justo</th>
-            <th data-field="valoracion_sueldo" data-sort="valoracion_sueldo">Sueldo</th>
-            <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th>
-            <th data-field="fin_contrato" data-sort="fin_contrato">Fin</th>
-            <th data-field="accion" data-sort="accion">Acción</th>
-          </tr></thead>
-          <tbody data-draw="plantilla-juvenil"></tbody>
-        </table>
-      </div>
-    </div>
+    <div class="sa-pitchgrid" id="fichas-plantilla" data-draw="fichas" data-source="jugadores"></div>
+
     <div class="sa-card">
-      <h3>Sueldo real frente a sueldo justo (primer equipo)</h3>
-      <p class="sa-note">Punto = lo que cobra; raya = lo que le correspondería por rendimiento. Rojo: cobra de más; verde: cobra de menos. Ordenados del que más aporta al que menos.</p>
+      <h3>¿Cobra lo que vale?</h3>
+      <p class="sa-note">Punto = lo que cobra · raya = su sueldo justo por rendimiento. Rojo: cobra de más · verde: cobra de menos.</p>
       <div class="sa-chart sa-tall" id="grafico-sueldos" data-draw="sueldos" data-source="jugadores"></div>
     </div>
+
+    <details class="sa-more">
+      <summary>Ver tablas completas de los tres equipos</summary>
+      <div class="sa-tools"><input class="sa-search" id="buscar-jugador" type="search" placeholder="Buscar jugador, posición o acción" aria-label="Buscar en la plantilla"></div>
+      <h3 class="sa-h3">Primer equipo</h3>
+      <div class="sa-tablebox"><table class="sa-table sa-plantilla" id="tabla-primer" data-source="jugadores" data-row-key="id"><thead><tr>
+        <th data-field="jugador" data-sort="jugador">Jugador</th><th data-field="edad" data-sort="edad" class="num">Edad</th><th data-field="posicion" data-sort="posicion">Pos.</th>
+        <th data-field="calidad" data-sort="calidad" class="num">Calidad</th><th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
+        <th data-field="nota" data-sort="nota" class="num">Nota</th><th data-field="minutos" data-sort="minutos" class="num">Minutos</th><th data-field="goles" data-sort="goles" class="num">Goles</th><th data-field="amarillas" data-sort="amarillas" class="num">Amarillas</th>
+        <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th><th data-field="sueldo_justo" data-sort="sueldo_justo" class="num">Sueldo justo</th><th data-field="valoracion_sueldo" data-sort="valoracion_sueldo">Sueldo</th>
+        <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th><th data-field="fin_contrato" data-sort="fin_contrato">Fin</th><th data-field="accion" data-sort="accion">Acción</th>
+      </tr></thead><tbody data-draw="plantilla-primer"></tbody></table></div>
+      <h3 class="sa-h3">Salamanca B</h3>
+      <div class="sa-tablebox"><table class="sa-table sa-plantilla" id="tabla-filial" data-source="jugadores" data-row-key="id"><thead><tr>
+        <th data-field="jugador" data-sort="jugador">Jugador</th><th data-field="edad" data-sort="edad" class="num">Edad</th><th data-field="posicion" data-sort="posicion">Pos.</th>
+        <th data-field="calidad" data-sort="calidad" class="num">Calidad</th><th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
+        <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th><th data-field="sueldo_justo" data-sort="sueldo_justo" class="num">Sueldo justo</th><th data-field="valoracion_sueldo" data-sort="valoracion_sueldo">Sueldo</th>
+        <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th><th data-field="fin_contrato" data-sort="fin_contrato">Fin</th><th data-field="accion" data-sort="accion">Acción</th>
+      </tr></thead><tbody data-draw="plantilla-filial"></tbody></table></div>
+      <h3 class="sa-h3">Juvenil</h3>
+      <div class="sa-tablebox"><table class="sa-table sa-plantilla" id="tabla-juvenil" data-source="jugadores" data-row-key="id"><thead><tr>
+        <th data-field="jugador" data-sort="jugador">Jugador</th><th data-field="edad" data-sort="edad" class="num">Edad</th><th data-field="posicion" data-sort="posicion">Pos.</th>
+        <th data-field="calidad" data-sort="calidad" class="num">Calidad</th><th data-field="potencial" data-sort="potencial_num" class="num">Potencial</th>
+        <th data-field="sueldo" data-sort="sueldo" class="num">Sueldo</th><th data-field="sueldo_justo" data-sort="sueldo_justo" class="num">Sueldo justo</th><th data-field="valoracion_sueldo" data-sort="valoracion_sueldo">Sueldo</th>
+        <th data-field="clausula" data-sort="clausula" class="num">Cláusula</th><th data-field="fin_contrato" data-sort="fin_contrato">Fin</th><th data-field="accion" data-sort="accion">Acción</th>
+      </tr></thead><tbody data-draw="plantilla-juvenil"></tbody></table></div>
+    </details>
   </section>
 
   <!-- ===================== CONTRATOS ===================== -->
   <section class="sa-page" id="contratos" role="tabpanel" hidden>
-    <p class="sa-intro">Lo que hay que cerrar antes de que nos cueste dinero: cláusulas baratas, contratos que acaban y sueldos por encima de tus topes.</p>
+    <p class="sa-intro">Semáforo de contratos: lo rojo, antes del 1 de enero.</p>
+    <div class="sa-lanes" id="semaforo" data-draw="semaforo" data-source="jugadores"></div>
     <div class="sa-card">
-      <h3>Cláusulas bajas y jugadores que siguen otros clubes</h3>
-      <p class="sa-note">Cláusula por debajo de su valor de mercado o con interés de otros clubes. Solución: renovar subiendo o quitando la cláusula.</p>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-riesgos" data-source="alertas" data-row-key="id">
-          <thead><tr>
-            <th data-field="jugador">Jugador</th>
-            <th data-field="equipo">Equipo</th>
-            <th data-field="edad" class="num">Edad</th>
-            <th data-field="potencial" class="num">Potencial</th>
-            <th data-field="clausula" class="num">Cláusula</th>
-            <th data-field="valor_max" class="num">Valor máx.</th>
-            <th data-field="le_siguen">Le siguen</th>
-            <th data-field="riesgo">Riesgo</th>
-          </tr></thead>
-          <tbody data-draw="riesgos"></tbody>
-        </table>
-      </div>
+      <h3>Cláusula frente a valor de mercado</h3>
+      <p class="sa-note">Barra = cláusula · raya = valor máximo. Si la barra no llega a la raya, se lo pueden llevar barato. Solo jugadores con potencial de 4★ o más.</p>
+      <div class="sa-chart sa-tall" id="grafico-clausulas" data-draw="clausulas" data-source="jugadores"></div>
     </div>
-    <div class="sa-card">
-      <h3>Contratos que acaban en 18 meses o menos</h3>
-      <p class="sa-note">Renovar o vender antes de la fecha límite (1 de enero), cuando ya pueden firmar un precontrato con otro club.</p>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-vencimientos" data-source="vencimientos" data-row-key="id">
-          <thead><tr>
-            <th data-field="jugador">Jugador</th>
-            <th data-field="equipo">Equipo</th>
-            <th data-field="edad" class="num">Edad</th>
-            <th data-field="fin_contrato">Fin</th>
-            <th data-field="limite_renovar">Límite</th>
-            <th data-field="accion">Acción</th>
-            <th data-field="motivo">Motivo</th>
-          </tr></thead>
-          <tbody data-draw="vencimientos"></tbody>
-        </table>
-      </div>
-    </div>
-    <div class="sa-card">
-      <h3>Sueldos que no cuadran con el rendimiento</h3>
-      <p class="sa-note">Más de un 30 % por encima de su sueldo justo (cobra de más) o más de un 25 % por debajo (cobra de menos: al renovar pedirá más, y lo merece).</p>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-desajuste" data-source="desajuste" data-row-key="id">
-          <thead><tr>
-            <th data-field="jugador">Jugador</th>
-            <th data-field="equipo">Equipo</th>
-            <th data-field="sueldo" class="num">Sueldo</th>
-            <th data-field="sueldo_justo" class="num">Sueldo justo</th>
-            <th data-field="diferencia" class="num">Diferencia</th>
-            <th data-field="valoracion">Valoración</th>
-            <th data-field="motivo">Por qué</th>
-          </tr></thead>
-          <tbody data-draw="desajuste"></tbody>
-        </table>
-      </div>
-    </div>
+    <details class="sa-more">
+      <summary>Ver tablas (vencimientos, cláusulas y sueldos)</summary>
+      <div class="sa-tablebox"><table class="sa-table" id="tabla-vencimientos" data-source="vencimientos" data-row-key="id"><thead><tr>
+        <th data-field="jugador">Jugador</th><th data-field="equipo">Equipo</th><th data-field="edad" class="num">Edad</th><th data-field="fin_contrato">Fin</th><th data-field="limite_renovar">Límite</th><th data-field="accion">Acción</th><th data-field="motivo">Motivo</th>
+      </tr></thead><tbody data-draw="vencimientos"></tbody></table></div>
+      <div class="sa-tablebox"><table class="sa-table" id="tabla-riesgos" data-source="alertas" data-row-key="id"><thead><tr>
+        <th data-field="jugador">Jugador</th><th data-field="equipo">Equipo</th><th data-field="edad" class="num">Edad</th><th data-field="potencial" class="num">Potencial</th><th data-field="clausula" class="num">Cláusula</th><th data-field="valor_max" class="num">Valor máx.</th><th data-field="le_siguen">Le siguen</th><th data-field="riesgo">Riesgo</th>
+      </tr></thead><tbody data-draw="riesgos"></tbody></table></div>
+      <div class="sa-tablebox"><table class="sa-table" id="tabla-desajuste" data-source="desajuste" data-row-key="id"><thead><tr>
+        <th data-field="jugador">Jugador</th><th data-field="equipo">Equipo</th><th data-field="sueldo" class="num">Sueldo</th><th data-field="sueldo_justo" class="num">Sueldo justo</th><th data-field="diferencia" class="num">Diferencia</th><th data-field="valoracion">Valoración</th><th data-field="motivo">Por qué</th>
+      </tr></thead><tbody data-draw="desajuste"></tbody></table></div>
+    </details>
   </section>
 
   <!-- ===================== MERCADO ===================== -->
   <section class="sa-page" id="mercado" role="tabpanel" hidden>
-    <p class="sa-intro">Ranking «modelo Castellón» (0-100) de las listas de ojeo: edad, potencial, calidad, coste, contrato y encaje. Los libres no cuestan traspaso; «Precontrato» = acaba contrato en junio de 2029: desde el 1 de enero puede firmar gratis para julio.</p>
-    <div class="sa-card">
-      <h3>Delantero centro</h3>
-      <p class="sa-note">Candidatos primero (verde ≥ 70). Los descartados llevan el motivo. Sin recomendación del ojeador en la lista: ese criterio no cuenta.</p>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-fichajes" data-source="fichajes" data-row-key="jugador">
-          <thead><tr>
-            <th data-field="nota" class="num">Nota</th>
-            <th data-field="jugador">Jugador</th>
-            <th data-field="edad" class="num">Edad</th>
-            <th data-field="calidad" class="num">Calidad</th>
-            <th data-field="potencial" class="num">Potencial</th>
-            <th data-field="tipo">Tipo</th>
-            <th data-field="valor_min" class="num">Traspaso mín.</th>
-            <th data-field="sueldo" class="num">Sueldo pedido</th>
-            <th data-field="precontrato">Precontrato</th>
-            <th data-field="estado">Estado</th>
-            <th data-field="motivo">Motivo del descarte</th>
-          </tr></thead>
-          <tbody data-draw="fichajes"></tbody>
-        </table>
-      </div>
-    </div>
+    <p class="sa-intro">Delanteros centro de la lista de ojeo. La puntuación (0-100) mide el encaje en el modelo Castellón: juventud, potencial, calidad y coste.</p>
+    <div class="sa-cands" id="candidatos" data-draw="candidatos" data-source="fichajes"></div>
+    <details class="sa-more">
+      <summary>Ver todos, incluidos los descartados</summary>
+      <div class="sa-tablebox"><table class="sa-table" id="tabla-fichajes" data-source="fichajes" data-row-key="jugador"><thead><tr>
+        <th data-field="nota" class="num">Nota</th><th data-field="jugador">Jugador</th><th data-field="edad" class="num">Edad</th><th data-field="calidad" class="num">Calidad</th><th data-field="potencial" class="num">Potencial</th><th data-field="tipo">Tipo</th>
+        <th data-field="valor_min" class="num">Traspaso mín.</th><th data-field="sueldo" class="num">Sueldo pedido</th><th data-field="precontrato">Precontrato</th><th data-field="estado">Estado</th><th data-field="motivo">Motivo del descarte</th>
+      </tr></thead><tbody data-draw="fichajes"></tbody></table></div>
+    </details>
   </section>
 
   <!-- ===================== CANTERA ===================== -->
   <section class="sa-page" id="cantera" role="tabpanel" hidden>
-    <p class="sa-intro">Jugadores de 19 años o menos del filial y el juvenil con potencial de 4★ o más, y dónde deberían jugar.</p>
+    <p class="sa-intro">Cuanto más arriba, más techo. Cuanto más a la derecha, más preparado ya. Tamaño del punto: cuanto más grande, más joven.</p>
     <div class="sa-card">
-      <h3>Joyas de la cantera</h3>
-      <p class="sa-note">La propuesta compara su calidad con la del primer equipo y la del filial.</p>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-cantera" data-source="cantera" data-row-key="jugador">
-          <thead><tr>
-            <th data-field="jugador">Jugador</th>
-            <th data-field="equipo">Equipo</th>
-            <th data-field="edad" class="num">Edad</th>
-            <th data-field="posicion">Pos.</th>
-            <th data-field="calidad" class="num">Calidad</th>
-            <th data-field="potencial" class="num">Potencial</th>
-            <th data-field="clausula" class="num">Cláusula</th>
-            <th data-field="propuesta">Dónde jugar</th>
-            <th data-field="motivo">Motivo</th>
-          </tr></thead>
-          <tbody data-draw="cantera"></tbody>
-        </table>
+      <h3>Mapa de la cantera</h3>
+      <div class="sa-legend"><span><i class="sa-sw" data-sw="0"></i>Primer equipo</span><span><i class="sa-sw" data-sw="1"></i>Salamanca B</span><span><i class="sa-sw" data-sw="2"></i>Juvenil</span></div>
+      <div class="sa-chart sa-tall" id="mapa-cantera" data-draw="mapa-cantera" data-source="jugadores"></div>
+    </div>
+    <div class="sa-pitchgrid" id="fichas-cantera" data-draw="fichas-cantera" data-source="cantera"></div>
+    <details class="sa-more">
+      <summary>Ver tabla de la cantera</summary>
+      <div class="sa-tablebox"><table class="sa-table" id="tabla-cantera" data-source="cantera" data-row-key="jugador"><thead><tr>
+        <th data-field="jugador">Jugador</th><th data-field="equipo">Equipo</th><th data-field="edad" class="num">Edad</th><th data-field="posicion">Pos.</th><th data-field="calidad" class="num">Calidad</th><th data-field="potencial" class="num">Potencial</th><th data-field="clausula" class="num">Cláusula</th><th data-field="propuesta">Dónde jugar</th><th data-field="motivo">Motivo</th>
+      </tr></thead><tbody data-draw="cantera"></tbody></table></div>
+    </details>
+  </section>
+
+  <!-- ===================== RENDIMIENTO ===================== -->
+  <section class="sa-page" id="partidos" role="tabpanel" hidden>
+    <p class="sa-intro">Cómo evaluar al entrenador según el modelo Castellón: por xG, no por resultados.</p>
+    <div class="sa-grid">
+      <div class="sa-card">
+        <h3>xG por partido</h3>
+        <div class="sa-legend"><span><i class="sa-sw" data-sw="0"></i>xG a favor</span><span><i class="sa-sw" data-sw="bad"></i>xG en contra</span></div>
+        <div class="sa-chart" id="grafico-xg" data-draw="xg" data-source="partidos"></div>
+      </div>
+      <div class="sa-card">
+        <h3>Puntos frente a puntos esperados</h3>
+        <p class="sa-note">Línea de puntos por encima de xPts = resultados mejores que el juego.</p>
+        <div class="sa-chart" id="grafico-puntos" data-draw="acum" data-source="acumulado"></div>
       </div>
     </div>
+    <details class="sa-more">
+      <summary>Ver partido a partido</summary>
+      <div class="sa-tablebox"><table class="sa-table" id="tabla-partidos" data-source="partidos" data-row-key="jornada"><thead><tr>
+        <th data-field="jornada" class="num">J</th><th data-field="rival">Rival</th><th data-field="campo">Campo</th><th data-field="resultado">Resultado</th><th data-field="xg_favor" class="num">xG a favor</th><th data-field="xg_contra" class="num">xG en contra</th><th data-field="xpts" class="num">xPts</th><th data-field="posesion" class="num">Posesión</th><th data-field="faltas" class="num">Faltas</th><th data-field="corners_contra" class="num">Córners en contra</th>
+      </tr></thead><tbody data-draw="tabla-partidos"></tbody></table></div>
+    </details>
+  </section>
+
+  <!-- ===================== ANÁLISIS ===================== -->
+  <section class="sa-page" id="analisis" role="tabpanel" hidden>
+    <p class="sa-intro">La lectura completa de las jornadas jugadas: qué funciona, qué no y qué hacer.</p>
+    <div class="sa-analisis" id="analisis-texto" data-draw="analisis" data-source="analisis"></div>
   </section>
 
   <!-- ===================== LIGA ===================== -->
   <section class="sa-page" id="liga" role="tabpanel" hidden>
-    <p class="sa-intro">Dónde estamos en la tabla y en qué somos mejores o peores que la media de la liga.</p>
     <div class="sa-card">
-      <h3>Diferencia con la media de la 2ª Federación Gr. 5</h3>
-      <p class="sa-note">En % sobre la media del Centro de datos. Verde = mejor que la media, rojo = peor, gris = depende del estilo de juego.</p>
+      <h3>Frente a la media de la liga</h3>
+      <p class="sa-note">Verde = mejor que la media · rojo = peor · gris = depende del estilo.</p>
       <div class="sa-chart sa-tall" id="grafico-liga" data-draw="metricas" data-source="metricas"></div>
     </div>
     <div class="sa-card">
-      <h3>Clasificación</h3>
-      <div class="sa-tablebox">
-        <table class="sa-table" id="tabla-clasificacion" data-source="clasificacion" data-row-key="equipo">
-          <thead><tr>
-            <th data-field="pos" class="num">Pos.</th>
-            <th data-field="equipo">Equipo</th>
-            <th data-field="jugados" class="num">PJ</th>
-            <th data-field="ganados" class="num">G</th>
-            <th data-field="empatados" class="num">E</th>
-            <th data-field="perdidos" class="num">P</th>
-            <th data-field="dif_goles" class="num">Dif.</th>
-            <th data-field="puntos" class="num">Pts</th>
-          </tr></thead>
-          <tbody data-draw="clasificacion"></tbody>
-        </table>
-      </div>
+      <h3>Clasificación (18/09)</h3>
+      <div class="sa-tablebox"><table class="sa-table" id="tabla-clasificacion" data-source="clasificacion" data-row-key="equipo"><thead><tr>
+        <th data-field="pos" class="num">Pos.</th><th data-field="equipo">Equipo</th><th data-field="jugados" class="num">PJ</th><th data-field="ganados" class="num">G</th><th data-field="empatados" class="num">E</th><th data-field="perdidos" class="num">P</th><th data-field="dif_goles" class="num">Dif.</th><th data-field="puntos" class="num">Pts</th>
+      </tr></thead><tbody data-draw="clasificacion"></tbody></table></div>
     </div>
   </section>
-
-  <details class="sa-notes">
-    <summary>Cómo se calculan los números</summary>
-    <dl>
-      <dt>xPts</dt><dd>Puntos esperados de cada partido según su xG a favor y en contra (modelo de Poisson).</dd>
-      <dt>Nota media</dt><dd>Media de la temporada que da el FM en la lista de selección; en filial y juvenil, sin dato.</dd>
-      <dt>Métricas de liga</dt><dd>Centro de datos del FM. Las marcadas «(aprox.)» se han leído a ojo de un gráfico.</dd>
-      <dt>Acción</dt><dd>RENOVAR, VENDER YA, CEDER, SALE LIBRE o MANTENER, con las reglas de config.yaml de la herramienta.</dd>
-      <dt>Origen</dt><dd>Capturas de pantalla del FM transcritas a mano; sin xG por jugador ni minutos de los suplentes.</dd>
-    </dl>
-  </details>
 </div>
 
 <script>
@@ -756,7 +587,7 @@
   });
 
   // ---------- pestañas
-  const PESTANAS = ['inicio', 'analisis', 'partidos', 'tactica', 'plantilla', 'contratos', 'mercado', 'cantera', 'liga'];
+  const PESTANAS = ['inicio', 'plantilla', 'contratos', 'mercado', 'cantera', 'partidos', 'analisis', 'liga'];
   sa.mostrar = (id, link = true) => {
     if (!PESTANAS.includes(id)) id = 'inicio';
     document.querySelectorAll('.sa-page').forEach((s) => { s.hidden = s.id !== id; });
@@ -968,4 +799,198 @@
       td(r.valor_min === '' ? '' : sa.eur(num(r.valor_min)), 'num'), td(r.sueldo === '' ? 'N/D' : sa.eur(num(r.sueldo)), 'num'),
       td(r.precontrato), td(pill(r.estado, r.estado === 'Candidato' ? 'ok' : 'bad')), td(r.motivo, 'wrap'));
   }));
+
+  // =================== CAPA VISUAL ===================
+  const FECHA_JUEGO = '2028-12-17'; // fecha del juego de las últimas capturas
+  const LIMITE_RENOV = '2029-01-01';
+  const COL = {RENOVAR: 'var(--color-ok)', 'VENDER YA': 'var(--color-bad)', CEDER: 'var(--color-warn)', 'SALE LIBRE': 'var(--cds-chart-muted)', MANTENER: 'var(--color-border-line)', 'CEDIDO AQUÍ': 'var(--color-border-line)'};
+  const corto = (n) => { const p = String(n).split(' '); return p.length > 1 && p[0].length > 2 ? p.slice(-1)[0] : String(n); };
+  const iniciales = (n) => String(n).split(' ').map((x) => x[0]).slice(0, 2).join('');
+  const el = (tag, cls, txt) => { const e = document.createElement(tag); if (cls) e.className = cls; if (txt != null) e.textContent = txt; return e; };
+  const mini = (cal, potMax) => {
+    const b = el('i', 'sa-mini');
+    const c = Math.max(0, Math.min(5, num(cal) || 0)), p = Math.max(c, Math.min(5, num(potMax) || c));
+    const a = el('i'); a.style.width = (c / 5 * 100) + '%';
+    const bb = el('i'); bb.style.width = ((p - c) / 5 * 100) + '%';
+    b.append(a, bb); b.title = `calidad ${c}★ · potencial hasta ${p}★`; return b;
+  };
+  const potMax = (txt) => { const p = String(txt || '').split('-'); return num(p[p.length - 1]); };
+  const chip = (nombre, dato, color, titulo) => {
+    const c = el('span', 'sa-chip'); c.style.setProperty('--c', color || 'var(--color-fg-muted)');
+    const av = el('span', 'sa-av', iniciales(nombre)); const b = el('b', null, corto(nombre)); c.append(av, b);
+    if (dato) c.append(el('em', null, dato));
+    if (titulo) c.title = titulo; return c;
+  };
+  const diasHasta = (iso) => Math.round((new Date(iso) - new Date(FECHA_JUEGO)) / 864e5);
+  dash.draw('dias-enero', (e) => { e.textContent = String(diasHasta(LIMITE_RENOV)); });
+  cifra('gf', () => fila('resumen')?.goles_favor);
+
+  // ---------- Tablero de decisiones
+  dash.draw('tablero', (e) => {
+    if (!sa.ready(e, ['jugadores', 'fichajes'])) return;
+    const J = dash.data('jugadores').data.filter((j, i, t) => t.findIndex((o) => o.jugador === j.jugador) === i && j.cedido !== 'Sí');
+    const F = dash.data('fichajes').data;
+    const lim = (j) => j.limite_renovar && j.limite_renovar <= LIMITE_RENOV;
+    const cols = [
+      {t: 'Renovar ya', d: 'Acaban en junio. Antes del 1 de enero.', c: 'var(--color-bad)', xs: J.filter((j) => j.accion === 'RENOVAR' && lim(j)).map((j) => chip(j.jugador, j.edad + ' a', 'var(--color-ok)', j.motivo))},
+      {t: 'Proteger cláusula', d: 'Cláusula por debajo de su valor.', c: 'var(--color-warn)', xs: J.filter((j) => j.clausula !== '' && j.valor_max !== '' && Number(j.clausula) < Number(j.valor_max) && Number(j.potencial_num) >= 3.5)
+        .sort((a, b) => Number(a.clausula) / Number(a.valor_max) - Number(b.clausula) / Number(b.valor_max)).slice(0, 8)
+        .map((j) => chip(j.jugador, Math.round(Number(j.clausula) / 1000) + ' mil €', 'var(--color-warn)', `Cláusula ${sa.eur(Number(j.clausula))} · valor hasta ${sa.eur(Number(j.valor_max))}`))},
+      {t: 'Vender o sacar', d: 'Liberan masa salarial.', c: 'var(--color-fg)', xs: J.filter((j) => j.accion === 'VENDER YA' || (j.valoracion_sueldo === 'Cobra de más' && j.equipo === 'Primer equipo' && Number(j.sueldo) >= 40000))
+        .sort((a, b) => Number(b.sueldo) - Number(a.sueldo)).map((j) => chip(j.jugador, Math.round(Number(j.sueldo) / 1000) + ' mil €', 'var(--color-bad)', (j.motivo_sueldo || '') + ' ' + j.motivo))},
+      {t: 'Fichar', d: 'Mejores delanteros de la lista de ojeo.', c: 'var(--color-ok)', xs: F.filter((f) => f.estado === 'Candidato').slice(0, 5).map((f) => chip(f.jugador, Math.round(num(f.nota)) + ' pts', 'var(--color-ok)', `${f.edad} años · ${f.calidad}★ → ${f.potencial}★ · ${f.tipo}`))},
+    ];
+    e.replaceChildren(...cols.map((c) => {
+      const col = el('div', 'sa-col'); col.style.setProperty('--c', c.c);
+      const h = el('h3', null, c.t); h.append(el('span', null, String(c.xs.length)));
+      const ch = el('div', 'sa-chips'); ch.append(...(c.xs.length ? c.xs : [el('span', 'sa-note', 'Nada pendiente')]));
+      col.append(h, el('p', null, c.d), ch); return col;
+    }));
+  });
+
+  // ---------- Fichas por equipo y línea
+  let equipoSel = 'Primer equipo';
+  document.querySelectorAll('.sa-segb').forEach((b) => b.addEventListener('click', () => {
+    equipoSel = b.getAttribute('data-eq');
+    document.querySelectorAll('.sa-segb').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    dash.draw('fichas');
+  }));
+  const linea = (pos) => { const p = String(pos || ''); if (p.startsWith('POR')) return 'Porteros'; if (/^(DF|CR)/.test(p)) return 'Defensas'; if (/^(MC|ME)/.test(p)) return 'Medios'; if (/^(MP|DL)/.test(p)) return 'Ataque'; return 'Sin datos'; };
+  const fichaJugador = (r, extra) => {
+    const c = el('div', 'sa-pc'); c.style.setProperty('--c', COL[r.accion] || 'var(--color-border-line)');
+    c.title = [r.motivo, r.motivo_sueldo].filter(Boolean).join('\n');
+    const top = el('div', 'sa-pc-top'); top.append(el('span', 'sa-pc-n', r.jugador + (r.lesionado === 'Sí' ? ' ✚' : '')), el('span', 'sa-pc-m', `${r.edad} a · ${r.posicion}`));
+    const r2 = el('div', 'sa-pc-row'); r2.append(mini(r.calidad, potMax(r.potencial)), el('span', null, r.calidad === '' ? 'sin datos' : `${r.calidad}★ → ${String(r.potencial).split('-').pop()}★`));
+    const r3 = el('div', 'sa-pc-row');
+    const nota = el('span', 'sa-nota' + (num(r.nota) >= 7 ? ' hi' : num(r.nota) && num(r.nota) < 6.6 ? ' lo' : ''), r.nota === '' ? '–' : sa.dec(num(r.nota), 2));
+    const tag = el('span', 'sa-tag', r.cedido === 'Sí' ? 'cedido' : r.accion === 'MANTENER' ? '' : r.accion.toLowerCase()); tag.style.setProperty('--c', COL[r.accion]);
+    r3.append(nota, tag);
+    c.append(top, r2, r3); if (extra) c.append(extra); return c;
+  };
+  dash.draw('fichas', (e) => {
+    if (!sa.ready(e, ['jugadores'])) return;
+    const rows = dash.data('jugadores').data.filter((r) => r.equipo === equipoSel && r.calidad !== '');
+    const orden = ['Porteros', 'Defensas', 'Medios', 'Ataque'];
+    e.replaceChildren(...orden.map((l) => {
+      const xs = rows.filter((r) => linea(r.posicion) === l).sort((a, b) => Number(b.calidad) - Number(a.calidad) || (num(b.nota) || 0) - (num(a.nota) || 0));
+      if (!xs.length) return el('span');
+      const box = el('div', 'sa-line'); box.append(el('h3', null, `${l} · ${xs.length}`));
+      const g = el('div', 'sa-cards'); g.append(...xs.map((r) => fichaJugador(r))); box.append(g); return box;
+    }));
+  });
+
+  // ---------- Semáforo de contratos
+  dash.draw('semaforo', (e) => {
+    if (!sa.ready(e, ['jugadores'])) return;
+    const J = dash.data('jugadores').data.filter((j, i, t) => t.findIndex((o) => o.jugador === j.jugador) === i && j.cedido !== 'Sí');
+    const fin29 = (j) => (j.fin_contrato || '').startsWith('2029');
+    const lanes = [
+      {t: 'Renovar antes del 1/1', c: 'var(--color-bad)', xs: J.filter((j) => fin29(j) && j.accion === 'RENOVAR')},
+      {t: 'Vender en enero', c: 'var(--color-warn)', xs: J.filter((j) => j.accion === 'VENDER YA')},
+      {t: 'Se van libres en junio', c: 'var(--cds-chart-muted)', xs: J.filter((j) => fin29(j) && j.accion === 'SALE LIBRE')},
+      {t: 'Atados (2030 o más)', c: 'var(--color-ok)', xs: J.filter((j) => !fin29(j) && j.fin_contrato && j.equipo === 'Primer equipo')},
+    ];
+    e.replaceChildren(...lanes.map((l) => {
+      const col = el('div', 'sa-col'); col.style.setProperty('--c', l.c);
+      const h = el('h3', null, l.t); h.append(el('span', null, String(l.xs.length)));
+      const ch = el('div', 'sa-chips');
+      ch.append(...(l.xs.length ? l.xs.map((j) => chip(j.jugador, j.fin_contrato ? j.fin_contrato.slice(0, 4) : '', l.c, j.motivo)) : [el('span', 'sa-note', 'Nadie')]));
+      col.append(h, ch); return col;
+    }));
+  });
+
+  // ---------- Cláusula frente a valor
+  dash.draw('clausulas', (e) => {
+    if (!sa.ready(e, ['jugadores'])) return;
+    const rows = dash.data('jugadores').data
+      .filter((j, i, t) => t.findIndex((o) => o.jugador === j.jugador) === i && j.cedido !== 'Sí' && Number(j.potencial_num) >= 4 && j.valor_max !== '' && Number(j.valor_max) > 0)
+      .map((j) => ({n: j.jugador, cl: j.clausula === '' ? null : Number(j.clausula), v: Number(j.valor_max)}))
+      .sort((a, b) => ((a.cl ?? 1e9) / a.v) - ((b.cl ?? 1e9) / b.v));
+    const W = e.clientWidth || 320, rowH = 22, m = {t: 6, r: 16, b: 24, l: 8};
+    const svg = d3.create('svg').attr('width', '100%'); e.replaceChildren(svg.node());
+    const probe = svg.append('g').style('font-size', 'var(--cds-font-size-caption)'); let lw = 0;
+    rows.forEach((r) => { lw = Math.max(lw, probe.append('text').text(r.n).node().getComputedTextLength()); }); probe.remove();
+    const H = m.t + rows.length * rowH + m.b; svg.attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Cláusula frente a valor de mercado');
+    const x = d3.scaleLinear([0, d3.max(rows, (r) => Math.max(r.v, Math.min(r.cl ?? 0, r.v * 3)))], [m.l + lw + 10, W - m.r]).nice();
+    const y = d3.scaleBand(rows.map((r) => r.n), [m.t, H - m.b]).padding(0.3);
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(Math.max(2, Math.floor(W / 140))).tickFormat((v) => d3.format(',.0f')(v / 1000) + ' mil €').tickSize(-(H - m.t - m.b))).call(sa.axisClean).call((g) => g.select('.domain').remove());
+    const tip = sa.tip(e);
+    rows.forEach((r) => {
+      const cy = y(r.n); const bajo = r.cl != null && r.cl < r.v;
+      svg.append('text').attr('x', m.l).attr('y', cy + y.bandwidth() / 2 + 4).attr('fill', 'var(--color-fg)').style('font-size', 'var(--cds-font-size-caption)').text(r.n);
+      if (r.cl != null) svg.append('rect').attr('x', x(0)).attr('y', cy).attr('height', y.bandwidth()).attr('rx', 2).attr('width', Math.max(2, x(Math.min(r.cl, x.domain()[1])) - x(0)))
+        .attr('fill', bajo ? 'var(--cds-chart-status-critical)' : 'var(--color-ok)').attr('opacity', 0.85)
+        .on('pointermove', (ev) => { const [px, py] = d3.pointer(ev, e); tip.show([r.n, `Cláusula ${sa.eur(r.cl)}`, `Valor hasta ${sa.eur(r.v)}`], px, py); }).on('pointerleave', () => tip.hide());
+      else svg.append('text').attr('x', x(0) + 4).attr('y', cy + y.bandwidth() / 2 + 4).attr('fill', 'var(--color-ok)').style('font-size', 'var(--cds-font-size-caption)').text('sin cláusula');
+      svg.append('line').attr('x1', x(r.v)).attr('x2', x(r.v)).attr('y1', cy - 3).attr('y2', cy + y.bandwidth() + 3).attr('stroke', 'var(--color-fg)').attr('stroke-width', 2);
+    });
+    sa.tip(e);
+  });
+
+  // ---------- Candidatos (anillo de puntuación)
+  const anillo = (v, top) => {
+    const s = d3.create('svg').attr('class', 'sa-ring').attr('width', 56).attr('height', 56).attr('viewBox', '0 0 56 56');
+    const a = d3.arc().innerRadius(20).outerRadius(26).startAngle(0);
+    s.append('path').attr('transform', 'translate(28,28)').attr('d', a.endAngle(2 * Math.PI)()).attr('fill', 'var(--color-border-line)');
+    s.append('path').attr('transform', 'translate(28,28)').attr('d', a.endAngle(2 * Math.PI * Math.max(0, Math.min(1, v / 100)))()).attr('fill', top ? 'var(--color-ok)' : v >= 70 ? dash.colors[0] : 'var(--color-warn)');
+    s.append('text').attr('x', 28).attr('y', 33).attr('text-anchor', 'middle').attr('fill', 'var(--color-fg)').style('font-size', '15px').style('font-weight', 700).text(Math.round(v));
+    return s.node();
+  };
+  dash.draw('candidatos', (e) => {
+    if (!sa.ready(e, ['fichajes'])) return;
+    const xs = dash.data('fichajes').data.filter((f) => f.estado === 'Candidato');
+    e.replaceChildren(...xs.map((f, i) => {
+      const c = el('div', 'sa-cand' + (i === 0 ? ' top' : ''));
+      const b = el('div', 'sa-cand-b');
+      b.append(el('span', 'sa-cand-n', (i === 0 ? '★ ' : '') + f.jugador), el('span', 'sa-pc-m', `${f.edad} años · ${f.posicion}`));
+      const r = el('div', 'sa-pc-row'); r.append(mini(f.calidad, potMax(f.potencial)), el('span', null, `${f.calidad}★ → ${String(f.potencial).split('-').pop()}★`)); b.append(r);
+      const coste = f.tipo === 'Libre' ? 'Gratis' : f.precontrato === 'Sí' ? 'Precontrato · ' + (f.sueldo ? Math.round(num(f.sueldo) / 1000) + ' mil €/año' : '') : 'Traspaso';
+      b.append(pill(coste, f.tipo === 'Libre' || f.precontrato === 'Sí' ? 'ok' : ''));
+      c.append(anillo(num(f.nota), i === 0), b); return c;
+    }));
+  });
+
+  // ---------- Mapa y fichas de la cantera
+  dash.draw('mapa-cantera', (e) => {
+    if (!sa.ready(e, ['jugadores'])) return;
+    const eqs = ['Primer equipo', 'Salamanca B', 'Juvenil'];
+    const rows = dash.data('jugadores').data.filter((j, i, t) => t.findIndex((o) => o.jugador === j.jugador) === i && j.cedido !== 'Sí' && Number(j.edad) <= 21 && j.calidad !== '')
+      .map((j) => ({n: j.jugador, cal: Number(j.calidad), pot: Number(j.potencial_num), edad: Number(j.edad), eq: eqs.indexOf(j.equipo)}));
+    const W = e.clientWidth || 320, H = 380, m = {t: 16, r: 16, b: 34, l: 40};
+    const jit = (n) => ((n.split('').reduce((a, c) => a + c.charCodeAt(0), 0) % 7) - 3) * 0.035;
+    const x = d3.scaleLinear([0.75, 3.75], [m.l, W - m.r]), y = d3.scaleLinear([1.5, 5.1], [H - m.b, m.t]);
+    const svg = d3.create('svg').attr('width', '100%').attr('viewBox', `0 0 ${W} ${H}`).attr('role', 'img').attr('aria-label', 'Calidad frente a potencial de los jóvenes');
+    svg.append('g').attr('transform', `translate(0,${H - m.b})`).call(d3.axisBottom(x).ticks(6).tickFormat((v) => v + '★').tickSize(-(H - m.t - m.b))).call(sa.axisClean);
+    svg.append('g').attr('transform', `translate(${m.l},0)`).call(d3.axisLeft(y).ticks(5).tickFormat((v) => v + '★').tickSize(-(W - m.l - m.r))).call(sa.axisClean).call((g) => g.select('.domain').remove());
+    svg.append('text').attr('x', W - m.r).attr('y', H - 4).attr('text-anchor', 'end').attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text('Calidad hoy →');
+    svg.append('text').attr('x', m.l + 4).attr('y', m.t + 10).attr('fill', 'var(--color-fg-muted)').style('font-size', 'var(--cds-font-size-caption)').text('↑ Potencial');
+    svg.append('rect').attr('x', x(1.75)).attr('y', y(5.1)).attr('width', x(3.75) - x(1.75)).attr('height', y(4) - y(5.1)).attr('fill', 'var(--color-ok)').attr('opacity', 0.07);
+    svg.append('text').attr('x', x(3.7)).attr('y', y(5.0) + 12).attr('text-anchor', 'end').attr('fill', 'var(--color-ok)').style('font-size', 'var(--cds-font-size-caption)').text('Joyas');
+    const tip = sa.tip(e);
+    const r = (ed) => Math.max(4, 13 - (ed - 15) * 1.6);
+    svg.append('g').selectAll('circle').data(rows).join('circle')
+      .attr('cx', (d) => x(d.cal + jit(d.n))).attr('cy', (d) => y(d.pot + jit(d.n + 'x'))).attr('r', (d) => r(d.edad))
+      .attr('fill', (d) => dash.colors[d.eq]).attr('fill-opacity', 0.75).attr('stroke', 'var(--color-bg)')
+      .on('pointermove', (ev, d) => { const [px, py] = d3.pointer(ev, e); tip.show([d.n, `${d.edad} años · ${eqs[d.eq]}`, `${d.cal}★ hoy → ${d.pot}★ de potencial`], px, py); }).on('pointerleave', () => tip.hide());
+    rows.filter((d) => d.pot >= 4.25).forEach((d) => svg.append('text').attr('x', x(d.cal + jit(d.n)) + r(d.edad) + 3).attr('y', y(d.pot + jit(d.n + 'x')) + 4).attr('fill', 'var(--color-fg)').style('font-size', '11px').text(corto(d.n)));
+    e.replaceChildren(svg.node()); sa.tip(e);
+  });
+  dash.draw('fichas-cantera', (e) => {
+    if (!sa.ready(e, ['cantera'])) return;
+    const rows = dash.data('cantera').data;
+    const grupos = d3.groups(rows, (r) => r.propuesta);
+    e.replaceChildren(...grupos.map(([g, xs]) => {
+      const box = el('div', 'sa-line'); box.append(el('h3', null, `Que juegue en: ${g} · ${xs.length}`));
+      const cards = el('div', 'sa-cards');
+      cards.append(...xs.map((r) => {
+        const c = el('div', 'sa-pc'); c.style.setProperty('--c', g === 'Primer equipo' ? 'var(--color-ok)' : dash.colors[g === 'Juvenil' ? 2 : 1]); c.title = r.motivo;
+        const top = el('div', 'sa-pc-top'); top.append(el('span', 'sa-pc-n', r.jugador), el('span', 'sa-pc-m', `${r.edad} a · ${r.posicion}`));
+        const r2 = el('div', 'sa-pc-row'); r2.append(mini(r.calidad, potMax(r.potencial)), el('span', null, `${r.calidad}★ → ${String(r.potencial).split('-').pop()}★`));
+        const r3 = el('div', 'sa-pc-row'); r3.append(el('span', null, r.clausula === '' ? 'sin cláusula' : 'cláusula ' + Math.round(num(r.clausula) / 1000) + ' mil €'));
+        if (r.le_siguen === 'Sí') r3.append(pill('le siguen', 'bad'));
+        c.append(top, r2, r3); return c;
+      }));
+      box.append(cards); return box;
+    }));
+  });
 </script>
