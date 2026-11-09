@@ -102,25 +102,28 @@ def rendimiento_jugadores(carpeta):
     _, filas = leer_csv(ruta_al)
     datos = {}
     for f in filas:
-        d = datos.setdefault(f["Jugador"], {"notas": [], "pos": set(), "goles": 0, "asist": 0})
+        d = datos.setdefault(f["Jugador"], {"notas": [], "pos": set(), "goles": 0, "asist": 0, "tit": 0, "apar": 0})
         n = numero(f.get("Nota"))
         if n is not None:
             d["notas"].append(n)
         d["pos"].add(f.get("Posición", ""))
+        d["apar"] += 1
+        if (f.get("Titular") or "Sí").startswith("Sí"):
+            d["tit"] += 1
     if ruta_go.exists():
         _, goles = leer_csv(ruta_go)
         for g in goles:
             if _clave(g.get("Equipo", "")) != "salamanca":
                 continue
             if g.get("Goleador"):
-                datos.setdefault(g["Goleador"], {"notas": [], "pos": set(), "goles": 0, "asist": 0})["goles"] += 1
+                datos.setdefault(g["Goleador"], {"notas": [], "pos": set(), "goles": 0, "asist": 0, "tit": 0, "apar": 0})["goles"] += 1
             if g.get("Asistente"):
-                datos.setdefault(g["Asistente"], {"notas": [], "pos": set(), "goles": 0, "asist": 0})["asist"] += 1
+                datos.setdefault(g["Asistente"], {"notas": [], "pos": set(), "goles": 0, "asist": 0, "tit": 0, "apar": 0})["asist"] += 1
     res = []
     for nombre, d in datos.items():
         notas = d["notas"]
         media = round(sum(notas) / len(notas), 2) if notas else None
-        res.append({"Jugador": nombre, "Titularidades": len(notas), "Nota media": media,
+        res.append({"Jugador": nombre, "Titularidades": d["tit"], "Partidos": d["apar"], "Nota media": media,
                     "Mejor nota": max(notas) if notas else None, "Peor nota": min(notas) if notas else None,
                     "Goles": d["goles"], "Asistencias": d["asist"], "Posiciones": ", ".join(sorted(p for p in d["pos"] if p)),
                     "_nivel": "verde" if media and media >= 7 else ("rojo" if media and media < 6.5 else "")})
@@ -310,8 +313,8 @@ def generar(ruta_csv, cfg, carpeta, carpeta_liga=None):
     jugadores = rendimiento_jugadores(carpeta_partidos)
     if jugadores:
         inf.seccion("Jugadores (titularidades, nota, goles y asistencias)")
-        inf.texto("Solo cuento titulares: las capturas del partido no muestran a los suplentes que entran.")
-        inf.tabla("Jugadores", ["Jugador", "Titularidades", "Nota media", "Mejor nota", "Peor nota", "Goles", "Asistencias",
+        inf.texto("J1-J4: once inicial (captura de Resultado). J5-J6: jugadores en el campo al final (captura en el 90'); los que entraron desde el banquillo no cuentan como titulares.")
+        inf.tabla("Jugadores", ["Jugador", "Partidos", "Titularidades", "Nota media", "Mejor nota", "Peor nota", "Goles", "Asistencias",
                                 "Posiciones"], jugadores)
 
     # Lista de partidos

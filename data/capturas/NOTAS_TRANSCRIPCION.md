@@ -118,7 +118,7 @@ Captura: `tactica_corner-defensa-lista-defensas-aereos_2028-09-18.png` → `data
 Captura: `partido_J05-alcobendas_2028-09-20.webp`.
 
 - Estadísticas → `partidos.csv`. **Mentalidad**: no sale en la captura; pongo Equilibrada (la habitual, según el usuario).
-- Once inicial con nota → `alineaciones.csv`. "Benítes" (DB, nº 28) = Erick Benítes, del Salamanca B. Las flechas verdes son cambios (confirmado por el usuario): Benítes, Valdaliso, Edu González, Kadochnikov y Osei fueron sustituidos. No se ve quién entró.
+- Jugadores en el campo al final, con su nota → `alineaciones.csv`. La captura es del 90', así que el panel de formación muestra **quién estaba en el campo al final**: las flechas marcan a los que **entraron** desde el banquillo (Benítes, Valdaliso, Edu González, Kadochnikov y Osei). "Benítes" (DB, nº 28) = Erick Benítes, del Salamanca B. No se ve quién salió.
 - **Clasificación**: solo se ven los puestos 9-15 → `data/liga/clasificacion-parcial_2028-09-20.csv`. La herramienta sigue usando la completa del 18/09 hasta tener otra captura entera.
 - Calendario: añadido el resultado del 20/09 → `data/liga/calendario_2028-09-20.csv`.
 - Otros resultados de la jornada (visibles): Fuenlabrada 2-0 Guadalajara, Mirandés B 2-0 Guijuelo, Navalcarnero 2-2 Ávila, Náxara 1-1 Unionistas y Numantia 2-1 Las Rozas.
@@ -128,8 +128,8 @@ Captura: `partido_J05-alcobendas_2028-09-20.webp`.
 Captura: `partido_J06-mirandes-b_2028-09-24.webp`.
 
 - Estadísticas → `partidos.csv` (mentalidad: Equilibrada, la habitual; no sale en la captura).
-- Once con notas → `alineaciones.csv`. Salieron (flechas): Valdaliso, Tello, Edu González, Kadochnikov y Osei.
-- **Gol: 29', L. Bilbao, asistencia de D. Hamansenya.** Ninguno de los dos está en el once que muestra la captura, así que debieron entrar desde el banquillo antes del 29' (¿lesiones?). **Sin confirmar.**
+- Jugadores en el campo al final → `alineaciones.csv`. Entraron desde el banquillo (flechas): Valdaliso, Tello, Edu González, Kadochnikov y Osei.
+- **Gol: 29', L. Bilbao, asistencia de D. Hamansenya.** Los dos fueron titulares y el usuario los cambió después porque estaban cansados. Por eso no salen en la captura; su nota no se ve. Están en `alineaciones.csv` como titulares, sin nota.
 - Clasificación parcial (puestos 7-13): somos 10º con 9 puntos → `data/liga/clasificacion-parcial_2028-09-24.csv`.
 - Otros resultados visibles: C.D. Coria 0-0 Guijuelo y Zamora 0-0 Valladolid B.
 - **León**: no jugó porque está convocado con su selección (República Dominicana), según el usuario.

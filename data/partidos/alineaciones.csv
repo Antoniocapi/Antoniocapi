@@ -1,67 +1,69 @@
-﻿Fecha;Jornada;Rival;Jugador;Nombre en el partido;Dorsal;Posición;Nota;Titular
-03/09/2028;1;Numantia;Pol Escribano;Escribano;21;ARI;6.4;Sí
-03/09/2028;1;Numantia;Aimar Vicandi;Vicandi;9;EPD;6.3;Sí
-03/09/2028;1;Numantia;Luis Bilbao;Luis Bilbao;18;EXT;6.2;Sí
-03/09/2028;1;Numantia;Pau Calvo;Calvo;7;MC;6.6;Sí
-03/09/2028;1;Numantia;Adur Alsúa;Alsúa;6;CTT;6.5;Sí
-03/09/2028;1;Numantia;Pavel Kadochnikov;Kadochnikov;15;PVO;6.3;Sí
-03/09/2028;1;Numantia;David Hamansenya;Hamansenya;11;LAT;6.6;Sí
-03/09/2028;1;Numantia;Mulas;Mulas;12;CD;6.5;Sí
-03/09/2028;1;Numantia;Luis Paulo;Luis Paulo;4;CD;6.5;Sí
-03/09/2028;1;Numantia;Pablo Cojo;Cojo;17;LO;6.1;Sí
-03/09/2028;1;Numantia;Álvaro Jiménez;Jiménez;;PSC;6.2;Sí
-06/09/2028;2;C.D. Coria;Óscar León;León;19;ARI;8.1;Sí
-06/09/2028;2;C.D. Coria;Mario Valdaliso;Valdaliso;22;EXT;6.4;Sí
-06/09/2028;2;C.D. Coria;Aimar Vicandi;Vicandi;9;DPD;6.7;Sí
-06/09/2028;2;C.D. Coria;Xavi Miràngels;Miràngels;8;MC;6.9;Sí
-06/09/2028;2;C.D. Coria;Jon Eceizabarrena;Eceizabarrena;16;CTT;6.5;Sí
-06/09/2028;2;C.D. Coria;Adur Alsúa;Alsúa;6;PVO;6.6;Sí
-06/09/2028;2;C.D. Coria;Philip Osei;Osei Philip;20;LAT;7.2;Sí
-06/09/2028;2;C.D. Coria;Luis Paulo;Luis Paulo;4;CD;6.7;Sí
-06/09/2028;2;C.D. Coria;Javier Murúa;Murúa;5;CD;6.8;Sí
-06/09/2028;2;C.D. Coria;Markel Ucín;Ucín;2;LO;6.1;Sí
-06/09/2028;2;C.D. Coria;Álvaro Jiménez;Jiménez;;PSC;7.1;Sí
-10/09/2028;3;Unionistas;Óscar León;León;19;ARI;7.0;Sí
-10/09/2028;3;Unionistas;Aimar Vicandi;Vicandi;9;EXT;6.4;Sí
-10/09/2028;3;Unionistas;Luis Bilbao;Luis Bilbao;18;EPD;6.4;Sí
-10/09/2028;3;Unionistas;Xavi Miràngels;Miràngels;8;MC;6.4;Sí
-10/09/2028;3;Unionistas;Adur Alsúa;Alsúa;6;CTT;6.6;Sí
-10/09/2028;3;Unionistas;Pau Calvo;Calvo;7;PVO;6.6;Sí
-10/09/2028;3;Unionistas;David Hamansenya;Hamansenya;11;LAT;6.5;Sí
-10/09/2028;3;Unionistas;Mulas;Mulas;12;CD;6.6;Sí
-10/09/2028;3;Unionistas;Javier Murúa;Murúa;5;CD;7.2;Sí
-10/09/2028;3;Unionistas;Pablo Cojo;Cojo;17;LO;6.8;Sí
-10/09/2028;3;Unionistas;Álvaro Jiménez;Jiménez;;PSC;6.4;Sí
-17/09/2028;4;Guijuelo;Óscar León;León;19;ARI;6.1;Sí
-17/09/2028;4;Guijuelo;Aimar Vicandi;Vicandi;9;EPD;6.1;Sí
-17/09/2028;4;Guijuelo;Pol Escribano;Escribano;21;DPD;6.9;Sí
-17/09/2028;4;Guijuelo;Jon Eceizabarrena;Eceizabarrena;16;MC;6.7;Sí
-17/09/2028;4;Guijuelo;Adur Alsúa;Alsúa;6;CTT;6.8;Sí
-17/09/2028;4;Guijuelo;Pavel Kadochnikov;Kadochnikov;15;PVO;6.3;Sí
-17/09/2028;4;Guijuelo;David Hamansenya;Hamansenya;11;LAT;6.5;Sí
-17/09/2028;4;Guijuelo;Mulas;Mulas;12;CD;7.0;Sí
-17/09/2028;4;Guijuelo;Javier Murúa;Murúa;5;CD;6.9;Sí
-17/09/2028;4;Guijuelo;Pablo Cojo;Cojo;17;LO;7.1;Sí
-17/09/2028;4;Guijuelo;Álvaro Jiménez;Jiménez;;PSC;7.4;Sí
-20/09/2028;5;R.C. Alcobendas;Erick Benítes;Benítes;28;DB;6.5;Sí
-20/09/2028;5;R.C. Alcobendas;Mario Valdaliso;Valdaliso;22;EXT;6.8;Sí
-20/09/2028;5;R.C. Alcobendas;Aimar Vicandi;Vicandi;9;DPD;6.4;Sí
-20/09/2028;5;R.C. Alcobendas;Edu González;Edu González;23;MP;6.6;Sí
-20/09/2028;5;R.C. Alcobendas;Pau Calvo;Calvo;7;CTT;6.8;Sí
-20/09/2028;5;R.C. Alcobendas;Pavel Kadochnikov;Kadochnikov;15;PVO;6.6;Sí
-20/09/2028;5;R.C. Alcobendas;Philip Osei;Osei Philip;20;LAT;6.6;Sí
-20/09/2028;5;R.C. Alcobendas;Luis Paulo;Luis Paulo;4;CD;7.1;Sí
-20/09/2028;5;R.C. Alcobendas;Javier Murúa;Murúa;5;CD;6.8;Sí
-20/09/2028;5;R.C. Alcobendas;Pablo Cojo;Cojo;17;LO;6.8;Sí
-20/09/2028;5;R.C. Alcobendas;Álvaro Jiménez;Jiménez;;PSC;7.3;Sí
-24/09/2028;6;Mirandés B;Pol Escribano;Escribano;21;ARI;6.5;Sí
-24/09/2028;6;Mirandés B;Mario Valdaliso;Valdaliso;22;EXT;6.5;Sí
-24/09/2028;6;Mirandés B;Joaquín Tello;Tello;30;EPD;6.6;Sí
-24/09/2028;6;Mirandés B;Edu González;Edu González;23;MC;6.6;Sí
-24/09/2028;6;Mirandés B;Adur Alsúa;Alsúa;6;CTT;6.6;Sí
-24/09/2028;6;Mirandés B;Pavel Kadochnikov;Kadochnikov;15;PVO;6.6;Sí
-24/09/2028;6;Mirandés B;Philip Osei;Osei Philip;20;LAT;6.6;Sí
-24/09/2028;6;Mirandés B;Luis Paulo;Luis Paulo;4;CD;7.3;Sí
-24/09/2028;6;Mirandés B;Javier Murúa;Murúa;5;CD;7.4;Sí
-24/09/2028;6;Mirandés B;Pablo Cojo;Cojo;17;LO;7.6;Sí
-24/09/2028;6;Mirandés B;Álvaro Jiménez;Jiménez;;PSC;7.2;Sí
+﻿Fecha;Jornada;Rival;Jugador;Nombre en el partido;Dorsal;Posición;Nota;Titular;Entró desde el banquillo
+03/09/2028;1;Numantia;Pol Escribano;Escribano;21;ARI;6.4;Sí;No
+03/09/2028;1;Numantia;Aimar Vicandi;Vicandi;9;EPD;6.3;Sí;No
+03/09/2028;1;Numantia;Luis Bilbao;Luis Bilbao;18;EXT;6.2;Sí;No
+03/09/2028;1;Numantia;Pau Calvo;Calvo;7;MC;6.6;Sí;No
+03/09/2028;1;Numantia;Adur Alsúa;Alsúa;6;CTT;6.5;Sí;No
+03/09/2028;1;Numantia;Pavel Kadochnikov;Kadochnikov;15;PVO;6.3;Sí;No
+03/09/2028;1;Numantia;David Hamansenya;Hamansenya;11;LAT;6.6;Sí;No
+03/09/2028;1;Numantia;Mulas;Mulas;12;CD;6.5;Sí;No
+03/09/2028;1;Numantia;Luis Paulo;Luis Paulo;4;CD;6.5;Sí;No
+03/09/2028;1;Numantia;Pablo Cojo;Cojo;17;LO;6.1;Sí;No
+03/09/2028;1;Numantia;Álvaro Jiménez;Jiménez;;PSC;6.2;Sí;No
+06/09/2028;2;C.D. Coria;Óscar León;León;19;ARI;8.1;Sí;No
+06/09/2028;2;C.D. Coria;Mario Valdaliso;Valdaliso;22;EXT;6.4;Sí;No
+06/09/2028;2;C.D. Coria;Aimar Vicandi;Vicandi;9;DPD;6.7;Sí;No
+06/09/2028;2;C.D. Coria;Xavi Miràngels;Miràngels;8;MC;6.9;Sí;No
+06/09/2028;2;C.D. Coria;Jon Eceizabarrena;Eceizabarrena;16;CTT;6.5;Sí;No
+06/09/2028;2;C.D. Coria;Adur Alsúa;Alsúa;6;PVO;6.6;Sí;No
+06/09/2028;2;C.D. Coria;Philip Osei;Osei Philip;20;LAT;7.2;Sí;No
+06/09/2028;2;C.D. Coria;Luis Paulo;Luis Paulo;4;CD;6.7;Sí;No
+06/09/2028;2;C.D. Coria;Javier Murúa;Murúa;5;CD;6.8;Sí;No
+06/09/2028;2;C.D. Coria;Markel Ucín;Ucín;2;LO;6.1;Sí;No
+06/09/2028;2;C.D. Coria;Álvaro Jiménez;Jiménez;;PSC;7.1;Sí;No
+10/09/2028;3;Unionistas;Óscar León;León;19;ARI;7.0;Sí;No
+10/09/2028;3;Unionistas;Aimar Vicandi;Vicandi;9;EXT;6.4;Sí;No
+10/09/2028;3;Unionistas;Luis Bilbao;Luis Bilbao;18;EPD;6.4;Sí;No
+10/09/2028;3;Unionistas;Xavi Miràngels;Miràngels;8;MC;6.4;Sí;No
+10/09/2028;3;Unionistas;Adur Alsúa;Alsúa;6;CTT;6.6;Sí;No
+10/09/2028;3;Unionistas;Pau Calvo;Calvo;7;PVO;6.6;Sí;No
+10/09/2028;3;Unionistas;David Hamansenya;Hamansenya;11;LAT;6.5;Sí;No
+10/09/2028;3;Unionistas;Mulas;Mulas;12;CD;6.6;Sí;No
+10/09/2028;3;Unionistas;Javier Murúa;Murúa;5;CD;7.2;Sí;No
+10/09/2028;3;Unionistas;Pablo Cojo;Cojo;17;LO;6.8;Sí;No
+10/09/2028;3;Unionistas;Álvaro Jiménez;Jiménez;;PSC;6.4;Sí;No
+17/09/2028;4;Guijuelo;Óscar León;León;19;ARI;6.1;Sí;No
+17/09/2028;4;Guijuelo;Aimar Vicandi;Vicandi;9;EPD;6.1;Sí;No
+17/09/2028;4;Guijuelo;Pol Escribano;Escribano;21;DPD;6.9;Sí;No
+17/09/2028;4;Guijuelo;Jon Eceizabarrena;Eceizabarrena;16;MC;6.7;Sí;No
+17/09/2028;4;Guijuelo;Adur Alsúa;Alsúa;6;CTT;6.8;Sí;No
+17/09/2028;4;Guijuelo;Pavel Kadochnikov;Kadochnikov;15;PVO;6.3;Sí;No
+17/09/2028;4;Guijuelo;David Hamansenya;Hamansenya;11;LAT;6.5;Sí;No
+17/09/2028;4;Guijuelo;Mulas;Mulas;12;CD;7.0;Sí;No
+17/09/2028;4;Guijuelo;Javier Murúa;Murúa;5;CD;6.9;Sí;No
+17/09/2028;4;Guijuelo;Pablo Cojo;Cojo;17;LO;7.1;Sí;No
+17/09/2028;4;Guijuelo;Álvaro Jiménez;Jiménez;;PSC;7.4;Sí;No
+20/09/2028;5;R.C. Alcobendas;Erick Benítes;Benítes;28;DB;6.5;No;Sí
+20/09/2028;5;R.C. Alcobendas;Mario Valdaliso;Valdaliso;22;EXT;6.8;No;Sí
+20/09/2028;5;R.C. Alcobendas;Aimar Vicandi;Vicandi;9;DPD;6.4;Sí (en el campo al final, sin flecha);No
+20/09/2028;5;R.C. Alcobendas;Edu González;Edu González;23;MP;6.6;No;Sí
+20/09/2028;5;R.C. Alcobendas;Pau Calvo;Calvo;7;CTT;6.8;Sí (en el campo al final, sin flecha);No
+20/09/2028;5;R.C. Alcobendas;Pavel Kadochnikov;Kadochnikov;15;PVO;6.6;No;Sí
+20/09/2028;5;R.C. Alcobendas;Philip Osei;Osei Philip;20;LAT;6.6;No;Sí
+20/09/2028;5;R.C. Alcobendas;Luis Paulo;Luis Paulo;4;CD;7.1;Sí (en el campo al final, sin flecha);No
+20/09/2028;5;R.C. Alcobendas;Javier Murúa;Murúa;5;CD;6.8;Sí (en el campo al final, sin flecha);No
+20/09/2028;5;R.C. Alcobendas;Pablo Cojo;Cojo;17;LO;6.8;Sí (en el campo al final, sin flecha);No
+20/09/2028;5;R.C. Alcobendas;Álvaro Jiménez;Jiménez;;PSC;7.3;Sí (en el campo al final, sin flecha);No
+24/09/2028;6;Mirandés B;Pol Escribano;Escribano;21;ARI;6.5;Sí (en el campo al final, sin flecha);No
+24/09/2028;6;Mirandés B;Mario Valdaliso;Valdaliso;22;EXT;6.5;No;Sí
+24/09/2028;6;Mirandés B;Joaquín Tello;Tello;30;EPD;6.6;No;Sí
+24/09/2028;6;Mirandés B;Edu González;Edu González;23;MC;6.6;No;Sí
+24/09/2028;6;Mirandés B;Adur Alsúa;Alsúa;6;CTT;6.6;Sí (en el campo al final, sin flecha);No
+24/09/2028;6;Mirandés B;Pavel Kadochnikov;Kadochnikov;15;PVO;6.6;No;Sí
+24/09/2028;6;Mirandés B;Philip Osei;Osei Philip;20;LAT;6.6;No;Sí
+24/09/2028;6;Mirandés B;Luis Paulo;Luis Paulo;4;CD;7.3;Sí (en el campo al final, sin flecha);No
+24/09/2028;6;Mirandés B;Javier Murúa;Murúa;5;CD;7.4;Sí (en el campo al final, sin flecha);No
+24/09/2028;6;Mirandés B;Pablo Cojo;Cojo;17;LO;7.6;Sí (en el campo al final, sin flecha);No
+24/09/2028;6;Mirandés B;Álvaro Jiménez;Jiménez;;PSC;7.2;Sí (en el campo al final, sin flecha);No
+24/09/2028;6;Mirandés B;Luis Bilbao;L. Bilbao;18;;;Sí;No
+24/09/2028;6;Mirandés B;David Hamansenya;D. Hamansenya;11;;;Sí;No

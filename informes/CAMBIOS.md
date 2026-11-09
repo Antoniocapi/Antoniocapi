@@ -1,5 +1,10 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Corrección: en la J5 y la J6 las flechas marcan a los que ENTRARON
+- Como Bilbao y Hamansenya marcaron en el 29' y luego los cambiaste por cansancio, las capturas del 90' muestran a quien estaba en el campo al final. Las flechas son los que entraron desde el banquillo. Lo había leído al revés.
+- **Corregido**: alineaciones (titular o suplente), análisis de la J5 y la J6 y notas de transcripción. Bilbao y Hamansenya, titulares en la J6 (sin nota en la captura).
+- El informe de partidos separa ahora **partidos jugados** y **titularidades**.
+
 ## 09/11 · Jornada 6: Salamanca 1-0 Mirandés B · y León internacional
 - **Transcrito**: estadísticas, once con notas, gol (29', Bilbao, asistencia de Hamansenya), calendario y parte de la clasificación (10º con 9 puntos).
 - **Partido**: el mejor de la temporada. 2,29 de xG frente a 0,33, 3 ocasiones claras frente a 0 y tercera portería a cero seguida. Cojo 7,6, Murúa 7,4 y Luis Paulo 7,3.
