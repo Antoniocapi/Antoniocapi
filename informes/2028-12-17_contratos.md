@@ -12,8 +12,8 @@ Regla: renovar antes del 1 de enero de su último año (cuando ya puede firmar u
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 🔴 | Javier Murúa | Primer equipo | 31 | 3 | 3 | Des | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 100.000 | 48.000 | VENDER YA | 31 años y sin margen de mejora (3★/3★): vender mientras vale ~48.000 €. |
 | 🔴 | Jon Eceizabarrena | Primer equipo | 23 | 3 | 4 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 60.000 | 75.000 | MANTENER | Renovado: 2 años (23/12/2028). Pásame la vista de contratos para ver su nuevo sueldo y cláusula. |
-| 🔴 | Jordi Martínez | Salamanca B | 20 | 2 | 3-4 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 20.000 | 0 | RENOVAR | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
-| 🔴 | Lucas Balan | Salamanca B | 19 | 2.5 | 4-5 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 26.000 | 22.000 | RENOVAR | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
+| 🔴 | Jordi Martínez | Salamanca B | 20 | 2 | 3-4 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 20.000 | 0 | MANTENER | Renovado: renovado (diciembre de 2028). Pásame la vista de contratos para ver su nuevo sueldo y cláusula. |
+| 🔴 | Lucas Balan | Salamanca B | 19 | 2.5 | 4-5 |  | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 26.000 | 22.000 | MANTENER | Renovado: renovado (diciembre de 2028). Pásame la vista de contratos para ver su nuevo sueldo y cláusula. |
 | 🔴 | Manu Vigo | Primer equipo | 23 | 2 | 2.5 | Trn | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 29.500 | 12.000 | SALE LIBRE | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. |
 | 🔴 | Marco Coronel | Salamanca B | 23 | 2 | 2.5 | Le siguen otros clubes | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 22.000 | 0 | SALE LIBRE | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
 | 🔴 | Mario Segura | Salamanca B | 21 | 1.5 | 2-3 | Lesionado | 30/06/2029 | 6.4 | 01/01/2029 | 15 | 19.250 | 0 | RENOVAR | Rinde muy por encima de sus estrellas (nota 7.01 en 1368'): renovar antes del 01/01/2029. |

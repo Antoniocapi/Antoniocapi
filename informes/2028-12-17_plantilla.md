@@ -7,10 +7,10 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 ## Resumen
 
 - **VENDER YA**: 1
-- **RENOVAR**: 4
+- **RENOVAR**: 2
 - **CEDER**: 1
 - **SALE LIBRE**: 8
-- **MANTENER**: 37
+- **MANTENER**: 39
 - **CEDIDO AQUÍ**: 2
 - **SIN DATOS**: 4
 
@@ -25,8 +25,6 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 🟢 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo | Apy | 30/06/2029 | 39.500 | Joven (21) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
-| 🟢 | Jordi Martínez | Salamanca B | 20 | POR | 2 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 20.000 | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
-| 🟢 | Lucas Balan | Salamanca B | 19 | ME (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2029 | 26.000 | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Mario Segura | Salamanca B | 21 | MC | 1.5 | 2-3 | Promesa casi en el primer equipo | Lesionado | 30/06/2029 | 19.250 | Rinde muy por encima de sus estrellas (nota 7.01 en 1368'): renovar antes del 01/01/2029. |
 
 ## CEDER
@@ -88,6 +86,8 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Erick Benítes | Salamanca B | 17 | DL (C) | 2 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 15.750 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Isaac Varela | Salamanca B | 17 | MP (I) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 18.250 | 2.5★/4-5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Joaquín Tello | Salamanca B | 17 | MP (I) | 2 | 4-5 | Futura promesa | Con minutos en el B | 30/06/2030 | 7.000 | 2★/4-5★, ya suma minutos con el B: no hace falta cederlo. Contrato hasta 30/06/2030. |
+| Jordi Martínez | Salamanca B | 20 | POR | 2 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 20.000 | Renovado: renovado (diciembre de 2028). Pásame la vista de contratos para ver su nuevo sueldo y cláusula. |
+| Lucas Balan | Salamanca B | 19 | ME (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2029 | 26.000 | Renovado: renovado (diciembre de 2028). Pásame la vista de contratos para ver su nuevo sueldo y cláusula. |
 | Manuel | Salamanca B | 17 | DF (C) | 2 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2031 | 20.000 | 2★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
 
 ## CEDIDO AQUÍ

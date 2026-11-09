@@ -1,5 +1,9 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Renovaciones cerradas salvo Calvo
+- Renovados: León, Eceizabarrena, Balan y Jordi Martínez (en `renovados` de config.yaml).
+- **Calvo pide 120.000 €**: sueldo justo ≈73.000 €. Propuesta: contraoferta de 70.000-80.000 € con primas; si no acepta, venderlo en enero.
+
 ## 09/11 · Portal del 23/12/2028
 - **Clasificación**: 6º con 29 puntos, a 1 del playoff. 19 de 24 puntos en las jornadas 10-17 y 3 victorias seguidas.
 - **Renovados**: León (3 años) y Eceizabarrena (2 años). Ya no salen como «renovar»; falta la captura de sus nuevos contratos.

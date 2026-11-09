@@ -1,5 +1,5 @@
 orden,prioridad,area,pestana,tarea,detalle
-1,Urgente,Contratos,contratos,"Renovar a Calvo, Balan y Jordi Martínez antes del 1/1",Eceizabarrena ya renovó (2 años). Calvo: subiéndole el sueldo (justo ≈73.000 €). Balan: renovar y ceder.
+1,Urgente,Contratos,contratos,Calvo pide 120.000 €: contraoferta o venta,"Su sueldo justo es ≈73.000 € (cobra 39.500 €). Contraoferta: 70.000-80.000 € fijos + primas por partido y una cláusula alta. Si no acepta antes del 1/1, venderlo en enero: en junio se iría gratis."
 2,Urgente,Contratos,contratos,"Subir cláusulas: Jiménez, Ruvira, Machado y Varela","Jiménez 100.000 € con 6,98 de media; Ruvira 82.000 €; Machado 29.000 € (ya 4-5★); Varela 73.000 €."
 3,Alta,Ventas,contratos,Vender a Murúa en enero,"31 años, 100.000 € de sueldo, acaba en junio y ya no es titular."
 4,Alta,Ventas,plantilla,"Sacar a Kadochnikov, Ucín y Manu Vigo",151.500 € al año de masa salarial con poco rendimiento.
@@ -13,3 +13,4 @@ orden,prioridad,area,pestana,tarea,detalle
 12,Hecho,Táctica,tactica,Quita a Miràngels del once,Hecho en la J5: Miràngels no jugó.
 13,Hecho,Táctica,tactica,Luis Paulo de central titular en lugar de Mulas,"Hecho en la J5: Luis Paulo fue el mejor de campo (7,1) y solo concedimos 5 córners."
 14,Hecho,Contratos,contratos,Renovar a Eceizabarrena,Renovado por 2 años el 23/12/2028.
+15,Hecho,Contratos,contratos,Renovar a Balan y Jordi Martínez,"Renovados en diciembre de 2028. Balan: ahora, cederle para que juegue."
