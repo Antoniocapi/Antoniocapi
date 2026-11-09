@@ -70,7 +70,7 @@
 <div class="sa">
   <header class="sa-head">
     <h1 class="sa-title">Salamanca UDS · Analítica</h1>
-    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · datos del FM a 18/09/2028</span>
+    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · datos del FM a 20/09/2028 (tras la jornada 5)</span>
   </header>
 
   <nav class="sa-tabs" role="tablist" aria-label="Secciones del panel">
@@ -743,7 +743,7 @@
   sa.mostrar(location.hash.slice(1) || 'inicio', false);
 
   const fechaES = (iso) => (iso ? d3.utcFormat('%d/%m/%Y')(new Date(iso)) : '');
-  const CLASE_URGENCIA = {Urgente: 'bad', Alta: 'warn'};
+  const CLASE_URGENCIA = {Urgente: 'bad', Alta: 'warn', Hecho: 'ok'};
   const NOMBRE_PESTANA = {inicio: 'Inicio', analisis: 'Análisis', partidos: 'Partidos', tactica: 'Táctica', plantilla: 'Plantilla', contratos: 'Contratos', cantera: 'Cantera', liga: 'Liga'};
 
   // ---------- cálculos de contratos

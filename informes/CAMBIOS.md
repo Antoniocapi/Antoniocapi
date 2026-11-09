@@ -1,5 +1,12 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Jornada 5: Salamanca 0-0 R.C. Alcobendas
+- **Transcrito**: estadísticas, once con notas y resultado; calendario y parte de la clasificación (solo se ven los puestos 9-15, quedamos 12º con 6 puntos).
+- **Partido**: el más completo con balón. 53 % de posesión, 84 % de pase, 10 tiros frente a 8, xG 0,78 frente a 0,35, solo 7 faltas y 5 córners en contra. Faltó el gol: jugó Benítes (17 años) de 9, con León y Escribano fuera del once.
+- **Temporada**: 6 puntos con 5,85 puntos esperados; los resultados ya reflejan el juego. En las 4 últimas jornadas, más xG que el rival (3,74 frente a 3,53).
+- **Tareas**: hechas «Miràngels fuera» y «Luis Paulo de central» (7,1, el mejor de campo). León sigue sin ser titular.
+- **Panel**: comprobación correcta.
+
 ## 09/11 · Centro de datos: goles, pase, físico y juego aéreo
 - **Transcrito**: análisis de goles, pase de Jiménez y de Alsúa, físico de los defensas y juego aéreo de los delanteros. Los valores de los gráficos son aproximados, leídos a ojo.
 - **Hallazgos** (bloque 8 de la pestaña Análisis):
