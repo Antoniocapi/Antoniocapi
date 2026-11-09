@@ -2,9 +2,7 @@
 
 *Fecha de juego: 18/09/2028*
 
-Nota media y partidos: de las alineaciones de los partidos (solo titulares). Solo cuentan para VENDER/RENOVAR a partir de 5 titularidades.
-
-> ⚠️ Datos que no salen en las capturas: Minutos jugados. El rendimiento se mide por estrellas de calidad y los minutos, por el «Tiempo de juego».
+> ⚠️ Datos que no salen en las capturas: Minutos jugados, Partidos jugados. El rendimiento se mide por estrellas de calidad y los minutos, por el «Tiempo de juego».
 
 Potencial con rango (estrellas blancas): uso el criterio «media» de config.yaml.
 
@@ -72,14 +70,14 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Gabri Benito | Juvenil | 16 | MP (D) | 1 | 3-4 | Futura promesa |  | 30/06/2031 | 7.750 | 1★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Guillermo José | Juvenil | 16 | DF (I) | 1 | 2.5-3.5 | Futura promesa |  | 30/06/2031 | 7.750 | 1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Ivan Murgia | Juvenil | 16 | MC | 1 | 2.5-3.5 | Futura promesa |  | 30/06/2031 | 6.250 | 1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
-| Jack Pingamage | Juvenil | 16 | MP (D) | 1.5 | 4-5 | Futura promesa | Les | 30/06/2030 | 7.500 | 1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
+| Jack Pingamage | Juvenil | 16 | MP (D) | 1.5 | 4-5 | Futura promesa | Lesionado | 30/06/2030 | 7.500 | 1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Javier Rebollo | Juvenil | 17 | MP (D) | 1 | 2-3 | Joven | Juvenil | 30/06/2031 | 3.300 | 1★/2-3★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Jorge María | Juvenil | 20 | MC | 1.5 | 2.5-3.5 | Cedido en otro club |  | 30/06/2030 | 34.500 | Cedido en otro club; 1.5★/2.5-3.5★, contrato hasta 30/06/2030. |
 | João Machado | Juvenil | 17 | DF (I) | 1.5 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 7.000 | 1.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 29.000 €: renueva para subirla o quitarla. |
 | Juan Ruiz | Juvenil | 16 | ME (C) | 1 | 3.5-4.5 | Joven | Juvenil | 30/06/2031 | 3.300 | 1★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Luis Ramírez | Juvenil | 16 | ME (I) | 1 | 2.5-3.5 | Futura promesa |  | 30/06/2031 | 7.750 | 1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Pablo Arbós | Juvenil | 21 | DL (C) | 2 | 2.5-3.5 | Cedido en otro club |  | 30/06/2030 | 27.000 | Cedido en otro club; 2★/2.5-3.5★, contrato hasta 30/06/2030. |
-| Ricardo | Juvenil | 17 | DF (D) | 1 | 3-4 | Futura promesa | Les | 30/06/2031 | 17.500 | 1★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
+| Ricardo | Juvenil | 17 | DF (D) | 1 | 3-4 | Futura promesa | Lesionado | 30/06/2031 | 17.500 | 1★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Toni Moreno | Juvenil | 16 | ME (C) | 1 | 2-3 | Joven | Juvenil | 30/06/2032 | 3.300 | 1★/2-3★, contrato hasta 30/06/2032: sin acción necesaria ahora. |
 | Adur Alsúa | Primer equipo | 23 | MC | 3 | 4 | Titular habitual |  | 30/06/2030 | 70.000 | 3★/4★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Aimar Vicandi | Primer equipo | 23 | MP (D) | 3.5 | 4 | Jugador estrella |  | 30/06/2031 | 175.000 | 3.5★/4★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
@@ -99,7 +97,7 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|
 | David Hamansenya | Primer equipo | 21 | DF (I) | 3.5 | 4-5 | Titular habitual | Le siguen otros clubes | 30/06/2029 | 7.750 | Cedido por otro club: ni se renueva ni se vende. |
-| Xavi Miràngels | Primer equipo | 19 | ME (C) | 3.5 | 4-5 | Jugador importante | Les | 30/06/2030 | 46.500 | Cedido por otro club: ni se renueva ni se vende. |
+| Xavi Miràngels | Primer equipo | 19 | ME (C) | 3.5 | 4-5 | Jugador importante | Lesionado | 30/06/2030 | 46.500 | Cedido por otro club: ni se renueva ni se vende. |
 
 ## SIN DATOS
 

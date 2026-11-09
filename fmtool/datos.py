@@ -26,7 +26,7 @@ ALIAS = {
     "club": ["Club", "Equipo"],
     "clausula": ["Cláusula de rescisión", "Cláusula de rescisión mínima", "Cláusula"],
     "futura_venta": ["Porcentaje de futura venta", "% futura venta", "Futura venta"],
-    "nota": ["Nota media", "Nota", "Media de puntuación"],
+    "nota": ["Nota media", "Nota", "Media de puntuación", "Media"],
     "partidos": ["Partidos", "Apariciones", "PJ"],
     "minutos": ["Minutos", "Min.", "Minutos jugados"],
     "amarillas": ["Amarillas", "Tarjetas amarillas", "TA"],

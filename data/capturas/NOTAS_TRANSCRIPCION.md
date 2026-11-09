@@ -79,3 +79,11 @@ Capturas: `*_contrato_2028-09-18.webp` → `data/plantilla/*_contrato_2028-09-18
 - **Cabeceras cortadas**: "Aumento de sueldo ..." la guardo como `Aumento de sueldo` (porcentaje).
 - **Celdas cortadas**: en el primer equipo, "Tiempo de juego" sale cortado ("Promesa casi en el primer e...", "Portero de competiciones d..."). Uso el texto completo de la captura de Información general del mismo día.
 - **Nº (dorsal)**: "-" en Marc Castro, Manu Vigo, todo el filial y parte del juvenil.
+
+## 18/09/2028 · Tácticas (dibujo, instrucciones con y sin posesión)
+
+- Táctica → `data/tactica/tactica_2028-09-18.yaml`.
+- Lista de selección → `data/plantilla/primer-equipo_seleccion_2028-09-18.csv`. La columna **Media** es la nota media de la temporada (incluye las salidas desde el banquillo) y sustituye a la que calculaba con las alineaciones.
+- **"Les" = lesionado**: confirmado por la cruz roja de Miràngels en la columna "Con".
+- **Cabecera cortada** "Familiaridad co...": transcribo las estrellas sin saber exactamente qué mide.
+- **Instrucciones cortadas**: "Buscar balón p..." y "Distribuir con r...".

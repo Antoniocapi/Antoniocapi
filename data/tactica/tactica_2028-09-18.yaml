@@ -1,0 +1,58 @@
+# Táctica activa a 18/09/2028 (capturas tactica_*_2028-09-18.webp)
+nombre: "4-3-3 2MC Abierto - Contraataque directo"
+estilo: Contraataque directo
+mentalidad: Equilibrada
+once_con_posesion:   # rol en la captura
+  PSC: Álvaro Jiménez
+  LAT: David Hamansenya
+  CD_1: Mulas
+  CD_2: Javier Murúa
+  LO: Pablo Cojo
+  PVO: Pau Calvo
+  CTT: Adur Alsúa
+  MC: Xavi Miràngels      # LESIONADO en la captura
+  EPD: Aimar Vicandi      # banda izquierda
+  EXT: Luis Bilbao        # banda derecha
+  ARI: Pol Escribano
+once_sin_posesion:
+  POR: Álvaro Jiménez
+  LAT: David Hamansenya
+  CC: Mulas
+  CDC: Javier Murúa
+  LDC: Pablo Cojo
+  MCC: Pau Calvo
+  MCP: Adur Alsúa
+  MC: Xavi Miràngels
+  CBI: Aimar Vicandi
+  CB: Luis Bilbao
+  DCE: Pol Escribano
+suplentes: [Ismael Velasco, Luis Paulo, Philip Osei, Pavel Kadochnikov, Jon Eceizabarrena, Mario Valdaliso, Óscar León]
+instrucciones_con_posesion:
+  Pases directos: Más directo
+  Ritmo de juego: Estándar
+  Amplitud del ataque: Estándar
+  Transición ofensiva: Contraataque
+  Libertad creativa: Equilibrado
+  Perder tiempo: Menos a menudo
+  Jugar buscando el balón parado: "Buscar balón p... (cortado)"
+  Paciencia: Estándar
+  Disparos lejanos: Disuadir
+  Estilo de centros: Equilibrada
+  Regate: Equilibrada
+  Carreras de apoyo: Equilibrado
+  Progresar por: Equilibrada
+  Recepción de pase: Pasar al espacio
+  Estrategia previa: Saltarse la presión
+  Saques de puerta: Mixto
+  Distribución del portero (velocidad): "Distribuir con r... (cortado, probablemente rapidez)"
+  Distribución del portero: Equilibrada
+instrucciones_sin_posesion:
+  Línea de presión: Bloque medio
+  Línea defensiva: Estándar
+  Comportamiento de la línea defensiva: Equilibrada
+  Activar presión: Más insistente
+  Transición defensiva: Reagruparse
+  Realizando una entrada: Estándar
+  Distribución del portero en corto (presionar): "No"
+  Trampa de presión: Equilibrado
+  Compromiso de centros: Evitar centros

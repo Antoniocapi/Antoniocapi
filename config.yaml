@@ -89,6 +89,7 @@ codigos_inf:
   Seg: Le siguen otros clubes
   B: Con minutos en el B
   Juv: Juvenil
+  Les: Lesionado
 
 # Código que indica que otros clubes siguen al jugador (sube la prioridad de su contrato)
 codigo_interes: Seg

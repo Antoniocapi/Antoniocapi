@@ -68,8 +68,6 @@ Solución: renovar subiendo la cláusula o sin cláusula. Prioridad: 🔴 primer
 
 ## Estructura salarial
 
-> ⚠️ Sin «Nota media» en las capturas: el rendimiento se mide por estrellas de calidad, no por nota.
-
 Topes: titular 60.000 €, rotación 40.000 €, filial/proyecto 25.000 €.
 
 Índice €/estrella: 1 = lo que cobra de media el primer equipo por cada estrella de calidad; 1,5 o más = caro.
