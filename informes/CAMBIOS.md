@@ -1,5 +1,15 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · 17/12/2028: plantillas al día y plan del mercado de invierno
+- **Transcrito**: estadísticas del primer equipo y del Salamanca B, y la vista general del B y del juvenil (estrellas nuevas).
+- **Herramienta**: ahora junta la vista más reciente de cada tipo (las estadísticas del 17/12 con los contratos del 18/09) y rellena los datos de quien sube de categoría (Ruvira).
+- **Reglas corregidas**: la nota baja ya no manda vender a canteranos; quien rinde muy por encima de sus estrellas (Cojo, 7,09) ya no sale como «sale libre».
+- **Nuevo informe**: `2028-12-17_mercado-invierno.md`, el plan del director deportivo: renovaciones antes del 1/1, cláusulas, salidas, fichajes y cantera.
+- **Tareas**: rehechas para el mercado.
+- **Ojeo de delanteros** (20 jugadores): ranking en `2028-12-17_fichajes.md` y en la nueva pestaña **Mercado** del panel. Primero: **Genís Clua** (19, 3,5/4,5-5★, sin contrato).
+- **Fichajes**: quitado el tope fijo de 60.000 €; solo se descarta lo que no cabe en el margen salarial o en el presupuesto de traspasos.
+- `config.yaml`: posiciones necesarias = DL (C) alta, DF (I) alta, POR baja.
+
 ## 09/11 · Jornada 9: Fuenlabrada 0-0 Salamanca
 - **Transcrito**: estadísticas y once inicial con nota (pantalla Resultado).
 - **Partido**: punto con algo de suerte (0,79 de xG frente a 1,47, 0 ocasiones claras). Cuarta portería a cero de la temporada y solo 3 faltas. León volvió (6,2) sin ocasiones.

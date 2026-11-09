@@ -3,7 +3,7 @@
 import re
 
 from . import bd
-from .comun import NOMBRE_DATO
+from .comun import NOMBRE_DATO, RAIZ
 from .datos import fmt_euros, fmt_fecha, meses_entre, posiciones, potencial, texto_potencial
 from .salida import Informe
 
@@ -69,7 +69,8 @@ def puntuar(j, cfg, ctx):
 
     # Coste: libre / cesión / traspaso y sueldo frente a los topes
     situacion = (j["situacion"] or "").lower()
-    libre = "libre" in situacion or ("club" in j["columnas"] and j["club"].lower() in ("", "sin club", "libre"))
+    libre = ("libre" in situacion or "sin contrato" in situacion
+             or ("club" in j["columnas"] and j["club"].lower() in ("", "sin club", "libre")))
     cesion = "cedible" in situacion or "cesión" in situacion or "cesion" in situacion
     coste = None
     if libre:
@@ -84,8 +85,6 @@ def puntuar(j, cfg, ctx):
     else:
         tipo = "?"
     if j["sueldo"] is not None:
-        if j["sueldo"] > topes.get("titular", 60000):
-            descartes.append(f"sueldo {fmt_euros(j['sueldo'])} > tope de titular")
         if ctx["margen_sueldos"] is not None and j["sueldo"] > ctx["margen_sueldos"]:
             descartes.append(f"sueldo {fmt_euros(j['sueldo'])} > margen salarial tras la reserva de enero ({fmt_euros(ctx['margen_sueldos'])})")
         factor = 1.0 if j["sueldo"] <= topes.get("rotacion", 40000) else 0.7
@@ -94,7 +93,7 @@ def puntuar(j, cfg, ctx):
 
     # Contrato que acaba pronto
     meses = meses_entre(j["fecha_juego"], j["fin"])
-    c["contrato"] = None if meses is None else (1.0 if meses <= 6 else 0.7 if meses <= 12 else 0.4 if meses <= 18 else 0.1)
+    c["contrato"] = 1.0 if libre else None if meses is None else (1.0 if meses <= 6 else 0.7 if meses <= 12 else 0.4 if meses <= 18 else 0.1)
 
     # Encaje en las posiciones que necesito
     necesarias = cfg.get("posiciones_necesarias") or []
@@ -193,4 +192,16 @@ def generar(conn, cfg, plantilla, carpeta):
     inf.seccion(f"Descartados ({len(descartados)})")
     inf.tabla("Descartados", ["Jugador", "Edad", "Pos.", "Calidad", "Potencial", "Nota", "Motivo del descarte"],
               sorted(descartados, key=lambda f: -f["Nota"]))
+    # CSV para el panel (pestaña Mercado)
+    import csv as _csv
+    filas_panel = [dict(f, Estado="Candidato") for f in validos] + [dict(f, Estado="Descartado") for f in descartados]
+    filas_panel.sort(key=lambda f: (f["Estado"] != "Candidato", -f["Nota"]))
+    with open(RAIZ / "panel" / "fichajes.csv", "w", encoding="utf-8", newline="") as fh:
+        w = _csv.writer(fh)
+        w.writerow(["jugador", "estado", "nota", "edad", "posicion", "calidad", "potencial", "tipo", "valor_min", "sueldo", "fin", "precontrato", "motivo"])
+        for f in filas_panel:
+            pre = "Sí" if f["Fin contrato"].endswith("2029") else ""
+            w.writerow([f["Jugador"], f["Estado"], f["Nota"], f["Edad"], f["Pos."], f["Calidad"], f["Potencial"], f["Tipo"],
+                        f["Valor mín. (€)"] if f["Valor mín. (€)"] is not None else "", f["Sueldo (€)"] if f["Sueldo (€)"] is not None else "",
+                        f["Fin contrato"], pre, f.get("Motivo del descarte", "")])
     return inf.guardar(carpeta)

@@ -1,17 +1,14 @@
 ﻿orden;prioridad;area;pestana;tarea;detalle
-1;Urgente;Táctica;analisis;Plan para rivales de arriba;Contra Numantia (3º) y Zamora (4º): 0,98 de xG a favor y 4,47 en contra, 32 % de posesión y 0 goles. Probar mentalidad Cautelosa, bloque bajo y contraataque. El próximo de arriba es U. Adarve (1º), el 12/11.
-2;Urgente;Táctica;tactica;Menos balón largo;Pases directos a Estándar, Estrategia previa a Equilibrada, saques de puerta cortos y portero en corto. Jiménez solo completa ≈44 % de sus pases y León gana el 13 % de los balones aéreos.
-3;Urgente;Táctica;tactica;Menos faltas;Entradas: Mantenerse en pie y presión Estándar. Hacemos 10,5 faltas por partido (media 8,3), sobre todo contra equipos de posesión. La línea defensiva se queda como está: el bloque bajo funcionó contra el Guijuelo.
-4;Urgente;Balón parado;tactica;Cubre el segundo palo en los córners en contra;Pasa el contraatacante C2 a Marcar segundo palo. Concedemos 39 córners en 4 partidos y unos 0,16 de xA a balón parado por partido (media 0,06).
-5;Alta;Táctica;tactica;Plan sin León: Escribano de 9;León es internacional y faltará en cada parón. Sin él, mejor Escribano (gana ≈41 % de los balones aéreos) que Benítes. Cuando León esté, titular: 3 de nuestros 4 goles son suyos.
-6;Alta;Contratos;contratos;Renueva a João Machado y Alberto Ruvira;Sus cláusulas (29.000 € y 82.000 €) están por debajo de su valor y a Machado le siguen otros clubes.
-7;Alta;Contratos;contratos;Renovaciones antes del 1 de enero de 2029;Eceizabarrena, Pau Calvo, Óscar León, Lucas Balan y Jordi Martínez.
-8;Alta;Mercado de enero;plantilla;Prepara los fichajes de enero;1) Delantero centro titular (León se va con su selección). 2) Lateral izquierdo (Hamansenya es cedido). 3) Lateral derecho. Margen: 95.000 € al año en sueldos y 14.000 € en traspasos.
-9;Alta;Entrenamiento;analisis;Más finalización en los entrenamientos;"5 goles con 8,20 de xG (−3,2) y 8 ocasiones claras. El juego genera ocasiones; falta acierto."
-10;Media;Contratos;contratos;Sube las cláusulas de los canteranos;Tello (68.000 €), Varela (73.000 €), Llabrés (61.000 €), Gallego (53.000 €) y Benítes (110.000 €) están por debajo de su valor.
-11;Media;Plantilla;plantilla;Cede a Marc Castro;0 minutos en el primer equipo. Valdaliso se queda: gol y 7,0 desde el banquillo en la J7.
-12;Baja;Ventas;contratos;Escucha ofertas por Murúa;31 años, cobra 100.000 € y acaba en junio. Rinde (7,00), así que solo si la oferta es buena.
-13;Baja;Datos;analisis;Pásame más capturas para analizar a fondo;La lista completa, con para qué sirve cada una, está al final de la pestaña Análisis.
-14;Hecho;Cantera;cantera;Sube a Alberto Ruvira al primer equipo;Debutó en la J7 de central con 16 años (6,8). Ahora, renovarle subiendo su cláusula (82.000 €).
-15;Hecho;Táctica;tactica;Quita a Miràngels del once;Hecho en la J5: Miràngels no jugó.
-16;Hecho;Táctica;tactica;Luis Paulo de central titular en lugar de Mulas;Hecho en la J5: Luis Paulo fue el mejor de campo (7,1) y solo concedimos 5 córners.
+1;Urgente;Contratos;contratos;Renovar a Óscar León antes del 1/1;8 de 18 goles. Acaba en junio. Sueldo justo ≈71.500 €, cláusula alta y % de futura venta.
+2;Urgente;Contratos;contratos;Renovar a Calvo, Eceizabarrena, Balan y Jordi Martínez antes del 1/1;Acaban en junio. Calvo, subiéndole el sueldo (justo ≈73.000 €). Balan: renovar y ceder.
+3;Urgente;Contratos;contratos;Subir cláusulas: Jiménez, Ruvira, Machado y Varela;"Jiménez 100.000 € con 6,98 de media; Ruvira 82.000 €; Machado 29.000 € (ya 4-5★); Varela 73.000 €."
+4;Alta;Ventas;contratos;Vender a Murúa en enero;31 años, 100.000 € de sueldo, acaba en junio y ya no es titular.
+5;Alta;Ventas;plantilla;Sacar a Kadochnikov, Ucín y Manu Vigo;151.500 € al año de masa salarial con poco rendimiento.
+6;Alta;Mercado de enero;plantilla;Delantero centro;León hace el 44 % de los goles, está lesionado y es internacional. Pásame la lista de ojeo.
+7;Alta;Mercado de enero;plantilla;Lateral izquierdo por precontrato;Hamansenya es cedido hasta junio y Osei se va. Buscar jugadores que acaben contrato en junio de 2029.
+8;Media;Cantera;cantera;Ceder a Marc Castro y a Lucas Balan;0 y 175 minutos: necesitan jugar.
+9;Media;Ventas;plantilla;Escuchar ofertas por Vicandi y Bilbao;Cobran 175.000 € y 120.000 € con sueldo justo de ≈100.000 € y ≈54.000 €.
+10;Baja;Datos;analisis;Pásame ojeo, Portal, clasificación y resultados J10-J17;Para cerrar el ranking de fichajes y la evaluación del entrenador.
+11;Hecho;Cantera;cantera;Sube a Alberto Ruvira al primer equipo;Debutó en la J7 de central con 16 años (6,8). Ahora, renovarle subiendo su cláusula (82.000 €).
+12;Hecho;Táctica;tactica;Quita a Miràngels del once;Hecho en la J5: Miràngels no jugó.
+13;Hecho;Táctica;tactica;Luis Paulo de central titular en lugar de Mulas;Hecho en la J5: Luis Paulo fue el mejor de campo (7,1) y solo concedimos 5 córners.

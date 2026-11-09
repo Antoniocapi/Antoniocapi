@@ -90,6 +90,7 @@ codigos_inf:
   B: Con minutos en el B
   Juv: Juvenil
   Les: Lesionado
+  # Códigos nuevos del 17/12 sin confirmar: Des, Apy, Obj, RJ, PrF
 
 # Código que indica que otros clubes siguen al jugador (sube la prioridad de su contrato)
 codigo_interes: Seg
@@ -119,7 +120,13 @@ cantera:
 # MC, ME (C), ME (D), ME (I), MP (C), MP (D), MP (I), DL (C)
 # prioridad: alta | media | baja
 # ---------------------------------------------------------------------
-posiciones_necesarias: []
+posiciones_necesarias:
+  - posicion: DL (C)
+    prioridad: alta
+  - posicion: DF (I)
+    prioridad: alta
+  - posicion: POR
+    prioridad: baja
 #  - posicion: DF (I)
 #    prioridad: alta
 #  - posicion: DF (C)

@@ -70,7 +70,7 @@
 <div class="sa">
   <header class="sa-head">
     <h1 class="sa-title">Salamanca UDS · Analítica</h1>
-    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · datos del FM a 21/10/2028 (tras la jornada 9) · posición de la liga del 18/09 a la espera de la tabla completa</span>
+    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · plantilla a 17/12/2028 · partidos analizados hasta la jornada 9 · posición de la liga del 18/09 a la espera de la tabla completa</span>
   </header>
 
   <nav class="sa-tabs" role="tablist" aria-label="Secciones del panel">
@@ -80,6 +80,7 @@
     <button class="sa-tab" role="tab" data-tab="tactica" aria-selected="false">Táctica<small>Once y cambios</small></button>
     <button class="sa-tab" role="tab" data-tab="plantilla" aria-selected="false">Plantilla<small>Notas y sueldos</small></button>
     <button class="sa-tab" role="tab" data-tab="contratos" aria-selected="false">Contratos<small>Cláusulas y renovaciones</small></button>
+    <button class="sa-tab" role="tab" data-tab="mercado" aria-selected="false">Mercado<small>Fichajes de enero</small></button>
     <button class="sa-tab" role="tab" data-tab="cantera" aria-selected="false">Cantera<small>Jóvenes con futuro</small></button>
     <button class="sa-tab" role="tab" data-tab="liga" aria-selected="false">Liga<small>Clasificación y métricas</small></button>
   </nav>
@@ -385,6 +386,33 @@
             <th data-field="motivo">Por qué</th>
           </tr></thead>
           <tbody data-draw="desajuste"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== MERCADO ===================== -->
+  <section class="sa-page" id="mercado" role="tabpanel" hidden>
+    <p class="sa-intro">Ranking «modelo Castellón» (0-100) de las listas de ojeo: edad, potencial, calidad, coste, contrato y encaje. Los libres no cuestan traspaso; «Precontrato» = acaba contrato en junio de 2029: desde el 1 de enero puede firmar gratis para julio.</p>
+    <div class="sa-card">
+      <h3>Delantero centro</h3>
+      <p class="sa-note">Candidatos primero (verde ≥ 70). Los descartados llevan el motivo. Sin recomendación del ojeador en la lista: ese criterio no cuenta.</p>
+      <div class="sa-tablebox">
+        <table class="sa-table" id="tabla-fichajes" data-source="fichajes" data-row-key="jugador">
+          <thead><tr>
+            <th data-field="nota" class="num">Nota</th>
+            <th data-field="jugador">Jugador</th>
+            <th data-field="edad" class="num">Edad</th>
+            <th data-field="calidad" class="num">Calidad</th>
+            <th data-field="potencial" class="num">Potencial</th>
+            <th data-field="tipo">Tipo</th>
+            <th data-field="valor_min" class="num">Traspaso mín.</th>
+            <th data-field="sueldo" class="num">Sueldo pedido</th>
+            <th data-field="precontrato">Precontrato</th>
+            <th data-field="estado">Estado</th>
+            <th data-field="motivo">Motivo del descarte</th>
+          </tr></thead>
+          <tbody data-draw="fichajes"></tbody>
         </table>
       </div>
     </div>
@@ -728,7 +756,7 @@
   });
 
   // ---------- pestañas
-  const PESTANAS = ['inicio', 'analisis', 'partidos', 'tactica', 'plantilla', 'contratos', 'cantera', 'liga'];
+  const PESTANAS = ['inicio', 'analisis', 'partidos', 'tactica', 'plantilla', 'contratos', 'mercado', 'cantera', 'liga'];
   sa.mostrar = (id, link = true) => {
     if (!PESTANAS.includes(id)) id = 'inicio';
     document.querySelectorAll('.sa-page').forEach((s) => { s.hidden = s.id !== id; });
@@ -744,7 +772,7 @@
 
   const fechaES = (iso) => (iso ? d3.utcFormat('%d/%m/%Y')(new Date(iso)) : '');
   const CLASE_URGENCIA = {Urgente: 'bad', Alta: 'warn', Hecho: 'ok'};
-  const NOMBRE_PESTANA = {inicio: 'Inicio', analisis: 'Análisis', partidos: 'Partidos', tactica: 'Táctica', plantilla: 'Plantilla', contratos: 'Contratos', cantera: 'Cantera', liga: 'Liga'};
+  const NOMBRE_PESTANA = {mercado: 'Mercado', inicio: 'Inicio', analisis: 'Análisis', partidos: 'Partidos', tactica: 'Táctica', plantilla: 'Plantilla', contratos: 'Contratos', cantera: 'Cantera', liga: 'Liga'};
 
   // ---------- cálculos de contratos
   dash.calc('vencimientos', {
@@ -932,4 +960,12 @@
     }));
   });
   dash.draw('necesito', (tb) => filas(tb, 'necesito', (r) => tr(r.orden, td(r.captura, 'strong'), td(r.donde, 'wrap'), td(r.para_que, 'wrap'))));
+
+  dash.draw('fichajes', (tb) => filas(tb, 'fichajes', (r) => {
+    const n = num(r.nota);
+    return tr(r.jugador, td(pill(sa.dec(n, 0), n >= 70 && r.estado === 'Candidato' ? 'ok' : n >= 55 && r.estado === 'Candidato' ? 'warn' : ''), 'num'),
+      td(r.jugador, 'strong'), td(r.edad, 'num'), td(r.calidad, 'num'), td(r.potencial, 'num'), td(r.tipo),
+      td(r.valor_min === '' ? '' : sa.eur(num(r.valor_min)), 'num'), td(r.sueldo === '' ? 'N/D' : sa.eur(num(r.sueldo)), 'num'),
+      td(r.precontrato), td(pill(r.estado, r.estado === 'Candidato' ? 'ok' : 'bad')), td(r.motivo, 'wrap'));
+  }));
 </script>

@@ -54,13 +54,20 @@ def _recomendar(p, j):
         return "VENDER YA", f"Su potencial ha bajado {abs(evo['potencial_ultima']):g}★ desde la captura anterior."
     if edad >= r.get("edad_veterano", 30) and (margen <= 0 or (evo and (evo["calidad"] or 0) < 0)):
         return "VENDER YA", f"{edad} años y sin margen de mejora ({estrellas}): vender mientras vale ~{fmt_euros(valor)}."
-    if hay_nota and j["nota"] < r.get("nota_minima", 6.6):
+    # La nota baja solo cuenta en adultos del primer equipo (en la cantera se está formando)
+    if hay_nota and j["grupo"] == "primer-equipo" and edad > r.get("edad_joven", 23) and j["nota"] < r.get("nota_minima", 6.6):
         return "VENDER YA", f"Nota media {j['nota']:g} en {int(j['partidos'])} partidos: no rinde."
     renovable = edad <= r.get("edad_joven", 23) and pot >= r.get("potencial_renovar_joven", 3.5)
     if meses is not None and meses <= 12 and valor >= r.get("valor_minimo_venta", 50000) and not renovable:
         return "VENDER YA", f"Último año de contrato (acaba {fin}) y vale ~{fmt_euros(valor)}: vender antes del {limite} o se irá gratis."
     if edad >= r.get("edad_pico", 27) and margen <= 0 and valor >= r.get("valor_minimo_venta", 50000):
         return "VENDER YA", f"En su pico ({edad} años, {estrellas}) y vale ~{fmt_euros(valor)}: es el mejor momento para vender."
+
+    # ---------------- Rinde por encima de sus estrellas (los datos mandan sobre las estrellas)
+    if hay_nota and j["nota"] >= r.get("nota_destacada", 7.0) and (j["minutos"] or 0) >= 900:
+        if meses is not None and meses <= r.get("meses_para_renovar", 18):
+            return "RENOVAR", f"Rinde muy por encima de sus estrellas (nota {j['nota']:g} en {int(j['minutos'])}'): renovar antes del {limite}."
+        return "MANTENER", f"Rinde muy por encima de sus estrellas ({estrellas}): nota {j['nota']:g} en {int(j['minutos'])}'. Titular."
 
     # ---------------- SALE LIBRE (techo bajo)
     if pot <= r.get("techo_bajo", 2.5) and (edad >= 20 or (meses is not None and meses <= 12)):

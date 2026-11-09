@@ -119,15 +119,48 @@ def _fusionar(filas):
 
 
 def estado_actual(conn, tipo, alias_extra=None):
-    """Último estado conocido: para cada grupo, la fecha de juego más reciente."""
+    """Último estado conocido de cada grupo.
+
+    - Los jugadores son los de la fecha más reciente del grupo (así desaparecen los que se fueron).
+    - Cada dato sale de la vista más reciente que lo tenga: si el 17/12 solo hay estadísticas,
+      las estrellas y el contrato siguen viniendo de la vista general anterior.
+    """
     ultimas = conn.execute(
         "SELECT grupo, MAX(fecha_juego) AS f FROM importaciones WHERE tipo=? GROUP BY grupo", (tipo,)
     ).fetchall()
     filas = []
     for u in ultimas:
-        filas += _cargar(conn, _SQL + "WHERE i.tipo=? AND i.grupo=? AND i.fecha_juego=? ORDER BY r.id",
-                         (tipo, u["grupo"], u["f"]), alias_extra)
-    return _fusionar(filas)
+        recientes = _cargar(conn, _SQL + "WHERE i.tipo=? AND i.grupo=? AND i.fecha_juego=? ORDER BY r.id",
+                            (tipo, u["grupo"], u["f"]), alias_extra)
+        plantilla = {j["jugador"] for j in recientes}
+        # Para cada vista, su importación más reciente (de la más nueva a la más vieja: la nueva manda)
+        vistas = conn.execute(
+            "SELECT vista, MAX(fecha_juego) AS f FROM importaciones WHERE tipo=? AND grupo=? GROUP BY vista ORDER BY f DESC",
+            (tipo, u["grupo"])).fetchall()
+        for v in vistas:
+            for j in _cargar(conn, _SQL + "WHERE i.tipo=? AND i.grupo=? AND i.vista=? AND i.fecha_juego=? ORDER BY r.id",
+                             (tipo, u["grupo"], v["vista"], v["f"]), alias_extra):
+                if j["jugador"] in plantilla:
+                    filas.append(j)
+    fusion = _fusionar(filas)
+    # Huecos (p. ej. un canterano que sube y cuyo contrato solo sale en la vista del B):
+    # se rellenan con su dato más reciente en cualquier equipo
+    todos = _cargar(conn, _SQL + "WHERE i.tipo=? ORDER BY i.fecha_juego DESC, r.id", (tipo,), alias_extra)
+    for j in fusion:
+        for o in todos:
+            if o["jugador"] != j["jugador"]:
+                continue
+            for k, v in o.items():
+                if k in ("grupo", "vista", "fecha_juego", "archivo", "raw", "columnas"):
+                    continue
+                if j.get(k) in (None, "") and v not in (None, ""):
+                    j[k] = v
+    # La fecha de cada jugador es la más reciente de su grupo
+    fecha_grupo = {u["grupo"]: u["f"] for u in ultimas}
+    from .datos import fecha as _f
+    for j in fusion:
+        j["fecha_juego"] = _f(fecha_grupo[j["grupo"]])
+    return fusion
 
 
 def historial(conn, alias_extra=None, jugador=None):

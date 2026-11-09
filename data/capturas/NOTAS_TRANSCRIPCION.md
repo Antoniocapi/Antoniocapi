@@ -159,3 +159,19 @@ Captura: `partido_J09-fuenlabrada_2028-10-21.webp`, pantalla "Resultado": muestr
 - Estadísticas → `partidos.csv` (mentalidad Equilibrada, la habitual; no sale en la captura).
 - Once inicial → `alineaciones.csv`. Luis Paulo no fue titular.
 - No se ve la clasificación: la posición sigue sin actualizar.
+
+## 17/12/2028 · Plantillas (primer equipo: estadísticas; Salamanca B: general y estadísticas; juvenil: general)
+
+- `data/plantilla/*_2028-12-17.csv`. Del primer equipo no hay vista general nueva: las estrellas y los contratos siguen siendo los del 18/09.
+- Estrellas leídas una a una con zoom (el lector automático no cuadraba en esta captura).
+- Ruvira ya está en el primer equipo; Tello figura en el Salamanca B (0 minutos).
+- **Códigos nuevos de la columna Inf, sin confirmar**: Des (Murúa), Apy (Calvo, Escribano, Mulas, Osei, Valdaliso, Cojo), Obj (Miràngels), RJ (Bilbao) y PrF (Marc Castro). Ucín sale como «Aislado» en felicidad.
+- Partidos: el FM cuenta 17 partidos (incluye todas las competiciones); yo tengo transcritos 9.
+
+## 17/12/2028 · Ojeo: foco DL (C) (20 jugadores)
+
+- `data/ojeo/delantero-centro_informacion-general_2028-12-17.csv`. Las capturas no se guardaron como archivo; transcrito de las imágenes del chat.
+- **Sueldo**: el FM da un rango cortado («144m € - 169...»): guardo el **mínimo**.
+- **Valor 0 €, sueldo N/D y final «No disponible»** (Clua, Kluivert, Orobengoa, Domínguez, Baldé): interpretado como **sin contrato**. Por confirmar en su ficha.
+- Estrellas leídas a ojo: algunas medias estrellas de potencial pueden variar ±0,5.
+- Sin recomendación del ojeador ni club en la vista.

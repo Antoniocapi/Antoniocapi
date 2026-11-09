@@ -1,0 +1,20 @@
+﻿Elegido;Inf;Jugador;Posición;Mejor pos.;Valor de traspaso;Mejor rol;Edad;Calidad;Potencial;Tiempo de juego;País;Sueldo;Final;Promesas
+S1;;Edu Gallego;DF/ME (C);DF (C);5000-55000;CD;17;2.5;3.5-4.5;Promesa casi en el primer equipo;ESP;11000;30/6/2030;0
+MP (D);;Isaac Varela;MP (DI);MP (I);12000-120000;EXT;17;2.5;4-5;Promesa casi en el primer equipo;ESP;18250;30/6/2031;0
+S4;;Lucas Balan;ME/MP (C);ME (C);4000-40000;MP;19;2.5;4-5;Promesa casi en el primer equipo;ESP;26000;30/6/2029;0
+DL (C);;Ronni;MP (DI), DL (C);DL (C);0;OBJ;22;2;2.5;Promesa casi en el primer equipo;PAR;24000;30/6/2029;0
+DF (C);Seg;Marco Coronel;DF (C);DF (C);0;DFC;23;2;2.5;Recambio de emergencia;ESP;22000;30/6/2029;1
+S3;;Diego Llabrés;DF (DC), CR (D);DF (C);12000-130000;CD;17;2;4-5;Futura promesa;ESP;7000;30/6/2030;0
+DF (D);;Manuel;DF (DC), MC, ...;DF (C);18000-180000;DFC;17;2;3.5-4.5;Promesa casi en el primer equipo;ESP;20000;30/6/2031;0
+S9;;Andres Giraldo;MP (IC), DL (C);MP (C);7000-75000;MP;17;2;3.5-4.5;Futura promesa;COL;15500;30/6/2030;0
+S5;;Erick Benítes;MP (DI), DL (C);DL (C);22000-230000;OBJ;17;2;3.5-4.5;Promesa casi en el primer equipo;PER;15750;30/6/2030;0
+POR;;Alessandro Lugo;POR;POR;7000-70000;PSC;19;2;3-4;Promesa casi en el primer equipo;ESP;20000;30/6/2031;0
+S2;;Jordi Martínez;POR;POR;0;PSC;20;2;3-4;Promesa casi en el primer equipo;ESP;20000;30/6/2029;0
+MP (I);;Joaquín Tello;MP (IC);MP (I);16000-150000;EPD;17;2;4-5;Futura promesa;ESP;7000;30/6/2030;0
+ME (C);Seg;Vaquero;ME (C);ME (C);0;CI;22;1.5;2.5;Promesa casi en el primer equipo;ESP;23500;30/6/2029;0
+MC;Les;Mario Segura;MC;MC;0;MC;21;1.5;2-3;Promesa casi en el primer equipo;ESP;19250;30/6/2029;0
+DF (I);Les;Sergio Rivera;DF (I);DF (I);0;LAT;21;1.5;1.5-2.5;Promesa casi en el primer equipo;ESP;22000;30/6/2029;0
+;;Willian Obama;DF/MP (D);;0;;18;;;;EQG;;;0
+;;Carlos Flores;ME (D);;0;;18;;;;VEN;;;0
+;;Eric;MP (C), DL (C);;0;;20;;;;ESP;;;0
+;;Matías Aguirre;ME (D);;0;;19;;;;ARG;;;0
