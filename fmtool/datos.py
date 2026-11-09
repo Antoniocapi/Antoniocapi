@@ -19,6 +19,9 @@ ALIAS = {
     "sueldo": ["Sueldo", "Salario"],
     "fin_contrato": ["Final", "Fin de contrato", "Expira", "Contrato hasta"],
     "estado": ["Tiempo de juego", "Estado en plantilla"],
+    "estado_real": ["Tiempo de juego real"],
+    "aumento_sueldo": ["Aumento de sueldo", "Aumento de sueldo anual"],
+    "dorsal": ["Nº", "Dorsal"],
     "pais": ["País", "Nacionalidad"],
     "club": ["Club", "Equipo"],
     "clausula": ["Cláusula de rescisión", "Cláusula de rescisión mínima", "Cláusula"],
@@ -180,12 +183,13 @@ def normalizar(fila, mapa):
     j["sueldo"] = dinero(col("sueldo"))
     j["fin"] = fecha(col("fin_contrato"))
     j["estado"] = "" if es_vacio(col("estado")) else col("estado").strip()
+    j["estado_real"] = "" if es_vacio(col("estado_real")) else col("estado_real").strip()
     j["pais"] = (col("pais") or "").strip()
     for dato in ("club", "situacion", "recomendacion", "inf"):
         v = col(dato)
         j[dato] = "" if es_vacio(v) else v.strip()
     j["clausula"] = dinero(col("clausula"))
-    for dato in ("futura_venta", "nota", "partidos", "minutos", "amarillas", "rojas", "xg", "entrenamiento"):
+    for dato in ("aumento_sueldo", "futura_venta", "nota", "partidos", "minutos", "amarillas", "rojas", "xg", "entrenamiento"):
         j[dato] = numero(col(dato))
     # Qué datos existen de verdad en este CSV
     j["columnas"] = set(mapa)

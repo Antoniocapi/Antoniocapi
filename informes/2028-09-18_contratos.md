@@ -34,16 +34,35 @@ Regla: renovar antes del 1 de enero de su último año (cuando ya puede firmar u
 
 |  | Jugador | Equipo | Edad | Calidad | Potencial | Fin contrato | Cláusula (€) | Valor máx. (€) | Riesgo | Recomendación | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 🔴 | Andres Giraldo | Filial | 17 | 2 | 3.5-4.5 | 30/06/2030 |  | 75.000 | cláusula desconocida, potencial 3.5-4.5★ | MANTENER | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
-| 🔴 | João Machado | Juvenil | 17 | 1.5 | 3.5-4.5 | 30/06/2030 |  | 70.000 | cláusula desconocida, potencial 3.5-4.5★ | MANTENER | 1.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
-| 🔴 | Marco Coronel | Filial | 23 | 2 | 2.5 | 30/06/2029 |  | 0 | le quedan 9.4 meses, cláusula desconocida | SALE LIBRE | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
-| 🔴 | Pol Escribano | Primer equipo | 20 | 3 | 3.5-4.5 | 30/06/2030 |  | 75.000 | cláusula desconocida, potencial 3.5-4.5★ | MANTENER | 3★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
-| 🔴 | Vaquero | Filial | 22 | 1.5 | 2 | 30/06/2029 |  | 0 | le quedan 9.4 meses, cláusula desconocida | SALE LIBRE | Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
-| 🟠 | Manuel | Filial | 17 | 2 | 3-4 | 30/06/2031 |  | 210.000 | cláusula desconocida | MANTENER | 2★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
+| 🔴 | Andres Giraldo | Filial | 17 | 2 | 3.5-4.5 | 30/06/2030 | 110.000 | 75.000 | cláusula baja, potencial 3.5-4.5★ | MANTENER | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 110.000 €: renueva para subirla o quitarla. |
+| 🔴 | João Machado | Juvenil | 17 | 1.5 | 3.5-4.5 | 30/06/2030 | 29.000 | 70.000 | cláusula baja, potencial 3.5-4.5★ | MANTENER | 1.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 29.000 €: renueva para subirla o quitarla. |
+| 🔴 | Marco Coronel | Filial | 23 | 2 | 2.5 | 30/06/2029 | 12.000 | 0 | le quedan 9.4 meses, cláusula baja | SALE LIBRE | Techo bajo (2★/2.5★) a los 23 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
+| 🔴 | Pol Escribano | Primer equipo | 20 | 3 | 3.5-4.5 | 30/06/2030 | 250.000 | 75.000 | cláusula baja, potencial 3.5-4.5★ | MANTENER | 3★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 250.000 €: renueva para subirla o quitarla. |
+| 🔴 | Vaquero | Filial | 22 | 1.5 | 2 | 30/06/2029 | 60.000 | 0 | le quedan 9.4 meses, cláusula baja | SALE LIBRE | Techo bajo (1.5★/2★) a los 22 años: no renovar, sale libre el 30/06/2029. Le siguen otros clubes: intenta sacar algo por él antes de que se vaya gratis. |
+| 🟠 | Manuel | Filial | 17 | 2 | 3-4 | 30/06/2031 | 500.000 | 210.000 |  | MANTENER | 2★/3-4★, contrato hasta 30/06/2031: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
 
 ## Cláusulas de rescisión bajas (potencial 4★ o más)
 
-> ⚠️ La columna «Cláusula de rescisión» no sale en las capturas. Añádela a la vista (o pásame la vista de Contratos) y este apartado se activará solo.
+|  | Jugador | Edad | Potencial | Cláusula (€) | Valor máx. (€) | Alerta |
+|---|---|---|---|---|---|---|
+| 🔴 | João Machado | 17 | 3.5-4.5 | 29.000 | 70.000 | Cláusula POR DEBAJO de su valor de mercado: se lo pueden llevar barato · LE SIGUEN OTROS CLUBES |
+| 🔴 | Edu Gallego | 17 | 3.5-4.5 | 53.000 | 55.000 | Cláusula POR DEBAJO de su valor de mercado: se lo pueden llevar barato |
+| 🔴 | Diego Llabrés | 17 | 4-5 | 61.000 | 130.000 | Cláusula POR DEBAJO de su valor de mercado: se lo pueden llevar barato |
+| 🔴 | Joaquín Tello | 17 | 4-5 | 68.000 | 150.000 | Cláusula POR DEBAJO de su valor de mercado: se lo pueden llevar barato |
+| 🔴 | Isaac Varela | 16 | 4-5 | 73.000 | 130.000 | Cláusula POR DEBAJO de su valor de mercado: se lo pueden llevar barato |
+| 🔴 | Alberto Ruvira | 16 | 3.5-4.5 | 82.000 | 160.000 | Cláusula POR DEBAJO de su valor de mercado: se lo pueden llevar barato |
+| 🔴 | Andres Giraldo | 17 | 3.5-4.5 | 110.000 | 75.000 | Cláusula por debajo de 500.000 € · LE SIGUEN OTROS CLUBES |
+| 🔴 | Erick Benítes | 17 | 3.5-4.5 | 110.000 | 230.000 | Cláusula POR DEBAJO de su valor de mercado: se lo pueden llevar barato |
+| 🔴 | Pol Escribano | 20 | 3.5-4.5 | 250.000 | 75.000 | Cláusula por debajo de 500.000 € · LE SIGUEN OTROS CLUBES |
+| 🟠 | Lucas Balan | 19 | 4-5 | 110.000 | 95.000 | Cláusula por debajo de 500.000 € |
+| 🟠 | Adur Alsúa | 23 | 4 | 245.000 | 140.000 | Cláusula por debajo de 500.000 € |
+| 🟠 | Jack Pingamage | 16 | 4-5 | 250.000 | 170.000 | Cláusula por debajo de 500.000 € |
+| 🟠 | Aimar Vicandi | 23 | 4 | 450.000 | 325.000 | Cláusula por debajo de 500.000 € |
+| 🟠 | Jon Eceizabarrena | 23 | 4 | 475.000 | 130.000 | Cláusula por debajo de 500.000 € |
+
+Sin cláusula (bien protegidos): Juan Ruiz.
+
+Solución: renovar subiendo la cláusula o sin cláusula. Prioridad: 🔴 primero.
 
 > ⚠️ El «Porcentaje de futura venta» no sale en las capturas: no puedo revisarlo.
 

@@ -22,7 +22,12 @@ def recomendar(p, j):
     """Devuelve (acción, motivo en una frase) para un jugador. p = Plantilla."""
     accion, motivo = _recomendar(p, j)
     if p.le_siguen(j) and not p.es_cedido_aqui(j):
-        motivo += SUFIJO_INTERES.get(accion, "")
+        clausula_baja = j["clausula"] is not None and j["clausula"] < p.cfg.get("clausula_minima", 500000)
+        if accion == "MANTENER" and clausula_baja:
+            motivo += (f" Le siguen otros clubes y su cláusula es de solo {fmt_euros(j['clausula'])}: "
+                       "renueva para subirla o quitarla.")
+        else:
+            motivo += SUFIJO_INTERES.get(accion, "")
     return accion, motivo
 
 

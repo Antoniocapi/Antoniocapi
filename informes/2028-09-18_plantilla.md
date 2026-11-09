@@ -62,7 +62,7 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 |---|---|---|---|---|---|---|---|---|---|---|
 | Alberto Ruvira | Filial | 16 | DF (C) | 3 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 19.000 | 3★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Alessandro Lugo | Filial | 19 | POR | 2 | 2.5-3.5 | Promesa casi en el primer equipo |  | 30/06/2031 | 20.000 | 2★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
-| Andres Giraldo | Filial | 17 | MP (C) | 2 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 15.500 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
+| Andres Giraldo | Filial | 17 | MP (C) | 2 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 15.500 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 110.000 €: renueva para subirla o quitarla. |
 | Diego Llabrés | Filial | 17 | DF (C) | 1.5 | 4-5 | Futura promesa |  | 30/06/2030 | 7.000 | 1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Edu Gallego | Filial | 17 | DF (C) | 2.5 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 11.000 | 2.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Erick Benítes | Filial | 17 | DL (C) | 2 | 3.5-4.5 | Promesa casi en el primer equipo |  | 30/06/2030 | 15.750 | 2★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
@@ -75,7 +75,7 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Jack Pingamage | Juvenil | 16 | MP (D) | 1.5 | 4-5 | Futura promesa | Les | 30/06/2030 | 7.500 | 1.5★/4-5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Javier Rebollo | Juvenil | 17 | MP (D) | 1 | 2-3 | Joven | Juvenil | 30/06/2031 | 3.300 | 1★/2-3★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Jorge María | Juvenil | 20 | MC | 1.5 | 2.5-3.5 | Cedido en otro club |  | 30/06/2030 | 34.500 | Cedido en otro club; 1.5★/2.5-3.5★, contrato hasta 30/06/2030. |
-| João Machado | Juvenil | 17 | DF (I) | 1.5 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 7.000 | 1.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
+| João Machado | Juvenil | 17 | DF (I) | 1.5 | 3.5-4.5 | Futura promesa | Le siguen otros clubes | 30/06/2030 | 7.000 | 1.5★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 29.000 €: renueva para subirla o quitarla. |
 | Juan Ruiz | Juvenil | 16 | ME (C) | 1 | 3.5-4.5 | Joven | Juvenil | 30/06/2031 | 3.300 | 1★/3.5-4.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Luis Ramírez | Juvenil | 16 | ME (I) | 1 | 2.5-3.5 | Futura promesa |  | 30/06/2031 | 7.750 | 1★/2.5-3.5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Pablo Arbós | Juvenil | 21 | DL (C) | 2 | 2.5-3.5 | Cedido en otro club |  | 30/06/2030 | 27.000 | Cedido en otro club; 2★/2.5-3.5★, contrato hasta 30/06/2030. |
@@ -91,7 +91,7 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 | Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 2.5★/4-5★, contrato hasta 30/06/2031: sin acción necesaria ahora. |
 | Mulas | Primer equipo | 22 | DF (C) | 3 | 3.5 | Jugador de plantilla |  | 30/06/2030 | 71.500 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 | Pavel Kadochnikov | Primer equipo | 22 | MC | 3 | 3 | Revulsivo desde el banquillo |  | 30/06/2030 | 80.000 | 3★/3★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
-| Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 3★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes: vigila su cláusula. |
+| Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 3★/3.5-4.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. Le siguen otros clubes y su cláusula es de solo 250.000 €: renueva para subirla o quitarla. |
 | Álvaro Jiménez | Primer equipo | 25 | POR | 3 | 3.5 | Jugador importante |  | 30/06/2030 | 52.000 | 3★/3.5★, contrato hasta 30/06/2030: sin acción necesaria ahora. |
 
 ## CEDIDO AQUÍ

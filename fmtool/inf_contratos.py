@@ -77,22 +77,32 @@ def generar(p, carpeta):
         inf.aviso("La columna «Cláusula de rescisión» no sale en las capturas. Añádela a la vista "
                   "(o pásame la vista de Contratos) y este apartado se activará solo.")
     else:
-        filas = []
+        filas, sin_clausula = [], []
         for j in jugadores:
             pot = p.pot(j)
             if pot is None or pot < 4:
                 continue
             clausula = j["clausula"]
             if clausula is None:
-                motivo, nivel = "Sin cláusula visible", "naranja"
-            elif clausula < cfg.get("clausula_minima", 500000) or (j["valor_max"] and clausula < j["valor_max"]):
-                motivo, nivel = "Cláusula baja: cualquiera puede pagarla", "rojo"
+                sin_clausula.append(j["jugador"])  # "-" en el FM = sin cláusula: no se le puede llevar pagándola
+                continue
+            if j["valor_max"] and clausula < j["valor_max"]:
+                motivo, nivel = "Cláusula POR DEBAJO de su valor de mercado: se lo pueden llevar barato", "rojo"
+            elif clausula < cfg.get("clausula_minima", 500000):
+                motivo, nivel = f"Cláusula por debajo de {fmt_euros(cfg.get('clausula_minima', 500000))}", "naranja"
             else:
                 continue
+            if p.le_siguen(j):
+                motivo += " · LE SIGUEN OTROS CLUBES"
+                nivel = "rojo"
             filas.append({"Jugador": j["jugador"], "Edad": j["edad"], "Potencial": texto_potencial(j),
                           "Cláusula (€)": clausula, "Valor máx. (€)": j["valor_max"], "Alerta": motivo, "_nivel": nivel})
+        filas.sort(key=lambda f: (f["_nivel"] != "rojo", (f["Cláusula (€)"] or 0)))
         inf.tabla("Cláusulas", ["Jugador", "Edad", "Potencial", "Cláusula (€)", "Valor máx. (€)", "Alerta"], filas,
                   "Ningún jugador de 4★ o más tiene la cláusula baja.")
+        if sin_clausula:
+            inf.texto("Sin cláusula (bien protegidos): " + ", ".join(sin_clausula) + ".")
+        inf.texto("Solución: renovar subiendo la cláusula o sin cláusula. Prioridad: 🔴 primero.")
 
     if "futura_venta" not in p.columnas:
         inf.aviso("El «Porcentaje de futura venta» no sale en las capturas: no puedo revisarlo.")

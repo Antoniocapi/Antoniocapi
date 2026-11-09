@@ -1,0 +1,21 @@
+﻿Elegido;Inf;Jugador;Nº;Tiempo de juego;Tiempo de juego real;Sueldo;Final;Valor de traspaso;Cláusula de rescisión;Aumento de sueldo
+POR;;Alessandro Lugo;;Promesa casi en el primer equipo;Joven;20000;30/6/2031;7000-65000;85000;
+DF (D);Seg;Manuel;;Promesa casi en el primer equipo;Joven;20000;30/6/2031;20000-210000;500000;5%
+DF (C);Seg;Marco Coronel;;Recambio de emergencia;Recambio de emergencia;22000;30/6/2029;0;12000;
+DF (C);;Alberto Ruvira;;Promesa casi en el primer equipo;Joven;19000;30/6/2031;80000-160000;82000;
+DF (I);;Sergio Rivera;;Promesa casi en el primer equipo;Joven;22000;30/6/2029;0;60000;
+MC;;Mario Segura;;Promesa casi en el primer equipo;Joven;19250;30/6/2029;0;7500;10%
+ME (C);Seg;Vaquero;;Promesa casi en el primer equipo;Recambio de emergencia;23500;30/6/2029;0;60000;10%
+MP (D);;Isaac Varela;;Promesa casi en el primer equipo;Joven;18250;30/6/2031;12000-130000;73000;
+MP (I);;Joaquín Tello;;Futura promesa;Joven;7000;30/6/2030;16000-150000;68000;
+DL (C);;Ronni;;Promesa casi en el primer equipo;Recambio de emergencia;24000;30/6/2029;500-5000;60000;10%
+S1;;Edu Gallego;;Promesa casi en el primer equipo;Joven;11000;30/6/2030;5000-55000;53000;
+S2;;Jordi Martínez;;Promesa casi en el primer equipo;Joven;20000;30/6/2029;2000-80000;43500;
+S3;;Diego Llabrés;;Futura promesa;Joven;7000;30/6/2030;12000-130000;61000;
+S4;;Lucas Balan;;Promesa casi en el primer equipo;Joven;26000;30/6/2029;16000-95000;110000;
+S5;;Erick Benítes;;Promesa casi en el primer equipo;Joven;15750;30/6/2030;22000-230000;110000;10%
+S9;Seg;Andres Giraldo;;Futura promesa;Joven;15500;30/6/2030;7000-75000;110000;10%
+;;Willian Obama;;;;;;0;;
+;;Carlos Flores;;;;;;0;;
+;;Matías Aguirre;;;;;;0;;
+;;Eric;;;;;;0;;

@@ -70,3 +70,12 @@ Capturas: `partido_J0X-*.webp`.
 - **`data/partidos/alineaciones.csv`**: el once inicial con su nota. Los suplentes no salen (Edu González dio una asistencia en J3 y no está en el once). He puesto el nombre completo de la plantilla; "Osei Philip" = Philip Osei.
 - **`data/partidos/goles.csv`**: goles y asistencias, con los nombres del rival tal como salen.
 - **Mentalidad**: no sale en las capturas. El usuario dice que normalmente juega con Equilibrada, así que la pongo en los 4 partidos. En el Centro de datos aparece "4-3-3 2MC Abierto Positiva" en algún partido: si fue alguno de estos, hay que corregirlo.
+
+## 18/09/2028 · Vista "Copia de Contrato" (primer equipo, filial y juvenil)
+
+Capturas: `*_contrato_2028-09-18.webp` → `data/plantilla/*_contrato_2028-09-18.csv`. Se juntan con la información general del mismo día.
+
+- **Cláusula de rescisión**: el FM la da en euros enteros (`100.000 €` → `100000`). "-" = sin cláusula, se deja vacía.
+- **Cabeceras cortadas**: "Aumento de sueldo ..." la guardo como `Aumento de sueldo` (porcentaje).
+- **Celdas cortadas**: en el primer equipo, "Tiempo de juego" sale cortado ("Promesa casi en el primer e...", "Portero de competiciones d..."). Uso el texto completo de la captura de Información general del mismo día.
+- **Nº (dorsal)**: "-" en Marc Castro, Manu Vigo, todo el filial y parte del juvenil.
