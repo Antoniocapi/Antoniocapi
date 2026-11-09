@@ -7,8 +7,8 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 ## Resumen
 
 - **VENDER YA**: 1
-- **RENOVAR**: 5
-- **CEDER**: 3
+- **RENOVAR**: 4
+- **CEDER**: 4
 - **SALE LIBRE**: 10
 - **MANTENER**: 32
 - **CEDIDO AQUÍ**: 2
@@ -25,7 +25,6 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 🟢 | Jon Eceizabarrena | Primer equipo | 23 | ME (C) | 3 | 4 | Jugador secundario |  | 30/06/2029 | 60.000 | Joven (23) con potencial 4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
-| 🟢 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 39.500 | Joven (21) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Óscar León | Primer equipo | 23 | DL (C) | 3 | 3.5 | Titular habitual |  | 30/06/2029 | 65.500 | Joven (23) con potencial 3.5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Jordi Martínez | Salamanca B | 20 | POR | 2 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 20.000 | Joven (20) con potencial 3-4★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
 | 🟢 | Lucas Balan | Salamanca B | 19 | ME (C) | 2 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2029 | 26.000 | Joven (19) con potencial 4-5★ y contrato hasta 30/06/2029: renovar antes del 01/01/2029. |
@@ -34,9 +33,10 @@ Potencial con rango (estrellas blancas): uso el criterio «media» de config.yam
 
 |  | Jugador | Equipo | Edad | Pos. | Calidad | Potencial | Tiempo de juego | Inf | Fin contrato | Sueldo (€) | Motivo |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| 🟠 | Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 20 años, 2.5★/4-5★ y pocos minutos (167 de 630 minutos): necesita jugar fuera. |
-| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (0 de 630 minutos): necesita jugar fuera. |
-| 🟠 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 20 años, 3★/3.5-4.5★ y pocos minutos (204 de 630 minutos): necesita jugar fuera. Le siguen otros clubes: blinda su contrato antes de cederlo. |
+| 🟠 | Luis Paulo | Primer equipo | 20 | DF (C) | 2.5 | 4-5 | Promesa casi en el primer equipo |  | 30/06/2031 | 42.000 | 20 años, 2.5★/4-5★ y pocos minutos (167 de 720 minutos): necesita jugar fuera. |
+| 🟠 | Marc Castro | Primer equipo | 20 | DF (C) | 2.5 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2030 | 36.000 | 20 años, 2.5★/3-4★ y pocos minutos (0 de 720 minutos): necesita jugar fuera. |
+| 🟠 | Pau Calvo | Primer equipo | 21 | ME (C) | 3 | 3-4 | Promesa casi en el primer equipo |  | 30/06/2029 | 39.500 | 21 años, 3★/3-4★ y pocos minutos (234 de 720 minutos): necesita jugar fuera. Renuévalo antes de cederlo (acaba 30/06/2029). |
+| 🟠 | Pol Escribano | Primer equipo | 20 | MP (I) | 3 | 3.5-4.5 | Promesa casi en el primer equipo | Le siguen otros clubes | 30/06/2030 | 46.500 | 20 años, 3★/3.5-4.5★ y pocos minutos (204 de 720 minutos): necesita jugar fuera. Le siguen otros clubes: blinda su contrato antes de cederlo. |
 
 ## SALE LIBRE
 

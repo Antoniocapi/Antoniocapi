@@ -1,5 +1,11 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 09/11 · Jornada 8: Salamanca 0-2 Zamora
+- **Transcrito**: estadísticas, jugadores en el campo al final con su nota, goles y clasificación parcial (seguimos 10º con 9 puntos).
+- **Partido**: nos superaron (0,65 de xG frente a 2,10, 32 % de posesión, 10 córners en contra). Goles suyos en el 68' y el 79'.
+- **Patrón**: contra los de arriba (Numantia y Zamora), 0,98 de xG a favor y 4,47 en contra. Contra el resto somos mejores.
+- **Tarea urgente nueva**: plan específico para rivales de arriba (próximo: U. Adarve, 1º, el 12/11).
+
 ## 09/11 · Jornada 7: Valladolid B 2-1 Salamanca
 - **Transcrito**: estadísticas, jugadores en el campo al final con su nota, goles y parte de la clasificación (seguimos 10º con 9 puntos).
 - **Partido**: derrota injusta por xG (1,84 frente a 1,65). 17 tiros, 65 pases progresivos y 3 ocasiones claras frente a 0, pero gol suyo en el 5'. Desde el banquillo: gol de Valdaliso (87'), asistencia de Tello y debut de Ruvira (16 años, 6,8).

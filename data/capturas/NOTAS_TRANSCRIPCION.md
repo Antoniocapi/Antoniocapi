@@ -143,3 +143,12 @@ Captura: `partido_J07-valladolid-b_2028-10-01.webp`, hecha en el 90'+5.
 - Goles: 5' Ó. Álvarez; 68' H. Calvo (asistencia de Álvaro García); 87' Valdaliso (asistencia de Tello).
 - Clasificación parcial (7º-13º): seguimos 10º con 9 puntos → `data/liga/clasificacion-parcial_2028-10-01.csv`.
 - Otros resultados visibles: Ávila 2-2 C.D. Coria, Las Rozas 1-1 Zamora, Navalcarnero 1-2 Guadalajara, Guijuelo 1-0 R.C. Alcobendas y Jaraíz 0-1 U. Adarve.
+
+## 15/10/2028 · J8 · Salamanca 0-2 Zamora (El Helmántico)
+
+Captura: `partido_J08-zamora_2028-10-15.webp`, hecha en el 90'+5.
+- Estadísticas → `partidos.csv` (mentalidad Equilibrada, la habitual; no sale en la captura).
+- Jugadores en el campo al final → `alineaciones.csv`. Entraron (flechas): Valdaliso, Luis Bilbao, Calvo, Vigo (dorsal 24) y Ruvira.
+- Goles en contra: 68' P. Mascaró (asist. J. Paez) y 79' J. Carbonell (asist. P. Mascaró).
+- Clasificación parcial (7º-13º): 10º con 9 puntos → `data/liga/clasificacion-parcial_2028-10-15.csv`.
+- Otros resultados: Guadalajara 2-2 Mirandés B, Numantia 2-1 Navalcarnero, RSD Alcalá 0-2 Valladolid B y Jaraíz 0-1 Las Rozas.
