@@ -4,7 +4,8 @@
 # =====================================================================
 
 club: "Salamanca CF UDS"
-temporada: "2028-29"
+temporada: "2029-30"
+liga: "Primera Federación"
 
 # ---------------------------------------------------------------------
 # Topes salariales (euros al año)
@@ -22,12 +23,12 @@ usar_reserva: true
 # Presupuestos tal como los muestra el Portal del FM (en euros).
 # Actualízalos cuando me pases una captura nueva del Portal.
 presupuesto_sueldos:
-  fecha: 2028-12-23
-  gasto_actual: 1900000       # "Gasto en sueldos 1,9M € p/a"
-  disponible: 116000           # "Presupuesto disponible 116m € p/a"
+  fecha: 2029-06-03
+  gasto_actual: 2090000       # "Gasto en sueldos 2,09M € p/a"
+  disponible: 1340000          # "Presupuesto disponible 1,34M € p/a" (presupuesto inicial de Primera Federación)
 presupuesto_fichajes:
-  fecha: 2028-12-23
-  disponible: 14000            # "Presupuesto disponible 14m €"
+  fecha: 2029-06-03
+  disponible: 13760            # "Presupuesto disponible 13,76m €"
   gastado: 39150               # "Gastado esta temporada 39,15m €"
 
 # Qué "Tiempo de juego" cuenta como titular o rotación en el primer equipo.
@@ -92,6 +93,9 @@ codigos_inf:
   B: Con minutos en el B
   Juv: Juvenil
   Les: Lesionado
+  Ret: Se retira
+  Lib: Sale libre
+  Fic: Fichado
   # Códigos nuevos del 17/12 sin confirmar: Des, Apy, Obj, RJ, PrF
 
 # Código que indica que otros clubes siguen al jugador (sube la prioridad de su contrato)
@@ -103,8 +107,6 @@ no_ceder:
 
 # Renovaciones ya firmadas que aún no salen en las capturas de contratos
 renovados:
-  Lucas Balan: "renovado (diciembre de 2028)"
-  Jordi Martínez: "renovado (diciembre de 2028)"
 
 # Fichajes ya cerrados (salen como «Fichado» en el ranking)
 fichados:

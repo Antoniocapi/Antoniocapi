@@ -1,16 +1,11 @@
 ﻿orden;prioridad;area;pestana;tarea;detalle
-1;Urgente;Contratos;contratos;Subir la cláusula de Jiménez (100.000 €);Ruvira ya está protegido (1,5 M €). Jiménez sigue con 100.000 € y es de los que más rinden (6,98). Machado y Varela: confírmamelo con la vista de contratos del B y el juvenil.
-2;Urgente;Mercado de enero;plantilla;Lateral izquierdo por precontrato;Hamansenya es cedido hasta junio y Osei se va. Buscar jugadores que acaben contrato en junio de 2029.
-3;Alta;Ventas;contratos;Vender a Murúa en enero;Ya está transferible. Cobra 100.000 € y acaba en junio: cualquier oferta razonable antes del cierre del mercado.
-4;Alta;Ventas;plantilla;Sacar a Kadochnikov, Ucín y Manu Vigo;Manu Vigo ya está transferible. Kadochnikov (80.000 €, 6,59) y Ucín (42.000 €) siguen: cesión o venta antes del cierre del mercado.
-5;Media;Cantera;cantera;Ceder a Lucas Balan;Marc Castro ya no está en la plantilla del primer equipo (¿cedido?). Lucas Santos está marcado para ceder.
-6;Media;Ventas;plantilla;Escuchar ofertas por Vicandi y Bilbao;Cobran 175.000 € y 120.000 € con sueldo justo de ≈100.000 € y ≈54.000 €.
-7;Baja;Datos;analisis;Pásame laterales izquierdos y contratos;Lista de ojeo de DF (I) y la vista de contratos del primer equipo (nuevos contratos de León y Eceizabarrena).
-8;Hecho;Contratos;contratos;Renovar a Calvo;Renovado: 75.000 € hasta 2030, cláusula 145.000 €. Muy cerca de su sueldo justo (≈80.000 €).
-9;Hecho;Mercado de enero;plantilla;Delantero centro: Ekain Orobengoa;Fichado libre (24 años, 3★/4★, DL y extremo izquierdo). Pásame su contrato.
-10;Hecho;Contratos;contratos;Renovar a Óscar León antes del 1/1;Renovado por 3 años el 23/12/2028.
-11;Hecho;Cantera;cantera;Sube a Alberto Ruvira al primer equipo;Debutó en la J7 de central con 16 años (6,8). Ahora, renovarle subiendo su cláusula (82.000 €).
-12;Hecho;Táctica;tactica;Quita a Miràngels del once;Hecho en la J5: Miràngels no jugó.
-13;Hecho;Táctica;tactica;Luis Paulo de central titular en lugar de Mulas;Hecho en la J5: Luis Paulo fue el mejor de campo (7,1) y solo concedimos 5 córners.
-14;Hecho;Contratos;contratos;Renovar a Eceizabarrena;Renovado por 2 años el 23/12/2028.
-15;Hecho;Contratos;contratos;Renovar a Balan y Jordi Martínez;Renovados en diciembre de 2028. Balan: ahora, cederle para que juegue.
+1;Urgente;Mercado de verano;mercado;Lateral izquierdo;"Se van Hamansenya (fin de cesión) y Osei: no queda ninguno. Preguntar por renovar la cesión de Hamansenya; si no, fichar libre (contrato que acaba el 30/06)."
+2;Alta;Mercado de verano;mercado;Lateral derecho y portero suplente;Solo Cojo en el lateral derecho (Ucín se va). Portero: subir a Jordi Martínez o fichar un libre.
+3;Alta;Contratos;contratos;Renovar a Jiménez subiendo la cláusula;Titular (38 partidos, 6,90) con cláusula de solo 100.000 €.
+4;Alta;Ventas;plantilla;Vender a Vicandi en su pico;175.000 €/año, 1 gol y 8 asistencias, valor de hasta 190.000 €.
+5;Media;Ventas;plantilla;Vender o ceder a Kadochnikov, Arbós y Jorge María;"80.000 €/año con poco rendimiento; Arbós y Jorge María no tienen techo para Primera Federación."
+6;Media;Cantera;cantera;Ceder a Luis Paulo y Balan;Potencial 4-5★ y pocos minutos: necesitan jugar.
+7;Media;Cantera;cantera;Pretemporada con Varela y Tello;"17-18 años, 4-5★; Varela marcó 12 goles en el B."
+8;Media;Contratos;contratos;Renovar a Pingamage y Machado;Potencial 4-5★, contrato hasta 2030.
+9;Baja;Salidas;contratos;Despedir a los que acaban el 30/06;Murúa (se retira), Ucín, Osei, Manu Vigo, Ronni, Rivera, Vaquero. Segura: renovación barata opcional.
+10;Hecho;Temporada;analisis;Ascenso a Primera Federación;Campeones del playoff: Calahorra y Llanera.

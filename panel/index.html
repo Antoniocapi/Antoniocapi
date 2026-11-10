@@ -123,7 +123,7 @@
 <div class="sa">
   <header class="sa-head">
     <h1 class="sa-title">Salamanca UDS · Dirección deportiva</h1>
-    <span class="sa-meta">2ª Federación Grupo 5 · temporada 2028-29 · contratos a 21/01/2029 · clasificación a 23/12/2028 · estadísticas a 17/12 · xG analizado hasta la jornada 9</span>
+    <span class="sa-meta">¡Ascendidos a Primera Federación! · temporada 2029-30 · plantillas a 03/06/2029 · xG analizado hasta la jornada 9</span>
   </header>
 
   <nav class="sa-tabs" role="tablist" aria-label="Secciones del panel">
@@ -140,7 +140,7 @@
   <!-- ===================== INICIO ===================== -->
   <section class="sa-page" id="inicio" role="tabpanel">
     <div class="sa-hero">
-      <div class="sa-count"><span class="sa-count-n" data-draw="dias-enero">—</span><span class="sa-count-t">días para el cierre<br>del mercado de invierno</span></div>
+      <div class="sa-count"><span class="sa-count-n" data-draw="dias-enero">—</span><span class="sa-count-t">días para el 1 de julio<br>(fin de contratos, abre el mercado)</span></div>
       <p class="sa-take">Tras <b data-draw="pj" data-source="resumen" data-field="pj" data-row="0">—</b> jornadas analizadas, <b data-draw="pts" data-source="resumen" data-field="puntos" data-row="0">—</b> puntos con un juego que vale <b data-draw="xpts" data-source="resumen" data-field="xpts" data-row="0">—</b>.
         <span data-variant="suerte" hidden>Los resultados van por delante del juego.</span>
         <span data-variant="merito" hidden>El juego merece más puntos de los que tenemos: el entrenador está haciendo bien su trabajo.</span>
@@ -306,7 +306,7 @@
       <div class="sa-chart sa-tall" id="grafico-liga" data-draw="metricas" data-source="metricas"></div>
     </div>
     <div class="sa-card">
-      <h3>Clasificación (23/12)</h3>
+      <h3>Clasificación de la 2ª Federación (23/12/2028)</h3>
       <div class="sa-tablebox"><table class="sa-table" id="tabla-clasificacion" data-source="clasificacion" data-row-key="equipo"><thead><tr>
         <th data-field="pos" class="num">Pos.</th><th data-field="equipo">Equipo</th><th data-field="jugados" class="num">PJ</th><th data-field="ganados" class="num">G</th><th data-field="empatados" class="num">E</th><th data-field="perdidos" class="num">P</th><th data-field="dif_goles" class="num">Dif.</th><th data-field="puntos" class="num">Pts</th>
       </tr></thead><tbody data-draw="clasificacion"></tbody></table></div>
@@ -801,8 +801,8 @@
   }));
 
   // =================== CAPA VISUAL ===================
-  const FECHA_JUEGO = '2029-01-21';
-  const CIERRE_MERCADO = '2029-01-31'; // cierre habitual del mercado de invierno en España (confirmar en el FM) // fecha del juego de las últimas capturas
+  const FECHA_JUEGO = '2029-06-03';
+  const CIERRE_MERCADO = '2029-07-01'; // fin de contratos y apertura del mercado de verano // fecha del juego de las últimas capturas
   const LIMITE_RENOV = '2029-01-01';
   const COL = {RENOVAR: 'var(--color-ok)', 'VENDER YA': 'var(--color-bad)', CEDER: 'var(--color-warn)', 'SALE LIBRE': 'var(--cds-chart-muted)', MANTENER: 'var(--color-border-line)', 'CEDIDO AQUÍ': 'var(--color-border-line)'};
   const corto = (n) => { const p = String(n).split(' '); return p.length > 1 && p[0].length > 2 ? p.slice(-1)[0] : String(n); };
@@ -833,13 +833,13 @@
     const F = dash.data('fichajes').data;
     const lim = (j) => j.limite_renovar && j.limite_renovar <= LIMITE_RENOV;
     const cols = [
-      {t: 'Renovar ya', d: 'Acaban en junio. Antes del 1 de enero.', c: 'var(--color-bad)', xs: J.filter((j) => j.accion === 'RENOVAR' && lim(j)).map((j) => chip(j.jugador, j.edad + ' a', 'var(--color-ok)', j.motivo))},
+      {t: 'Renovar ya', d: 'Acaban contrato pronto.', c: 'var(--color-bad)', xs: J.filter((j) => j.accion === 'RENOVAR' && lim(j)).map((j) => chip(j.jugador, j.edad + ' a', 'var(--color-ok)', j.motivo))},
       {t: 'Proteger cláusula', d: 'Cláusula por debajo de su valor.', c: 'var(--color-warn)', xs: J.filter((j) => j.clausula !== '' && j.valor_max !== '' && Number(j.clausula) < Number(j.valor_max) && Number(j.potencial_num) >= 3.5)
         .sort((a, b) => Number(a.clausula) / Number(a.valor_max) - Number(b.clausula) / Number(b.valor_max)).slice(0, 8)
         .map((j) => chip(j.jugador, Math.round(Number(j.clausula) / 1000) + ' mil €', 'var(--color-warn)', `Cláusula ${sa.eur(Number(j.clausula))} · valor hasta ${sa.eur(Number(j.valor_max))}`))},
       {t: 'Vender o sacar', d: 'Liberan masa salarial.', c: 'var(--color-fg)', xs: J.filter((j) => j.accion === 'VENDER YA' || (j.valoracion_sueldo === 'Cobra de más' && j.equipo === 'Primer equipo' && Number(j.sueldo) >= 40000))
         .sort((a, b) => Number(b.sueldo) - Number(a.sueldo)).map((j) => chip(j.jugador, Math.round(Number(j.sueldo) / 1000) + ' mil €', 'var(--color-bad)', (j.motivo_sueldo || '') + ' ' + j.motivo))},
-      {t: 'Fichar', d: 'Delantero: ✔ fichado. Siguiente: lateral izquierdo.', c: 'var(--color-ok)', xs: F.filter((f) => f.estado === 'Fichado').concat(F.filter((f) => f.estado === 'Candidato').slice(0, 2)).map((f) => chip(f.jugador, Math.round(num(f.nota)) + ' pts', 'var(--color-ok)', `${f.edad} años · ${f.calidad}★ → ${f.potencial}★ · ${f.tipo}`))},
+      {t: 'Fichar', d: 'Prioridad: lateral izquierdo, lateral derecho y portero. Pásame las listas de ojeo.', c: 'var(--color-ok)', xs: [].map((f) => chip(f.jugador, Math.round(num(f.nota)) + ' pts', 'var(--color-ok)', `${f.edad} años · ${f.calidad}★ → ${f.potencial}★ · ${f.tipo}`))},
     ];
     e.replaceChildren(...cols.map((c) => {
       const col = el('div', 'sa-col'); col.style.setProperty('--c', c.c);

@@ -1,5 +1,12 @@
 # Qué se ha hecho (lo último, arriba)
 
+## 10/11 · Ascenso a Primera Federación: plantillas a 03/06/2029 y plan de verano
+- **Transcrito**: Portal, primer equipo (general y estadísticas), Salamanca B (general y estadísticas) y juvenil (general y estadísticas de los cedidos).
+- **Presupuesto**: 1,34 M €/año para sueldos y 13.760 € para traspasos.
+- **Nuevo informe**: `2029-06-03_plan-verano.md`, con balance, salidas, fichajes (lateral izquierdo urgente), ventas, cantera y contratos.
+- **Tareas y análisis** rehechos para el verano (bloque «0. Temporada 2028-29: balance»).
+- `config.yaml`: temporada 2029-30, liga Primera Federación, códigos Ret/Lib/Fic.
+
 ## 09/11 · Contratos del primer equipo a 21/01/2029
 - **Transcrito**: vista de contratos. Calvo renovado (75.000 € hasta 2030, cláusula 145.000 €), Ruvira (63.000 € hasta 2031, cláusula 1,5 M €), León (110.000 € hasta 2031, cláusula 500.000 €), Eceizabarrena (75.000 € hasta 2030) y Orobengoa (36.500 € hasta 2030, cláusula 240.000 €).
 - **Transferibles**: Murúa y Manu Vigo. Lucas Santos marcado «Ced». Marc Castro ya no está en la plantilla.

@@ -1,20 +1,20 @@
 jugador,estado,nota,edad,posicion,calidad,potencial,tipo,valor_min,sueldo,fin,precontrato,motivo
 Genís Clua,Candidato,100.0,19,DL (C),3.5,4.5-5,Libre,0,,,,
-Shane Kluivert,Candidato,88.1,21,MP (I),3.0,4-4.5,Libre,0,,,,
-David Domínguez,Candidato,80.9,23,DL (C),2.5,4,Libre,0,,,,
-Jens Olsson,Candidato,79.1,22,DL (C),2.5,4,Traspaso,0,23000,30/06/2029,Sí,
-Mahamadou Baldé,Candidato,77.4,24,MP (D),3.0,4,Libre,0,,,,
-Miguel Conde,Candidato,73.8,22,DL (C),2.5,4,Traspaso,0,65000,30/06/2029,Sí,
-Miguel Álvarez,Candidato,72.9,22,DL (C),2.5,4,Traspaso,1000,83500,30/06/2029,Sí,
-Adri López,Candidato,65.0,23,DL (C),2.5,4,Traspaso,10000,83000,30/06/2029,Sí,
-Córcoles,Candidato,63.4,23,DL (C),2.5,3.5,Traspaso,3500,41000,30/06/2029,Sí,
-Mateo Albarracín,Descartado,78.1,21,DL (C),3.0,4-4.5,Traspaso,6000,168000,30/06/2029,Sí,sueldo 168.000 € > margen salarial (116.000 €)
-Yanis Senhadji,Descartado,77.1,23,DL (C),3.5,4.5-5,Traspaso,14000,144000,30/06/2030,,sueldo 144.000 € > margen salarial (116.000 €)
-Salim Dansokho,Descartado,71.0,21,DL (C),3.0,4-4.5,Traspaso,110000,60000,30/06/2029,Sí,traspaso mínimo 110.000 € > presupuesto 14.000 €
-Lolo Martínez,Descartado,68.2,18,DL (C),3.5,4.5-5,Traspaso,2400000,141000,30/06/2032,,traspaso mínimo 2.400.000 € > presupuesto 14.000 €; sueldo 141.000 € > margen salarial (116.000 €)
-Pol Rivera,Descartado,67.5,22,DL (C),3.0,4-4.5,Traspaso,60000,46000,30/06/2030,,traspaso mínimo 60.000 € > presupuesto 14.000 €
-Nuhu Fofana,Descartado,67.5,20,DL (C),3.0,4-4.5,Traspaso,22000,160000,30/06/2030,,traspaso mínimo 22.000 € > presupuesto 14.000 €; sueldo 160.000 € > margen salarial (116.000 €)
-Aarón Soriano,Descartado,67.5,20,DL (C),3.0,4-4.5,Traspaso,130000,78000,30/06/2030,,traspaso mínimo 130.000 € > presupuesto 14.000 €
-Hugo Alba,Descartado,67.4,22,DL (C),3.0,4,Traspaso,180000,188000,30/06/2029,Sí,traspaso mínimo 180.000 € > presupuesto 14.000 €; sueldo 188.000 € > margen salarial (116.000 €)
-Mateo Muñoz,Descartado,65.3,21,DL (C),2.5,4.5-5,Traspaso,500000,48500,30/06/2030,,traspaso mínimo 500.000 € > presupuesto 14.000 €
-Marc Tenas,Descartado,49.7,27,DL (C),3.0,4,Traspaso,50000,29500,30/06/2030,,traspaso mínimo 50.000 € > presupuesto 14.000 €
+Shane Kluivert,Candidato,94.0,21,MP (I),3.0,4-4.5,Libre,0,,,,
+David Domínguez,Candidato,86.8,23,DL (C),2.5,4,Libre,0,,,,
+Jens Olsson,Candidato,85.0,22,DL (C),2.5,4,Traspaso,0,23000,30/06/2029,Sí,
+Mateo Albarracín,Candidato,83.9,21,DL (C),3.0,4-4.5,Traspaso,6000,168000,30/06/2029,Sí,
+Mahamadou Baldé,Candidato,83.2,24,MP (D),3.0,4,Libre,0,,,,
+Miguel Conde,Candidato,79.7,22,DL (C),2.5,4,Traspaso,0,65000,30/06/2029,Sí,
+Miguel Álvarez,Candidato,78.8,22,DL (C),2.5,4,Traspaso,1000,83500,30/06/2029,Sí,
+Adri López,Candidato,70.7,23,DL (C),2.5,4,Traspaso,10000,83000,30/06/2029,Sí,
+Córcoles,Candidato,69.2,23,DL (C),2.5,3.5,Traspaso,3500,41000,30/06/2029,Sí,
+Yanis Senhadji,Descartado,77.1,23,DL (C),3.5,4.5-5,Traspaso,14000,144000,30/06/2030,,traspaso mínimo 14.000 € > presupuesto 13.760 €
+Salim Dansokho,Descartado,76.9,21,DL (C),3.0,4-4.5,Traspaso,110000,60000,30/06/2029,Sí,traspaso mínimo 110.000 € > presupuesto 13.760 €
+Pol Rivera,Descartado,73.4,22,DL (C),3.0,4-4.5,Traspaso,60000,46000,30/06/2030,,traspaso mínimo 60.000 € > presupuesto 13.760 €
+Nuhu Fofana,Descartado,73.4,20,DL (C),3.0,4-4.5,Traspaso,22000,160000,30/06/2030,,traspaso mínimo 22.000 € > presupuesto 13.760 €
+Aarón Soriano,Descartado,73.4,20,DL (C),3.0,4-4.5,Traspaso,130000,78000,30/06/2030,,traspaso mínimo 130.000 € > presupuesto 13.760 €
+Hugo Alba,Descartado,73.2,22,DL (C),3.0,4,Traspaso,180000,188000,30/06/2029,Sí,traspaso mínimo 180.000 € > presupuesto 13.760 €
+Mateo Muñoz,Descartado,71.2,21,DL (C),2.5,4.5-5,Traspaso,500000,48500,30/06/2030,,traspaso mínimo 500.000 € > presupuesto 13.760 €
+Lolo Martínez,Descartado,68.2,18,DL (C),3.5,4.5-5,Traspaso,2400000,141000,30/06/2032,,traspaso mínimo 2.400.000 € > presupuesto 13.760 €
+Marc Tenas,Descartado,55.6,27,DL (C),3.0,4,Traspaso,50000,29500,30/06/2030,,traspaso mínimo 50.000 € > presupuesto 13.760 €
